@@ -2025,10 +2025,23 @@
 </code></pre><h2 id="channels">Channels</h2>
 <pre><code>pro main(): int = {
 
-    var []something: str = { non };
+    var []something: str;
+    ~var found: bol;
 
-    &gt;&gt;&gt; fun doItFast()[[]something]: int[64] = {
-        
+    for (i in 0 ... 4) {
+        &gt;&gt; doItFast(i, found)[[i]something]
+    }
+
+}
+
+fun doItFast(i: int; found: bol)[]: bol = {
+
+}
+</code></pre><h3 id="asyncawait">Async/Await</h3>
+<pre><code>pro main(): int = {
+
+    &gt;&gt; fun doItFast(): int[64] = {
+        var result = client.get((address)).send() | await
     }
 }
 </code></pre>
@@ -2074,7 +2087,11 @@
     <li>
       <ul>
         <li><a href="#tasks">Tasks</a></li>
-        <li><a href="#channels">Channels</a></li>
+        <li><a href="#channels">Channels</a>
+          <ul>
+            <li><a href="#asyncawait">Async/Await</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
