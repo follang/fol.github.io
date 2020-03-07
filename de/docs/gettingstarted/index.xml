@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on FOL</title>
+    <link>http://follang.org/de/docs/gettingstarted/</link>
+    <description>Recent content in Getting Started on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="http://follang.org/de/docs/gettingstarted/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Basic Usage</title>
+        <link>http://follang.org/de/docs/gettingstarted/basicusage/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:51 +0900</pubDate>
+        
+        <guid>http://follang.org/de/docs/gettingstarted/basicusage/</guid>
+        <description>Markdown here</description>
+      </item>
+      
+      <item>
+        <title>Configuration</title>
+        <link>http://follang.org/de/docs/gettingstarted/configuration/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:56 +0900</pubDate>
+        
+        <guid>http://follang.org/de/docs/gettingstarted/configuration/</guid>
+        <description>Markdown here</description>
+      </item>
+      
+      <item>
+        <title>Installation</title>
+        <link>http://follang.org/de/docs/gettingstarted/installation/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:13 +0900</pubDate>
+        
+        <guid>http://follang.org/de/docs/gettingstarted/installation/</guid>
+        <description>Markdown here</description>
+      </item>
+      
+      <item>
+        <title>Quick Start</title>
+        <link>http://follang.org/de/docs/gettingstarted/quickstart/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:41 +0900</pubDate>
+        
+        <guid>http://follang.org/de/docs/gettingstarted/quickstart/</guid>
+        <description>Markdown here</description>
+      </item>
+      
+    
+  </channel>
+</rss>
