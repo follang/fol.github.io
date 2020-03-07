@@ -1309,6 +1309,20 @@
       
       
         
+        
+          
+            
+              <a href="http://follang.org/blog/markdown-syntax/" data-lang="en" class="lang__dropdown--item">English</a>
+            
+          
+        
+      
+        
+      
+    
+      
+      
+        
       
         
         
@@ -1430,44 +1444,8 @@
         
 <div class="mid">
   <div class="divider">
-    
-    <nav id="single-menu" class="l" data-dir="ltr">
-    </nav>
-
+    <nav id="single-menu" class="l" style=""data-dir="ltr"></nav>
     <article id="list-main" class="m" data-dir="ltr">
-      
-        <nav class="breadcrumb" aria-label="breadcrumbs" data-is-blog="true">
-  <ol>
-    
-  
-  
-  
-  
-  
-  <li >
-    
-      <a href="http://follang.org/de/" class="capitalize">FOL</a>
-    
-  </li>
-  
-  
-  <li >
-    
-      <a href="http://follang.org/de/blog/" class="capitalize">Blog</a>
-    
-  </li>
-  
-  
-  <li  class="is-active" >
-    
-      <span>Markdown Syntax Guide</span>
-    
-  </li>
-  
-  </ol>
-  
-</nav>
-      
       
   <label class="switch">
     <input id="toggle-sidebar" aria-label="Toggle Sidebar Visibility" type="checkbox" checked />
@@ -1653,7 +1631,6 @@ caluere tempus</p>
 
 
     </article>
-    
     <section id="list-side" class="r" data-dir="ltr">
       
         <div class="toc">
@@ -1728,7 +1705,6 @@ caluere tempus</p>
 </div>
       
     </section>
-
   </div>
 </div>
 
@@ -1918,11 +1894,11 @@ caluere tempus</p>
   var listMain = document.getElementById('list-main');
   var singleMenu = document.getElementById('single-menu');
 
-  enquire.register("screen and (max-width:1280px)", {
+  enquire.register("screen and (max-width:2080px)", {
     match: function () {
       listSide.className = 'r';
-      listMain.className = 'm';
-      singleMenu.className = 'l';
+      listMain.className = 'lm';
+      singleMenu.className = 'hide';
     },
     unmatch: function () {
       listSide.className = 'r';

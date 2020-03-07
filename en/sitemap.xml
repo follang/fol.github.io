@@ -171,6 +171,7 @@
   
   <url>
     <loc>http://follang.org/blog/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -180,6 +181,81 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://follang.org/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/tags/css/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/css/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/tags/html/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/html/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/tags/markdown/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/markdown/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/blog/markdown-syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/blog/markdown-syntax/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/blog/markdown-syntax/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/tags/themes/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/themes/"
                 />
   </url>
   

@@ -145,21 +145,61 @@
   <url>
     <loc>http://follang.org/de/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/css/"
+                />
   </url>
   
   <url>
     <loc>http://follang.org/de/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/html/"
+                />
   </url>
   
   <url>
     <loc>http://follang.org/de/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/markdown/"
+                />
   </url>
   
   <url>
     <loc>http://follang.org/de/blog/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/blog/markdown-syntax/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/blog/markdown-syntax/"
+                />
   </url>
   
   <url>
@@ -170,6 +210,16 @@
   <url>
     <loc>http://follang.org/de/tags/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://follang.org/tags/themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="http://follang.org/de/tags/themes/"
+                />
   </url>
   
   <url>

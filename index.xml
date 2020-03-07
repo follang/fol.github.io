@@ -223,6 +223,18 @@ typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5]
 pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(a, b: flt[32]) flt[32] { return max(flt[32])(a, b); }; fun biggerInteger(a, b: int[64]) int[64] { return max(int[64])(a, b); }; And here is an object defined with generics.</description>
       </item>
       
+      <item>
+        <title>Markdown Syntax Guide</title>
+        <link>http://follang.org/blog/markdown-syntax/</link>
+        <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+        
+        <guid>http://follang.org/blog/markdown-syntax/</guid>
+        <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de&lt;br /&gt;
+pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice&lt;br /&gt;
+subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc&lt;br /&gt;
+caluere tempus&lt;/p&gt;</description>
+      </item>
+      
     
   </channel>
 </rss>
