@@ -2021,20 +2021,22 @@
 <li>Second, when a program unit invokes a task, in some cases it need not wait for the task to complete its execution before continuing its own.</li>
 <li>Third, when the execution of a task is completed, control may or may not return to the unit that started that execution.</li>
 </ul>
-<pre><code>&gt;&gt;&gt; declaration[options] name(arguments)[captures]: returntype[options] = { implementation; };
-</code></pre><h2 id="channels">Channels</h2>
+<p>In fol to sent a assign a subprogram to a task, we use the symbols <code>&gt;&gt;</code></p>
+<h2 id="channels">Channels</h2>
 <pre><code>pro main(): int = {
 
     var []something: str;
     ~var found: bol;
 
     for (i in 0 ... 4) {
-        &gt;&gt; doItFast(i, found)[[i]something]
+        &gt;&gt; doItFast(i, found) | [i&gt;]something
     }
+
+    var fromCh1 = [&lt;0]something
 
 }
 
-fun doItFast(i: int; found: bol)[]: bol = {
+fun doItFast(i: int; found: bol): str = {
 
 }
 </code></pre><h3 id="asyncawait">Async/Await</h3>
