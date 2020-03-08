@@ -1309,6 +1309,29 @@
   
 
     
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
+    <a href="http://follang.org/docs/readme/"
+      class="menu__title "></a>
+  </li>
+  
+
+    
   </ul>
 </div>
 
@@ -1515,7 +1538,32 @@
 </div>
 
         </div>
-        <div class="navbar__icons">
+        
+<div class="navbar__icons">
+  
+    <div class="dropdown">
+  <button class="lang__dropdown navbar__icons--icon" aria-label="Select Site Language">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+  <path
+     fill="none"
+     d="M0 0h24v24H0V0z"
+     id="path2" />
+  <path
+     inkscape:connector-curvature="0"
+     d="m 17.14174,4.7567875 c -1.659637,0 -2.992021,1.3323836 -2.992021,2.9920204 0,1.0986331 0.607753,2.0570144 1.496012,2.5712701 v 0.420753 c 0,1.496012 -1.496012,2.99202 -2.992024,2.99202 -1.238884,0 -2.220643,0.257129 -2.9920249,0.677882 V 7.3280549 C 10.549942,6.8138019 11.157695,5.855418 11.157695,4.7567875 c 0,-1.6596407 -1.3323839,-2.9920244 -2.9920209,-2.9920244 -1.65964,0 -2.992024,1.3323837 -2.992024,2.9920244 0,1.0986305 0.607755,2.0570144 1.496012,2.5712674 v 9.7941981 c -0.888257,0.514253 -1.496012,1.472637 -1.496012,2.571268 0,1.659639 1.332384,2.992023 2.992024,2.992023 1.659637,0 2.9920209,-1.332384 2.9920209,-2.992023 0,-0.794756 -0.303878,-1.496009 -0.794756,-2.033641 0.444127,-0.537627 1.145384,-0.95838 2.290768,-0.95838 2.992024,0 5.984045,-2.992023 5.984045,-5.984043 v -0.420753 c 0.888255,-0.5142567 1.496009,-1.4726369 1.496009,-2.5712714 0,-1.6596368 -1.332382,-2.9920204 -2.992021,-2.9920204 z M 8.1656741,3.2607753 c 0.818131,0 1.496008,0.6778801 1.496008,1.4960122 0,0.8181307 -0.677877,1.4960082 -1.496008,1.4960082 -0.818132,0 -1.496012,-0.6778775 -1.496012,-1.4960082 0,-0.8181321 0.67788,-1.4960122 1.496012,-1.4960122 z m 0,17.9521317 c -0.818132,0 -1.496012,-0.677878 -1.496012,-1.496008 0,-0.818134 0.67788,-1.496013 1.496012,-1.496013 0.818131,0 1.496008,0.677879 1.496008,1.496013 0,0.81813 -0.677877,1.496008 -1.496008,1.496008 z M 17.14174,9.2448187 c -0.818131,0 -1.496009,-0.6778801 -1.496009,-1.4960108 0,-0.8181307 0.677878,-1.4960122 1.496009,-1.4960122 0.81813,0 1.496012,0.6778815 1.496012,1.4960122 0,0.8181307 -0.677882,1.4960108 -1.496012,1.4960108 z"
+     id="path2-5"
+     style="stroke-width:0.02337518" />
+</svg>
+
+  </button>
+  <div class="dropdown-content lang__dropdown--content">
+    
+    
+    
+  </div>
+</div>
+
+  
   
 <div class="dropdown">
   <button class="lang__dropdown navbar__icons--icon" aria-label="Select Site Language">
@@ -1974,6 +2022,29 @@
   
 
     
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
+    <a href="http://follang.org/docs/readme/"
+      class="menu__title "></a>
+  </li>
+  
+
+    
   </ul>
 </div>
 
@@ -1999,27 +2070,23 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as <code>bash pipes</code>. For example, an subprogram output is piped to a conditional through pipe symbol <code>|</code> then the conditional takes the input and returns true or false. If returned false, then the second part of pipe is returned. To access the piped variable, <code>result</code> keyword is used:</p>
+    <p>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as <code>bash pipes</code>. For example, an subprogram output is piped to a conditional through pipe symbol <code>|</code> then the conditional takes the input and returns true or false. If returned false, then the second part of pipe is returned. To access the piped variable, <code>this</code> keyword is used:</p>
 <pre><code>pro[] main: int = {
     fun addFunc(x, y: int): int = {
         return x + y;
     }
-    var aVar: int = addFunc(4, 5) | result &gt; 8 | return 6;
+    var aVar: int = addFunc(4, 5) | if(this &gt; 8) | return 6;
 }
-</code></pre><p>However, when we assign an output of a function to a variable, we shoud expect that errors within funciton can happen. So the pipe&rsquo;s other function is to do the error checking. If the function returns an erros, the pipe does not continue further.</p>
-<p>When a pipe flow is part of the main function, the pipe reports the error with <code>panic</code> and exitin the program, if it&rsquo;s part of nested function, it reports the error with <code>report</code>, thus sending this report the the function it belongs.</p>
-<pre><code>pro[] main: int = {
-    fun addFunc(x, y: int): int = {
-        var aVar: int = someFunction(x, y) | result &gt; 8 | return 6;         // if someFunction throws an error, the pipe blocks the function here and reports the error to function
-        return aVar;
-    }
-
-    var bVar: int = addFunc(4, 5) | result &gt; 8 | return 6;                  // if addFunc throws an error, the pipe panics (because it is in the main function), thus exiting the program
-}
-</code></pre><p>To handle better the error, that we can use the <code>error</code> keyword to check: The code below basically says: <strong>if the function internally had an error, don&rsquo;t exit the program, but assign another value (or default value) to the variable</strong>:</p>
-<pre><code>var aVar: int = addFunc(4, 5) | error != nil | return 5;
-</code></pre><p>If we want capture the error in case there is one (not relaying on the internal function handling - because it might not have at all) we use the double symbol <code>||</code>. This is one of the simplest way to handle errors.</p>
-<pre><code>var aVar: int = addFunc(4, 5) || &quot;something bad inside function has happened&quot;;
+</code></pre><p>However, when we assign an output of a function to a variable, we shoud expect that errors within funciton can happen. By default, everytime a function is called, and the function throws an error in will be reported up.</p>
+<pre><code>var aVar: int = addFunc(4, 5);                                  // if there are errors, and the call is in main function, the program will exit
+                                                                // because is the last concatinator of the 'report' error
+</code></pre><p>However, when we use pipes, we pass the function values (result and the error) to the next expression, and then, it is the second expression&rsquo;s responsibility to deal with it. We use the built-in <code>check</code> that checks for error on the function:</p>
+<pre><code>var aVar: int = addFunc(4, 5) | check(this) | return 5;         // if there are errors, the error is passed to the next sepression with pipe
+                                                                // here, if there is errors, will be checked and the default value of 5 will return
+</code></pre><p>There is a shorter way to do this kind of error checking. For that we use double pipe <code>||</code>. For example, we assign the output of a function to a variable, but the function may fail, so we want a default variable:</p>
+<pre><code>var aVar: int = addFunc(4, 5) || return 5;
+</code></pre><p>Or to handle the error ourselves. This simply says, if i get the error, then we can <code>panic</code> or <code>report</code> with custom message:</p>
+<pre><code>var aVar: int = addFunc(4, 5) || panic &quot;something bad inside function has happened&quot;;
 </code></pre><p>More on error handling can be <a href="/docs/spec/errors">found here</a></p>
 
   </article>

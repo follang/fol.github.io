@@ -38,7 +38,17 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/lex/static/dynamic/</loc>
+    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/lex/</loc>
+    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/lex/</loc>
     <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
@@ -48,7 +58,17 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/lex/static/</loc>
+    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/lex/test1/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/lex/test1/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
@@ -58,12 +78,27 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/lex/static/test2/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/lex/static/dynamic/test3/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/lex/static/dynamic/test3/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/</loc>
+    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/</loc>
     <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
@@ -78,7 +113,16 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/lex/ttttest/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/modules/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/modules/</loc>
   </url>
   
   <url>
@@ -86,7 +130,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/behaviour/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/control/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/control/</loc>
   </url>
   
   <url>
@@ -94,7 +146,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/types/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/operators/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/operators/</loc>
   </url>
   
   <url>
@@ -102,7 +162,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/variables/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/pointers/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/pointers/</loc>
   </url>
   
   <url>
@@ -110,7 +178,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/functions/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/errors/</loc>
   </url>
   
   <url>
@@ -118,7 +194,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/pipes/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/concurrency/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/concurrency/</loc>
   </url>
   
   <url>
@@ -126,7 +210,15 @@
   </url>
   
   <url>
+    <loc>http://follang.org/v0.11-docs/spec/objects/</loc>
+  </url>
+  
+  <url>
     <loc>http://follang.org/docs/spec/generics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/spec/generics/</loc>
   </url>
   
   <url>
@@ -162,6 +254,11 @@
                 hreflang="en"
                 href="http://follang.org/docs/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/</loc>
+    <lastmod>2020-01-11T14:09:21+09:00</lastmod>
   </url>
   
   <url>
@@ -257,6 +354,14 @@
                 hreflang="en"
                 href="http://follang.org/tags/themes/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://follang.org/docs/readme/</loc>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/v0.11-docs/readme/</loc>
   </url>
   
 </urlset>

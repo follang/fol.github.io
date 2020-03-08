@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on FOL</title>
+    <link>http://follang.org/v0.11-docs/</link>
+    <description>Recent content in Docs on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    <lastBuildDate>Sat, 11 Jan 2020 14:09:21 +0900</lastBuildDate>
+    
+        <atom:link href="http://follang.org/v0.11-docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Lexical analysis</title>
+        <link>http://follang.org/v0.11-docs/lex/</link>
+        <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
+        
+        <guid>http://follang.org/v0.11-docs/lex/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Specifications</title>
+        <link>http://follang.org/v0.11-docs/spec/</link>
+        <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
+        
+        <guid>http://follang.org/v0.11-docs/spec/</guid>
+        <description>TYPES primitive: int, flt, chr, bol container: arr, seq, map, mat, set, any complex: num, str special: any, ptr, err DEFINITIONS use name: type = { modulename } def name: type = { body } VARIABLES var[opt] name: type = value	var[opt] name: type = value, othername: type = value var name: type = value var[opt] name = value var[opt] name: (type, type,...) = {value[0], value[1],...} var[opt] name = value | {bool} | othervalue FUNCTIONS fun name(parameters): type = return fun[opt] name(input output relation): type = {return} fun[opt] name(parameters): type = {yeild} fun[opt] name(a: list; lambda): list = {return} fun &#39;operator&#39;(two parameters max): type = {return} fun (structname)name(parameters): type = return STRUCTURES typ[opt] name: type[opt] = {description} typ[opt] name(inheritance): type[opt] = {description} GENERICS fun[opt] name(T: gen)(a: T, b: T): var[opt] = { body } typ[opt] name(T: gen)(): obj[opt] = { body } </description>
+      </item>
+      
+      <item>
+        <title></title>
+        <link>http://follang.org/v0.11-docs/readme/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://follang.org/v0.11-docs/readme/</guid>
+        <description></description>
+      </item>
+      
+    
+  </channel>
+</rss>
