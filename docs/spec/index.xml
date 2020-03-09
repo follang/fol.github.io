@@ -138,8 +138,7 @@ typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5]
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>http://follang.org/docs/spec/generics/</guid>
-        <description>Generics allow us to write a class or method that can work with any data types. Here there is a method that returns the bigger number of two.
-pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(a, b: flt[32]) flt[32] { return max(flt[32])(a, b); }; fun biggerInteger(a, b: int[64]) int[64] { return max(int[64])(a, b); }; And here is an object defined with generics.</description>
+        <description>Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
       </item>
       
     

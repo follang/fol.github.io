@@ -1010,7 +1010,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "http://follang.org/docs/spec/generics/",
-    "description": "Generics allow us to write a class or method that can work with any data types. Here there is a method that returns the bigger number of two. pro max(T: gen)(a, b: T): T …",
+    "description": "Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http://follang.org"
@@ -1302,6 +1302,42 @@
         
         <li>
           <a href="http://follang.org/docs/spec/generics/" class="menu__title active" data-depth="0">Generics</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <span class="menu__title--collapse " data-depth="0">
+    Syntax guide
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </span>
+  <ul class="menu__list " data-data=/syn/ data-link=http://follang.org/docs/spec/generics/>
+    
+      
+        
+        
+        <li>
+          <a href="http://follang.org/docs/syn/test1/" class="menu__title " data-depth="0">Test 1</a>
         </li>
       
     
@@ -1805,11 +1841,10 @@
   </ol>
   
 </nav>
-
-        
         <div class="grow"></div>
         
         
+    
     
     
     
@@ -1849,33 +1884,46 @@
         <div class="dropdown-content lang__dropdown--content">
             
                 
-                    <a href="/docs/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
+                    
+                    
+                    <a href="/docs///spec/generics/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
                 
             
                 
-                    <a href="/v0.11-docs/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
+                    
+                    
+                    <a href="/v0.11-docs///spec/generics/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
                 
             
                 
-                    <a href="/v0.10-docs/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
+                    
+                    
+                    <a href="/v0.10-docs///spec/generics/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
                 
             
                 
-                    <a href="/v0.9-docs/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
+                    
+                    
+                    <a href="/v0.9-docs///spec/generics/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
                 
             
                 
-                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches" data-lang="Archives" class="lang__dropdown--item">Archives</a>
+                    
+                    
+                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches//spec/generics/" data-lang="Archives" class="lang__dropdown--item">Archives</a>
                 
             
                 
-                    <a href="/development/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
+                    
+                    
+                    <a href="/development///spec/generics/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
                 
             
         </div>
     </div>
 
 
+        
       </div>
     </div>
   </div>
@@ -2163,6 +2211,42 @@
   
   
   
+  <span class="menu__title--collapse " data-depth="0">
+    Syntax guide
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </span>
+  <ul class="menu__list " data-data=/syn/ data-link=http://follang.org/docs/spec/generics/>
+    
+      
+        
+        
+        <li>
+          <a href="http://follang.org/docs/syn/test1/" class="menu__title " data-depth="0">Test 1</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
   
   
   <li class="">
@@ -2197,7 +2281,8 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>Generics allow us to write a class or method that can work with any data types. Here there is a method that returns the bigger number of two.</p>
+    <h2 id="generic-functions---lifting">Generic functions - lifting</h2>
+<p>The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</p>
 <pre><code>pro max(T: gen)(a, b: T): T {
 	result =  a | a &lt; b | b;
 };
@@ -2207,7 +2292,8 @@ fun biggerFloat(a, b: flt[32]) flt[32] {
 fun biggerInteger(a, b: int[64]) int[64] {
 	return max(int[64])(a, b);
 };
-</code></pre><p>And here is an object defined with generics.</p>
+</code></pre><h2 id="generic-types---concepts">Generic types - concepts</h2>
+<p>Once many algorithms within a given problem domain have been lifted, we start to see patterns among the requirements. It is common for the same set of requirements to be required by several different algorithms. When this occurs, each set of requirements is bundled into a concept. A concept contains a set of requirements that describe a family of abstractions, typically data types. Examples of concepts include Input Iterator, Graph, and Equality Comparable. When the generic programming process is carefully followed, the concepts that emerge tend to describe the abstractions within the problem domain in some logical way.</p>
 <pre><code>typ container(T: gen, N: int)(): obj = {
 	var anarray: arr[T,N];
 	+fun getsize(): num = { result = N; }
@@ -2244,7 +2330,16 @@ var aContainer: container[int, 5] = { anarray = {zero, one, two, three, four}; }
         <div class="toc">
   <h6 class="toc__label">What&#39;s on this Page</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#generic-functions---lifting">Generic functions - lifting</a></li>
+        <li><a href="#generic-types---concepts">Generic types - concepts</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <div class="toc__issue" style="padding-top:10%;">
     

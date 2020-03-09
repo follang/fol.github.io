@@ -68,6 +68,11 @@
   </url>
   
   <url>
+    <loc>http://follang.org/docs/syn/test1/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://follang.org/v0.11-docs/lex/test1/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
@@ -115,6 +120,11 @@
   <url>
     <loc>http://follang.org/v0.11-docs/lex/ttttest/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://follang.org/docs/syn/</loc>
+    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
   <url>

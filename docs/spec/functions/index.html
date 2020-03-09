@@ -1323,6 +1323,42 @@
   
   
   
+  <span class="menu__title--collapse " data-depth="0">
+    Syntax guide
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </span>
+  <ul class="menu__list " data-data=/syn/ data-link=http://follang.org/docs/spec/functions/>
+    
+      
+        
+        
+        <li>
+          <a href="http://follang.org/docs/syn/test1/" class="menu__title " data-depth="0">Test 1</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
   
   
   <li class="">
@@ -1805,11 +1841,10 @@
   </ol>
   
 </nav>
-
-        
         <div class="grow"></div>
         
         
+    
     
     
     
@@ -1849,33 +1884,46 @@
         <div class="dropdown-content lang__dropdown--content">
             
                 
-                    <a href="/docs/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
+                    
+                    
+                    <a href="/docs///spec/functions/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
                 
             
                 
-                    <a href="/v0.11-docs/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
+                    
+                    
+                    <a href="/v0.11-docs///spec/functions/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
                 
             
                 
-                    <a href="/v0.10-docs/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
+                    
+                    
+                    <a href="/v0.10-docs///spec/functions/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
                 
             
                 
-                    <a href="/v0.9-docs/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
+                    
+                    
+                    <a href="/v0.9-docs///spec/functions/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
                 
             
                 
-                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches" data-lang="Archives" class="lang__dropdown--item">Archives</a>
+                    
+                    
+                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches//spec/functions/" data-lang="Archives" class="lang__dropdown--item">Archives</a>
                 
             
                 
-                    <a href="/development/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
+                    
+                    
+                    <a href="/development///spec/functions/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
                 
             
         </div>
     </div>
 
 
+        
       </div>
     </div>
   </div>
@@ -2163,6 +2211,42 @@
   
   
   
+  <span class="menu__title--collapse " data-depth="0">
+    Syntax guide
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </span>
+  <ul class="menu__list " data-data=/syn/ data-link=http://follang.org/docs/spec/functions/>
+    
+      
+        
+        
+        <li>
+          <a href="http://follang.org/docs/syn/test1/" class="menu__title " data-depth="0">Test 1</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
   
   
   <li class="">
@@ -2219,8 +2303,8 @@
 <p>Parameters are declared as a list of identifiers separated by semicolon (or by a colon, but for code cleanness, the semicolon is preferred). A parameter is given a type by : typename. If after the parameter the <code>:</code> is not declared, but <code>,</code> colon to identfy another paremeter, of which both parameters are of the same type if after the second one the <code>:</code> and the type is placed. Then the same type parameters continue to grow with <code>,</code> until <code>:</code> is reached.</p>
 <pre><code>fun[] calc(el1, el2, el3: int[64]; changed: bol = true): int[64] = { result = el1 + el2 - el3 }
 </code></pre><p>In subprogram signatures, you must declare the type of each parameter. Requiring type annotations in subprogram definitions is obligatory, which means the compiler almost never needs you to use them elsewhere in the code to figure out what you mean. Subprogram can parameter overloaded too. It makes possible to create multiple subprogram of the same name with different implementations. Calls to an overloaded subprogram will run a specific implementation of that subprogram appropriate to the context of the call, allowing one subprogram call to perform different tasks depending on context:</p>
-<pre><code>fun retBigger(el2, el2: int): int = { return el1 | result &gt; el2 | el2 }
-fun retBigger(el2, el2: flt): flt = { return el1 | result &gt; el2 | el2 }
+<pre><code>fun retBigger(el2, el2: int): int = { return el1 | this &gt; el2 | el2 }
+fun retBigger(el2, el2: flt): flt = { return el1 | this &gt; el2 | el2 }
 
 pro main: int = {
     retBigger(4, 5);                                        // calling a subprogram with intigers
@@ -2266,7 +2350,7 @@ pro main: int = {
 }
 </code></pre><h3 id="default-arguments">Default arguments</h3>
 <p>Formal parameters can have default values too. A default value is used if no actual parameter is passed to the formal parameter. The default parameter is assigned directly after the formal parameter declaration. The compiler converts the list of arguments to an array implicitly. The number of parameters needs to be known at compile time.</p>
-<pre><code>fun[] calc(el1, el2, el3: rise: bool = true): int = { result[0] = el1 + el2 * el3 | rise | el1 + el2;  }
+<pre><code>fun[] calc(el1, el2, el3: rise: bool = true): int = { result[0] = el1 + el2 * el3 | this | el1 + el2;  }
 
 pro main: int = {
     calc(3,3,2);                                            // this returns 6, last positional parameter is not passed but 
@@ -2275,7 +2359,7 @@ pro main: int = {
 }
 </code></pre><h3 id="variadic-subprograms">Variadic subprograms</h3>
 <p>The use of <code>...</code> as the type of argument at the end of the argument list declares the subprogram as variadic. This must appear as the last argument of the subprogram. When variadic subprograms are used, the default arguments can not be used at the same time.</p>
-<pre><code>fun[] calc(rise: bool; ints: ... int): int = { result[0] = ints[0] + ints[1] + ints[2] * ints[3] | rise | ints[0] + ints[1];  }
+<pre><code>fun[] calc(rise: bool; ints: ... int): int = { result[0] = ints[0] + ints[1] + ints[2] * ints[3] | this | ints[0] + ints[1];  }
 
 pro main: int = {
     calc(true,3,3,3,2);                                     // this returns 81, four parmeters are passed as variadic arguments
@@ -2334,7 +2418,7 @@ pro main(): int = {
         if ( check(aFile) ) {
             report &quot;File could not be opened&quot; + file                        // report will not break the program, but will return the error here, and the funciton will stop
         } else {
-            return file | stringify($) | return $                           // this will be executed only if file was oopened without error
+            return file | stringify(this) | return $                        // this will be executed only if file was oopened without error
         }
     }
 }
@@ -2480,12 +2564,26 @@ Since Fol supports first class functions, it allows functions to be assigned to 
     .echo(a + b)
 }(5, 6)                                                                 //calling anonymous function
 </code></pre><h3 id="closures">Closures</h3>
-<p>Functions can appear at the top level in a module as well as inside other scopes, in which case they are called nested functions. A nested function can access local variables from its enclosing scope and if it does so it becomes a closure. Any captured variables are stored in a hidden additional argument to the closure (its environment) and they are accessed by reference by both the closure and its enclosing scope (i.e. any modifications made to them are visible in both places). The closure environment may be allocated on the heap or on the stack if the compiler determines that this would be safe. To capture variables, we use the <code>[]</code> just before the type declaration, <a href="/docs/spec/concurrency/#channels">the same as channels</a>:</p>
+<p>Functions can appear at the top level in a module as well as inside other scopes, in which case they are called nested functions. A nested function can access local variables from its enclosing scope and if it does so it becomes a closure. Any captured variables are stored in a hidden additional argument to the closure (its environment) and they are accessed by reference by both the closure and its enclosing scope (i.e. any modifications made to them are visible in both places). The closure environment may be allocated on the heap or on the stack if the compiler determines that this would be safe.</p>
+<p>There are two types of closures:</p>
+<ul>
+<li>anonymous</li>
+<li>named</li>
+</ul>
+<p>Anonymus closures automatically capture variables, while named closures need to be specified what to capture. For capture we use the <code>[]</code> just before the type declaration.</p>
 <pre><code>fun[] add(n: int): int = {
-    fun added(x: int)[n]: int = {                                       // we capture 
-        return x + n                                                    // variable $n can be accesed from within the nested function
+    fun added(x: int)[n]: int = {                                       // we make a named closure 
+        return x + n                                                    // variable $n can be accesed because we have captured ti
     }    
     return adder()
+}
+
+var added = add(1)                                                      // assigning closure to variable
+added(5)                                                                // this returns 6
+</code></pre><pre><code>fun[] add(n: int): int = {
+    return fun(x: int): int = {                                         // we make a anonymous closure 
+        return x + n                                                    // variable $n can be accesed from within the nested function
+    }
 }
 </code></pre><h3 id="currying">Currying</h3>
 <p>Currying is converting a single function of &ldquo;n&rdquo; arguments into &ldquo;n&rdquo; functions with a &ldquo;single&rdquo; argument each. Given the following function:</p>
@@ -2496,8 +2594,8 @@ Since Fol supports first class functions, it allows functions to be assigned to 
 <pre><code>f(x)(y)(z)
 </code></pre><p>However, the more iportant thing is taht, currying is a way of constructing functions that allows partial application of a function’s arguments. What this means is that you can pass all of the arguments a function is expecting and get the result, or pass a subset of those arguments and get a function back that’s waiting for the rest of the arguments.</p>
 <pre><code>fun calc(x): int = {
-   return fun adder1(y): int = {
-       return fun adder2(z): int = {
+   return fun(y): int = {
+       return fun (z): int = {
            return x + y + z
        } 
    }
@@ -2505,6 +2603,8 @@ Since Fol supports first class functions, it allows functions to be assigned to 
 
 var value: int = calc(5)(6)                                             // this is okay, the function is still finished
 var another int = value(8)                                              // this completes the function
+
+var allIn: int = calc(5)(6)(8)                                          // or this as alternative
 </code></pre><h3 id="higer-order-functions">Higer-order functions</h3>
 <p>A higher-order function is a function that takes a function as an argument. This is commonly used to customize the behavior of a generically defined function, often a looping construct or recursion scheme.</p>
 <p>They are functions which do at least one of the following:</p>
