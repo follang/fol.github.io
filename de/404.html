@@ -456,7 +456,7 @@
 
   
     
-    var permalink = JSON.parse("\"https://follang.org/de/404.html\"");
+    var searchURL = JSON.parse("\"https://follang.org/de/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -471,7 +471,7 @@
     if (enableSearch) {
       (function initFuse() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', permalink + "index.json");
+        xhr.open('GET', searchURL + "index.json");
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
@@ -1340,7 +1340,22 @@
         
         
 <main class="main">
-  Page not found
+	<div id="notfound">
+		<div class="notfound-bg">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="notfound">
+			<div class="notfound-404">
+				<h1>404</h1>
+			</div>
+			<h2>Page Not Found</h2>
+			<p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+			<a href="#">Homepage</a>
+		</div>
+	</div>
 </main>
 
         
