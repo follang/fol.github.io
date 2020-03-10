@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Libs on FOL</title>
-    <link>http://follang.org/libs/</link>
+    <link>https://follang.org/libs/</link>
     <description>Recent content in Libs on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     <lastBuildDate>Sat, 11 Jan 2020 14:09:21 +0900</lastBuildDate>
     
-        <atom:link href="http://follang.org/libs/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.org/libs/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>CORE</title>
-        <link>http://follang.org/libs/core/</link>
+        <link>https://follang.org/libs/core/</link>
         <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
         
-        <guid>http://follang.org/libs/core/</guid>
+        <guid>https://follang.org/libs/core/</guid>
         <description></description>
       </item>
       
       <item>
         <title>STD</title>
-        <link>http://follang.org/libs/std/</link>
+        <link>https://follang.org/libs/std/</link>
         <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
         
-        <guid>http://follang.org/libs/std/</guid>
+        <guid>https://follang.org/libs/std/</guid>
         <description></description>
       </item>
       
