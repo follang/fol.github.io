@@ -33,17 +33,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/lex/static/dynamic/</loc>
-    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/lex/static/dynamic/</loc>
-    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/lex/</loc>
     <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
@@ -53,22 +43,22 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/lex/static/</loc>
-    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/lex/static/</loc>
     <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/lex/test1/</loc>
+    <loc>https://follang.org/docs/1_lex/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/syn/test1/</loc>
+    <loc>https://follang.org/docs/1_lex/test1/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/5_typ/test1/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
@@ -78,28 +68,13 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/lex/static/test2/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/lex/static/test2/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/lex/static/dynamic/test3/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://follang.org/v0.11-docs/lex/static/dynamic/test3/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/spec/</loc>
-    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
   </url>
   
   <url>
@@ -113,22 +88,37 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/lex/ttttest/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/lex/ttttest/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/syn/</loc>
-    <lastmod>2020-02-28T10:08:56+09:00</lastmod>
+    <loc>https://follang.org/docs/2_mac/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/modules/</loc>
+    <loc>https://follang.org/docs/3_ite/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/4_exp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/5_typ/</loc>
+    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/6_mem/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/7_pro/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/3_ite/modules/</loc>
   </url>
   
   <url>
@@ -136,7 +126,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/behaviour/</loc>
+    <loc>https://follang.org/docs/2_mac/behaviour/</loc>
   </url>
   
   <url>
@@ -144,7 +134,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/control/</loc>
+    <loc>https://follang.org/docs/4_exp/control/</loc>
   </url>
   
   <url>
@@ -152,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/types/</loc>
+    <loc>https://follang.org/docs/3_ite/types/</loc>
   </url>
   
   <url>
@@ -160,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/operators/</loc>
+    <loc>https://follang.org/docs/4_exp/operators/</loc>
   </url>
   
   <url>
@@ -168,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/variables/</loc>
+    <loc>https://follang.org/docs/3_ite/variables/</loc>
   </url>
   
   <url>
@@ -176,7 +166,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/pointers/</loc>
+    <loc>https://follang.org/docs/6_mem/pointers/</loc>
   </url>
   
   <url>
@@ -184,7 +174,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/functions/</loc>
+    <loc>https://follang.org/docs/3_ite/functions/</loc>
   </url>
   
   <url>
@@ -192,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/errors/</loc>
+    <loc>https://follang.org/docs/3_ite/errors/</loc>
   </url>
   
   <url>
@@ -200,7 +190,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/pipes/</loc>
+    <loc>https://follang.org/docs/3_ite/pipes/</loc>
   </url>
   
   <url>
@@ -208,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/concurrency/</loc>
+    <loc>https://follang.org/docs/7_pro/concurrency/</loc>
   </url>
   
   <url>
@@ -216,7 +206,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/objects/</loc>
+    <loc>https://follang.org/docs/3_ite/objects/</loc>
   </url>
   
   <url>
@@ -224,7 +214,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/spec/generics/</loc>
+    <loc>https://follang.org/docs/3_ite/generics/</loc>
   </url>
   
   <url>

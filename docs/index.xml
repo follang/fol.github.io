@@ -16,28 +16,64 @@
       
       <item>
         <title>Lexical analysis</title>
-        <link>https://follang.org/docs/lex/</link>
-        <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
+        <link>https://follang.org/docs/1_lex/</link>
+        <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
         
-        <guid>https://follang.org/docs/lex/</guid>
+        <guid>https://follang.org/docs/1_lex/</guid>
         <description></description>
       </item>
       
       <item>
-        <title>Specifications</title>
-        <link>https://follang.org/docs/spec/</link>
-        <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
+        <title>Macro system</title>
+        <link>https://follang.org/docs/2_mac/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/spec/</guid>
+        <guid>https://follang.org/docs/2_mac/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Syntatic items</title>
+        <link>https://follang.org/docs/3_ite/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/3_ite/</guid>
         <description>TYPES primitive: int, flt, chr, bol container: arr, seq, map, mat, set, any complex: num, str special: any, ptr, err DEFINITIONS use name: type = { modulename } def name: type = { body } VARIABLES var[opt] name: type = value	var[opt] name: type = value, othername: type = value var name: type = value var[opt] name = value var[opt] name: (type, type,...) = {value[0], value[1],...} var[opt] name = value | {bool} | othervalue FUNCTIONS fun name(parameters): type = return fun[opt] name(input output relation): type = {return} fun[opt] name(parameters): type = {yeild} fun[opt] name(a: list; lambda): list = {return} fun &#39;operator&#39;(two parameters max): type = {return} fun (structname)name(parameters): type = return STRUCTURES typ[opt] name: type[opt] = {description} typ[opt] name(inheritance): type[opt] = {description} GENERICS fun[opt] name(T: gen)(a: T, b: T): var[opt] = { body } typ[opt] name(T: gen)(): obj[opt] = { body } </description>
       </item>
       
       <item>
-        <title>Syntax guide</title>
-        <link>https://follang.org/docs/syn/</link>
-        <pubDate>Fri, 28 Feb 2020 10:08:56 +0900</pubDate>
+        <title>Code expressions</title>
+        <link>https://follang.org/docs/4_exp/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/syn/</guid>
+        <guid>https://follang.org/docs/4_exp/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Type system</title>
+        <link>https://follang.org/docs/5_typ/</link>
+        <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
+        
+        <guid>https://follang.org/docs/5_typ/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Memory model</title>
+        <link>https://follang.org/docs/6_mem/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/6_mem/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Multi Threading</title>
+        <link>https://follang.org/docs/7_pro/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/7_pro/</guid>
         <description></description>
       </item>
       
