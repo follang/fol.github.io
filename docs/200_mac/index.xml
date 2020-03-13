@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Macro system on FOL</title>
+    <link>https://follang.org/docs/200_mac/</link>
+    <description>Recent content in Macro system on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/200_mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Build-In</title>
+        <link>https://follang.org/docs/200_mac/buildin/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/buildin/</guid>
+        <description>WITH ALTERNATIVES, MACROS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEWORSD AND BEHAVIOUR. HOWEVER, THIS IS NOT SUGGESTED.
+RELAYING HEAVILY ON IT, THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE ELSE WANTS TO USE.
+ Build-in functions Fol has some build-in functions offered by compiler, and you access them by . (with space/newline/bracket before):
+var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .</description>
+      </item>
+      
+      <item>
+        <title>Macors</title>
+        <link>https://follang.org/docs/200_mac/macros/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/macros/</guid>
+        <description>Macros Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
+For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
+      </item>
+      
+      <item>
+        <title>Templates</title>
+        <link>https://follang.org/docs/200_mac/temp/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/temp/</guid>
+        <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
+For example here is how the != is defined:
+fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
+      </item>
+      
+    
+  </channel>
+</rss>

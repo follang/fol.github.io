@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Modules tree on FOL</title>
+    <link>https://follang.org/docs/250_mod/</link>
+    <description>Recent content in Modules tree on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/250_mod/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Modules</title>
+        <link>https://follang.org/docs/250_mod/modules/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/250_mod/modules/</guid>
+        <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
+use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
+use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
+      </item>
+      
+      <item>
+        <title>Scope</title>
+        <link>https://follang.org/docs/250_mod/scopes/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/250_mod/scopes/</guid>
+        <description>Every file in a folder is part of one package, thus they share the same scope. Thus two varibles with same name at global scope cant be defined. However, this is kind of special for functions. Functions of the same name and same amount of parameters (so identical functions, not function overloading) can be defined in two different files. When called, the one on the same file is used.
+In case a function exists in two files and is called from thrid one, then this can be resolved in two ways.</description>
+      </item>
+      
+      <item>
+        <title>Blocks</title>
+        <link>https://follang.org/docs/250_mod/blocks/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/250_mod/blocks/</guid>
+        <description>Namespaces A namespace can be defined in three ways:
+ in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main module
+def shko/other: mod[] = { pro[] main: int = { // implementation } // implementation } or in the same module file:
+def shko: mod[] = { pro[] main: int = { // implementation } def shko/other: mod[] = { // implementation } } Blocks Block statement is used for scopes where members get destroyed when scope is finished.</description>
+      </item>
+      
+    
+  </channel>
+</rss>

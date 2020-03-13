@@ -16,64 +16,73 @@
       
       <item>
         <title>Lexical analysis</title>
-        <link>https://follang.org/docs/1_lex/</link>
-        <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
+        <link>https://follang.org/docs/100_lex/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/1_lex/</guid>
+        <guid>https://follang.org/docs/100_lex/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Macro system</title>
-        <link>https://follang.org/docs/2_mac/</link>
+        <link>https://follang.org/docs/200_mac/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/2_mac/</guid>
+        <guid>https://follang.org/docs/200_mac/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Modules tree</title>
+        <link>https://follang.org/docs/250_mod/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/250_mod/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Syntatic items</title>
-        <link>https://follang.org/docs/3_ite/</link>
+        <link>https://follang.org/docs/300_ite/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/3_ite/</guid>
-        <description>TYPES primitive: int, flt, chr, bol container: arr, seq, map, mat, set, any complex: num, str special: any, ptr, err DEFINITIONS use name: type = { modulename } def name: type = { body } VARIABLES var[opt] name: type = value	var[opt] name: type = value, othername: type = value var name: type = value var[opt] name = value var[opt] name: (type, type,...) = {value[0], value[1],...} var[opt] name = value | {bool} | othervalue FUNCTIONS fun name(parameters): type = return fun[opt] name(input output relation): type = {return} fun[opt] name(parameters): type = {yeild} fun[opt] name(a: list; lambda): list = {return} fun &#39;operator&#39;(two parameters max): type = {return} fun (structname)name(parameters): type = return STRUCTURES typ[opt] name: type[opt] = {description} typ[opt] name(inheritance): type[opt] = {description} GENERICS fun[opt] name(T: gen)(a: T, b: T): var[opt] = { body } typ[opt] name(T: gen)(): obj[opt] = { body } </description>
+        <guid>https://follang.org/docs/300_ite/</guid>
+        <description></description>
       </item>
       
       <item>
         <title>Code expressions</title>
-        <link>https://follang.org/docs/4_exp/</link>
+        <link>https://follang.org/docs/400_exp/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/4_exp/</guid>
+        <guid>https://follang.org/docs/400_exp/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Type system</title>
-        <link>https://follang.org/docs/5_typ/</link>
+        <link>https://follang.org/docs/500_typ/</link>
         <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
         
-        <guid>https://follang.org/docs/5_typ/</guid>
+        <guid>https://follang.org/docs/500_typ/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Memory model</title>
-        <link>https://follang.org/docs/6_mem/</link>
+        <link>https://follang.org/docs/600_mem/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/6_mem/</guid>
+        <guid>https://follang.org/docs/600_mem/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Multi Threading</title>
-        <link>https://follang.org/docs/7_pro/</link>
+        <link>https://follang.org/docs/700_pro/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/7_pro/</guid>
+        <guid>https://follang.org/docs/700_pro/</guid>
         <description></description>
       </item>
       

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lexical analysis on FOL</title>
+    <link>https://follang.org/docs/100_lex/</link>
+    <description>Recent content in Lexical analysis on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/100_lex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Keywords</title>
+        <link>https://follang.org/docs/100_lex/keywords/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/keywords/</guid>
+        <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
+Keywords FOL has some reserved keywords that can&amp;rsquo;t be used:
+Here are what lexer considers a keyword:
+FOL_AS: as
+FOL_IF: if
+FOL_IN: in
+FOL_ELSE: else
+FOL_PANIC: panic
+FOL_BREAK: break
+FOL_RETURN: return
+FOL_REPORT: report
+ </description>
+      </item>
+      
+      <item>
+        <title>Identifiers</title>
+        <link>https://follang.org/docs/100_lex/identify/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/identify/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Comments</title>
+        <link>https://follang.org/docs/100_lex/comments/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/comments/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Tokens</title>
+        <link>https://follang.org/docs/100_lex/tokens/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/tokens/</guid>
+        <description></description>
+      </item>
+      
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Multi Threading on FOL</title>
+    <link>https://follang.org/docs/700_pro/</link>
+    <description>Recent content in Multi Threading on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/700_pro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Concurrency</title>
+        <link>https://follang.org/docs/700_pro/concurrency/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_pro/concurrency/</guid>
+        <description>Concurrency Concurrency is the ability of different tasks of a program to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent tasks, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program into order-independent or partially-ordered tasks.
+There are two distinct categories of concurrent task control.</description>
+      </item>
+      
+    
+  </channel>
+</rss>
