@@ -142,9 +142,9 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_mac/buildin/</guid>
-        <description>WITH ALTERNATIVES, MACROS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEWORSD AND BEHAVIOUR. HOWEVER, THIS IS NOT SUGGESTED.
-RELAYING HEAVILY ON IT, THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE ELSE WANTS TO USE.
- Build-in functions Fol has some build-in functions offered by compiler, and you access them by . (with space/newline/bracket before):
+        <description>WITH BUILD-INS, ALTERNATIVES, MACROS, DEFAULTS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEYWORDS, IDENTIFIERS, AND BEHAVIOUR.
+ IT IS NOT SUGGESTED TO RELAY HEAVILY ON MACROS BECAUSE THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE TRIES TO USE YOUR CODE.
+ Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
 var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .</description>
       </item>
       
@@ -412,25 +412,24 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
         <guid>https://follang.org/docs/100_lex/keywords/</guid>
         <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
 Keywords Fol has a number of restricted groups of keywords:
-AI (assignment indentifiers) AI_USE: use
-AI_DEF: def
-AI_VAR: var
-AI_FUN: fun
-AI_PRO: pro
-AI_TYP: typ
- TI (type indentifiers) TI_INT: int
-TI_FLT: flt
-TI_CHR: chr
-TI_BOL: bol
-TI_ARR: arr
-TI_SEQ: seq
-TI_VEC: vec
-TI_SET: set
-TI_MAP: map
-TI_MAT: mat
-TI_STR: str
-TI_NUM: num
-TI_OPT: opt</description>
+AI (assignment indentifiers) AI_USE use
+AI_DEF def
+AI_VAR var
+AI_FUN fun
+AI_PRO pro
+AI_TYP typ
+ AI: (AI_USE|AI_DEF|...)
+ TI (type indentifiers) TI_INT int
+TI_FLT flt
+TI_CHR chr
+TI_BOL bol
+TI_ARR arr
+TI_SEQ seq
+TI_VEC vec
+TI_SET set
+TI_MAP map
+TI_MAT mat
+TI_STR str</description>
       </item>
       
       <item>
@@ -439,10 +438,13 @@ TI_OPT: opt</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/identify/</guid>
-        <description>Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
+        <description>Encoding Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
 IDENTIFIER:
 [a-z A-Z] [a-z A-Z 0-9 _]* | _ [a-z A-Z 0-9 _]+
- </description>
+ An identifier is any nonempty ASCII string of the following form:
+Either
+ The first character is a letter. The remaining characters are alphanumeric or _.  Or
+ The first character is _.</description>
       </item>
       
       <item>
@@ -451,7 +453,12 @@ IDENTIFIER:
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/comments/</guid>
-        <description></description>
+        <description>Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace.
+LINE_COMMENT :
+// (~[/ !] | //) ~\n* | //
+BLOCK_COMMENT :
+/* (~[* !] ) ( ~*/)* */ | /**/
+ Docs comments Doc comments beginning with exactly three slashes (///) are interpreted as a special syntax for doc attributes.</description>
       </item>
       
       <item>
@@ -460,7 +467,14 @@ IDENTIFIER:
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/tokens/</guid>
-        <description></description>
+        <description>Assigning \n(\t|\s)*(\W)?(AI)(\[(OI)\])*
+\n(\t|\s)*(AI)
+| \n(\t|\s)*\W(AI)
+| \n(\t|\s)*(AI)(\[\])
+| \n(\t|\s)*\W(AI)(\[\])
+| \n(\t|\s)*(AI)(\[(OI)\])
+| \n(\t|\s)*\W(AI)(\[(OI)\])
+ </description>
       </item>
       
       <item>
@@ -473,24 +487,6 @@ IDENTIFIER:
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice&lt;br /&gt;
 subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc&lt;br /&gt;
 caluere tempus&lt;/p&gt;</description>
-      </item>
-      
-      <item>
-        <title></title>
-        <link>https://follang.org/docs/readme/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/readme/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title></title>
-        <link>https://follang.org/v0.11-docs/readme/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/v0.11-docs/readme/</guid>
-        <description></description>
       </item>
       
     

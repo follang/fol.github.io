@@ -21,25 +21,24 @@
         <guid>https://follang.org/docs/100_lex/keywords/</guid>
         <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
 Keywords Fol has a number of restricted groups of keywords:
-AI (assignment indentifiers) AI_USE: use
-AI_DEF: def
-AI_VAR: var
-AI_FUN: fun
-AI_PRO: pro
-AI_TYP: typ
- TI (type indentifiers) TI_INT: int
-TI_FLT: flt
-TI_CHR: chr
-TI_BOL: bol
-TI_ARR: arr
-TI_SEQ: seq
-TI_VEC: vec
-TI_SET: set
-TI_MAP: map
-TI_MAT: mat
-TI_STR: str
-TI_NUM: num
-TI_OPT: opt</description>
+AI (assignment indentifiers) AI_USE use
+AI_DEF def
+AI_VAR var
+AI_FUN fun
+AI_PRO pro
+AI_TYP typ
+ AI: (AI_USE|AI_DEF|...)
+ TI (type indentifiers) TI_INT int
+TI_FLT flt
+TI_CHR chr
+TI_BOL bol
+TI_ARR arr
+TI_SEQ seq
+TI_VEC vec
+TI_SET set
+TI_MAP map
+TI_MAT mat
+TI_STR str</description>
       </item>
       
       <item>
@@ -48,10 +47,13 @@ TI_OPT: opt</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/identify/</guid>
-        <description>Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
+        <description>Encoding Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
 IDENTIFIER:
 [a-z A-Z] [a-z A-Z 0-9 _]* | _ [a-z A-Z 0-9 _]+
- </description>
+ An identifier is any nonempty ASCII string of the following form:
+Either
+ The first character is a letter. The remaining characters are alphanumeric or _.  Or
+ The first character is _.</description>
       </item>
       
       <item>
@@ -60,7 +62,12 @@ IDENTIFIER:
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/comments/</guid>
-        <description></description>
+        <description>Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace.
+LINE_COMMENT :
+// (~[/ !] | //) ~\n* | //
+BLOCK_COMMENT :
+/* (~[* !] ) ( ~*/)* */ | /**/
+ Docs comments Doc comments beginning with exactly three slashes (///) are interpreted as a special syntax for doc attributes.</description>
       </item>
       
       <item>
@@ -69,7 +76,14 @@ IDENTIFIER:
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/tokens/</guid>
-        <description></description>
+        <description>Assigning \n(\t|\s)*(\W)?(AI)(\[(OI)\])*
+\n(\t|\s)*(AI)
+| \n(\t|\s)*\W(AI)
+| \n(\t|\s)*(AI)(\[\])
+| \n(\t|\s)*\W(AI)(\[\])
+| \n(\t|\s)*(AI)(\[(OI)\])
+| \n(\t|\s)*\W(AI)(\[(OI)\])
+ </description>
       </item>
       
     

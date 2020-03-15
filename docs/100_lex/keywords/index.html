@@ -1037,36 +1037,13 @@
     
     <div id="container">
         <div id="myDrawer" class="drawer" style="">
-  <div class="drawer__header">
-      
-      <div onclick="location.href='\/';" style="padding-left:5%; cursor: pointer;" id="svglogo" class="navbar__logo--wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="35" fill="currentColor" viewBox="0 0 42 24">
-  <g fill="#b380ff">
-    <path class="the_logo" d="M20.986.868a11.16 11.16 0 00-2.489.296V8.97L23.646 6 28.1 3.427a11.16 11.16 0 00-2.38-1.497l-4.735 2.733zm-3.898.712A11.16 11.16 0 0014.6 2.896v5.5l-3.29-1.899a11.16 11.16 0 00-.995 2.298l1.628.939 5.145 2.97v-5.94zm12.048 2.826l-1.632.943-5.146 2.972 5.146 2.97 4.483 2.587a11.16 11.16 0 00.167-1.852 11.16 11.16 0 00-.048-.948L27.331 8.32l3.296-1.903a11.16 11.16 0 00-1.491-2.012zm-19.134 5.775a11.16 11.16 0 00-.167 1.845 11.16 11.16 0 00.047.959l4.787 2.764-3.296 1.903a11.16 11.16 0 001.492 2.008l1.632-.94 5.147-2.971-5.147-2.972zm14.861 1.186v11.119a11.16 11.16 0 002.486-1.303v-5.508l3.31 1.91a11.16 11.16 0 001.004-2.292l-1.655-.955zm-1.368 3.7l-5.146 2.972-4.469 2.58a11.16 11.16 0 002.38 1.498l4.748-2.743v3.812a11.16 11.16 0 002.487-.299V21.01z"/>
-    <text style="line-height:1.25;font-feature-settings:normal;text-align:start" x="12.5" y="152.709" font-weight="400" font-size="137.837" letter-spacing="0" word-spacing="0" transform="matrix(.11697 0 0 .11697 -2.367 .348)" font-family="Bahnschrift" stroke-width="3.446">
-      <tspan x="12.5" y="152.709" style="font-feature-settings:normal;text-align:start">F</tspan>
-    </text>
-    <text style="line-height:1.25;font-feature-settings:normal;text-align:start" x="-387.54" y="150.732" transform="matrix(-.11697 0 0 .11697 -2.367 .348)" font-weight="400" font-size="137.837" letter-spacing="0" word-spacing="0" font-family="Bahnschrift" stroke-width="3.446">
-      <tspan x="-387.54" y="150.732" style="font-feature-settings:normal;text-align:start">L</tspan>
-    </text>
-  </g>
-</svg>
-
-      </div>
-      
-  <div class="grow"></div>
-    <div class="drawer__close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg>
-    </div>
-  </div>
-
   <div class="drawer__body">
     <div class="menu">
-  <h6 class="menu__label">
+  
     
-      Keywords
+      
     
-  </h6>
+  
   <ul>
     
     
@@ -1470,29 +1447,6 @@
   
 
     
-      
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  <li class="">
-    <a href="https://follang.org/docs/readme/"
-      class="menu__title "></a>
-  </li>
-  
-
-    
   </ul>
 </div>
 
@@ -1521,6 +1475,7 @@
 </script>
 
   </div>
+  <div class="drawer__close"></div>
 </div>
 <div id="myModal" class="modal" style=""></div>
 
@@ -1597,6 +1552,9 @@
   <div class="navbar__collapse" data-open="false">
   <ul>
     
+  <li class="navbar__menu--mobile-item ">
+    <a href="/" class="">Home</a>
+  </li>
 
   
   
@@ -2480,29 +2438,6 @@
   
 
     
-      
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  <li class="">
-    <a href="https://follang.org/docs/readme/"
-      class="menu__title "></a>
-  </li>
-  
-
-    
   </ul>
 </div>
 
@@ -2534,75 +2469,88 @@
 <p>Fol has a number of restricted groups of keywords:</p>
 <h3 id="ai-assignment-indentifiers">AI (assignment indentifiers)</h3>
 <div class="placeholder " > 
-<p>AI_USE:            <code>use</code><br />
-AI_DEF:            <code>def</code><br />
-AI_VAR:            <code>var</code><br />
-AI_FUN:            <code>fun</code><br />
-AI_PRO:            <code>pro</code><br />
-AI_TYP:            <code>typ</code></p>
+<p>AI_USE             <code>use</code><br />
+AI_DEF             <code>def</code><br />
+AI_VAR             <code>var</code><br />
+AI_FUN             <code>fun</code><br />
+AI_PRO             <code>pro</code><br />
+AI_TYP             <code>typ</code></p>
+</div>
+<div class="placeholder " >
+<p><code>AI: (AI_USE|AI_DEF|...)</code></p>
 </div>
 <h3 id="ti-type-indentifiers">TI (type indentifiers)</h3>
 <div class="placeholder " > 
-<p>TI_INT:            <code>int</code><br />
-TI_FLT:            <code>flt</code><br />
-TI_CHR:            <code>chr</code><br />
-TI_BOL:            <code>bol</code></p>
-<p>TI_ARR:            <code>arr</code><br />
-TI_SEQ:            <code>seq</code><br />
-TI_VEC:            <code>vec</code><br />
-TI_SET:            <code>set</code><br />
-TI_MAP:            <code>map</code><br />
-TI_MAT:            <code>mat</code></p>
-<p>TI_STR:            <code>str</code><br />
-TI_NUM:            <code>num</code></p>
-<p>TI_OPT:            <code>opt</code><br />
-TI_MUL:            <code>mul</code><br />
-TI_ANY:            <code>any</code></p>
-<p>TI_PTR:            <code>ptr</code><br />
-TI_ERR:            <code>err</code><br />
-TI_NON:            <code>non</code></p>
-<p>TI_REC:            <code>rec</code><br />
-TI_LST:            <code>lst</code><br />
-TI_ENM:            <code>enm</code><br />
-TI_UNI:            <code>uni</code><br />
-TI_CLS:            <code>cls</code></p>
-<p>TI_STD:            <code>std</code><br />
-TI_MOD:            <code>mod</code><br />
-TI_BLK:            <code>blk</code></p>
+<p>TI_INT             <code>int</code><br />
+TI_FLT             <code>flt</code><br />
+TI_CHR             <code>chr</code><br />
+TI_BOL             <code>bol</code></p>
+<p>TI_ARR             <code>arr</code><br />
+TI_SEQ             <code>seq</code><br />
+TI_VEC             <code>vec</code><br />
+TI_SET             <code>set</code><br />
+TI_MAP             <code>map</code><br />
+TI_MAT             <code>mat</code></p>
+<p>TI_STR             <code>str</code><br />
+TI_NUM             <code>num</code></p>
+<p>TI_OPT             <code>opt</code><br />
+TI_MUL             <code>mul</code><br />
+TI_ANY             <code>any</code></p>
+<p>TI_PTR             <code>ptr</code><br />
+TI_ERR             <code>err</code><br />
+TI_NON             <code>non</code></p>
+<p>TI_REC             <code>rec</code><br />
+TI_LST             <code>lst</code><br />
+TI_ENM             <code>enm</code><br />
+TI_UNI             <code>uni</code><br />
+TI_CLS             <code>cls</code></p>
+<p>TI_STD             <code>std</code><br />
+TI_MOD             <code>mod</code><br />
+TI_BLK             <code>blk</code></p>
+</div>
+<div class="placeholder " >
+<p><code>TI: (TI_INT|TI_FLT|...)</code></p>
 </div>
 <div class="notices warn" >
 <p>Note that all of the <strong>type indentifiers</strong> are of three characters long. It is recomanded that identifiers not to be of the same number of characters, as ne day in the future versoin of fol, it may include more.</p>
 </div>
 <h3 id="oi-option-indentifiers">OI (option indentifiers)</h3>
 <div class="placeholder " >
-<p>OI_PUB              <code>pub</code></p>
+<p>OI_PUB              <code>pub</code><br />
+OI_EXP              <code>exp</code></p>
+</div>
+<div class="placeholder " >
+<p><code>OI: ((OI_PUB|OI_EXP|...),?)*</code></p>
 </div>
 <h3 id="bi-build-in-indentifiers">BI (build-in indentifiers)</h3>
 <div class="placeholder " > 
-<p>BI_AS:             <code>as</code><br />
-BI_IN:             <code>in</code><br />
-BI_DO:             <code>do</code><br />
-BI_GO:             <code>go</code></p>
-<p>BI_OR:             <code>or</code><br />
-BI_AND:            <code>and</code></p>
-<p>BI_IF:             <code>if</code><br />
-BI_ELSE:           <code>else</code><br />
-BI_FOR:            <code>for</code><br />
-BI_CASE:           <code>case</code><br />
-BI_LIKE:           <code>like</code><br />
-BI_TYPE:           <code>type</code><br />
-BI_LOOP:           <code>loop</code><br />
-BI_NONE:           <code>none</code></p>
-<p>BI_THIS:           <code>this</code><br />
-BI_SELF:           <code>self</code></p>
-<p>BI_BREAK:          <code>break</code><br />
-BI_RETURN:         <code>return</code><br />
-BI_YEILD:          <code>yeild</code><br />
-BI_PANIC:          <code>panic</code><br />
-BI_REPORT:         <code>report</code><br />
-BI_CHECK:          <code>check</code></p>
-<p>BI_TRUE:           <code>true</code><br />
-BI_FALSE:          <code>false</code></p>
+<p>BI_AS              <code>as</code><br />
+BI_IN              <code>in</code><br />
+BI_DO              <code>do</code><br />
+BI_GO              <code>go</code></p>
+<p>BI_OR              <code>or</code><br />
+BI_AND             <code>and</code></p>
+<p>BI_IF              <code>if</code><br />
+BI_ELSE            <code>else</code><br />
+BI_FOR             <code>for</code><br />
+BI_CASE            <code>case</code><br />
+BI_LIKE            <code>like</code><br />
+BI_TYPE            <code>type</code><br />
+BI_LOOP            <code>loop</code><br />
+BI_NONE            <code>none</code></p>
+<p>BI_THIS            <code>this</code><br />
+BI_SELF            <code>self</code></p>
+<p>BI_BREAK           <code>break</code><br />
+BI_RETURN          <code>return</code><br />
+BI_YEILD           <code>yeild</code><br />
+BI_PANIC           <code>panic</code><br />
+BI_REPORT          <code>report</code><br />
+BI_CHECK           <code>check</code></p>
+<p>BI_TRUE            <code>true</code><br />
+BI_FALSE           <code>false</code></p>
+</div>
+<div class="placeholder " >
+<p><code>BI: (BI_AS|BI_IN|...)</code></p>
 </div>
 
   </article>
