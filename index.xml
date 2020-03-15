@@ -411,17 +411,26 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
         
         <guid>https://follang.org/docs/100_lex/keywords/</guid>
         <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
-Keywords FOL has some reserved keywords that can&amp;rsquo;t be used:
-Here are what lexer considers a keyword:
-FOL_AS: as
-FOL_IF: if
-FOL_IN: in
-FOL_ELSE: else
-FOL_PANIC: panic
-FOL_BREAK: break
-FOL_RETURN: return
-FOL_REPORT: report
- </description>
+Keywords Fol has a number of restricted groups of keywords:
+AI (assignment indentifiers) AI_USE: use
+AI_DEF: def
+AI_VAR: var
+AI_FUN: fun
+AI_PRO: pro
+AI_TYP: typ
+ TI (type indentifiers) TI_INT: int
+TI_FLT: flt
+TI_CHR: chr
+TI_BOL: bol
+TI_ARR: arr
+TI_SEQ: seq
+TI_VEC: vec
+TI_SET: set
+TI_MAP: map
+TI_MAT: mat
+TI_STR: str
+TI_NUM: num
+TI_OPT: opt</description>
       </item>
       
       <item>
@@ -430,7 +439,10 @@ FOL_REPORT: report
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/identify/</guid>
-        <description></description>
+        <description>Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
+IDENTIFIER:
+[a-z A-Z] [a-z A-Z 0-9 _]* | _ [a-z A-Z 0-9 _]+
+ </description>
       </item>
       
       <item>
