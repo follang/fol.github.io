@@ -962,6 +962,7 @@
   
   }
 </script>
+
     
 
 
@@ -1037,40 +1038,15 @@
         <div id="myDrawer" class="drawer" style="">
   <div class="drawer__body">
     <div class="menu">
-  
-    
-      
-    
-  
-  <ul>
     
     
-  </ul>
+    
+        
+        
+    
 </div>
 
 
-
-<script>
-  var menuTitle = document.querySelectorAll('.menu__title');
-  var modal = document.getElementById("myModal");
-  var drawer = document.getElementById('myDrawer');
-
-  var closeDrawer = function () {
-    setTimeout(function () {
-      modal.style.opacity = 0;
-      drawer.style.left = '-100%';
-      modal.style.left = '-100%';
-    }, 250);
-  }
-
-  menuTitle ?
-  menuTitle.forEach(function(elem) {
-    elem.onclick = function() {
-      closeDrawer();
-      localStorage.setItem('isDrawerOpen', 'false');
-    }
-  }) : null;
-</script>
 
   </div>
   <div class="drawer__close"></div>
@@ -1395,7 +1371,7 @@
             </a>
         </div>
         <div class="compass-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" style="width: 80%;">
                 <title>compass_vector</title>
                 <g id="Base">
                     <line x1="51.25" y1="42.75" x2="243" y2="242" style="fill: none;stroke: #b380ff;stroke-miterlimit: 10;stroke-width: 0.5px;stroke-dasharray: 12.002400398254395"/>
