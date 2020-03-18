@@ -199,7 +199,6 @@
     var rightBurger = document.getElementById('rightBurger');
     var rightModal = document.getElementById("rightModal");
     var rightDrawer = document.getElementById('rightDrawer');
-    var drawerCloseBtn = document.querySelector('.drawer__close');
 
     var openRightDrawer = function() {
         rightModal.style.opacity = 1;
@@ -222,15 +221,10 @@
       closeRightDrawer();
       localStorage.setItem('isRightDrawerOpen', 'false');
     }
-    drawerCloseBtn.onclick = function () {
-      closeRightDrawer();
-      localStorage.setItem('isRightDrawerOpen', 'false');
-    }
     
     var leftBurger = document.getElementById('leftBurger');
     var leftModal = document.getElementById("leftModal");
     var leftDrawer = document.getElementById('leftDrawer');
-    var drawerCloseBtn = document.querySelector('.drawer__close');
     var openLeftDrawer = function() {
       leftModal.style.opacity = 1;
       leftModal.style.left = 0;
@@ -246,10 +240,6 @@
       localStorage.setItem('isLeftDrawerOpen', 'true');
     }
     leftModal.onclick = function () {
-      closeLeftDrawer();
-      localStorage.setItem('isLeftDrawerOpen', 'false');
-    }
-    drawerCloseBtn.onclick = function () {
       closeLeftDrawer();
       localStorage.setItem('isLeftDrawerOpen', 'false');
     }
@@ -1048,510 +1038,10 @@
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
             document.getElementById('root').className = `theme__${localTheme}`;
-        }        
+        }
     </script>
-    
+
     <div id="container">
-        <div id="myDrawer" class="drawer" style="">
-  <div class="drawer__header">
-    <a href="/" class="drawer__header--text">
-      FOL
-    </a>
-    <div class="grow"></div>
-    <div class="drawer__close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg>
-    </div>
-  </div>
-
-  <div class="drawer__body">
-    <div class="menu">
-  <h6 class="menu__label">
-    
-      Modules
-    
-  </h6>
-  <ul>
-    
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Lexical analysis
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/100_lex/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/keywords/" class="menu__title " data-depth="0">Keywords</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/identify/" class="menu__title " data-depth="0">Identifiers</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/comments/" class="menu__title " data-depth="0">Comments</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/whitespaces/" class="menu__title " data-depth="0">Whitespaces</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/100_lex/numbers/" class="menu__title " data-depth="0">Numbers</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Macro system
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/200_mac/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/200_mac/buildin/" class="menu__title " data-depth="0">Build-In</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/200_mac/temp/" class="menu__title " data-depth="0">Templates</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Modules tree
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/250_mod/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/250_mod/modules/" class="menu__title " data-depth="0">Modules</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/250_mod/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/250_mod/blocks/" class="menu__title " data-depth="0">Blocks</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Syntatic items
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/300_ite/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/types/" class="menu__title " data-depth="0">Types</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/variables/" class="menu__title " data-depth="0">Variables</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/functions/" class="menu__title " data-depth="0">Functions</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/errors/" class="menu__title " data-depth="0">Errors</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/pipes/" class="menu__title " data-depth="0">Pipes</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/objects/" class="menu__title " data-depth="0">Objects</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/300_ite/generics/" class="menu__title " data-depth="0">Generics</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Code expressions
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/400_exp/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/400_exp/control/" class="menu__title " data-depth="0">Control</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/400_exp/operators/" class="menu__title " data-depth="0">Operators</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Type system
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/500_typ/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/500_typ/test1/" class="menu__title " data-depth="0">Test 1</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Memory model
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/600_mem/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_mem/pointers/" class="menu__title " data-depth="0">Ownership</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-      
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-  
-
-  
-  <ul class="menu__title--collapse " data-depth="0">
-    Multi Threading
-    <span class="menu__title--icon right">
-      
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-      
-    </span>
-  </ul>
-  <ul class="menu__list " data-data=/700_pro/ data-link=https://follang.org/v0.11-docs/spec/modules/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/700_pro/concurrency/" class="menu__title " data-depth="0">Concurrency</a>
-        </li>
-      
-    
-  </ul>
-  
-
-    
-  </ul>
-</div>
-
-
-
-<script>
-  var menuTitle = document.querySelectorAll('.menu__title');
-  var modal = document.getElementById("myModal");
-  var drawer = document.getElementById('myDrawer');
-
-  var closeDrawer = function () {
-    setTimeout(function () {
-      modal.style.opacity = 0;
-      drawer.style.left = '-100%';
-      modal.style.left = '-100%';
-    }, 250);
-  }
-
-  menuTitle ?
-  menuTitle.forEach(function(elem) {
-    elem.onclick = function() {
-      closeDrawer();
-      localStorage.setItem('isDrawerOpen', 'false');
-    }
-  }) : null;
-</script>
-
-  </div>
-</div>
-<div id="myModal" class="modal" style=""></div>
-
-<script>
-  var isDrawerOpen = localStorage.getItem('isDrawerOpen');
-  var modal = document.getElementById("myModal");
-  var drawer = document.getElementById('myDrawer');
-  
-  
-  var languagedir = JSON.parse("\"ltr\"");
-
-  var openDrawer = function () {
-    modal.style.opacity = 1;
-    
-    if (languagedir === "rtl") {
-      modal.style.right = 0;
-      drawer.style.right = 0;
-    } else {
-      modal.style.left = 0;
-      drawer.style.left = 0;
-    }
-  }
-
-  if (isDrawerOpen && isDrawerOpen === 'true') {
-    openDrawer();
-  }
-</script>
         <div id="leftDrawer" class="drawer left-drawer" style="left: -100%">
   <div class="drawer__body">
     <div class="menu">
@@ -2752,12 +2242,17 @@
 <script>
   var leftBurger = document.getElementById('leftBurger');
   var rightBurger = document.getElementById('rightBurger');
-  enquire.register("screen and (max-width:960px)", {
+  enquire.register("screen and (max-width:1280px)", {
     match: function () {
       rightBurger.className = '';
     },
     unmatch: function () {
       rightBurger.className = 'hide';
+    },
+  }).register("screen and (max-width:960px)", {
+    match: function () {
+    },
+    unmatch: function () {
     },
   }).register("screen and (max-width:600px)", {
     match: function () {
@@ -3203,10 +2698,6 @@
   
 
     
-    
-        
-        
-    
 </div>
 
 
@@ -3215,19 +2706,6 @@
     </nav>
 
     <article id="list-main" class="m" data-dir="ltr">
-      
-  <label class="switch">
-    <input id="toggle-sidebar" aria-label="Toggle Sidebar Visibility" type="checkbox" checked />
-    <span class="slider">
-      <span class="slider__icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-      </span>
-      <span class="slider__icon hide">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-      </span>
-    </span>
-  </label>
-
       <div class="single" data-display="block">
   
 
@@ -3774,8 +3252,8 @@ def &quot;some unit testing&quot;: tst[shko] = {}
       singleMenu.className = 'l';
     },
     unmatch: function () {
-      listSide.className = 'r';
-      listMain.className = 'm';
+      listSide.className = 'hide';
+      listMain.className = 'mr';
       singleMenu.className = 'l';
     },
   }).register("screen and (max-width:600px)", {
