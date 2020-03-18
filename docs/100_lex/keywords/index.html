@@ -189,57 +189,72 @@
     
 
 
+
+
+
+
     
-    var mobileLogo = document.getElementById('mobileLogo');
-    var modal = document.getElementById("myModal");
-    var drawer = document.getElementById('myDrawer');
+    
+    
+    var rightBurger = document.getElementById('rightBurger');
+    var rightModal = document.getElementById("rightModal");
+    var rightDrawer = document.getElementById('rightDrawer');
     var drawerCloseBtn = document.querySelector('.drawer__close');
 
-    var openDrawer = function() {
-      modal.style.opacity = 1;
-
-      if (languagedir === 'rtl') {
-        modal.style.right = 0;
-        drawer.style.right = 0;
-      } else {
-        modal.style.left = 0;
-        drawer.style.left = 0;
-      }
+    var openRightDrawer = function() {
+        rightModal.style.opacity = 1;
+        rightModal.style.left = 0;
+        rightDrawer.style.right = 0;
     }
 
-    var closeDrawer = function() {
-      modal.style.opacity = 0;
-
-      if (languagedir === 'rtl') {
-        drawer.style.right = '-100%';
-      } else {
-        drawer.style.left = '-100%';
-      }
-
-      
-      setTimeout(function () {
-        if (languagedir === 'rtl') {
-          modal.style.right = '-100%';
-        } else {
-          modal.style.left = '-100%';
-        }
-      }, 250);
+    var closeRightDrawer = function() {
+      rightModal.style.opacity = 0;
+      rightDrawer.style.right = '-100%';
+      rightModal.style.left = '-100%';
+      setTimeout(function () { rightModal.style.right = '-100%'; }, 250);
+    }
+    rightBurger.onclick = function () {
+      openRightDrawer();
+      localStorage.setItem('isRightDrawerOpen', 'true');
     }
 
-    mobileLogo.onclick = function () {
-      openDrawer();
-      localStorage.setItem('isDrawerOpen', 'true');
+    rightModal.onclick = function () {
+      closeRightDrawer();
+      localStorage.setItem('isRightDrawerOpen', 'false');
     }
-
-    modal.onclick = function () {
-      closeDrawer();
-      localStorage.setItem('isDrawerOpen', 'false');
-    }
-
     drawerCloseBtn.onclick = function () {
-      closeDrawer();
-      localStorage.setItem('isDrawerOpen', 'false');
+      closeRightDrawer();
+      localStorage.setItem('isRightDrawerOpen', 'false');
     }
+    
+    var leftBurger = document.getElementById('leftBurger');
+    var leftModal = document.getElementById("leftModal");
+    var leftDrawer = document.getElementById('leftDrawer');
+    var drawerCloseBtn = document.querySelector('.drawer__close');
+    var openLeftDrawer = function() {
+      leftModal.style.opacity = 1;
+      leftModal.style.left = 0;
+      leftDrawer.style.left = 0;
+    }
+    var closeLeftDrawer = function() {
+      leftModal.style.opacity = 0;
+      leftDrawer.style.left = '-100%';
+      setTimeout(function () { leftModal.style.left = '-100%'; }, 250);
+    }
+    leftBurger.onclick = function () {
+      openLeftDrawer();
+      localStorage.setItem('isLeftDrawerOpen', 'true');
+    }
+    leftModal.onclick = function () {
+      closeLeftDrawer();
+      localStorage.setItem('isLeftDrawerOpen', 'false');
+    }
+    drawerCloseBtn.onclick = function () {
+      closeLeftDrawer();
+      localStorage.setItem('isLeftDrawerOpen', 'false');
+    }
+  
+  
   
 
 
@@ -1038,11 +1053,27 @@
     
     <div id="container">
         <div id="myDrawer" class="drawer" style="">
+  <div class="drawer__header">
+    <a href="/" class="drawer__header--text">
+      FOL
+    </a>
+    <div class="grow"></div>
+    <div class="drawer__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"/></svg>
+    </div>
+  </div>
+
   <div class="drawer__body">
     <div class="menu">
+  <h6 class="menu__label">
+    
+      Keywords
+    
+  </h6>
+  <ul>
     
     
-        
+      
   
   
   
@@ -1094,7 +1125,31 @@
         
         
         <li>
+          <a href="https://follang.org/docs/100_lex/whitespaces/" class="menu__title " data-depth="0">Whitespaces</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
           <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/numbers/" class="menu__title " data-depth="0">Numbers</a>
         </li>
       
     
@@ -1102,7 +1157,7 @@
   
 
     
-        
+      
   
   
   
@@ -1154,7 +1209,7 @@
   
 
     
-        
+      
   
   
   
@@ -1206,7 +1261,7 @@
   
 
     
-        
+      
   
   
   
@@ -1290,7 +1345,7 @@
   
 
     
-        
+      
   
   
   
@@ -1334,7 +1389,7 @@
   
 
     
-        
+      
   
   
   
@@ -1370,7 +1425,7 @@
   
 
     
-        
+      
   
   
   
@@ -1406,7 +1461,7 @@
   
 
     
-        
+      
   
   
   
@@ -1442,16 +1497,34 @@
   
 
     
-    
-        
-        
-    
+  </ul>
 </div>
 
 
 
+<script>
+  var menuTitle = document.querySelectorAll('.menu__title');
+  var modal = document.getElementById("myModal");
+  var drawer = document.getElementById('myDrawer');
+
+  var closeDrawer = function () {
+    setTimeout(function () {
+      modal.style.opacity = 0;
+      drawer.style.left = '-100%';
+      modal.style.left = '-100%';
+    }, 250);
+  }
+
+  menuTitle ?
+  menuTitle.forEach(function(elem) {
+    elem.onclick = function() {
+      closeDrawer();
+      localStorage.setItem('isDrawerOpen', 'false');
+    }
+  }) : null;
+</script>
+
   </div>
-  <div class="drawer__close"></div>
 </div>
 <div id="myModal" class="modal" style=""></div>
 
@@ -1478,6 +1551,656 @@
   if (isDrawerOpen && isDrawerOpen === 'true') {
     openDrawer();
   }
+</script>
+        <div id="leftDrawer" class="drawer left-drawer" style="left: -100%">
+  <div class="drawer__body">
+    <div class="menu">
+  <h6 class="menu__label">
+    
+      Keywords
+    
+  </h6>
+  <ul>
+    
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse active" data-depth="0">
+    Lexical analysis
+    <span class="menu__title--icon down">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list active" data-data=/100_lex/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/keywords/" class="menu__title active" data-depth="0">Keywords</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/identify/" class="menu__title " data-depth="0">Identifiers</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/comments/" class="menu__title " data-depth="0">Comments</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/whitespaces/" class="menu__title " data-depth="0">Whitespaces</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/numbers/" class="menu__title " data-depth="0">Numbers</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Macro system
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/200_mac/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/buildin/" class="menu__title " data-depth="0">Build-In</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/temp/" class="menu__title " data-depth="0">Templates</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Modules tree
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/250_mod/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/250_mod/modules/" class="menu__title " data-depth="0">Modules</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/250_mod/scopes/" class="menu__title " data-depth="0">Scope</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/250_mod/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Syntatic items
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/300_ite/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/types/" class="menu__title " data-depth="0">Types</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/variables/" class="menu__title " data-depth="0">Variables</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/functions/" class="menu__title " data-depth="0">Functions</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/errors/" class="menu__title " data-depth="0">Errors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/pipes/" class="menu__title " data-depth="0">Pipes</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/objects/" class="menu__title " data-depth="0">Objects</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/300_ite/generics/" class="menu__title " data-depth="0">Generics</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Code expressions
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/400_exp/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/400_exp/control/" class="menu__title " data-depth="0">Control</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/400_exp/operators/" class="menu__title " data-depth="0">Operators</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Type system
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/500_typ/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_typ/test1/" class="menu__title " data-depth="0">Test 1</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Memory model
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/600_mem/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/600_mem/pointers/" class="menu__title " data-depth="0">Ownership</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  <ul class="menu__title--collapse " data-depth="0">
+    Multi Threading
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/700_pro/ data-link=https://follang.org/docs/100_lex/keywords/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_pro/concurrency/" class="menu__title " data-depth="0">Concurrency</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+  </ul>
+</div>
+
+
+
+<script>
+  var menuTitle = document.querySelectorAll('.menu__title');
+  var modal = document.getElementById("myModal");
+  var drawer = document.getElementById('myDrawer');
+
+  var closeDrawer = function () {
+    setTimeout(function () {
+      modal.style.opacity = 0;
+      drawer.style.left = '-100%';
+      modal.style.left = '-100%';
+    }, 250);
+  }
+
+  menuTitle ?
+  menuTitle.forEach(function(elem) {
+    elem.onclick = function() {
+      closeDrawer();
+      localStorage.setItem('isDrawerOpen', 'false');
+    }
+  }) : null;
+</script>
+
+  </div>
+</div>
+<div id="leftModal" class="modal" style="opacity: 0; left: -100%"></div>
+
+<script>
+  var isDrawerOpen = localStorage.getItem('isDrawerOpen');
+  var leftModal = document.getElementById("leftModal");
+  var leftDrawer = document.getElementById('leftDrawer');
+
+  
+  var languagedir = JSON.parse("\"ltr\"");
+
+  var openLeftDrawer = function () {
+    leftModal.style.opacity = 1;
+    leftModal.style.left = 0;
+    leftDrawer.style.left = 0;
+  }
+
+  if (isLeftDrawerOpen && isLeftDrawerOpen === 'true') { openLeftDrawer(); }
+</script>
+
+        <div id="rightDrawer" class="drawer right-drawer" style="right: -100%">
+  <div class="drawer__body">
+    <div class="toc">
+  <h6 class="toc__label">Index</h6>
+  <div class="toc__body">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#input-format">Input format</a></li>
+        <li><a href="#keywords">Keywords</a>
+          <ul>
+            <li><a href="#ai-assignment-indentifiers">AI (assignment indentifiers)</a></li>
+            <li><a href="#ti-type-indentifiers">TI (type indentifiers)</a></li>
+            <li><a href="#oi-option-indentifiers">OI (option indentifiers)</a></li>
+            <li><a href="#bi-build-in-indentifiers">BI (build-in indentifiers)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+  <div class="toc__issue">
+      
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+   
+  
+  
+  
+
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+    
+
+    
+    
+    
+
+    
+    <div class="toc__issue-el">
+        <a href="https://github.com/follang/docs/tree/master/docs/100_lex/keywords.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+  <path
+     d="m 21.201118,14.729321 c -0.300834,0 -0.54465,0.243816 -0.54465,0.54465 v 4.835895 c -0.0011,0.902076 -0.731873,1.633098 -1.633949,1.633949 H 3.7401983 C 2.838122,21.742964 2.1073126,21.011942 2.1062488,20.109866 V 5.916845 C 2.1073126,5.0149815 2.838122,4.2839593 3.7401983,4.2828955 h 4.8358946 c 0.3008339,0 0.5446498,-0.2438159 0.5446498,-0.5446498 0,-0.3006211 -0.2438159,-0.5446498 -0.5446498,-0.5446498 H 3.7401983 C 2.2368797,3.1952979 1.0186512,4.4135264 1.0169492,5.916845 v 14.193233 c 0.0017,1.503319 1.2199305,2.721547 2.7232491,2.72325 H 19.022519 c 1.503319,-0.0017 2.721547,-1.219931 2.723249,-2.72325 v -4.836107 c 0,-0.300834 -0.243816,-0.54465 -0.54465,-0.54465 z m 0,0"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.05446498" />
+  <path
+     d="m 21.530035,1.7921864 c -0.957179,-0.95717944 -2.509005,-0.95717944 -3.466185,0 L 8.346957,11.509079 c -0.066592,0.06659 -0.1146743,0.14914 -0.1397793,0.239773 l -1.2777994,4.613142 c -0.05255,0.189139 8.517e-4,0.39168 0.1395665,0.530608 0.1389282,0.138716 0.3414698,0.192117 0.530608,0.139779 l 4.6131412,-1.278012 c 0.09063,-0.02511 0.173181,-0.07319 0.239773,-0.139779 l 9.716681,-9.7171056 c 0.95569,-0.9578178 0.95569,-2.5083677 0,-3.4661855 z M 9.5336976,11.863102 17.486223,3.9103635 20.050971,6.4751111 12.098232,14.427849 Z m -0.5123109,1.028026 2.0490323,2.049245 -2.8343067,0.785275 z M 21.398979,5.1273155 20.821353,5.7049422 18.256392,3.139982 18.834232,2.5623553 c 0.531671,-0.5316719 1.39375,-0.5316719 1.925422,0 l 0.639325,0.6391125 c 0.530821,0.5323101 0.530821,1.3937504 0,1.9258477 z m 0,0"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.05446498" />
+</svg>
+ Edit this page </a>
+    </div>
+
+    
+    <div class="toc__issue-el">
+        <a href="https://github.com/follang/docs/issues/new?title=Keywords%28docs/100_lex/keywords.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g6">
+    <g
+       id="g4">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 509.989,463.656 474.84,361.363 C 491.746,327.189 500.687,289.098 500.747,250.77 500.849,184.768 475.312,122.359 428.838,75.043 382.357,27.718 320.418,1.08 254.433,0.033 219.862,-0.522 186.316,5.848 154.676,18.945 124.159,31.578 96.792,49.877 73.336,73.333 49.879,96.789 31.58,124.156 18.948,154.673 5.851,186.313 -0.512,219.876 0.035,254.43 c 1.045,65.985 27.684,127.924 75.009,174.406 47.224,46.383 109.472,71.912 175.332,71.911 0.129,0 0.265,0 0.394,0 38.328,-0.06 76.419,-9.001 110.594,-25.907 l 102.293,35.149 c 3.934,1.352 7.966,2.011 11.954,2.011 9.474,0 18.69,-3.722 25.678,-10.712 9.929,-9.929 13.264,-24.349 8.7,-37.632 z m -30.165,16.168 c -1.007,1.007 -3.163,2.535 -6.304,1.457 L 365.126,444.035 c -1.603,-0.55 -3.27,-0.824 -4.932,-0.824 -2.45,0 -4.889,0.593 -7.098,1.762 -31.327,16.573 -66.727,25.363 -102.374,25.417 C 131.172,470.583 32.28,373.48 30.386,253.949 29.433,193.81 52.309,137.289 94.8,94.798 c 42.491,-42.49 98.995,-65.362 159.151,-64.411 119.53,1.895 216.625,100.738 216.439,220.336 -0.056,35.648 -8.845,71.048 -25.417,102.373 -1.962,3.708 -2.301,8.063 -0.938,12.03 l 37.246,108.394 c 1.079,3.139 -0.449,5.298 -1.457,6.304 z"
+         id="path2" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g12">
+    <g
+       id="g10">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 247.91,362.748 c -7.939,0 -15.545,6.981 -15.178,15.178 0.368,8.223 6.669,15.178 15.178,15.178 7.939,0 15.545,-6.981 15.178,-15.178 -0.368,-8.224 -6.669,-15.178 -15.178,-15.178 z"
+         id="path8" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g18">
+    <g
+       id="g16">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 247.91,127.674 c -41.639,0 -75.515,33.876 -75.515,75.515 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.796 15.178,-15.178 0,-24.9 20.259,-45.159 45.159,-45.159 24.9,0 45.159,20.259 45.159,45.159 0,24.9 -20.259,45.159 -45.159,45.159 -8.382,0 -15.178,6.796 -15.178,15.178 v 61.905 c 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.795 15.178,-15.179 v -48.259 c 34.389,-7.045 60.337,-37.54 60.337,-73.982 0,-41.639 -33.876,-75.515 -75.515,-75.515 z"
+         id="path14" />
+    </g>
+  </g>
+</svg>
+ Issue a problem </a>
+    </div>
+
+    
+    
+      
+      
+
+      
+    
+
+    
+    
+  
+
+
+  </div>
+</div>
+
+  </div>
+</div>
+<div id="rightModal" class="modal" style="opacity: 0; right: -100%"></div>
+
+<script>
+  var isDrawerOpen = localStorage.getItem('isDrawerOpen');
+  var rightModal = document.getElementById("rightModal");
+  var rightDrawer = document.getElementById('rightDrawer');
+
+  
+  var languagedir = JSON.parse("\"ltr\"");
+
+  var openRightDrawer = function () {
+    rightModal.style.opacity = 1;
+    rightModal.style.right = 0;
+    rightDrawer.style.right = 0;
+  }
+
+  if (isRightDrawerOpen && isRightDrawerOpen === 'true') { openRightDrawer(); }
 </script>
 
         
@@ -1509,13 +2232,12 @@
 </div>
 
           <div id="mobileLogo" class="hide">
+    <div onclick="location.href='\/';" style="cursor: pointer;" id="svglogo" class="navbar__icons--icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 24 24">
+  <path class="the_logo" d="M11.996.394a11.595 11.595 0 00-2.584.308v8.112l5.347-3.087 4.63-2.673A11.595 11.595 0 0016.913 1.5l-4.918 2.84zm-4.05.74a11.595 11.595 0 00-2.583 1.368v5.716L1.944 6.244A11.595 11.595 0 00.911 8.631l1.689.975 5.347 3.087V6.52zm12.52 2.938l-1.697.98-5.347 3.086 5.347 3.087 4.658 2.69a11.595 11.595 0 00.174-1.926 11.595 11.595 0 00-.05-.986L18.59 8.138l3.424-1.976a11.595 11.595 0 00-1.549-2.09zm-19.882 6a11.595 11.595 0 00-.173 1.917 11.595 11.595 0 00.05.996l4.973 2.87-3.426 1.978a11.595 11.595 0 001.552 2.088l1.695-.979 5.347-3.086-5.347-3.087zm15.44 1.231v11.553a11.595 11.595 0 002.584-1.352v-5.725l3.44 1.986a11.595 11.595 0 001.043-2.382l-1.72-.993zm-1.42 3.845l-5.347 3.087-4.643 2.68a11.595 11.595 0 002.471 1.557l4.934-2.848v3.959a11.595 11.595 0 002.584-.309v-1.952z" fill="#b380ff"/>
+</svg>
 
-<a href="#" class="navbar__logo--link">
-    <div class="navbar__icons--icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg>
     </div>
-</a>
-
 </div>
 
           <span id="navMenuMobile" class="hide">
@@ -1528,9 +2250,6 @@
   <div class="navbar__collapse" data-open="false">
   <ul>
     
-  <li class="navbar__menu--mobile-item ">
-    <a href="/" class="">Home</a>
-  </li>
 
   
   
@@ -1563,7 +2282,6 @@
   <li class="navbar__menu--mobile-item ">
     <a href="/hub" class="">Hub</a>
   </li>
-
 
   </ul>
 </div>
@@ -1861,90 +2579,29 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr flexbox">
+        <div id="leftBurger" class="hide">
+        <a href="#" class="burgermenu">
+            <div class="navbar__icons--icon burgers leftBurger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M3 4L2 5l1 1h18l1-1-1-1zm0 8l-1 1 1 1h12l1-1-1-1zm0 7l-1 1 1 1h18l1-1-1-1z"/>
+</svg>
+
+            </div>
+        </a>
+        </div>
+        <div class="grow"></div>
         <h2 class="title">Keywords</h2>
         <div class="grow"></div>
-        
-    
-    
-    
-    
-    
-    
-    
+        <div id="rightBurger" class="hide">
+        <a href="#" class="burgermenu">
+            <div class="navbar__icons--icon burgers rightBurger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M3 4L2 5l1 1h18l1-1-1-1zm6 8l-1 1 1 1h12l1-1-1-1zm-6 7l-1 1 1 1h18l1-1-1-1z"/>
+</svg>
 
-    
-    
-    
-
-    
-    
-
-    
-    
-        
-        
-        
-        
-        
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="dropdown versioner" style="padding-right:.3%;">
-        <div style="height:40%"></div>
-        <div style="height:20%">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
-        <div class="dropdown-content lang__dropdown--content">
-            
-                
-                    
-                    
-                    <a href="/docs///100_lex/keywords/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
-                
-            
-                
-                    
-                    
-                    <a href="/v0.11-docs///100_lex/keywords/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
-                
-            
-                
-                    
-                    
-                    <a href="/v0.10-docs///100_lex/keywords/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
-                
-            
-                
-                    
-                    
-                    <a href="/v0.9-docs///100_lex/keywords/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
-                
-            
-                
-                    
-                    
-                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches//100_lex/keywords/" data-lang="Archives" class="lang__dropdown--item">Archives</a>
-                
-            
-                
-                    
-                    
-                    <a href="/development///100_lex/keywords/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
-                
-            
+            </div>
+        </a>
         </div>
-        <div style="height:40%"></div>
-    </div>
-
-
       </div>
     </div>
 
@@ -1996,123 +2653,83 @@
 </nav>
         <div class="grow"></div>
         
-
-  
-  
-  
-  
-  
-
-  
-  
-  
     
-  
-  
-  
-   
-  
-  
-  
-
-  
-  
-
-  
-  
     
-      
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
         
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-    
-    
-
+        
+        
+        
+        
+        
     
     
     
-
     
-    <div>
-        <a href="https://github.com/follang/docs/tree/master/docs/100_lex/keywords.md" class="navbar__icons--icon issue-icons" ><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-  <path
-     d="m 21.201118,14.729321 c -0.300834,0 -0.54465,0.243816 -0.54465,0.54465 v 4.835895 c -0.0011,0.902076 -0.731873,1.633098 -1.633949,1.633949 H 3.7401983 C 2.838122,21.742964 2.1073126,21.011942 2.1062488,20.109866 V 5.916845 C 2.1073126,5.0149815 2.838122,4.2839593 3.7401983,4.2828955 h 4.8358946 c 0.3008339,0 0.5446498,-0.2438159 0.5446498,-0.5446498 0,-0.3006211 -0.2438159,-0.5446498 -0.5446498,-0.5446498 H 3.7401983 C 2.2368797,3.1952979 1.0186512,4.4135264 1.0169492,5.916845 v 14.193233 c 0.0017,1.503319 1.2199305,2.721547 2.7232491,2.72325 H 19.022519 c 1.503319,-0.0017 2.721547,-1.219931 2.723249,-2.72325 v -4.836107 c 0,-0.300834 -0.243816,-0.54465 -0.54465,-0.54465 z m 0,0"
-     id="path2"
-     inkscape:connector-curvature="0"
-     style="stroke-width:0.05446498" />
-  <path
-     d="m 21.530035,1.7921864 c -0.957179,-0.95717944 -2.509005,-0.95717944 -3.466185,0 L 8.346957,11.509079 c -0.066592,0.06659 -0.1146743,0.14914 -0.1397793,0.239773 l -1.2777994,4.613142 c -0.05255,0.189139 8.517e-4,0.39168 0.1395665,0.530608 0.1389282,0.138716 0.3414698,0.192117 0.530608,0.139779 l 4.6131412,-1.278012 c 0.09063,-0.02511 0.173181,-0.07319 0.239773,-0.139779 l 9.716681,-9.7171056 c 0.95569,-0.9578178 0.95569,-2.5083677 0,-3.4661855 z M 9.5336976,11.863102 17.486223,3.9103635 20.050971,6.4751111 12.098232,14.427849 Z m -0.5123109,1.028026 2.0490323,2.049245 -2.8343067,0.785275 z M 21.398979,5.1273155 20.821353,5.7049422 18.256392,3.139982 18.834232,2.5623553 c 0.531671,-0.5316719 1.39375,-0.5316719 1.925422,0 l 0.639325,0.6391125 c 0.530821,0.5323101 0.530821,1.3937504 0,1.9258477 z m 0,0"
-     id="path4"
-     inkscape:connector-curvature="0"
-     style="stroke-width:0.05446498" />
-</svg>
-</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="dropdown versioner" style="padding-right:.3%;">
+        <div style="line-height:2em;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
+        <div class="dropdown-content lang__dropdown--content">
+            
+                
+                    
+                    
+                    <a href="/docs///100_lex/keywords/" data-lang="v0.12" class="lang__dropdown--item active">v0.12</a>
+                
+            
+                
+                    
+                    
+                    <a href="/v0.11-docs///100_lex/keywords/" data-lang="v0.11" class="lang__dropdown--item">v0.11</a>
+                
+            
+                
+                    
+                    
+                    <a href="/v0.10-docs///100_lex/keywords/" data-lang="v0.10" class="lang__dropdown--item">v0.10</a>
+                
+            
+                
+                    
+                    
+                    <a href="/v0.9-docs///100_lex/keywords/" data-lang="v0.9" class="lang__dropdown--item">v0.9</a>
+                
+            
+                
+                    
+                    
+                    <a href="https://github.com/zzossig/hugo-theme-zdoc/branches//100_lex/keywords/" data-lang="Archives" class="lang__dropdown--item">Archives</a>
+                
+            
+                
+                    
+                    
+                    <a href="/development///100_lex/keywords/" data-lang="Pre-release" class="lang__dropdown--item">Pre-release</a>
+                
+            
+        </div>
     </div>
-
-    
-    <div>
-        <a href="https://github.com/follang/docs/issues/new?title=Keywords%28docs/100_lex/keywords.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md" class="navbar__icons--icon issue-icons" ><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-  <g
-     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
-     id="g6">
-    <g
-       id="g4">
-      <path
-         inkscape:connector-curvature="0"
-         d="M 509.989,463.656 474.84,361.363 C 491.746,327.189 500.687,289.098 500.747,250.77 500.849,184.768 475.312,122.359 428.838,75.043 382.357,27.718 320.418,1.08 254.433,0.033 219.862,-0.522 186.316,5.848 154.676,18.945 124.159,31.578 96.792,49.877 73.336,73.333 49.879,96.789 31.58,124.156 18.948,154.673 5.851,186.313 -0.512,219.876 0.035,254.43 c 1.045,65.985 27.684,127.924 75.009,174.406 47.224,46.383 109.472,71.912 175.332,71.911 0.129,0 0.265,0 0.394,0 38.328,-0.06 76.419,-9.001 110.594,-25.907 l 102.293,35.149 c 3.934,1.352 7.966,2.011 11.954,2.011 9.474,0 18.69,-3.722 25.678,-10.712 9.929,-9.929 13.264,-24.349 8.7,-37.632 z m -30.165,16.168 c -1.007,1.007 -3.163,2.535 -6.304,1.457 L 365.126,444.035 c -1.603,-0.55 -3.27,-0.824 -4.932,-0.824 -2.45,0 -4.889,0.593 -7.098,1.762 -31.327,16.573 -66.727,25.363 -102.374,25.417 C 131.172,470.583 32.28,373.48 30.386,253.949 29.433,193.81 52.309,137.289 94.8,94.798 c 42.491,-42.49 98.995,-65.362 159.151,-64.411 119.53,1.895 216.625,100.738 216.439,220.336 -0.056,35.648 -8.845,71.048 -25.417,102.373 -1.962,3.708 -2.301,8.063 -0.938,12.03 l 37.246,108.394 c 1.079,3.139 -0.449,5.298 -1.457,6.304 z"
-         id="path2" />
-    </g>
-  </g>
-  <g
-     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
-     id="g12">
-    <g
-       id="g10">
-      <path
-         inkscape:connector-curvature="0"
-         d="m 247.91,362.748 c -7.939,0 -15.545,6.981 -15.178,15.178 0.368,8.223 6.669,15.178 15.178,15.178 7.939,0 15.545,-6.981 15.178,-15.178 -0.368,-8.224 -6.669,-15.178 -15.178,-15.178 z"
-         id="path8" />
-    </g>
-  </g>
-  <g
-     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
-     id="g18">
-    <g
-       id="g16">
-      <path
-         inkscape:connector-curvature="0"
-         d="m 247.91,127.674 c -41.639,0 -75.515,33.876 -75.515,75.515 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.796 15.178,-15.178 0,-24.9 20.259,-45.159 45.159,-45.159 24.9,0 45.159,20.259 45.159,45.159 0,24.9 -20.259,45.159 -45.159,45.159 -8.382,0 -15.178,6.796 -15.178,15.178 v 61.905 c 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.795 15.178,-15.179 v -48.259 c 34.389,-7.045 60.337,-37.54 60.337,-73.982 0,-41.639 -33.876,-75.515 -75.515,-75.515 z"
-         id="path14" />
-    </g>
-  </g>
-</svg>
-</a>
-    </div>
-
-    
-    
-      
-      
-
-      
-    
-
-    
-    
-  
 
 
         
@@ -2120,6 +2737,27 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  var leftBurger = document.getElementById('leftBurger');
+  var rightBurger = document.getElementById('rightBurger');
+  enquire.register("screen and (max-width:960px)", {
+    match: function () {
+      rightBurger.className = '';
+    },
+    unmatch: function () {
+      rightBurger.className = 'hide';
+    },
+  }).register("screen and (max-width:600px)", {
+    match: function () {
+      leftBurger.className = '';
+    },
+    unmatch: function () {
+      leftBurger.className = 'hide';
+    },
+  });
+</script>
 
 
         
@@ -2183,7 +2821,31 @@
         
         
         <li>
+          <a href="https://follang.org/docs/100_lex/whitespaces/" class="menu__title " data-depth="0">Whitespaces</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
           <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/100_lex/numbers/" class="menu__title " data-depth="0">Numbers</a>
         </li>
       
     
@@ -2574,7 +3236,8 @@ AI_PRO             <code>pro</code><br />
 AI_TYP             <code>typ</code></p>
 </div>
 <div class="placeholder " >
-<p><code>AI: (AI_USE|AI_DEF|...)</code></p>
+<p>ASSIGNMENT IDENTIFIERS - AI:<br />
+<code>(AI_USE|AI_DEF|...)</code></p>
 </div>
 <h3 id="ti-type-indentifiers">TI (type indentifiers)</h3>
 <div class="placeholder " > 
@@ -2606,7 +3269,8 @@ TI_MOD             <code>mod</code><br />
 TI_BLK             <code>blk</code></p>
 </div>
 <div class="placeholder " >
-<p><code>TI: (TI_INT|TI_FLT|...)</code></p>
+<p>TYPE IDENTIFIERS - TI:<br />
+<code>(TI_INT|TI_FLT|...)</code></p>
 </div>
 <div class="notices warn" >
 <p>Note that all of the <strong>type indentifiers</strong> are of three characters long. It is recomanded that identifiers not to be of the same number of characters, as ne day in the future versoin of fol, it may include more.</p>
@@ -2617,7 +3281,8 @@ TI_BLK             <code>blk</code></p>
 OI_EXP              <code>exp</code></p>
 </div>
 <div class="placeholder " >
-<p><code>OI: ((OI_PUB|OI_EXP|...),?)*</code></p>
+<p>OPTION IDENTIFIERS - OI:<br />
+<code>((OI_PUB|OI_EXP|...),?)*</code></p>
 </div>
 <h3 id="bi-build-in-indentifiers">BI (build-in indentifiers)</h3>
 <div class="placeholder " > 
@@ -2647,7 +3312,8 @@ BI_CHECK           <code>check</code></p>
 BI_FALSE           <code>false</code></p>
 </div>
 <div class="placeholder " >
-<p><code>BI: (BI_AS|BI_IN|...)</code></p>
+<p>BUILD-IN IDENTIFIERS - BI:<br />
+<code>(BI_AS|BI_IN|...)</code></p>
 </div>
 
   </article>
@@ -2697,6 +3363,128 @@ BI_FALSE           <code>false</code></p>
     </li>
   </ul>
 </nav>
+  </div>
+  <div class="toc__issue">
+      
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+  
+   
+  
+  
+  
+
+  
+  
+
+  
+  
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+    
+
+    
+    
+    
+
+    
+    <div class="toc__issue-el">
+        <a href="https://github.com/follang/docs/tree/master/docs/100_lex/keywords.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+  <path
+     d="m 21.201118,14.729321 c -0.300834,0 -0.54465,0.243816 -0.54465,0.54465 v 4.835895 c -0.0011,0.902076 -0.731873,1.633098 -1.633949,1.633949 H 3.7401983 C 2.838122,21.742964 2.1073126,21.011942 2.1062488,20.109866 V 5.916845 C 2.1073126,5.0149815 2.838122,4.2839593 3.7401983,4.2828955 h 4.8358946 c 0.3008339,0 0.5446498,-0.2438159 0.5446498,-0.5446498 0,-0.3006211 -0.2438159,-0.5446498 -0.5446498,-0.5446498 H 3.7401983 C 2.2368797,3.1952979 1.0186512,4.4135264 1.0169492,5.916845 v 14.193233 c 0.0017,1.503319 1.2199305,2.721547 2.7232491,2.72325 H 19.022519 c 1.503319,-0.0017 2.721547,-1.219931 2.723249,-2.72325 v -4.836107 c 0,-0.300834 -0.243816,-0.54465 -0.54465,-0.54465 z m 0,0"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.05446498" />
+  <path
+     d="m 21.530035,1.7921864 c -0.957179,-0.95717944 -2.509005,-0.95717944 -3.466185,0 L 8.346957,11.509079 c -0.066592,0.06659 -0.1146743,0.14914 -0.1397793,0.239773 l -1.2777994,4.613142 c -0.05255,0.189139 8.517e-4,0.39168 0.1395665,0.530608 0.1389282,0.138716 0.3414698,0.192117 0.530608,0.139779 l 4.6131412,-1.278012 c 0.09063,-0.02511 0.173181,-0.07319 0.239773,-0.139779 l 9.716681,-9.7171056 c 0.95569,-0.9578178 0.95569,-2.5083677 0,-3.4661855 z M 9.5336976,11.863102 17.486223,3.9103635 20.050971,6.4751111 12.098232,14.427849 Z m -0.5123109,1.028026 2.0490323,2.049245 -2.8343067,0.785275 z M 21.398979,5.1273155 20.821353,5.7049422 18.256392,3.139982 18.834232,2.5623553 c 0.531671,-0.5316719 1.39375,-0.5316719 1.925422,0 l 0.639325,0.6391125 c 0.530821,0.5323101 0.530821,1.3937504 0,1.9258477 z m 0,0"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="stroke-width:0.05446498" />
+</svg>
+ Edit this page </a>
+    </div>
+
+    
+    <div class="toc__issue-el">
+        <a href="https://github.com/follang/docs/issues/new?title=Keywords%28docs/100_lex/keywords.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g6">
+    <g
+       id="g4">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 509.989,463.656 474.84,361.363 C 491.746,327.189 500.687,289.098 500.747,250.77 500.849,184.768 475.312,122.359 428.838,75.043 382.357,27.718 320.418,1.08 254.433,0.033 219.862,-0.522 186.316,5.848 154.676,18.945 124.159,31.578 96.792,49.877 73.336,73.333 49.879,96.789 31.58,124.156 18.948,154.673 5.851,186.313 -0.512,219.876 0.035,254.43 c 1.045,65.985 27.684,127.924 75.009,174.406 47.224,46.383 109.472,71.912 175.332,71.911 0.129,0 0.265,0 0.394,0 38.328,-0.06 76.419,-9.001 110.594,-25.907 l 102.293,35.149 c 3.934,1.352 7.966,2.011 11.954,2.011 9.474,0 18.69,-3.722 25.678,-10.712 9.929,-9.929 13.264,-24.349 8.7,-37.632 z m -30.165,16.168 c -1.007,1.007 -3.163,2.535 -6.304,1.457 L 365.126,444.035 c -1.603,-0.55 -3.27,-0.824 -4.932,-0.824 -2.45,0 -4.889,0.593 -7.098,1.762 -31.327,16.573 -66.727,25.363 -102.374,25.417 C 131.172,470.583 32.28,373.48 30.386,253.949 29.433,193.81 52.309,137.289 94.8,94.798 c 42.491,-42.49 98.995,-65.362 159.151,-64.411 119.53,1.895 216.625,100.738 216.439,220.336 -0.056,35.648 -8.845,71.048 -25.417,102.373 -1.962,3.708 -2.301,8.063 -0.938,12.03 l 37.246,108.394 c 1.079,3.139 -0.449,5.298 -1.457,6.304 z"
+         id="path2" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g12">
+    <g
+       id="g10">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 247.91,362.748 c -7.939,0 -15.545,6.981 -15.178,15.178 0.368,8.223 6.669,15.178 15.178,15.178 7.939,0 15.545,-6.981 15.178,-15.178 -0.368,-8.224 -6.669,-15.178 -15.178,-15.178 z"
+         id="path8" />
+    </g>
+  </g>
+  <g
+     transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
+     id="g18">
+    <g
+       id="g16">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 247.91,127.674 c -41.639,0 -75.515,33.876 -75.515,75.515 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.796 15.178,-15.178 0,-24.9 20.259,-45.159 45.159,-45.159 24.9,0 45.159,20.259 45.159,45.159 0,24.9 -20.259,45.159 -45.159,45.159 -8.382,0 -15.178,6.796 -15.178,15.178 v 61.905 c 0,8.382 6.796,15.178 15.178,15.178 8.382,0 15.178,-6.795 15.178,-15.179 v -48.259 c 34.389,-7.045 60.337,-37.54 60.337,-73.982 0,-41.639 -33.876,-75.515 -75.515,-75.515 z"
+         id="path14" />
+    </g>
+  </g>
+</svg>
+ Issue a problem </a>
+    </div>
+
+    
+    
+      
+      
+
+      
+    
+
+    
+    
+  
+
+
   </div>
 </div>
 
@@ -2895,8 +3683,8 @@ BI_FALSE           <code>false</code></p>
 
   enquire.register("screen and (max-width:1280px)", {
     match: function () {
-      listSide.className = 'r';
-      listMain.className = 'm';
+      listSide.className = 'hide';
+      listMain.className = 'mr';
       singleMenu.className = 'l';
     },
     unmatch: function () {

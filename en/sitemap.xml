@@ -235,7 +235,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/tokens/</loc>
+    <loc>https://follang.org/docs/100_lex/whitespaces/</loc>
   </url>
   
   <url>
@@ -244,11 +244,23 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/100_lex/tokens/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lex/strings/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/600_mem/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/docs/700_pro/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lex/numbers/</loc>
   </url>
   
   <url>

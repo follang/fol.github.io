@@ -27,7 +27,8 @@ AI_VAR var
 AI_FUN fun
 AI_PRO pro
 AI_TYP typ
- AI: (AI_USE|AI_DEF|...)
+ ASSIGNMENT IDENTIFIERS - AI:
+(AI_USE|AI_DEF|...)
  TI (type indentifiers) TI_INT int
 TI_FLT flt
 TI_CHR chr
@@ -37,8 +38,7 @@ TI_SEQ seq
 TI_VEC vec
 TI_SET set
 TI_MAP map
-TI_MAT mat
-TI_STR str</description>
+TI_MAT mat</description>
       </item>
       
       <item>
@@ -71,18 +71,87 @@ BLOCK_COMMENT :
       </item>
       
       <item>
+        <title>Whitespaces</title>
+        <link>https://follang.org/docs/100_lex/whitespaces/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/whitespaces/</guid>
+        <description>Whitespace is any non-empty string containing only characters that have the below Unicode properties:
+ U+0009 (horizontal tab, &amp;lsquo;\t&amp;rsquo;) U+000A (line feed, &amp;lsquo;\n&amp;rsquo;) U+000B (vertical tab) U+000C (form feed) U+000D (carriage return, &amp;lsquo;\r&amp;rsquo;) U+0020 (space, &#39; &amp;lsquo;) U+0085 (next line) U+200E (left-to-right mark) U+200F (right-to-left mark) U+2028 (line separator) U+2029 (paragraph separator)  </description>
+      </item>
+      
+      <item>
         <title>Tokens</title>
         <link>https://follang.org/docs/100_lex/tokens/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/tokens/</guid>
-        <description>Assigning \n(\t|\s)*(\W)?(AI)(\[(OI)\])*
-\n(\t|\s)*(AI)
-| \n(\t|\s)*\W(AI)
-| \n(\t|\s)*(AI)(\[\])
-| \n(\t|\s)*\W(AI)(\[\])
-| \n(\t|\s)*(AI)(\[(OI)\])
-| \n(\t|\s)*\W(AI)(\[(OI)\])
+        <description>Abbreviations BI - BuildIn Identifiers:
+(BI_AS|BI_IN|...)
+AI - Assigning Identifiers:
+(AI_USE|AI_DEF|...)
+TI - Type Identifiers:
+(TI_INT|TI_FLT|...)
+OI - Options Identifiers:
+((OI_PUB|OI_EXP|...),?)*
+WS - White Spaces
+ Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
+(WS)*(AI)
+| (WS)*\W(AI)
+| (WS)*(AI)(\[\])
+| (WS)*\W(AI)(\[\])
+| (WS)*(AI)(\[(OI)\])
+| (WS)*\W(AI)(\[(OI)\])
+ </description>
+      </item>
+      
+      <item>
+        <title>Letters</title>
+        <link>https://follang.org/docs/100_lex/strings/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/strings/</guid>
+        <description>Character literals BI - BuildIn Identifiers:
+(BI_AS|BI_IN|...)
+AI - Assigning Identifiers:
+(AI_USE|AI_DEF|...)
+TI - Type Identifiers:
+(TI_INT|TI_FLT|...)
+OI - Options Identifiers:
+((OI_PUB|OI_EXP|...),?)*
+WS - White Spaces
+ Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
+(WS)*(AI)
+| (WS)*\W(AI)
+| (WS)*(AI)(\[\])
+| (WS)*\W(AI)(\[\])
+| (WS)*(AI)(\[(OI)\])
+| (WS)*\W(AI)(\[(OI)\])
+ </description>
+      </item>
+      
+      <item>
+        <title>Numbers</title>
+        <link>https://follang.org/docs/100_lex/numbers/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lex/numbers/</guid>
+        <description>Abbreviations BI - BuildIn Identifiers:
+(BI_AS|BI_IN|...)
+AI - Assigning Identifiers:
+(AI_USE|AI_DEF|...)
+TI - Type Identifiers:
+(TI_INT|TI_FLT|...)
+OI - Options Identifiers:
+((OI_PUB|OI_EXP|...),?)*
+WS - White Spaces
+ Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
+(WS)*(AI)
+| (WS)*\W(AI)
+| (WS)*(AI)(\[\])
+| (WS)*\W(AI)(\[\])
+| (WS)*(AI)(\[(OI)\])
+| (WS)*\W(AI)(\[(OI)\])
  </description>
       </item>
       
