@@ -985,7 +985,7 @@
 <meta property="og:url" content="https://follang.org/docs/100_lex/strings/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/100_lex/strings/">
@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lex/strings/",
-    "description": "Character literals BI - BuildIn Identifiers: (BI_AS|BI_IN|...) AI - Assigning Identifiers: (AI_USE|AI_DEF|...) TI - Type Identifiers: (TI_INT|TI_FLT|...) OI - Options …",
+    "description": "Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (\u0026quot;) with the exception of U+0022 itself, which must be escaped by …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1113,14 +1113,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title active" data-depth="0">Letters</a>
         </li>
       
@@ -1174,6 +1166,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -1534,8 +1542,18 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#character-literals">Character literals</a></li>
-        <li><a href="#assigning">Assigning</a></li>
+        <li><a href="#character-literals">Character literals</a>
+          <ul>
+            <li><a href="#raw-characters">Raw characters</a></li>
+          </ul>
+        </li>
+        <li><a href="#string-literals">String literals</a>
+          <ul>
+            <li><a href="#escape-sequences">Escape sequences</a></li>
+            <li><a href="#raw-strings">Raw strings</a></li>
+          </ul>
+        </li>
+        <li><a href="#boolean-literal">Boolean literal</a></li>
       </ul>
     </li>
   </ul>
@@ -2171,8 +2189,8 @@
     
     
     
-    <div class="dropdown versioner" style="padding-right:.3%;">
-        <div style="line-height:2em;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
+    <div class="dropdown versioner">
+        <div style="line-height:2.1rem;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
         <div class="dropdown-content lang__dropdown--content">
             
                 
@@ -2317,14 +2335,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title active" data-depth="0">Letters</a>
         </li>
       
@@ -2378,6 +2388,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -2694,28 +2720,105 @@
 
   <article class="single__contents" data-dir="ltr">
     <h2 id="character-literals">Character literals</h2>
-<div class="placeholder " >
-<p>BI - BuildIn Identifiers:<br />
-<code>(BI_AS|BI_IN|...)</code></p>
-<p>AI - Assigning Identifiers:<br />
-<code>(AI_USE|AI_DEF|...)</code></p>
-<p>TI - Type Identifiers:<br />
-<code>(TI_INT|TI_FLT|...)</code></p>
-<p>OI - Options Identifiers:<br />
-<code>((OI_PUB|OI_EXP|...),?)*</code></p>
-<p>WS - White Spaces</p>
-</div>
-<h2 id="assigning">Assigning</h2>
-<div class="placeholder " >
-<p><code>(</code><em>WS</em><code>)*(\W)?(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)?\])?</code></p>
-<p><code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)</code><br />
-| <code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)(\[\])</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)(\[\])</code><br />
-| <code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)\])</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)\])</code></p>
-</div>
+<p>A character literal is a <strong>single</strong> Unicode character enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
+<pre><code>var aCharacter: chr = &quot;z\n&quot;
+var anotherOne: str = &quot;語\n&quot;
+</code></pre><h3 id="raw-characters">Raw characters</h3>
+<p>Raw character literals do not process any escapes. They are enclosed within single-quotes <code>U+0027</code> (<code>'</code>) with the exception of <code>U+0027</code> itself:</p>
+<pre><code>var aCharacter: chr = 'z'
+</code></pre><h2 id="string-literals">String literals</h2>
+<p>A character literal is a <strong>single</strong> or a <strong>sequence</strong> of Unicode characters enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
+<pre><code>var hiInEnglish: str = &quot;Hello, world!\n&quot;
+var hInCantonese: str = &quot;日本語&quot;
+</code></pre><p>Line-breaks are allowed in string literals. A line-break is either a newline (<code>U+000A</code>) or a pair of carriage return and newline (<code>U+000D</code>, <code>U+000A</code>). Both byte sequences are normally translated to <code>U+000A</code>, but as a special exception, when an unescaped <code>U+005C</code> character (<code>\</code> occurs immediately before the line-break, the <code>U+005C</code> character, the line-break, and all whitespace at the beginning of the next line are ignored. Thus a and b are equal:</p>
+<pre><code>var a: str = &quot;foobar&quot;;
+var b: str = &quot;foo\
+              bar&quot;;
 
+assert(a,b);
+</code></pre><h3 id="escape-sequences">Escape sequences</h3>
+<p>Some additional escapes are available in either character or non-raw string literals.</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\p</td>
+<td>platform specific newline: CRLF on Windows, LF on Unix</td>
+</tr>
+<tr>
+<td>\r, \c</td>
+<td>carriage return</td>
+</tr>
+<tr>
+<td>\n, \l</td>
+<td>line feed (often called newline)</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>form feed</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tabulator</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>vertical tabulator</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>backslash</td>
+</tr>
+<tr>
+<td>\&rdquo;</td>
+<td>quotation mark</td>
+</tr>
+<tr>
+<td>\&rsquo;</td>
+<td>apostrophe</td>
+</tr>
+<tr>
+<td>\ &lsquo;0&rsquo;..&lsquo;9'+</td>
+<td>character with decimal value d; all decimal digits directly following are used for the character</td>
+</tr>
+<tr>
+<td>\a</td>
+<td>alert</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>backspace</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>escape [ESC]</td>
+</tr>
+<tr>
+<td>\x HH</td>
+<td>character with hex value HH; exactly two hex digits are allowed</td>
+</tr>
+<tr>
+<td>\u HHHH</td>
+<td>unicode codepoint with hex value HHHH; exactly four hex digits are allowed</td>
+</tr>
+<tr>
+<td>\u {H+}</td>
+<td>unicode codepoint; all hex digits enclosed in {} are used for the codepoint</td>
+</tr>
+</tbody>
+</table>
+<h3 id="raw-strings">Raw strings</h3>
+<p>Just like <a href="/docs/100_lex/strings/#raw-characters">raw characters</a>, raw string literals do not process any escapes either. They are enclosed within single-quotes <code>U+0027</code> (<code>'</code>) with the exception of <code>U+0027</code> itself:</p>
+<pre><code>var hiInEnglish: str = 'Hello, world!'
+</code></pre><h2 id="boolean-literal">Boolean literal</h2>
+<p>The two values of the boolean type are written <code>true</code> and <code>false</code>:</p>
+<pre><code>var isPresent: bol = false;
+</code></pre>
   </article>
 </div>
       
@@ -2723,11 +2826,11 @@
 <nav class="pagination-single">
   
     
-      <a href="https://follang.org/docs/100_lex/tokens/" title="Tokens" class="pagination-single__left">
+      <a href="https://follang.org/docs/100_lex/whitespaces/" title="Whitespaces" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Tokens</div>
+        <div class="pagination-single__right-title">Whitespaces</div>
       </a>
     
     <div class="grow"></div>
@@ -2757,8 +2860,18 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#character-literals">Character literals</a></li>
-        <li><a href="#assigning">Assigning</a></li>
+        <li><a href="#character-literals">Character literals</a>
+          <ul>
+            <li><a href="#raw-characters">Raw characters</a></li>
+          </ul>
+        </li>
+        <li><a href="#string-literals">String literals</a>
+          <ul>
+            <li><a href="#escape-sequences">Escape sequences</a></li>
+            <li><a href="#raw-strings">Raw strings</a></li>
+          </ul>
+        </li>
+        <li><a href="#boolean-literal">Boolean literal</a></li>
       </ul>
     </li>
   </ul>

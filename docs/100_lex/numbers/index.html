@@ -985,7 +985,7 @@
 <meta property="og:url" content="https://follang.org/docs/100_lex/numbers/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/100_lex/numbers/">
@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lex/numbers/",
-    "description": "Abbreviations BI - BuildIn Identifiers: (BI_AS|BI_IN|...) AI - Assigning Identifiers: (AI_USE|AI_DEF|...) TI - Type Identifiers: (TI_INT|TI_FLT|...) OI - Options …",
+    "description": "A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed. Intiger literals An integer …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1113,14 +1113,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -1174,6 +1166,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -1534,8 +1542,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#abbreviations">Abbreviations</a></li>
-        <li><a href="#assigning">Assigning</a></li>
+        <li><a href="#intiger-literals">Intiger literals</a>
+          <ul>
+            <li><a href="#underscore">Underscore</a></li>
+          </ul>
+        </li>
+        <li><a href="#float-literal">Float literal</a></li>
       </ul>
     </li>
   </ul>
@@ -2171,8 +2183,8 @@
     
     
     
-    <div class="dropdown versioner" style="padding-right:.3%;">
-        <div style="line-height:2em;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
+    <div class="dropdown versioner">
+        <div style="line-height:2.1rem;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
         <div class="dropdown-content lang__dropdown--content">
             
                 
@@ -2317,14 +2329,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -2378,6 +2382,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -2693,29 +2713,38 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="abbreviations">Abbreviations</h2>
-<div class="placeholder " >
-<p>BI - BuildIn Identifiers:<br />
-<code>(BI_AS|BI_IN|...)</code></p>
-<p>AI - Assigning Identifiers:<br />
-<code>(AI_USE|AI_DEF|...)</code></p>
-<p>TI - Type Identifiers:<br />
-<code>(TI_INT|TI_FLT|...)</code></p>
-<p>OI - Options Identifiers:<br />
-<code>((OI_PUB|OI_EXP|...),?)*</code></p>
-<p>WS - White Spaces</p>
-</div>
-<h2 id="assigning">Assigning</h2>
-<div class="placeholder " >
-<p><code>(</code><em>WS</em><code>)*(\W)?(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)?\])?</code></p>
-<p><code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)</code><br />
-| <code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)(\[\])</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)(\[\])</code><br />
-| <code>(</code><em>WS</em><code>)*(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)\])</code><br />
-| <code>(</code><em>WS</em><code>)*\W(</code><em>AI</em><code>)(\[(</code><em>OI</em><code>)\])</code></p>
-</div>
+    <p>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.</p>
+<h2 id="intiger-literals">Intiger literals</h2>
+<p>An integer literal has one of four forms:</p>
+<ul>
+<li>A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores.</li>
+<li>A hex literal starts with the character sequence <code>U+0030</code> <code>U+0078</code> (<code>0x</code>) and continues as any mixture (with at least one digit) of hex digits and underscores.</li>
+<li>An octal literal starts with the character sequence <code>U+0030 U+006F</code> (<code>0o</code>) and continues as any mixture (with at least one digit) of octal digits and underscores.</li>
+<li>A binary literal starts with the character sequence <code>U+0030 U+0062</code> (<code>0b</code>) and continues as any mixture (with at least one digit) of binary digits and underscores.</li>
+</ul>
+<pre><code>var decimal: int = 45;
+var hexadec: int = 0x6HF53BD5;
+var octal: int = 0o822371;
+var binary: int = 0b010010010;
+</code></pre><h3 id="underscore">Underscore</h3>
+<p>Underscore character <code>U+005F</code> (<code>_</code>) is a special character, that does not represent anything withing the number laterals. An integer lateral containing this character is the same as the one without. It is used only as a syntastc sugar:</p>
+<pre><code>var aNumber: int = 540_467;
+var bNumber: int = 540467;
 
+assert(aNumber, bNumber)
+</code></pre><h2 id="float-literal">Float literal</h2>
+<p>A floating-point literal has one of two forms:</p>
+<ul>
+<li>A decimal literal followed by a period character <code>U+002E</code> (<code>.</code>). This is optionally followed by another decimal literal.</li>
+<li>A decimal literal that follows a period character <code>U+002E</code> (<code>.</code>).</li>
+<li>A decimal literal followed by a period character <code>U+002C</code> (<code>,</code>). This is optionally followed by another decimal literal.</li>
+<li>A decimal literal that follows a period character <code>U+002C</code> (<code>,</code>).</li>
+</ul>
+<pre><code>var aFloat: flt = 3.4;
+var bFloat: flt = .4;
+var cFloat: flt = 3,4;
+var bFloat: flt = ,4;
+</code></pre>
   </article>
 </div>
       
@@ -2750,8 +2779,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#abbreviations">Abbreviations</a></li>
-        <li><a href="#assigning">Assigning</a></li>
+        <li><a href="#intiger-literals">Intiger literals</a>
+          <ul>
+            <li><a href="#underscore">Underscore</a></li>
+          </ul>
+        </li>
+        <li><a href="#float-literal">Float literal</a></li>
       </ul>
     </li>
   </ul>

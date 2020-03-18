@@ -137,28 +137,6 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
       </item>
       
       <item>
-        <title>Build-In</title>
-        <link>https://follang.org/docs/200_mac/buildin/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_mac/buildin/</guid>
-        <description>WITH BUILD-INS, ALTERNATIVES, MACROS, DEFAULTS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEYWORDS, IDENTIFIERS, AND BEHAVIOUR.
- IT IS NOT SUGGESTED TO RELAY HEAVILY ON MACROS BECAUSE THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE TRIES TO USE YOUR CODE.
- Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
-var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .</description>
-      </item>
-      
-      <item>
-        <title>Macors</title>
-        <link>https://follang.org/docs/200_mac/macros/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_mac/macros/</guid>
-        <description>Macros Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
-For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
-      </item>
-      
-      <item>
         <title>Scope</title>
         <link>https://follang.org/docs/250_mod/scopes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -184,17 +162,6 @@ In case a function exists in two files and is called from thrid one, then this c
         
         <guid>https://follang.org/v0.11-docs/spec/control/</guid>
         <description>Statements and expressions </description>
-      </item>
-      
-      <item>
-        <title>Templates</title>
-        <link>https://follang.org/docs/200_mac/temp/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_mac/temp/</guid>
-        <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
-For example here is how the != is defined:
-fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
       </item>
       
       <item>
@@ -405,6 +372,18 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
       </item>
       
       <item>
+        <title>Build-In</title>
+        <link>https://follang.org/docs/200_mac/buildin/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/buildin/</guid>
+        <description>WITH BUILD-INS, ALTERNATIVES, MACROS, DEFAULTS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEYWORDS, IDENTIFIERS, AND BEHAVIOUR.
+ IT IS NOT SUGGESTED TO RELAY HEAVILY ON MACROS BECAUSE THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE TRIES TO USE YOUR CODE.
+ Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
+var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .</description>
+      </item>
+      
+      <item>
         <title>Keywords</title>
         <link>https://follang.org/docs/100_lex/keywords/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -412,24 +391,27 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
         <guid>https://follang.org/docs/100_lex/keywords/</guid>
         <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
 Keywords Fol has a number of restricted groups of keywords:
-AI (assignment indentifiers) AI_USE use
-AI_DEF def
-AI_VAR var
-AI_FUN fun
-AI_PRO pro
-AI_TYP typ
- ASSIGNMENT IDENTIFIERS - AI:
-(AI_USE|AI_DEF|...)
- TI (type indentifiers) TI_INT int
-TI_FLT flt
-TI_CHR chr
-TI_BOL bol
-TI_ARR arr
-TI_SEQ seq
-TI_VEC vec
-TI_SET set
-TI_MAP map
-TI_MAT mat</description>
+BK (build-in keywords) BK_AS as
+BK_IN in
+BK_DO do
+BK_GO go
+BK_OR or
+BK_AND and
+BK_IF if
+BK_ELSE else
+BK_FOR for
+BK_CASE case
+BK_LIKE like
+BK_TYPE type
+BK_LOOP loop
+BK_NONE none
+BK_THIS this
+BK_SELF self
+BK_BREAK break
+BK_RETURN return
+BK_YEILD yeild
+BK_PANIC panic
+BK_REPORT report</description>
       </item>
       
       <item>
@@ -448,6 +430,36 @@ Either
       </item>
       
       <item>
+        <title>Macors</title>
+        <link>https://follang.org/docs/200_mac/macros/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/macros/</guid>
+        <description>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
+For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
+      </item>
+      
+      <item>
+        <title>Alternatives</title>
+        <link>https://follang.org/docs/200_mac/alternatives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/alternatives/</guid>
+        <description>Alternatives are used when we want to simplify code. For example, define an alternative, so whenever you write +var it is the same as var[+].
+def &#39;+var&#39;: alt = &#39;var[+]&#39; def &#39;~var&#39;: alt = &#39;var[~]&#39; def &#39;.pointer_content&#39;: alt = &#39;.pointer_value&#39; </description>
+      </item>
+      
+      <item>
+        <title>Defaults</title>
+        <link>https://follang.org/docs/200_mac/defaults/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/defaults/</guid>
+        <description>Defaults are a way to change the default behaviour of options. Example the default behaviour of str when called without options. By defalt str is it is saved on stack, it is a constant and not public, thus has str[pil,imu,nor], and we want to make it mutable and saved on heap by default:
+def &#39;str&#39;: def[] = &#39;str[new,mut,nor]&#39; </description>
+      </item>
+      
+      <item>
         <title>Comments</title>
         <link>https://follang.org/docs/100_lex/comments/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -462,6 +474,17 @@ BLOCK_COMMENT :
       </item>
       
       <item>
+        <title>Templates</title>
+        <link>https://follang.org/docs/200_mac/temp/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_mac/temp/</guid>
+        <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
+For example here is how the != is defined:
+fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
+      </item>
+      
+      <item>
         <title>Whitespaces</title>
         <link>https://follang.org/docs/100_lex/whitespaces/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -472,53 +495,14 @@ BLOCK_COMMENT :
       </item>
       
       <item>
-        <title>Tokens</title>
-        <link>https://follang.org/docs/100_lex/tokens/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/100_lex/tokens/</guid>
-        <description>Abbreviations BI - BuildIn Identifiers:
-(BI_AS|BI_IN|...)
-AI - Assigning Identifiers:
-(AI_USE|AI_DEF|...)
-TI - Type Identifiers:
-(TI_INT|TI_FLT|...)
-OI - Options Identifiers:
-((OI_PUB|OI_EXP|...),?)*
-WS - White Spaces
- Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
-(WS)*(AI)
-| (WS)*\W(AI)
-| (WS)*(AI)(\[\])
-| (WS)*\W(AI)(\[\])
-| (WS)*(AI)(\[(OI)\])
-| (WS)*\W(AI)(\[(OI)\])
- </description>
-      </item>
-      
-      <item>
         <title>Letters</title>
         <link>https://follang.org/docs/100_lex/strings/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/strings/</guid>
-        <description>Character literals BI - BuildIn Identifiers:
-(BI_AS|BI_IN|...)
-AI - Assigning Identifiers:
-(AI_USE|AI_DEF|...)
-TI - Type Identifiers:
-(TI_INT|TI_FLT|...)
-OI - Options Identifiers:
-((OI_PUB|OI_EXP|...),?)*
-WS - White Spaces
- Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
-(WS)*(AI)
-| (WS)*\W(AI)
-| (WS)*(AI)(\[\])
-| (WS)*\W(AI)(\[\])
-| (WS)*(AI)(\[(OI)\])
-| (WS)*\W(AI)(\[(OI)\])
- </description>
+        <description>Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
+var aCharacter: chr = &amp;quot;z\n&amp;quot; var anotherOne: str = &amp;quot;語\n&amp;quot; Raw characters Raw character literals do not process any escapes. They are enclosed within single-quotes U+0027 (&#39;) with the exception of U+0027 itself:
+var aCharacter: chr = &#39;z&#39; String literals A character literal is a single or a sequence of Unicode characters enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
       </item>
       
       <item>
@@ -527,23 +511,9 @@ WS - White Spaces
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lex/numbers/</guid>
-        <description>Abbreviations BI - BuildIn Identifiers:
-(BI_AS|BI_IN|...)
-AI - Assigning Identifiers:
-(AI_USE|AI_DEF|...)
-TI - Type Identifiers:
-(TI_INT|TI_FLT|...)
-OI - Options Identifiers:
-((OI_PUB|OI_EXP|...),?)*
-WS - White Spaces
- Assigning (WS)*(\W)?(AI)(\[(OI)?\])?
-(WS)*(AI)
-| (WS)*\W(AI)
-| (WS)*(AI)(\[\])
-| (WS)*\W(AI)(\[\])
-| (WS)*(AI)(\[(OI)\])
-| (WS)*\W(AI)(\[(OI)\])
- </description>
+        <description>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.
+Intiger literals An integer literal has one of four forms:
+ A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
       </item>
       
       <item>

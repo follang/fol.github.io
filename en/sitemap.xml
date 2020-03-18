@@ -95,14 +95,6 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/buildin/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/200_mac/macros/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/docs/250_mod/scopes/</loc>
   </url>
   
@@ -112,10 +104,6 @@
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/control/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/200_mac/temp/</loc>
   </url>
   
   <url>
@@ -203,6 +191,10 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/200_mac/buildin/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/100_lex/keywords/</loc>
   </url>
   
@@ -215,11 +207,23 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/200_mac/macros/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/200_mac/</loc>
   </url>
   
   <url>
+    <loc>https://follang.org/docs/200_mac/alternatives/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/250_mod/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/200_mac/defaults/</loc>
   </url>
   
   <url>
@@ -228,6 +232,10 @@
   
   <url>
     <loc>https://follang.org/docs/300_ite/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/200_mac/temp/</loc>
   </url>
   
   <url>
@@ -241,10 +249,6 @@
   <url>
     <loc>https://follang.org/docs/500_typ/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/100_lex/tokens/</loc>
   </url>
   
   <url>

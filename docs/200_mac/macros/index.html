@@ -985,7 +985,7 @@
 <meta property="og:url" content="https://follang.org/docs/200_mac/macros/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/200_mac/macros/">
@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/200_mac/macros/",
-    "description": "Macros Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to …",
+    "description": "Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1113,14 +1113,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -1174,6 +1166,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title active" data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -1530,21 +1538,7 @@
     <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#macros">Macros</a></li>
-            <li><a href="#alternatives">Alternatives</a></li>
-            <li><a href="#defaults">Defaults</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
   <div class="toc__issue">
       
@@ -2176,8 +2170,8 @@
     
     
     
-    <div class="dropdown versioner" style="padding-right:.3%;">
-        <div style="line-height:2em;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
+    <div class="dropdown versioner">
+        <div style="line-height:2.1rem;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
         <div class="dropdown-content lang__dropdown--content">
             
                 
@@ -2322,14 +2316,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -2383,6 +2369,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title active" data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -2698,8 +2700,7 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="macros">Macros</h3>
-<p>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.</p>
+    <p>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.</p>
 <p>For example, wherever <code>$</code> is before <code>any</code> variable name, its replaced with <code>.to_string</code>. Or wherever <code>!</code> is before <code>bol</code> name, its replaced with <code>.not</code> but when the same <code>!</code> is placed before <code>ptr</code> it is replaced with <code>.delete_pointer</code>.</p>
 <pre><code>def '$'(a: any): mac = '.to_string'
 def '!'(a: bol): mac = '.not '
@@ -2707,14 +2708,6 @@ def '!'(a: ptr): mac = '.delete_pointer';
 def '*'(a: ptr): mac = '.pointer_value';
 def '#'(a: any): mac = '.borrow_from';
 def '&amp;'(a: any): mac = '.address_of';
-</code></pre><h3 id="alternatives">Alternatives</h3>
-<p>Alternatives are used when we want to simplify code. For example, define an alternative, so whenever you write <code>+var</code> it is the same as <code>var[+]</code>.</p>
-<pre><code>def '+var': alt = 'var[+]'
-def '~var': alt = 'var[~]'
-def '.pointer_content': alt = '.pointer_value'
-</code></pre><h3 id="defaults">Defaults</h3>
-<p>Defaults are a way to change the default behaviour of options. Example the default behaviour of <code>str</code> when called without options. By defalt <code>str</code> is it is saved on stack, it is a constant and not public, thus has <code>str[pil,imu,nor]</code>, and we want to make it mutable and saved on heap by default:</p>
-<pre><code>def 'str': def[] = 'str[new,mut,nor]'
 </code></pre>
   </article>
 </div>
@@ -2732,8 +2725,8 @@ def '.pointer_content': alt = '.pointer_value'
     
     <div class="grow"></div>
     
-      <a href="https://follang.org/docs/200_mac/temp/" title="Templates" class="pagination-single__right">
-        <div class="pagination-single__left-title">Templates</div>
+      <a href="https://follang.org/docs/200_mac/alternatives/" title="Alternatives" class="pagination-single__right">
+        <div class="pagination-single__left-title">Alternatives</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2753,21 +2746,7 @@ def '.pointer_content': alt = '.pointer_value'
         <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#macros">Macros</a></li>
-            <li><a href="#alternatives">Alternatives</a></li>
-            <li><a href="#defaults">Defaults</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
   <div class="toc__issue">
       

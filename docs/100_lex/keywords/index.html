@@ -985,7 +985,7 @@
 <meta property="og:url" content="https://follang.org/docs/100_lex/keywords/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.66.0" />
+<meta name="generator" content="Hugo 0.67.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/100_lex/keywords/">
@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lex/keywords/",
-    "description": "Input format FOL\u0026rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8 Keywords Fol has a number of restricted groups of keywords: AI …",
+    "description": "Input format FOL\u0026rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8 Keywords Fol has a number of restricted groups of keywords: BK …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1113,14 +1113,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -1174,6 +1166,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -1537,12 +1545,13 @@
         <li><a href="#input-format">Input format</a></li>
         <li><a href="#keywords">Keywords</a>
           <ul>
-            <li><a href="#ai-assignment-indentifiers">AI (assignment indentifiers)</a></li>
-            <li><a href="#ti-type-indentifiers">TI (type indentifiers)</a></li>
-            <li><a href="#oi-option-indentifiers">OI (option indentifiers)</a></li>
-            <li><a href="#bi-build-in-indentifiers">BI (build-in indentifiers)</a></li>
+            <li><a href="#bk-build-in-keywords">BK (build-in keywords)</a></li>
+            <li><a href="#ak-assignment-keywords">AK (assignment keywords)</a></li>
+            <li><a href="#tk-type-keywords">TK (type keywords)</a></li>
+            <li><a href="#ok-option-keywords">OK (option keywords)</a></li>
           </ul>
         </li>
+        <li><a href="#assigning">Assigning</a></li>
       </ul>
     </li>
   </ul>
@@ -2178,8 +2187,8 @@
     
     
     
-    <div class="dropdown versioner" style="padding-right:.3%;">
-        <div style="line-height:2em;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
+    <div class="dropdown versioner">
+        <div style="line-height:2.1rem;">v0.12 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg></div>
         <div class="dropdown-content lang__dropdown--content">
             
                 
@@ -2324,14 +2333,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/100_lex/tokens/" class="menu__title " data-depth="0">Tokens</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/100_lex/strings/" class="menu__title " data-depth="0">Letters</a>
         </li>
       
@@ -2385,6 +2386,22 @@
         
         <li>
           <a href="https://follang.org/docs/200_mac/macros/" class="menu__title " data-depth="0">Macors</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_mac/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -2704,94 +2721,105 @@
 <p>FOL&rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8</p>
 <h2 id="keywords">Keywords</h2>
 <p>Fol has a number of restricted groups of keywords:</p>
-<h3 id="ai-assignment-indentifiers">AI (assignment indentifiers)</h3>
+<h3 id="bk-build-in-keywords">BK (build-in keywords)</h3>
 <div class="placeholder " > 
-<p>AI_USE             <code>use</code><br />
-AI_DEF             <code>def</code><br />
-AI_VAR             <code>var</code><br />
-AI_FUN             <code>fun</code><br />
-AI_PRO             <code>pro</code><br />
-AI_TYP             <code>typ</code></p>
+<p>BK_AS              <code>as</code><br />
+BK_IN              <code>in</code><br />
+BK_DO              <code>do</code><br />
+BK_GO              <code>go</code></p>
+<p>BK_OR              <code>or</code><br />
+BK_AND             <code>and</code></p>
+<p>BK_IF              <code>if</code><br />
+BK_ELSE            <code>else</code><br />
+BK_FOR             <code>for</code><br />
+BK_CASE            <code>case</code><br />
+BK_LIKE            <code>like</code><br />
+BK_TYPE            <code>type</code><br />
+BK_LOOP            <code>loop</code><br />
+BK_NONE            <code>none</code></p>
+<p>BK_THIS            <code>this</code><br />
+BK_SELF            <code>self</code></p>
+<p>BK_BREAK           <code>break</code><br />
+BK_RETURN          <code>return</code><br />
+BK_YEILD           <code>yeild</code><br />
+BK_PANIC           <code>panic</code><br />
+BK_REPORT          <code>report</code><br />
+BK_CHECK           <code>check</code><br />
+BK_ASSERT          <code>assert</code></p>
+<p>BK_TRUE            <code>true</code><br />
+BK_FALSE           <code>false</code></p>
 </div>
 <div class="placeholder " >
-<p>ASSIGNMENT IDENTIFIERS - AI:<br />
-<code>(AI_USE|AI_DEF|...)</code></p>
+<p>BUILD-IN KEYWORDS - BK:<br />
+<code>(BK_AS|BK_IN|...)</code></p>
 </div>
-<h3 id="ti-type-indentifiers">TI (type indentifiers)</h3>
+<h3 id="ak-assignment-keywords">AK (assignment keywords)</h3>
 <div class="placeholder " > 
-<p>TI_INT             <code>int</code><br />
-TI_FLT             <code>flt</code><br />
-TI_CHR             <code>chr</code><br />
-TI_BOL             <code>bol</code></p>
-<p>TI_ARR             <code>arr</code><br />
-TI_SEQ             <code>seq</code><br />
-TI_VEC             <code>vec</code><br />
-TI_SET             <code>set</code><br />
-TI_MAP             <code>map</code><br />
-TI_MAT             <code>mat</code></p>
-<p>TI_STR             <code>str</code><br />
-TI_NUM             <code>num</code></p>
-<p>TI_OPT             <code>opt</code><br />
-TI_MUL             <code>mul</code><br />
-TI_ANY             <code>any</code></p>
-<p>TI_PTR             <code>ptr</code><br />
-TI_ERR             <code>err</code><br />
-TI_NON             <code>non</code></p>
-<p>TI_REC             <code>rec</code><br />
-TI_LST             <code>lst</code><br />
-TI_ENM             <code>enm</code><br />
-TI_UNI             <code>uni</code><br />
-TI_CLS             <code>cls</code></p>
-<p>TI_STD             <code>std</code><br />
-TI_MOD             <code>mod</code><br />
-TI_BLK             <code>blk</code></p>
+<p>AK_USE             <code>use</code><br />
+AK_DEF             <code>def</code><br />
+AK_VAR             <code>var</code><br />
+AK_FUN             <code>fun</code><br />
+AK_PRO             <code>pro</code><br />
+AK_TYP             <code>typ</code></p>
 </div>
 <div class="placeholder " >
-<p>TYPE IDENTIFIERS - TI:<br />
-<code>(TI_INT|TI_FLT|...)</code></p>
+<p>ASSIGNMENT KEYWORDS - AK:<br />
+<code>(AK_USE|AK_DEF|...)</code></p>
+</div>
+<h3 id="tk-type-keywords">TK (type keywords)</h3>
+<div class="placeholder " > 
+<p>TK_INT             <code>int</code><br />
+TK_FLT             <code>flt</code><br />
+TK_CHR             <code>chr</code><br />
+TK_BOL             <code>bol</code></p>
+<p>TK_ARR             <code>arr</code><br />
+TK_SEQ             <code>seq</code><br />
+TTKVEC             <code>vec</code><br />
+TK_SET             <code>set</code><br />
+TK_MAP             <code>map</code><br />
+TK_MAT             <code>mat</code></p>
+<p>TK_STR             <code>str</code><br />
+TK_NUM             <code>num</code></p>
+<p>TK_OPT             <code>opt</code><br />
+TK_MUL             <code>mul</code><br />
+TK_ANY             <code>any</code></p>
+<p>TK_PTR             <code>ptr</code><br />
+TK_ERR             <code>err</code><br />
+TK_NON             <code>non</code></p>
+<p>TK_REC             <code>rec</code><br />
+TK_LST             <code>lst</code><br />
+TK_ENM             <code>enm</code><br />
+TK_UNI             <code>uni</code><br />
+TK_CLS             <code>cls</code></p>
+<p>TK_STD             <code>std</code><br />
+TK_MOD             <code>mod</code><br />
+TK_BLK             <code>blk</code></p>
+</div>
+<div class="placeholder " >
+<p>TYPE KEYWORDS - TK:<br />
+<code>(TK_INT|TK_FLT|...)</code></p>
 </div>
 <div class="notices warn" >
-<p>Note that all of the <strong>type indentifiers</strong> are of three characters long. It is recomanded that identifiers not to be of the same number of characters, as ne day in the future versoin of fol, it may include more.</p>
+<p>Note that all of the <strong>type keywords</strong> are of three characters long. It is recomanded that new identifiers not to be of the same number of characters, as one day in the future that same identifier can be used s a keyword in FOL compiler.</p>
 </div>
-<h3 id="oi-option-indentifiers">OI (option indentifiers)</h3>
+<h3 id="ok-option-keywords">OK (option keywords)</h3>
 <div class="placeholder " >
-<p>OI_PUB              <code>pub</code><br />
-OI_EXP              <code>exp</code></p>
-</div>
-<div class="placeholder " >
-<p>OPTION IDENTIFIERS - OI:<br />
-<code>((OI_PUB|OI_EXP|...),?)*</code></p>
-</div>
-<h3 id="bi-build-in-indentifiers">BI (build-in indentifiers)</h3>
-<div class="placeholder " > 
-<p>BI_AS              <code>as</code><br />
-BI_IN              <code>in</code><br />
-BI_DO              <code>do</code><br />
-BI_GO              <code>go</code></p>
-<p>BI_OR              <code>or</code><br />
-BI_AND             <code>and</code></p>
-<p>BI_IF              <code>if</code><br />
-BI_ELSE            <code>else</code><br />
-BI_FOR             <code>for</code><br />
-BI_CASE            <code>case</code><br />
-BI_LIKE            <code>like</code><br />
-BI_TYPE            <code>type</code><br />
-BI_LOOP            <code>loop</code><br />
-BI_NONE            <code>none</code></p>
-<p>BI_THIS            <code>this</code><br />
-BI_SELF            <code>self</code></p>
-<p>BI_BREAK           <code>break</code><br />
-BI_RETURN          <code>return</code><br />
-BI_YEILD           <code>yeild</code><br />
-BI_PANIC           <code>panic</code><br />
-BI_REPORT          <code>report</code><br />
-BI_CHECK           <code>check</code></p>
-<p>BI_TRUE            <code>true</code><br />
-BI_FALSE           <code>false</code></p>
+<p>OK_PUB              <code>pub</code><br />
+OK_EXP              <code>exp</code></p>
 </div>
 <div class="placeholder " >
-<p>BUILD-IN IDENTIFIERS - BI:<br />
-<code>(BI_AS|BI_IN|...)</code></p>
+<p>OPTION KEYWORDS - OK:<br />
+<code>((OK_PUB|OK_EXP|...),?)*</code></p>
+</div>
+<h2 id="assigning">Assigning</h2>
+<div class="placeholder " >
+<p><code>(</code><em>WS</em><code>)*(\W)?(</code><em>AK</em><code>)(\[(</code><em>OK</em><code>)?\])?</code></p>
+<p><code>(</code><em>WS</em><code>)*(</code><em>AK</em><code>)</code><br />
+| <code>(</code><em>WS</em><code>)*\W(</code><em>AK</em><code>)</code><br />
+| <code>(</code><em>WS</em><code>)*(</code><em>AK</em><code>)(\[\])</code><br />
+| <code>(</code><em>WS</em><code>)*\W(</code><em>AK</em><code>)(\[\])</code><br />
+| <code>(</code><em>WS</em><code>)*(</code><em>AK</em><code>)(\[(</code><em>OK</em><code>)\])</code><br />
+| <code>(</code><em>WS</em><code>)*\W(</code><em>AK</em><code>)(\[(</code><em>OK</em><code>)\])</code></p>
 </div>
 
   </article>
@@ -2831,12 +2859,13 @@ BI_FALSE           <code>false</code></p>
         <li><a href="#input-format">Input format</a></li>
         <li><a href="#keywords">Keywords</a>
           <ul>
-            <li><a href="#ai-assignment-indentifiers">AI (assignment indentifiers)</a></li>
-            <li><a href="#ti-type-indentifiers">TI (type indentifiers)</a></li>
-            <li><a href="#oi-option-indentifiers">OI (option indentifiers)</a></li>
-            <li><a href="#bi-build-in-indentifiers">BI (build-in indentifiers)</a></li>
+            <li><a href="#bk-build-in-keywords">BK (build-in keywords)</a></li>
+            <li><a href="#ak-assignment-keywords">AK (assignment keywords)</a></li>
+            <li><a href="#tk-type-keywords">TK (type keywords)</a></li>
+            <li><a href="#ok-option-keywords">OK (option keywords)</a></li>
           </ul>
         </li>
+        <li><a href="#assigning">Assigning</a></li>
       </ul>
     </li>
   </ul>
