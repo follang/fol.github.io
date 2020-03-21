@@ -31,6 +31,7 @@
         <description>Fol has a number of restricted groups of keywords:
 BK (build-in keywords) BK_AS as
 BK_IN in
+BK_IS is
 BK_DO do
 BK_GO go
 BK_OR or
@@ -55,8 +56,7 @@ BK_ASSERT assert
 BK_TRUE true
 BK_FALSE false
  BUILD-IN KEYWORDS - BK:
-(BK_AS|BK_IN|...)
- AK (assignment keywords) AK_USE use</description>
+(BK_AS|BK_IN|...)</description>
       </item>
       
       <item>
@@ -104,9 +104,9 @@ BLOCK_COMMENT :
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/strings/</guid>
-        <description>Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
+        <description>Characters A character is a single Unicode element enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
 var aCharacter: chr = &amp;quot;z\n&amp;quot; var anotherOne: str = &amp;quot;語\n&amp;quot; Raw characters Raw character literals do not process any escapes. They are enclosed within single-quotes U+0027 (&#39;) with the exception of U+0027 itself:
-var aCharacter: chr = &#39;z&#39; String literals A character literal is a single or a sequence of Unicode characters enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
+var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of Unicode elements enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
       </item>
       
       <item>
@@ -115,8 +115,8 @@ var aCharacter: chr = &#39;z&#39; String literals A character literal is a singl
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/numbers/</guid>
-        <description>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.
-Intiger literals An integer literal has one of four forms:
+        <description>A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed.
+Intigers An integer has one of four forms:
  A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
       </item>
       

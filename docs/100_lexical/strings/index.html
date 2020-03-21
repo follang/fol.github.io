@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lexical/strings/",
-    "description": "Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (\u0026quot;) with the exception of U+0022 itself, which must be escaped by …",
+    "description": "Characters A character is a single Unicode element enclosed within quotes U+0022 (\u0026quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1244,7 +1244,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -1252,7 +1252,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -1260,7 +1260,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -1268,7 +1268,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -1694,18 +1694,18 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#character-literals">Character literals</a>
+        <li><a href="#characters">Characters</a>
           <ul>
             <li><a href="#raw-characters">Raw characters</a></li>
           </ul>
         </li>
-        <li><a href="#string-literals">String literals</a>
+        <li><a href="#strings">Strings</a>
           <ul>
             <li><a href="#escape-sequences">Escape sequences</a></li>
             <li><a href="#raw-strings">Raw strings</a></li>
           </ul>
         </li>
-        <li><a href="#boolean-literal">Boolean literal</a></li>
+        <li><a href="#booleans">Booleans</a></li>
       </ul>
     </li>
   </ul>
@@ -2618,7 +2618,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -2626,7 +2626,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -2634,7 +2634,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -2642,7 +2642,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -3023,18 +3023,18 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="character-literals">Character literals</h2>
-<p>A character literal is a <strong>single</strong> Unicode character enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
+    <h2 id="characters">Characters</h2>
+<p>A character is a <strong>single</strong> Unicode element enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
 <pre><code>var aCharacter: chr = &quot;z\n&quot;
 var anotherOne: str = &quot;語\n&quot;
 </code></pre><h3 id="raw-characters">Raw characters</h3>
 <p>Raw character literals do not process any escapes. They are enclosed within single-quotes <code>U+0027</code> (<code>'</code>) with the exception of <code>U+0027</code> itself:</p>
 <pre><code>var aCharacter: chr = 'z'
-</code></pre><h2 id="string-literals">String literals</h2>
-<p>A character literal is a <strong>single</strong> or a <strong>sequence</strong> of Unicode characters enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
+</code></pre><h2 id="strings">Strings</h2>
+<p>A string is a <strong>single</strong> or a <strong>sequence</strong> of Unicode elements enclosed within quotes <code>U+0022</code> (<code>&quot;</code>) with the exception of <code>U+0022</code> itself, which must be escaped by a preceding <code>U+005C</code> character (<code>\</code>).</p>
 <pre><code>var hiInEnglish: str = &quot;Hello, world!\n&quot;
 var hInCantonese: str = &quot;日本語&quot;
-</code></pre><p>Line-breaks are allowed in string literals. A line-break is either a newline (<code>U+000A</code>) or a pair of carriage return and newline (<code>U+000D</code>, <code>U+000A</code>). Both byte sequences are normally translated to <code>U+000A</code>, but as a special exception, when an unescaped <code>U+005C</code> character (<code>\</code> occurs immediately before the line-break, the <code>U+005C</code> character, the line-break, and all whitespace at the beginning of the next line are ignored. Thus a and b are equal:</p>
+</code></pre><p>Line-breaks are allowed in strings. A line-break is either a newline (<code>U+000A</code>) or a pair of carriage return and newline (<code>U+000D</code>, <code>U+000A</code>). Both byte sequences are normally translated to <code>U+000A</code>, but as a special exception, when an unescaped <code>U+005C</code> character (<code>\</code> occurs immediately before the line-break, the <code>U+005C</code> character, the line-break, and all whitespace at the beginning of the next line are ignored. Thus a and b are equal:</p>
 <pre><code>var a: str = &quot;foobar&quot;;
 var b: str = &quot;foo\
               bar&quot;;
@@ -3119,7 +3119,7 @@ assert(a,b);
 <h3 id="raw-strings">Raw strings</h3>
 <p>Just like <a href="/docs/100_lex/strings/#raw-characters">raw characters</a>, raw string literals do not process any escapes either. They are enclosed within single-quotes <code>U+0027</code> (<code>'</code>) with the exception of <code>U+0027</code> itself:</p>
 <pre><code>var hiInEnglish: str = 'Hello, world!'
-</code></pre><h2 id="boolean-literal">Boolean literal</h2>
+</code></pre><h2 id="booleans">Booleans</h2>
 <p>The two values of the boolean type are written <code>true</code> and <code>false</code>:</p>
 <pre><code>var isPresent: bol = false;
 </code></pre>
@@ -3164,18 +3164,18 @@ assert(a,b);
   <ul>
     <li>
       <ul>
-        <li><a href="#character-literals">Character literals</a>
+        <li><a href="#characters">Characters</a>
           <ul>
             <li><a href="#raw-characters">Raw characters</a></li>
           </ul>
         </li>
-        <li><a href="#string-literals">String literals</a>
+        <li><a href="#strings">Strings</a>
           <ul>
             <li><a href="#escape-sequences">Escape sequences</a></li>
             <li><a href="#raw-strings">Raw strings</a></li>
           </ul>
         </li>
-        <li><a href="#boolean-literal">Boolean literal</a></li>
+        <li><a href="#booleans">Booleans</a></li>
       </ul>
     </li>
   </ul>

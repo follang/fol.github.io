@@ -1244,7 +1244,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -1252,7 +1252,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -1260,7 +1260,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -1268,7 +1268,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -2622,7 +2622,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -2630,7 +2630,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -2638,7 +2638,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -2646,7 +2646,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -3048,10 +3048,10 @@ typ rgbSet: set[rgb, rgb, rgb];                       // then we create a type h
 <p>A type definition creates a new, distinct type - a record. A record is an aggregate of data elements in which the individual elements are identified by names and types and accessed through offsets from the beginning of the structure. There is frequently a need in programs to model a collection of data in which the individual elements are not of the same type or size. For example, information about a college student might include name, student number, grade point average, and so forth. A data type for such a collection might use a character string for the name, an integer for the student number, a  floating- point for the grade point average, and so forth. Records are designed for this kind of need.</p>
 <p>It may appear that records and heterogeneous <a href="/docs/spec/types/#sets">set</a> are the same, but that is not the case. The elements of a heterogeneous <code>set[]</code> are all references to data objects that reside in scattered locations, often on the heap. The elements of a record are of potentially different sizes and reside in adjacent memory locations. Records are normally used as encapsulation structures, rather than data structures.</p>
 <pre><code>typ user: rec = {
-    username: str,
-    email: str,
-    sign_in_count: int[64],
-    active: bol,
+    username: str;
+    email: str;
+    sign_in_count: int[64];
+    active: bol;
 };
 </code></pre><p>To use a record after we’ve defined it, we create an instance of that record by specifying concrete values for each of the fields. We create an instance by stating the name of the record and then add curly brackets containing key: value pairs, where the keys are the names of the fields and the values are the data we want to store in those fields. We don’t have to specify the fields in the same order in which we declared them in the record. In other words, the record definition is like a general template for the type, and instances fill in that template with particular data to create values of the type.</p>
 <pre><code>@var user1: user = {
@@ -3097,10 +3097,10 @@ user1[username] = &quot;anotherusername&quot;
 <pre><code>fun (recieverRecord)someFunction(): str = { self.somestring; };
 </code></pre><p>After declaring the record receiver, we then we have access to the record with the keyword <code>self</code>. A receiver is essentially just a type that can directly call the method.</p>
 <pre><code>typ user: rec = {
-    username: str,
-    email: str,
-    sign_in_count: int[64],
-    active: bol,
+    username: str;
+    email: str;
+    sign_in_count: int[64];
+    active: bol;
 };
 
 fun (user)getName(): str = { result = self.username; };
@@ -3111,22 +3111,22 @@ fun (user)getName(): str = { result = self.username; };
 .echo(user1.getName());
 </code></pre><p>Records can have default values in their fields too.</p>
 <pre><code>typ user: rec = {
-    username: str,
-    email: str,
-    sign_in_count: int[64] = 1,
-    active: bol = true,
+    username: str;
+    email: str;
+    sign_in_count: int[64] = 1;
+    active: bol = true;
 };
 </code></pre><p>This makes possible to enforce some fields (empty ones), and leave the defaults untouched:</p>
 <pre><code>@var[mut] user1: user = { email = &quot;someone@example.com&quot;, username = &quot;someusername123&quot; }
 
 </code></pre><h3 id="catalogs">Catalogs</h3>
-<h5 style="color: red; !important;">
-Compared to records, catalogs cant have neither named values, neither default values (all types need to be declared).
-</h5>
+<div class="notices warn" >
+<p>Compared to records, catalogs cant have neither named values, neither default values (all types need to be declared).</p>
+</div>
 <p>Catalogs are simplified version of records. The are identified with <code>cat[]</code> keyword. Catalogs have the added meaning the record name provides but don’t have names associated with their fields; rather, they just have the types of the fields. Catalogs are useful when you want to give a <code>set[]</code> a name and make it be a different type from other sets, and naming each field as in a regular record would be verbose or redundant.</p>
 <pre><code>typ regStc: cat = {
-    int[8],
-    str,
+    int[8];
+    str;
 }
 </code></pre><p>And the difference between a catalog and aliased type to set is that, in a catalog you can restrict the values (with ranges) assigned to each field:</p>
 <pre><code>typ rgbSet: set[int[8], int[8], int[8]];
@@ -3165,10 +3165,10 @@ if( something == color.BLUE ) { dosomething } else { donothing }
     var[pub] brand: str;
     var[pub] memory: int[16];
 
-    +fun getType(): str = { return brand + .to_string(memory); };
+    +fun getType(): str = { brand + .to_string(memory) };
 }
 
-var laptop: computer = { member1 = value, member2 = value; };
+var laptop: computer = { member1 = value, member2 = value };
 .echo(laptop.getType());
 </code></pre><h2 id="standards-and-contracts">Standards and Contracts</h2>
 <h3 id="satndard">Satndard</h3>
@@ -3211,12 +3211,12 @@ typ rect(geo): rec[] = {                                             // this typ
 }
 
 </code></pre><p>Now we can make <code>rect</code> records or classes, we have to respect the contract. If we don&rsquo;t implement the <code>geo</code> methods, when we instantiate a new object of type <code>rect</code> it will throw an error.</p>
-<pre><code>var aRectangle: rect = { width = 5; heigh = 6; }                     // this throws an error, we haven't fullfill the ocntract
+<pre><code>var aRectangle: rect = { width = 5, heigh = 6 }                      // this throws an error, we haven't fullfill the ocntract
 </code></pre><p>To do so, we need first to create the default <code>rect</code> methods from <code>geo</code> standard, then instantiate a new object:</p>
 <pre><code>fun (rect)area(): flt[64] = { result = self.width + self.heigh }
 fun (rect)perim(): flt[64] = { result = 2 * self.width + 2 * self.heigh }
 
-var aRectangle: rect = { width = 5; heigh = 6; }                     // this from here on will work
+var aRectangle: rect = { width = 5, heigh = 6 }                     // this from here on will work
 </code></pre><p>The benifit of standard is that, we can create a subprogram that as parameter takes a standard, thus all objects with the standard can use afterwards that subprogram:</p>
 <pre><code>typ geo: std = {
     fun area(): flt[64];
@@ -3243,9 +3243,9 @@ typ square: rec[] = {                                               // this type
 pro measure( standard: std) { .echo(standard.area() + &quot;m2&quot;) }        // a siple method to print the standard's area
 
 // instantiate two objects
-var aRectangle: rect = { width = 5; heigh = 6; }                     // creating a new rectangle
-var aCircle: circle = { radius = 5; }                                // creating a new rectangle
-var aSquare: square = { heigh = 6; }                                 // creating a new square
+var aRectangle: rect = { width = 5, heigh = 6 }                      // creating a new rectangle
+var aCircle: circle = { radius = 5 }                                 // creating a new rectangle
+var aSquare: square = { heigh = 6 }                                  // creating a new square
 
 
 // to call the measure function that rpints the surface

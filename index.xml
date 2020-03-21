@@ -382,6 +382,7 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
         <description>Fol has a number of restricted groups of keywords:
 BK (build-in keywords) BK_AS as
 BK_IN in
+BK_IS is
 BK_DO do
 BK_GO go
 BK_OR or
@@ -406,8 +407,7 @@ BK_ASSERT assert
 BK_TRUE true
 BK_FALSE false
  BUILD-IN KEYWORDS - BK:
-(BK_AS|BK_IN|...)
- AK (assignment keywords) AK_USE use</description>
+(BK_AS|BK_IN|...)</description>
       </item>
       
       <item>
@@ -422,13 +422,13 @@ var aVar: int[u32] = 45; Each variant can be either signed or unsigned and has a
       </item>
       
       <item>
-        <title>Arithmetics</title>
+        <title>Calculations</title>
         <link>https://follang.org/docs/200_expressions/300_exp/arithmetics/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/300_exp/arithmetics/</guid>
-        <description>The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.
-   symbol description     - substraction   * multiplication   + addition   / division   % reminder   ^ exponent    assert((3 + 6), 9); assert((5.5 - 1.25), 4.25); assert((-5 * 14), -70); assert((14 / 3), 4); assert((100 % 7), 2); </description>
+        <description>In fol, every calcultaion, needs to be enclosed in rounded brackets ( //to evaluate ) - except in one line evaluating, the curly brackets are allowed too { // to evaluate }:
+fun adder(a, b: int): int = { retun a + b // this will throw an error } fun adder(a, b: int): int = { retun (a + b) // this is the right way to enclose } Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</description>
       </item>
       
       <item>
@@ -502,16 +502,6 @@ BLOCK_COMMENT :
       </item>
       
       <item>
-        <title>Comparison</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/comparison/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_expressions/300_exp/comparison/</guid>
-        <description>Comparison operators are also defined both for primitive types and many type in the standard library. Parentheses are required when chaining comparison operators. For example, the expression a == b == c is invalid and may be written as ((a == b) == c).
-   Symbol Meaning     == equal   != not equal   &amp;gt;&amp;gt; greater than   &amp;lt;&amp;lt; Less than   &amp;gt;= greater than or equal to   &amp;lt;= Less than or equal to    assert((123 == 123)); assert((23 !</description>
-      </item>
-      
-      <item>
         <title>Complex</title>
         <link>https://follang.org/docs/450_type/complex/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -525,6 +515,19 @@ opt[] Multiple mul[] Any any[] </description>
       </item>
       
       <item>
+        <title>Literals</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/literals/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/literals/</guid>
+        <description>A literal expression consists of one or more of the numerical/letter forms described earlier. It directly describes a numbers, characters, booleans, containers and constructs.
+There are two type of literals:
+ values calls  Value literals Value literals are the simpliest expressions. They are direct values assigned to variables and are divided into two types:
+ singletons clusters  Singelton literals Singleton literals represent one sigle values:
+4 // intiger literal 0xA8 // hex-intiger literal 4.</description>
+      </item>
+      
+      <item>
         <title>Templates</title>
         <link>https://follang.org/docs/300_macros/temp/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -533,6 +536,17 @@ opt[] Multiple mul[] Any any[] </description>
         <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
 For example here is how the != is defined:
 fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
+      </item>
+      
+      <item>
+        <title>Ranges</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/ranges/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/ranges/</guid>
+        <description>There are two range expressions:
+ Defined ranges Undefined ranges  Defined ranges Defined ranges represent a group of values that are generated as a sequence based on some predefined rules. Ranges are represented with two dots .. operator.
+{ 1..8 } // a range from 1 to 8 { 1,2,3,4,5,6,7,8 } { 8..1 } // a range from 8 to 1 { 8,7,6,5,4,3,2,1 } { 1..8..2 } // a range from 1 to 8 jumping by 2 { 1,3,5,7 } { 3.</description>
       </item>
       
       <item>
@@ -555,23 +569,14 @@ fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) 
       </item>
       
       <item>
-        <title>Logical</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/logical/</link>
+        <title>Access</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/access/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/logical/</guid>
-        <description>A branch of algebra in which all operations are either true or false, thus operates only on booleans, and all relationships between the operations can be expressed with logical operators such as:
- and (conjunction), denoted (x and y), satisfies (x and y) = 1 if x = y = 1, and (x and y) = 0 otherwise. or (disjunction), denoted (x or y), satisfies (x or y) = 0 if x = y = 0, and (x or) = 1 otherwise.</description>
-      </item>
-      
-      <item>
-        <title>Compounds</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/revaluation/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_expressions/300_exp/revaluation/</guid>
-        <description>There are further assignment operators that can be used to modify the value of an existing variable. These are the compounds or aka compound assignments. A compound assignment operator is used to simplify the coding of some expressions. For example, using the operators described earlier we can increase a variable&amp;rsquo;s value by ten using the following code:
-value = value + 10; This statement has an equivalent using the compound assignment operator for addition (+=).</description>
+        <guid>https://follang.org/docs/200_expressions/300_exp/access/</guid>
+        <description>There are four access expresions:
+ namespace member access subprogram member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
+&amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
       </item>
       
       <item>
@@ -580,9 +585,9 @@ value = value + 10; This statement has an equivalent using the compound assignme
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/strings/</guid>
-        <description>Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
+        <description>Characters A character is a single Unicode element enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
 var aCharacter: chr = &amp;quot;z\n&amp;quot; var anotherOne: str = &amp;quot;語\n&amp;quot; Raw characters Raw character literals do not process any escapes. They are enclosed within single-quotes U+0027 (&#39;) with the exception of U+0027 itself:
-var aCharacter: chr = &#39;z&#39; String literals A character literal is a single or a sequence of Unicode characters enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
+var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of Unicode elements enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
       </item>
       
       <item>
@@ -591,8 +596,8 @@ var aCharacter: chr = &#39;z&#39; String literals A character literal is a singl
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/numbers/</guid>
-        <description>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.
-Intiger literals An integer literal has one of four forms:
+        <description>A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed.
+Intigers An integer has one of four forms:
  A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
       </item>
       

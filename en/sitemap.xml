@@ -238,15 +238,15 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_expressions/300_exp/comparison/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/docs/450_type/complex/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/docs/200_expressions/300_exp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/200_expressions/300_exp/literals/</loc>
   </url>
   
   <url>
@@ -262,6 +262,10 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/200_expressions/300_exp/ranges/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/450_type/special/</loc>
   </url>
   
@@ -274,19 +278,15 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/200_expressions/300_exp/access/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/500_items/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_expressions/300_exp/logical/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/docs/550_sugar/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/200_expressions/300_exp/revaluation/</loc>
   </url>
   
   <url>

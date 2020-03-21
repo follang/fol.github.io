@@ -1244,7 +1244,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -1252,7 +1252,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -1260,7 +1260,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -1268,7 +1268,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -1695,16 +1695,7 @@
     <li>
       <ul>
         <li><a href="#statements">Statements</a></li>
-        <li><a href="#expressions">Expressions</a>
-          <ul>
-            <li><a href="#calculations">Calculations</a>
-              <ul>
-                <li><a href="#order">Order</a></li>
-              </ul>
-            </li>
-            <li><a href="#values">Values</a></li>
-          </ul>
-        </li>
+        <li><a href="#expressions">Expressions</a></li>
       </ul>
     </li>
   </ul>
@@ -2617,7 +2608,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -2625,7 +2616,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -2633,7 +2624,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -2641,7 +2632,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -3028,9 +3019,7 @@
 <p>Types of statement:</p>
 <ul>
 <li>declaration</li>
-<li>compounds</li>
 <li>control</li>
-<li>access</li>
 </ul>
 <p>Here are some statements:</p>
 <pre><code>var x: int;                            // Also a declaration.
@@ -3043,31 +3032,9 @@ for(expr) { /*...*/ }                  // For-loop.
 <p>Types of expressions are divided into two groups:</p>
 <ul>
 <li>calculations</li>
-<li>values</li>
-</ul>
-<h3 id="calculations">Calculations</h3>
-<p>Calculation expressions include:</p>
-<ul>
-<li>arithmetics</li>
-<li>comparison</li>
-<li>logical</li>
-</ul>
-<p>In fol, every calcultaion, needs to be enclosed in rounded brackets <code>( //to evaluate )</code> - except in one line evaluating, the curly brackets are allowed too <code>{ // to evaluate }</code>:</p>
-<pre><code>fun adder(a, b: int): int = {
-    retun a + b                                                 // this will throw an error 
-}
-
-fun adder(a, b: int): int = {
-    retun (a + b)                                               // this is the right way to enclose 
-}
-</code></pre><h4 id="order">Order</h4>
-<p>Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</p>
-<pre><code>.echo((12 / 4 / 8))                                             // 0.375 (12 / 4 = 3.0, then 3 / 8 = 0.375)
-.echo((12 / (4 / 8)))                                           // 24 (4 / 8 = 0.5, then 12 / 0.5 = 24)
-</code></pre><h3 id="values">Values</h3>
-<ul>
-<li>singelton</li>
-<li>containers</li>
+<li>literals</li>
+<li>access</li>
+<li>ranges</li>
 </ul>
 
   </article>
@@ -3089,16 +3056,7 @@ fun adder(a, b: int): int = {
     <li>
       <ul>
         <li><a href="#statements">Statements</a></li>
-        <li><a href="#expressions">Expressions</a>
-          <ul>
-            <li><a href="#calculations">Calculations</a>
-              <ul>
-                <li><a href="#order">Order</a></li>
-              </ul>
-            </li>
-            <li><a href="#values">Values</a></li>
-          </ul>
-        </li>
+        <li><a href="#expressions">Expressions</a></li>
       </ul>
     </li>
   </ul>

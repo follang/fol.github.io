@@ -1016,7 +1016,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lexical/numbers/",
-    "description": "A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed. Intiger literals An integer …",
+    "description": "A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed. Intigers An integer has one of four forms:  A decimal …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1244,7 +1244,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -1252,7 +1252,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -1260,7 +1260,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -1268,7 +1268,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -1694,12 +1694,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#intiger-literals">Intiger literals</a>
+        <li><a href="#intigers">Intigers</a>
           <ul>
             <li><a href="#underscore">Underscore</a></li>
           </ul>
         </li>
-        <li><a href="#float-literal">Float literal</a></li>
+        <li><a href="#floating-points">Floating points</a></li>
+        <li><a href="#imaginary-numbers">Imaginary numbers</a></li>
       </ul>
     </li>
   </ul>
@@ -2612,7 +2613,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title " data-depth="1">Calculations</a>
         </li>
       
     
@@ -2620,7 +2621,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -2628,7 +2629,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -2636,7 +2637,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -3017,9 +3018,9 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.</p>
-<h2 id="intiger-literals">Intiger literals</h2>
-<p>An integer literal has one of four forms:</p>
+    <p>A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed.</p>
+<h2 id="intigers">Intigers</h2>
+<p>An integer has one of four forms:</p>
 <ul>
 <li>A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores.</li>
 <li>A hex literal starts with the character sequence <code>U+0030</code> <code>U+0078</code> (<code>0x</code>) and continues as any mixture (with at least one digit) of hex digits and underscores.</li>
@@ -3036,15 +3037,16 @@ var binary: int = 0b010010010;
 var bNumber: int = 540467;
 
 assert(aNumber, bNumber)
-</code></pre><h2 id="float-literal">Float literal</h2>
-<p>A floating-point literal has one of two forms:</p>
+</code></pre><h2 id="floating-points">Floating points</h2>
+<p>A floating-point has one of two forms:</p>
 <ul>
 <li>A decimal literal followed by a period character <code>U+002E</code> (<code>.</code>). This is optionally followed by another decimal literal.</li>
 <li>A decimal literal that follows a period character <code>U+002E</code> (<code>.</code>).</li>
 </ul>
 <pre><code>var aFloat: flt = 3.4;
 var bFloat: flt = .4;
-</code></pre>
+</code></pre><h2 id="imaginary-numbers">Imaginary numbers</h2>
+
   </article>
 </div>
       
@@ -3086,12 +3088,13 @@ var bFloat: flt = .4;
   <ul>
     <li>
       <ul>
-        <li><a href="#intiger-literals">Intiger literals</a>
+        <li><a href="#intigers">Intigers</a>
           <ul>
             <li><a href="#underscore">Underscore</a></li>
           </ul>
         </li>
-        <li><a href="#float-literal">Float literal</a></li>
+        <li><a href="#floating-points">Floating points</a></li>
+        <li><a href="#imaginary-numbers">Imaginary numbers</a></li>
       </ul>
     </li>
   </ul>

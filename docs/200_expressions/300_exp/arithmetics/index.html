@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Arithmetics – FOL</title>
+    <title>Calculations – FOL</title>
     
 
 
@@ -981,7 +981,7 @@
 
 
 <meta property="og:site_name" content="FOL">
-<meta property="og:title" content="Arithmetics">
+<meta property="og:title" content="Calculations">
 <meta property="og:url" content="https://follang.org/docs/200_expressions/300_exp/arithmetics/">
 <meta property="og:type" content="article">
 
@@ -1012,11 +1012,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Arithmetics",
+    "headline": "Calculations",
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/200_expressions/300_exp/arithmetics/",
-    "description": "The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.    symbol …",
+    "description": "In fol, every calcultaion, needs to be enclosed in rounded brackets ( //to evaluate ) - except in one line evaluating, the curly brackets are allowed too { // to evaluate …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1047,7 +1047,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Arithmetics
+      Calculations
     
   </h6>
   <ul>
@@ -1244,7 +1244,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title active" data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title active" data-depth="1">Calculations</a>
         </li>
       
     
@@ -1252,7 +1252,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -1260,7 +1260,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -1268,7 +1268,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -1690,7 +1690,18 @@
     <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#arithmetics">Arithmetics</a></li>
+        <li><a href="#comparisons">Comparisons</a></li>
+        <li><a href="#logical">Logical</a></li>
+        <li><a href="#compounds">Compounds</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <div class="toc__issue">
       
@@ -1762,7 +1773,7 @@
 
     
     <div class="toc__issue-el">
-        <a href="https://github.com/follang/docs/issues/new?title=Arithmetics%28docs/200_expressions/300_exp/arithmetics.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://github.com/follang/docs/issues/new?title=Calculations%28docs/200_expressions/300_exp/arithmetics.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
   <g
      transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
      id="g6">
@@ -2224,7 +2235,7 @@
         </a>
         </div>
         <div class="grow"></div>
-        <h2 class="title">Arithmetics</h2>
+        <h2 class="title">Calculations</h2>
         <div class="grow"></div>
         <div id="rightBurger" class="hide">
         <a href="#" class="burgermenu">
@@ -2287,7 +2298,7 @@
   
   <li  class="is-active" >
     
-      <span>Arithmetics</span>
+      <span>Calculations</span>
     
   </li>
   
@@ -2608,7 +2619,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title active" data-depth="1">Arithmetics</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/arithmetics/" class="menu__title active" data-depth="1">Calculations</a>
         </li>
       
     
@@ -2616,7 +2627,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" class="menu__title " data-depth="1">Comparison</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/literals/" class="menu__title " data-depth="1">Literals</a>
         </li>
       
     
@@ -2624,7 +2635,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/logical/" class="menu__title " data-depth="1">Logical</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/ranges/" class="menu__title " data-depth="1">Ranges</a>
         </li>
       
     
@@ -2632,7 +2643,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/200_expressions/300_exp/revaluation/" class="menu__title " data-depth="1">Compounds</a>
+          <a href="https://follang.org/docs/200_expressions/300_exp/access/" class="menu__title " data-depth="1">Access</a>
         </li>
       
     
@@ -3013,7 +3024,26 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.</p>
+    <p>In fol, every calcultaion, needs to be enclosed in rounded brackets <code>( //to evaluate )</code> - except in one line evaluating, the curly brackets are allowed too <code>{ // to evaluate }</code>:</p>
+<pre><code>fun adder(a, b: int): int = {
+    retun a + b                                                 // this will throw an error 
+}
+
+fun adder(a, b: int): int = {
+    retun (a + b)                                               // this is the right way to enclose 
+}
+</code></pre><p>Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</p>
+<pre><code>.echo((12 / 4 / 8))                                             // 0.375 (12 / 4 = 3.0, then 3 / 8 = 0.375)
+.echo((12 / (4 / 8)))                                           // 24 (4 / 8 = 0.5, then 12 / 0.5 = 24)
+</code></pre><p>Calculation expressions include:</p>
+<ul>
+<li>arithmetics</li>
+<li>comparison</li>
+<li>logical</li>
+<li>compounds</li>
+</ul>
+<h2 id="arithmetics">Arithmetics</h2>
+<p>The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.</p>
 <table>
 <thead>
 <tr>
@@ -3053,7 +3083,73 @@ assert((5.5 - 1.25), 4.25);
 assert((-5 * 14), -70);
 assert((14 / 3), 4);
 assert((100 % 7), 2);
-</code></pre>
+</code></pre><h2 id="comparisons">Comparisons</h2>
+<p>Comparison operators are also defined both for primitive types and many type in the standard library. Parentheses are required when chaining comparison operators. For example, the expression <code>a == b == c</code> is invalid and may be written as <code>((a == b) == c)</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<pre><code>assert((123 == 123));
+assert((23 != -12));
+assert((12.5 &gt;&gt; 12.2));
+assert(({1, 2, 3} &lt;&lt; {1, 3, 4}));
+assert(('A' &lt;= 'B'));
+assert((&quot;World&quot; &gt;= &quot;Hello&quot;));
+</code></pre><h2 id="logical">Logical</h2>
+<p>A branch of algebra in which all operations are either true or false, thus operates only on booleans, and all relationships between the operations can be expressed with logical operators such as:</p>
+<ul>
+<li><code>and</code> (conjunction), denoted <code>(x and y)</code>, satisfies <code>(x and y) = 1</code> if <code>x = y = 1</code>, and <code>(x and y) = 0</code> otherwise.</li>
+<li><code>or</code> (disjunction), denoted <code>(x or y)</code>, satisfies <code>(x or y) = 0</code> if <code>x = y = 0</code>, and <code>(x or) = 1</code> otherwise.</li>
+<li><code>not</code> (negation), denoted <code>(not x)</code>, satisfies <code>(not x) = 0</code> if <code>x = 1</code> and (not x) = 1<code>if</code>x = 0`.</li>
+</ul>
+<pre><code>assert((true and false), (false and true));
+assert((true or false), true)
+assert((not true), false)
+</code></pre><h2 id="compounds">Compounds</h2>
+<p>There are further assignment operators that can be used to modify the value of an existing variable. These are the compounds or aka compound assignments. A compound assignment operator is used to simplify the coding of some expressions. For example, using the operators described earlier we can increase a variable&rsquo;s value by ten using the following code:</p>
+<pre><code>value = value + 10;
+</code></pre><p>This statement has an equivalent using the compound assignment operator for addition (+=).</p>
+<pre><code>value += 10;
+</code></pre><p>There are compound assignment operators for each of the six binary arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code> and <code>^</code>. Each is constructed using the arithmetic operator followed by the assignment operator. The following code gives examples for addition <code>+=</code>, subtraction <code>-=</code>, multiplication <code>*=</code>, division <code>/=</code> and modulus <code>%=</code>:</p>
+<pre><code>
+var value: int = 10;
+(value += 10);        // value = 20
+(value -= 5);         // value = 15
+(value *= 10);        // value = 150
+(value /= 3);         // value = 50
+(value %= 8);         // value = 2
+</code></pre><p>Compound assignment operators provide two benefits. Firstly, they produce more compact code; they are often called shorthand operators for this reason. Secondly, the variable being operated upon, or operand, will only be evaluated once in the compiled application. This can make the code more efficient.</p>
+
   </article>
 </div>
       
@@ -3063,8 +3159,8 @@ assert((100 % 7), 2);
     
     <div class="grow"></div>
     
-      <a href="https://follang.org/docs/200_expressions/300_exp/comparison/" title="Comparison" class="pagination-single__right">
-        <div class="pagination-single__left-title">Comparison</div>
+      <a href="https://follang.org/docs/200_expressions/300_exp/literals/" title="Literals" class="pagination-single__right">
+        <div class="pagination-single__left-title">Literals</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -3084,7 +3180,18 @@ assert((100 % 7), 2);
         <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#arithmetics">Arithmetics</a></li>
+        <li><a href="#comparisons">Comparisons</a></li>
+        <li><a href="#logical">Logical</a></li>
+        <li><a href="#compounds">Compounds</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <div class="toc__issue">
       
@@ -3156,7 +3263,7 @@ assert((100 % 7), 2);
 
     
     <div class="toc__issue-el">
-        <a href="https://github.com/follang/docs/issues/new?title=Arithmetics%28docs/200_expressions/300_exp/arithmetics.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://github.com/follang/docs/issues/new?title=Calculations%28docs/200_expressions/300_exp/arithmetics.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
   <g
      transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
      id="g6">
