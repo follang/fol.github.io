@@ -119,7 +119,6 @@
     
 
     
-    
     var root = document.getElementById('root');
     var toggleToLightBtn = document.getElementById('toggleToLight');
     var toggleToDarkBtn = document.getElementById('toggleToDark');
@@ -142,10 +141,9 @@
     
     document.querySelectorAll('.menu__list').forEach(function(elem) {
       if (elem.classList.contains('active')) {
-        elem.style.maxHeight = elem.scrollHeight + "px"; 
+        elem.style.maxHeight = elem.scrollHeight + "px";
       }
     });
-    
     document.querySelectorAll('.menu__title--collapse').forEach(function(elem) {
       elem.addEventListener('click', function (e) {
         var content = this.nextElementSibling;
@@ -166,24 +164,16 @@
           content.style.maxHeight = null;
           content.classList.remove('active');
           menuTitleIcon.classList.add('right');
-          if (languagedir === 'rtl') {
-            menuTitleIcon.classList.remove('downrtl');
-          } else {
-            menuTitleIcon.classList.remove('down');
-          }
+          menuTitleIcon.classList.remove('down');
         } else {
           console.log('scrollHeight');
           content.style.maxHeight = content.scrollHeight + "px";
           content.classList.add('active');
           menuTitleIcon.classList.remove('right');
-          if (languagedir === 'rtl') {
-            menuTitleIcon.classList.add('downrtl');
-          } else {
-            menuTitleIcon.classList.add('down');
-          }
+          menuTitleIcon.classList.add('down');
         }
         function link() { location.href = hreflink; }
-        <!-- link(); -->
+        link();
       });
     });
     
@@ -1067,7 +1057,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/lex/">
-    Lexical analysis
+    <span class="menu__title--text ">
+        Lexical analysis
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -1092,7 +1084,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="1" data-href="https://follang.org/v0.11-docs/lex/static/">
-    Static
+    <span class="menu__title--text ">
+        Static
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -1117,7 +1111,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="2" data-href="https://follang.org/v0.11-docs/lex/static/dynamic/">
-    Dynamic
+    <span class="menu__title--text ">
+        Dynamic
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -1187,7 +1183,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/spec/">
-    Specifications
+    <span class="menu__title--text ">
+        Specifications
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -2086,7 +2084,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/lex/">
-    Lexical analysis
+    <span class="menu__title--text ">
+        Lexical analysis
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -2111,7 +2111,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="1" data-href="https://follang.org/v0.11-docs/lex/static/">
-    Static
+    <span class="menu__title--text ">
+        Static
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -2136,7 +2138,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="2" data-href="https://follang.org/v0.11-docs/lex/static/dynamic/">
-    Dynamic
+    <span class="menu__title--text ">
+        Dynamic
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -2206,7 +2210,9 @@
 
   
   <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/spec/">
-    Specifications
+    <span class="menu__title--text ">
+        Specifications
+    </span>
     <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
