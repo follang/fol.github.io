@@ -48,11 +48,6 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/500_typ/test1/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/lex/test1/</loc>
     <lastmod>2020-01-30T00:38:25+09:00</lastmod>
   </url>
@@ -83,7 +78,11 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/250_mod/modules/</loc>
+    <loc>https://follang.org/docs/100_lexical/input/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/400_modules/modules/</loc>
   </url>
   
   <url>
@@ -95,11 +94,11 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/250_mod/scopes/</loc>
+    <loc>https://follang.org/docs/400_modules/scopes/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/400_exp/control/</loc>
+    <loc>https://follang.org/docs/200_expressions/200_sta/control/</loc>
   </url>
   
   <url>
@@ -107,15 +106,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/types/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/spec/types/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/400_exp/operators/</loc>
   </url>
   
   <url>
@@ -123,11 +114,11 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/250_mod/blocks/</loc>
+    <loc>https://follang.org/docs/400_modules/blocks/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/variables/</loc>
+    <loc>https://follang.org/docs/500_items/variables/</loc>
   </url>
   
   <url>
@@ -135,7 +126,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/600_mem/pointers/</loc>
+    <loc>https://follang.org/docs/600_memory/pointers/</loc>
   </url>
   
   <url>
@@ -143,7 +134,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/functions/</loc>
+    <loc>https://follang.org/docs/500_items/functions/</loc>
   </url>
   
   <url>
@@ -151,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/errors/</loc>
+    <loc>https://follang.org/docs/550_sugar/errors/</loc>
   </url>
   
   <url>
@@ -159,7 +150,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/pipes/</loc>
+    <loc>https://follang.org/docs/550_sugar/pipes/</loc>
   </url>
   
   <url>
@@ -167,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/700_pro/concurrency/</loc>
+    <loc>https://follang.org/docs/700_processor/concurrency/</loc>
   </url>
   
   <url>
@@ -175,7 +166,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/objects/</loc>
+    <loc>https://follang.org/docs/500_items/constructs/</loc>
   </url>
   
   <url>
@@ -183,7 +174,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/generics/</loc>
+    <loc>https://follang.org/docs/500_items/generics/</loc>
   </url>
   
   <url>
@@ -191,80 +182,131 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/buildin/</loc>
+    <loc>https://follang.org/docs/200_expressions/blocks/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/keywords/</loc>
+    <loc>https://follang.org/docs/300_macros/buildin/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/</loc>
+    <loc>https://follang.org/docs/100_lexical/keywords/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/identify/</loc>
+    <loc>https://follang.org/docs/100_lexical/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/macros/</loc>
+    <loc>https://follang.org/docs/450_type/simple/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/</loc>
+    <loc>https://follang.org/docs/200_expressions/300_exp/arithmetics/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/alternatives/</loc>
+    <loc>https://follang.org/docs/200_expressions/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/250_mod/</loc>
+    <loc>https://follang.org/docs/450_type/container/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/defaults/</loc>
+    <loc>https://follang.org/docs/100_lexical/identify/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/comments/</loc>
+    <loc>https://follang.org/docs/300_macros/macros/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_ite/</loc>
+    <loc>https://follang.org/docs/200_expressions/200_sta/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_mac/temp/</loc>
+    <loc>https://follang.org/docs/300_macros/alternatives/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/400_exp/</loc>
+    <loc>https://follang.org/docs/300_macros/defaults/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/whitespaces/</loc>
+    <loc>https://follang.org/docs/100_lexical/comments/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/500_typ/</loc>
-    <lastmod>2020-01-30T00:38:25+09:00</lastmod>
+    <loc>https://follang.org/docs/200_expressions/300_exp/comparison/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/strings/</loc>
+    <loc>https://follang.org/docs/450_type/complex/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/600_mem/</loc>
+    <loc>https://follang.org/docs/200_expressions/300_exp/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/700_pro/</loc>
+    <loc>https://follang.org/docs/300_macros/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lex/numbers/</loc>
+    <loc>https://follang.org/docs/300_macros/temp/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/400_modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/450_type/special/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lexical/whitespaces/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/450_type/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/200_expressions/300_exp/logical/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/550_sugar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/200_expressions/300_exp/revaluation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lexical/strings/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/600_memory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/700_processor/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lexical/numbers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/100_lexical/symbols/</loc>
   </url>
   
   <url>

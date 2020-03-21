@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Item declarations on FOL</title>
+    <link>https://follang.org/docs/500_items/</link>
+    <description>Recent content in Item declarations on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/500_items/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Variables</title>
+        <link>https://follang.org/docs/500_items/variables/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/variables/</guid>
+        <description>Here are some of the ways that variables can be defined:
+var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;this is a string&amp;quot; var[~] yetanother = 192.56 var[+] shortlet = true var anarray: arr[str,3] = { &amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;, &amp;quot;three&amp;quot; } var asequence : seq[num[i8]] = { 20, 25, 45, 68, 73,98 } var multiholder: set[num, str] = { 12, &amp;quot;word&amp;quot; } var anothermulti: set[str, seq[num[f32]]] = { &amp;quot;string&amp;quot;, {5.5, 4.</description>
+      </item>
+      
+      <item>
+        <title>Functions</title>
+        <link>https://follang.org/docs/500_items/functions/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/functions/</guid>
+        <description>A subprogram definition describes the interface to and the actions of the subprogram abstraction. A subprogram call is the explicit request that a specific subprogram be executed. A subprogram is said to be active if, after having been called, it has begun execution but has not yet completed that execution.A subprogram declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</description>
+      </item>
+      
+      <item>
+        <title>Constructs</title>
+        <link>https://follang.org/docs/500_items/constructs/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/constructs/</guid>
+        <description>Constructs are the way to declare new type of data. A construct binds an identifier, the type name, to a type.
+There re two ways to declare new constructs:
+ alias declarations and type definitions  Alias declaration An alias declaration binds an identifier to the given type. All the properties of the type are bound to the alias too: credit to golang:
+typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:</description>
+      </item>
+      
+      <item>
+        <title>Generics</title>
+        <link>https://follang.org/docs/500_items/generics/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/generics/</guid>
+        <description>Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
+      </item>
+      
+    
+  </channel>
+</rss>

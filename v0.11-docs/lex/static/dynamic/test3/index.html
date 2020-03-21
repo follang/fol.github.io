@@ -149,11 +149,11 @@
     document.querySelectorAll('.menu__title--collapse').forEach(function(elem) {
       elem.addEventListener('click', function (e) {
         var content = this.nextElementSibling;
+        var hreflink = this.dataset.href;
         var menuTitleIcon = this.querySelector('.menu__title--icon');
         if (!content) {
           return null;
         }
-
         var parent = elem.parentNode;
         while (parent.classList.contains('menu__list') && parent.classList.contains('active')) {
           console.log('parent');
@@ -166,7 +166,6 @@
           content.style.maxHeight = null;
           content.classList.remove('active');
           menuTitleIcon.classList.add('right');
-          
           if (languagedir === 'rtl') {
             menuTitleIcon.classList.remove('downrtl');
           } else {
@@ -177,13 +176,14 @@
           content.style.maxHeight = content.scrollHeight + "px";
           content.classList.add('active');
           menuTitleIcon.classList.remove('right');
-          
           if (languagedir === 'rtl') {
             menuTitleIcon.classList.add('downrtl');
           } else {
             menuTitleIcon.classList.add('down');
           }
         }
+        function link() { location.href = hreflink; }
+        <!-- link(); -->
       });
     });
     
@@ -1067,7 +1067,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="0">
+  <ul class="menu__title--collapse active" data-depth="0" data-href="https://follang.org/v0.11-docs/lex/">
     Lexical analysis
     <span class="menu__title--icon down">
       
@@ -1092,7 +1092,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="1">
+  <ul class="menu__title--collapse active" data-depth="1" data-href="https://follang.org/v0.11-docs/lex/static/">
     Static
     <span class="menu__title--icon down">
       
@@ -1117,7 +1117,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="2">
+  <ul class="menu__title--collapse active" data-depth="2" data-href="https://follang.org/v0.11-docs/lex/static/dynamic/">
     Dynamic
     <span class="menu__title--icon down">
       
@@ -1187,7 +1187,7 @@
   
 
   
-  <ul class="menu__title--collapse " data-depth="0">
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/spec/">
     Specifications
     <span class="menu__title--icon right">
       
@@ -2107,7 +2107,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="0">
+  <ul class="menu__title--collapse active" data-depth="0" data-href="https://follang.org/v0.11-docs/lex/">
     Lexical analysis
     <span class="menu__title--icon down">
       
@@ -2132,7 +2132,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="1">
+  <ul class="menu__title--collapse active" data-depth="1" data-href="https://follang.org/v0.11-docs/lex/static/">
     Static
     <span class="menu__title--icon down">
       
@@ -2157,7 +2157,7 @@
   
 
   
-  <ul class="menu__title--collapse active" data-depth="2">
+  <ul class="menu__title--collapse active" data-depth="2" data-href="https://follang.org/v0.11-docs/lex/static/dynamic/">
     Dynamic
     <span class="menu__title--icon down">
       
@@ -2227,7 +2227,7 @@
   
 
   
-  <ul class="menu__title--collapse " data-depth="0">
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/v0.11-docs/spec/">
     Specifications
     <span class="menu__title--icon right">
       

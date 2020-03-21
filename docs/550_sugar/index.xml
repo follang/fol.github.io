@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Syntactic sugar on FOL</title>
+    <link>https://follang.org/docs/550_sugar/</link>
+    <description>Recent content in Syntactic sugar on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/550_sugar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Errors</title>
+        <link>https://follang.org/docs/550_sugar/errors/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/550_sugar/errors/</guid>
+        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
+ braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
+      </item>
+      
+      <item>
+        <title>Pipes</title>
+        <link>https://follang.org/docs/550_sugar/pipes/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/550_sugar/pipes/</guid>
+        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
+      </item>
+      
+    
+  </channel>
+</rss>

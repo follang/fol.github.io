@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Expressions on FOL</title>
+    <link>https://follang.org/docs/200_expressions/300_exp/</link>
+    <description>Recent content in Expressions on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/200_expressions/300_exp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Arithmetics</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/arithmetics/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/arithmetics/</guid>
+        <description>The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.
+   symbol description     - substraction   * multiplication   + addition   / division   % reminder   ^ exponent    assert((3 + 6), 9); assert((5.5 - 1.25), 4.25); assert((-5 * 14), -70); assert((14 / 3), 4); assert((100 % 7), 2); </description>
+      </item>
+      
+      <item>
+        <title>Comparison</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/comparison/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/comparison/</guid>
+        <description>Comparison operators are also defined both for primitive types and many type in the standard library. Parentheses are required when chaining comparison operators. For example, the expression a == b == c is invalid and may be written as ((a == b) == c).
+   Symbol Meaning     == equal   != not equal   &amp;gt;&amp;gt; greater than   &amp;lt;&amp;lt; Less than   &amp;gt;= greater than or equal to   &amp;lt;= Less than or equal to    assert((123 == 123)); assert((23 !</description>
+      </item>
+      
+      <item>
+        <title>Logical</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/logical/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/logical/</guid>
+        <description>A branch of algebra in which all operations are either true or false, thus operates only on booleans, and all relationships between the operations can be expressed with logical operators such as:
+ and (conjunction), denoted (x and y), satisfies (x and y) = 1 if x = y = 1, and (x and y) = 0 otherwise. or (disjunction), denoted (x or y), satisfies (x or y) = 0 if x = y = 0, and (x or) = 1 otherwise.</description>
+      </item>
+      
+      <item>
+        <title>Compounds</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/revaluation/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/revaluation/</guid>
+        <description>There are further assignment operators that can be used to modify the value of an existing variable. These are the compounds or aka compound assignments. A compound assignment operator is used to simplify the coding of some expressions. For example, using the operators described earlier we can increase a variable&amp;rsquo;s value by ten using the following code:
+value = value + 10; This statement has an equivalent using the compound assignment operator for addition (+=).</description>
+      </item>
+      
+    
+  </channel>
+</rss>

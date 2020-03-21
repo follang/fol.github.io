@@ -61,15 +61,6 @@
       
       <item>
         <title>Test 1</title>
-        <link>https://follang.org/docs/500_typ/test1/</link>
-        <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
-        
-        <guid>https://follang.org/docs/500_typ/test1/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Test 1</title>
         <link>https://follang.org/v0.11-docs/lex/test1/</link>
         <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
         
@@ -105,11 +96,20 @@
       </item>
       
       <item>
-        <title>Modules</title>
-        <link>https://follang.org/docs/250_mod/modules/</link>
+        <title>Input</title>
+        <link>https://follang.org/docs/100_lexical/input/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/250_mod/modules/</guid>
+        <guid>https://follang.org/docs/100_lexical/input/</guid>
+        <description>FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8</description>
+      </item>
+      
+      <item>
+        <title>Modules</title>
+        <link>https://follang.org/docs/400_modules/modules/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/400_modules/modules/</guid>
         <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
 use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
 use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
@@ -138,20 +138,20 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
       
       <item>
         <title>Scope</title>
-        <link>https://follang.org/docs/250_mod/scopes/</link>
+        <link>https://follang.org/docs/400_modules/scopes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/250_mod/scopes/</guid>
+        <guid>https://follang.org/docs/400_modules/scopes/</guid>
         <description>Every file in a folder is part of one package, thus they share the same scope. Thus two varibles with same name at global scope cant be defined. However, this is kind of special for functions. Functions of the same name and same amount of parameters (so identical functions, not function overloading) can be defined in two different files. When called, the one on the same file is used.
 In case a function exists in two files and is called from thrid one, then this can be resolved in two ways.</description>
       </item>
       
       <item>
         <title>Control</title>
-        <link>https://follang.org/docs/400_exp/control/</link>
+        <link>https://follang.org/docs/200_expressions/200_sta/control/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/400_exp/control/</guid>
+        <guid>https://follang.org/docs/200_expressions/200_sta/control/</guid>
         <description>At least two linguistic mechanisms are necessary to make the computations in programs flexible and powerful: some means of selecting among alternative control flow paths (of statement execution) and some means of causing the repeated execution of statements or sequences of statements. Statements that provide these kinds of capabilities are called control statements. A control structure is a control statement and the collection of statements whose execution it controls. This set of statements is in turn generally structured as a block, which in addition to grouping, also defines a lexical scope.</description>
       </item>
       
@@ -162,17 +162,6 @@ In case a function exists in two files and is called from thrid one, then this c
         
         <guid>https://follang.org/v0.11-docs/spec/control/</guid>
         <description>Statements and expressions </description>
-      </item>
-      
-      <item>
-        <title>Types</title>
-        <link>https://follang.org/docs/300_ite/types/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/300_ite/types/</guid>
-        <description>Every value in Fol is of a certain data type, which tells Fol what kind of data is being specified so it knows how to work with that data. There are four main subsets: simple, container, complex and special.
-Simple Simple types are the most primitive type of data:
-int[options], flt[options], chr[options], bol Intiger type An integer is a number without a fractional component. We used one integer of the u32 type, the type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with i, instead of u) that takes up 32 bits of space:</description>
       </item>
       
       <item>
@@ -188,15 +177,6 @@ int[options], flt[options], chr[options], bol Intiger type An integer is a numbe
       
       <item>
         <title>Operators</title>
-        <link>https://follang.org/docs/400_exp/operators/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/400_exp/operators/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Operators</title>
         <link>https://follang.org/v0.11-docs/spec/operators/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -206,10 +186,10 @@ int[options], flt[options], chr[options], bol Intiger type An integer is a numbe
       
       <item>
         <title>Blocks</title>
-        <link>https://follang.org/docs/250_mod/blocks/</link>
+        <link>https://follang.org/docs/400_modules/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/250_mod/blocks/</guid>
+        <guid>https://follang.org/docs/400_modules/blocks/</guid>
         <description>Namespaces A namespace can be defined in three ways:
  in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main module
 def shko/other: mod[] = { pro[] main: int = { // implementation } // implementation } or in the same module file:
@@ -218,10 +198,10 @@ def shko: mod[] = { pro[] main: int = { // implementation } def shko/other: mod[
       
       <item>
         <title>Variables</title>
-        <link>https://follang.org/docs/300_ite/variables/</link>
+        <link>https://follang.org/docs/500_items/variables/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/variables/</guid>
+        <guid>https://follang.org/docs/500_items/variables/</guid>
         <description>Here are some of the ways that variables can be defined:
 var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;this is a string&amp;quot; var[~] yetanother = 192.56 var[+] shortlet = true var anarray: arr[str,3] = { &amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;, &amp;quot;three&amp;quot; } var asequence : seq[num[i8]] = { 20, 25, 45, 68, 73,98 } var multiholder: set[num, str] = { 12, &amp;quot;word&amp;quot; } var anothermulti: set[str, seq[num[f32]]] = { &amp;quot;string&amp;quot;, {5.5, 4.</description>
       </item>
@@ -238,10 +218,10 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Ownership</title>
-        <link>https://follang.org/docs/600_mem/pointers/</link>
+        <link>https://follang.org/docs/600_memory/pointers/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_mem/pointers/</guid>
+        <guid>https://follang.org/docs/600_memory/pointers/</guid>
         <description>Stack vs Heap The Stack What is the stack? It&amp;rsquo;s a special region of your computer&amp;rsquo;s memory that stores temporary variables created by each function (including the main() function). The stack is a &amp;ldquo;LIFO&amp;rdquo; (last in, first out) data structure, that is managed and optimized by the CPU quite closely. Every time a function declares a new variable, it is &amp;ldquo;pushed&amp;rdquo; onto the stack. Then every time a function exits, all of the variables pushed onto the stack by that function, are freed (that is to say, they are deleted).</description>
       </item>
       
@@ -256,10 +236,10 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Functions</title>
-        <link>https://follang.org/docs/300_ite/functions/</link>
+        <link>https://follang.org/docs/500_items/functions/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/functions/</guid>
+        <guid>https://follang.org/docs/500_items/functions/</guid>
         <description>A subprogram definition describes the interface to and the actions of the subprogram abstraction. A subprogram call is the explicit request that a specific subprogram be executed. A subprogram is said to be active if, after having been called, it has begun execution but has not yet completed that execution.A subprogram declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</description>
       </item>
       
@@ -274,10 +254,10 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Errors</title>
-        <link>https://follang.org/docs/300_ite/errors/</link>
+        <link>https://follang.org/docs/550_sugar/errors/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/errors/</guid>
+        <guid>https://follang.org/docs/550_sugar/errors/</guid>
         <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
  braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
       </item>
@@ -294,10 +274,10 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Pipes</title>
-        <link>https://follang.org/docs/300_ite/pipes/</link>
+        <link>https://follang.org/docs/550_sugar/pipes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/pipes/</guid>
+        <guid>https://follang.org/docs/550_sugar/pipes/</guid>
         <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
       </item>
       
@@ -312,10 +292,10 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Concurrency</title>
-        <link>https://follang.org/docs/700_pro/concurrency/</link>
+        <link>https://follang.org/docs/700_processor/concurrency/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_pro/concurrency/</guid>
+        <guid>https://follang.org/docs/700_processor/concurrency/</guid>
         <description>Concurrency Concurrency is the ability of different tasks of a program to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent tasks, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program into order-independent or partially-ordered tasks.
 There are two distinct categories of concurrent task control.</description>
       </item>
@@ -331,13 +311,14 @@ There are two distinct categories of concurrent task control.</description>
       </item>
       
       <item>
-        <title>Objects</title>
-        <link>https://follang.org/docs/300_ite/objects/</link>
+        <title>Constructs</title>
+        <link>https://follang.org/docs/500_items/constructs/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/objects/</guid>
-        <description>A type declaration binds an identifier, the type name, to a type. Type declarations come in two forms:
- alias declarations and type definitions: records, lists, enums, and classes.  Alias declaration An alias declaration binds an identifier to the given type. All the properties of the type are bound to the alias too: credit to golang:
+        <guid>https://follang.org/docs/500_items/constructs/</guid>
+        <description>Constructs are the way to declare new type of data. A construct binds an identifier, the type name, to a type.
+There re two ways to declare new constructs:
+ alias declarations and type definitions  Alias declaration An alias declaration binds an identifier to the given type. All the properties of the type are bound to the alias too: credit to golang:
 typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:</description>
       </item>
       
@@ -354,10 +335,10 @@ typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5]
       
       <item>
         <title>Generics</title>
-        <link>https://follang.org/docs/300_ite/generics/</link>
+        <link>https://follang.org/docs/500_items/generics/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_ite/generics/</guid>
+        <guid>https://follang.org/docs/500_items/generics/</guid>
         <description>Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
       </item>
       
@@ -372,11 +353,20 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
       </item>
       
       <item>
-        <title>Build-In</title>
-        <link>https://follang.org/docs/200_mac/buildin/</link>
+        <title>Blocks</title>
+        <link>https://follang.org/docs/200_expressions/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/buildin/</guid>
+        <guid>https://follang.org/docs/200_expressions/blocks/</guid>
+        <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling subprograms, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
+      </item>
+      
+      <item>
+        <title>Build-In</title>
+        <link>https://follang.org/docs/300_macros/buildin/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_macros/buildin/</guid>
         <description>WITH BUILD-INS, ALTERNATIVES, MACROS, DEFAULTS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEYWORDS, IDENTIFIERS, AND BEHAVIOUR.
  IT IS NOT SUGGESTED TO RELAY HEAVILY ON MACROS BECAUSE THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE TRIES TO USE YOUR CODE.
  Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
@@ -385,12 +375,11 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
       
       <item>
         <title>Keywords</title>
-        <link>https://follang.org/docs/100_lex/keywords/</link>
+        <link>https://follang.org/docs/100_lexical/keywords/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/keywords/</guid>
-        <description>Input format FOL&amp;rsquo;s input is interpreted as a sequence of Unicode code points encoded in UTF-8
-Keywords Fol has a number of restricted groups of keywords:
+        <guid>https://follang.org/docs/100_lexical/keywords/</guid>
+        <description>Fol has a number of restricted groups of keywords:
 BK (build-in keywords) BK_AS as
 BK_IN in
 BK_DO do
@@ -411,15 +400,54 @@ BK_BREAK break
 BK_RETURN return
 BK_YEILD yeild
 BK_PANIC panic
-BK_REPORT report</description>
+BK_REPORT report
+BK_CHECK check
+BK_ASSERT assert
+BK_TRUE true
+BK_FALSE false
+ BUILD-IN KEYWORDS - BK:
+(BK_AS|BK_IN|...)
+ AK (assignment keywords) AK_USE use</description>
+      </item>
+      
+      <item>
+        <title>Simple</title>
+        <link>https://follang.org/docs/450_type/simple/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/simple/</guid>
+        <description>Simple types are the most primitive type of data:
+int[options], flt[options], chr[options], bol Intiger type An integer is a number without a fractional component. We used one integer of the u32 type, the type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with i, instead of u) that takes up 32 bits of space:
+var aVar: int[u32] = 45; Each variant can be either signed or unsigned and has an explicit size.</description>
+      </item>
+      
+      <item>
+        <title>Arithmetics</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/arithmetics/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/arithmetics/</guid>
+        <description>The behavior of arithmetic operators is only on intiger and floating point primitive types. For other types, there need to be operator overloading implemented.
+   symbol description     - substraction   * multiplication   + addition   / division   % reminder   ^ exponent    assert((3 + 6), 9); assert((5.5 - 1.25), 4.25); assert((-5 * 14), -70); assert((14 / 3), 4); assert((100 % 7), 2); </description>
+      </item>
+      
+      <item>
+        <title>Container</title>
+        <link>https://follang.org/docs/450_type/container/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/container/</guid>
+        <description>Containers are of compound types. They contain other primitive or constructed types. To access the types in container those brackets are used: [], so:
+var container: type = { element, element, element } // declaring a container var varable: type = container[2] // accessing the last element Containers are always zero indexed
+ Static Arrays Arrays arr[type,size] Arrays are the most simple type of container. They contain homogeneous type, meaning that each element in the array has the same type.</description>
       </item>
       
       <item>
         <title>Identifiers</title>
-        <link>https://follang.org/docs/100_lex/identify/</link>
+        <link>https://follang.org/docs/100_lexical/identify/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/identify/</guid>
+        <guid>https://follang.org/docs/100_lexical/identify/</guid>
         <description>Encoding Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
 IDENTIFIER:
 [a-z A-Z] [a-z A-Z 0-9 _]* | _ [a-z A-Z 0-9 _]+
@@ -431,40 +459,40 @@ Either
       
       <item>
         <title>Macors</title>
-        <link>https://follang.org/docs/200_mac/macros/</link>
+        <link>https://follang.org/docs/300_macros/macros/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/macros/</guid>
+        <guid>https://follang.org/docs/300_macros/macros/</guid>
         <description>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
 For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
       </item>
       
       <item>
         <title>Alternatives</title>
-        <link>https://follang.org/docs/200_mac/alternatives/</link>
+        <link>https://follang.org/docs/300_macros/alternatives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/alternatives/</guid>
+        <guid>https://follang.org/docs/300_macros/alternatives/</guid>
         <description>Alternatives are used when we want to simplify code. For example, define an alternative, so whenever you write +var it is the same as var[+].
 def &#39;+var&#39;: alt = &#39;var[+]&#39; def &#39;~var&#39;: alt = &#39;var[~]&#39; def &#39;.pointer_content&#39;: alt = &#39;.pointer_value&#39; </description>
       </item>
       
       <item>
         <title>Defaults</title>
-        <link>https://follang.org/docs/200_mac/defaults/</link>
+        <link>https://follang.org/docs/300_macros/defaults/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/defaults/</guid>
+        <guid>https://follang.org/docs/300_macros/defaults/</guid>
         <description>Defaults are a way to change the default behaviour of options. Example the default behaviour of str when called without options. By defalt str is it is saved on stack, it is a constant and not public, thus has str[pil,imu,nor], and we want to make it mutable and saved on heap by default:
 def &#39;str&#39;: def[] = &#39;str[new,mut,nor]&#39; </description>
       </item>
       
       <item>
         <title>Comments</title>
-        <link>https://follang.org/docs/100_lex/comments/</link>
+        <link>https://follang.org/docs/100_lexical/comments/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/comments/</guid>
+        <guid>https://follang.org/docs/100_lexical/comments/</guid>
         <description>Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace.
 LINE_COMMENT :
 // (~[/ !] | //) ~\n* | //
@@ -474,32 +502,84 @@ BLOCK_COMMENT :
       </item>
       
       <item>
-        <title>Templates</title>
-        <link>https://follang.org/docs/200_mac/temp/</link>
+        <title>Comparison</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/comparison/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/temp/</guid>
+        <guid>https://follang.org/docs/200_expressions/300_exp/comparison/</guid>
+        <description>Comparison operators are also defined both for primitive types and many type in the standard library. Parentheses are required when chaining comparison operators. For example, the expression a == b == c is invalid and may be written as ((a == b) == c).
+   Symbol Meaning     == equal   != not equal   &amp;gt;&amp;gt; greater than   &amp;lt;&amp;lt; Less than   &amp;gt;= greater than or equal to   &amp;lt;= Less than or equal to    assert((123 == 123)); assert((23 !</description>
+      </item>
+      
+      <item>
+        <title>Complex</title>
+        <link>https://follang.org/docs/450_type/complex/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/complex/</guid>
+        <description>Strings Strings are a complex type that are made of array of chars with null terminator &amp;lsquo;\0&amp;rsquo;, and by default is utf8 encoded:
+str[8,16,32] str is similar to seq[char[]]
+Imaginary Imaginary numbers
+img[] Optional Either are empty or have a value
+opt[] Multiple mul[] Any any[] </description>
+      </item>
+      
+      <item>
+        <title>Templates</title>
+        <link>https://follang.org/docs/300_macros/temp/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_macros/temp/</guid>
         <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
 For example here is how the != is defined:
 fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
       </item>
       
       <item>
-        <title>Whitespaces</title>
-        <link>https://follang.org/docs/100_lex/whitespaces/</link>
+        <title>Special</title>
+        <link>https://follang.org/docs/450_type/special/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/whitespaces/</guid>
+        <guid>https://follang.org/docs/450_type/special/</guid>
+        <description>Pointer ptr[basetype] Error err[basetype] Null / Emoty / Junk non nil jun </description>
+      </item>
+      
+      <item>
+        <title>Whitespaces</title>
+        <link>https://follang.org/docs/100_lexical/whitespaces/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lexical/whitespaces/</guid>
         <description>Whitespace is any non-empty string containing only characters that have the below Unicode properties:
  U+0009 (horizontal tab, &amp;lsquo;\t&amp;rsquo;) U+000A (line feed, &amp;lsquo;\n&amp;rsquo;) U+000B (vertical tab) U+000C (form feed) U+000D (carriage return, &amp;lsquo;\r&amp;rsquo;) U+0020 (space, &#39; &amp;lsquo;) U+0085 (next line) U+200E (left-to-right mark) U+200F (right-to-left mark) U+2028 (line separator) U+2029 (paragraph separator)  </description>
       </item>
       
       <item>
-        <title>Letters</title>
-        <link>https://follang.org/docs/100_lex/strings/</link>
+        <title>Logical</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/logical/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/strings/</guid>
+        <guid>https://follang.org/docs/200_expressions/300_exp/logical/</guid>
+        <description>A branch of algebra in which all operations are either true or false, thus operates only on booleans, and all relationships between the operations can be expressed with logical operators such as:
+ and (conjunction), denoted (x and y), satisfies (x and y) = 1 if x = y = 1, and (x and y) = 0 otherwise. or (disjunction), denoted (x or y), satisfies (x or y) = 0 if x = y = 0, and (x or) = 1 otherwise.</description>
+      </item>
+      
+      <item>
+        <title>Compounds</title>
+        <link>https://follang.org/docs/200_expressions/300_exp/revaluation/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/300_exp/revaluation/</guid>
+        <description>There are further assignment operators that can be used to modify the value of an existing variable. These are the compounds or aka compound assignments. A compound assignment operator is used to simplify the coding of some expressions. For example, using the operators described earlier we can increase a variable&amp;rsquo;s value by ten using the following code:
+value = value + 10; This statement has an equivalent using the compound assignment operator for addition (+=).</description>
+      </item>
+      
+      <item>
+        <title>Letters</title>
+        <link>https://follang.org/docs/100_lexical/strings/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lexical/strings/</guid>
         <description>Character literals A character literal is a single Unicode character enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
 var aCharacter: chr = &amp;quot;z\n&amp;quot; var anotherOne: str = &amp;quot;語\n&amp;quot; Raw characters Raw character literals do not process any escapes. They are enclosed within single-quotes U+0027 (&#39;) with the exception of U+0027 itself:
 var aCharacter: chr = &#39;z&#39; String literals A character literal is a single or a sequence of Unicode characters enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
@@ -507,13 +587,24 @@ var aCharacter: chr = &#39;z&#39; String literals A character literal is a singl
       
       <item>
         <title>Numbers</title>
-        <link>https://follang.org/docs/100_lex/numbers/</link>
+        <link>https://follang.org/docs/100_lexical/numbers/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/numbers/</guid>
+        <guid>https://follang.org/docs/100_lexical/numbers/</guid>
         <description>A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.
 Intiger literals An integer literal has one of four forms:
  A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
+      </item>
+      
+      <item>
+        <title>Symbols</title>
+        <link>https://follang.org/docs/100_lexical/symbols/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/100_lexical/symbols/</guid>
+        <description>Operators Fol allows user defined operators. An operator is any combination of the following characters:
+= + - * / &amp;gt; . @ $ ~ &amp;amp; % &amp;lt; : ! ? ^ # ` \ _ The grammar uses the terminal OP to refer to operator symbols as defined here.
+Brackets Bracket punctuation is used in various parts of the grammar. An open bracket must always be paired with a close bracket.</description>
       </item>
       
       <item>

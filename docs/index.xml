@@ -16,73 +16,82 @@
       
       <item>
         <title>Lexical analysis</title>
-        <link>https://follang.org/docs/100_lex/</link>
+        <link>https://follang.org/docs/100_lexical/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lex/</guid>
+        <guid>https://follang.org/docs/100_lexical/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Code blocks</title>
+        <link>https://follang.org/docs/200_expressions/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Macro system</title>
-        <link>https://follang.org/docs/200_mac/</link>
+        <link>https://follang.org/docs/300_macros/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_mac/</guid>
+        <guid>https://follang.org/docs/300_macros/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Modules tree</title>
-        <link>https://follang.org/docs/250_mod/</link>
+        <link>https://follang.org/docs/400_modules/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/250_mod/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Syntatic items</title>
-        <link>https://follang.org/docs/300_ite/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/300_ite/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Code expressions</title>
-        <link>https://follang.org/docs/400_exp/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/400_exp/</guid>
+        <guid>https://follang.org/docs/400_modules/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Type system</title>
-        <link>https://follang.org/docs/500_typ/</link>
-        <pubDate>Thu, 30 Jan 2020 00:38:25 +0900</pubDate>
+        <link>https://follang.org/docs/450_type/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_typ/</guid>
+        <guid>https://follang.org/docs/450_type/</guid>
+        <description>Every value in Fol is of a certain data type, which tells Fol what kind of data is being specified so it knows how to work with that data. There are four main primitives: simple, container, complex and special.</description>
+      </item>
+      
+      <item>
+        <title>Item declarations</title>
+        <link>https://follang.org/docs/500_items/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Syntactic sugar</title>
+        <link>https://follang.org/docs/550_sugar/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/550_sugar/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Memory model</title>
-        <link>https://follang.org/docs/600_mem/</link>
+        <link>https://follang.org/docs/600_memory/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_mem/</guid>
+        <guid>https://follang.org/docs/600_memory/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Multi Threading</title>
-        <link>https://follang.org/docs/700_pro/</link>
+        <link>https://follang.org/docs/700_processor/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_pro/</guid>
+        <guid>https://follang.org/docs/700_processor/</guid>
         <description></description>
       </item>
       

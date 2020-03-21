@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Type system on FOL</title>
+    <link>https://follang.org/docs/450_type/</link>
+    <description>Recent content in Type system on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/450_type/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Simple</title>
+        <link>https://follang.org/docs/450_type/simple/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/simple/</guid>
+        <description>Simple types are the most primitive type of data:
+int[options], flt[options], chr[options], bol Intiger type An integer is a number without a fractional component. We used one integer of the u32 type, the type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with i, instead of u) that takes up 32 bits of space:
+var aVar: int[u32] = 45; Each variant can be either signed or unsigned and has an explicit size.</description>
+      </item>
+      
+      <item>
+        <title>Container</title>
+        <link>https://follang.org/docs/450_type/container/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/container/</guid>
+        <description>Containers are of compound types. They contain other primitive or constructed types. To access the types in container those brackets are used: [], so:
+var container: type = { element, element, element } // declaring a container var varable: type = container[2] // accessing the last element Containers are always zero indexed
+ Static Arrays Arrays arr[type,size] Arrays are the most simple type of container. They contain homogeneous type, meaning that each element in the array has the same type.</description>
+      </item>
+      
+      <item>
+        <title>Complex</title>
+        <link>https://follang.org/docs/450_type/complex/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/complex/</guid>
+        <description>Strings Strings are a complex type that are made of array of chars with null terminator &amp;lsquo;\0&amp;rsquo;, and by default is utf8 encoded:
+str[8,16,32] str is similar to seq[char[]]
+Imaginary Imaginary numbers
+img[] Optional Either are empty or have a value
+opt[] Multiple mul[] Any any[] </description>
+      </item>
+      
+      <item>
+        <title>Special</title>
+        <link>https://follang.org/docs/450_type/special/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/450_type/special/</guid>
+        <description>Pointer ptr[basetype] Error err[basetype] Null / Emoty / Junk non nil jun </description>
+      </item>
+      
+    
+  </channel>
+</rss>
