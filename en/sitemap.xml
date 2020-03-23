@@ -78,11 +78,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lexical/input/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/400_modules/modules/</loc>
+    <loc>https://follang.org/docs/600_modules/modules/</loc>
   </url>
   
   <url>
@@ -94,7 +90,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/400_modules/scopes/</loc>
+    <loc>https://follang.org/docs/600_modules/scopes/</loc>
   </url>
   
   <url>
@@ -114,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/400_modules/blocks/</loc>
+    <loc>https://follang.org/docs/600_modules/blocks/</loc>
   </url>
   
   <url>
@@ -123,10 +119,6 @@
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/variables/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/600_memory/pointers/</loc>
   </url>
   
   <url>
@@ -142,7 +134,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/550_sugar/errors/</loc>
+    <loc>https://follang.org/docs/600_modules/tests/</loc>
   </url>
   
   <url>
@@ -150,15 +142,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/550_sugar/pipes/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/v0.11-docs/spec/pipes/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/700_processor/concurrency/</loc>
   </url>
   
   <url>
@@ -182,11 +166,19 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/200_expressions/blocks/</loc>
+    <loc>https://follang.org/docs/300_macros/buildin/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/buildin/</loc>
+    <loc>https://follang.org/docs/750_conversion/coercion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/700_sugar/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/900_processor/eventuals/</loc>
   </url>
   
   <url>
@@ -198,7 +190,11 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/450_type/simple/</loc>
+    <loc>https://follang.org/docs/400_type/ordinal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/800_memory/ownership/</loc>
   </url>
   
   <url>
@@ -206,11 +202,19 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/750_conversion/casting/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/200_expressions/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/450_type/container/</loc>
+    <loc>https://follang.org/docs/400_type/container/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/900_processor/corutines/</loc>
   </url>
   
   <url>
@@ -219,6 +223,14 @@
   
   <url>
     <loc>https://follang.org/docs/300_macros/macros/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/700_sugar/pipes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/800_memory/pointers/</loc>
   </url>
   
   <url>
@@ -238,7 +250,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/450_type/complex/</loc>
+    <loc>https://follang.org/docs/400_type/complex/</loc>
   </url>
   
   <url>
@@ -254,11 +266,15 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/700_sugar/mixture/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/300_macros/temp/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/400_modules/</loc>
+    <loc>https://follang.org/docs/700_sugar/limits/</loc>
   </url>
   
   <url>
@@ -266,15 +282,15 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/450_type/special/</loc>
+    <loc>https://follang.org/docs/400_type/special/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/400_type/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/docs/100_lexical/whitespaces/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/450_type/</loc>
   </url>
   
   <url>
@@ -286,7 +302,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/550_sugar/</loc>
+    <loc>https://follang.org/docs/700_sugar/rolling/</loc>
   </url>
   
   <url>
@@ -294,11 +310,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/600_memory/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/700_processor/</loc>
+    <loc>https://follang.org/docs/600_modules/</loc>
   </url>
   
   <url>
@@ -306,7 +318,23 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/700_sugar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/750_conversion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/800_memory/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/100_lexical/symbols/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/900_processor/</loc>
   </url>
   
   <url>

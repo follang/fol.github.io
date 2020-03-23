@@ -20,7 +20,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/</guid>
-        <description></description>
+        <description>FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8</description>
       </item>
       
       <item>
@@ -29,7 +29,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/</guid>
-        <description></description>
+        <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling subprograms, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
       </item>
       
       <item>
@@ -38,25 +38,16 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/300_macros/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Modules tree</title>
-        <link>https://follang.org/docs/400_modules/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/400_modules/</guid>
-        <description></description>
+        <description>Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data. It means that a program can be designed to read, generate, analyze or transform other programs, and even modify itself while running. In some cases, this allows programmers to minimize the number of lines of code to express a solution, in turn reducing development time. It also allows programs greater flexibility to efficiently handle new situations without recompilation.</description>
       </item>
       
       <item>
         <title>Type system</title>
-        <link>https://follang.org/docs/450_type/</link>
+        <link>https://follang.org/docs/400_type/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/450_type/</guid>
-        <description>Every value in Fol is of a certain data type, which tells Fol what kind of data is being specified so it knows how to work with that data. There are four main primitives: simple, container, complex and special.</description>
+        <guid>https://follang.org/docs/400_type/</guid>
+        <description>A data type defines a collection of data values and a set of predefined operations on those values. Computer programs produce results by manipulating data. An important factor in determining the ease with which they can perform this task is how well the data types available in the language being used match the objects in the real world of the problem being addressed. Therefore, it is crucial that a FOL supports an appropriate collection of data types and structures.</description>
       </item>
       
       <item>
@@ -69,30 +60,51 @@
       </item>
       
       <item>
-        <title>Syntactic sugar</title>
-        <link>https://follang.org/docs/550_sugar/</link>
+        <title>Modules tree</title>
+        <link>https://follang.org/docs/600_modules/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/550_sugar/</guid>
+        <guid>https://follang.org/docs/600_modules/</guid>
         <description></description>
+      </item>
+      
+      <item>
+        <title>Syntactic sugar</title>
+        <link>https://follang.org/docs/700_sugar/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Value conversion</title>
+        <link>https://follang.org/docs/750_conversion/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/750_conversion/</guid>
+        <description>A type cast converts a value of one type to another.
+FOL uses two ways for value conversion:
+ coercion for conversions that are known to be completely safe and unambiguous, and casting for conversions that one would not want to happen on accident.  </description>
       </item>
       
       <item>
         <title>Memory model</title>
-        <link>https://follang.org/docs/600_memory/</link>
+        <link>https://follang.org/docs/800_memory/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_memory/</guid>
-        <description></description>
+        <guid>https://follang.org/docs/800_memory/</guid>
+        <description>The Stack What is the stack? It&amp;rsquo;s a special region of your computer&amp;rsquo;s memory that stores temporary variables created by each function (including the main() function). The stack is a &amp;ldquo;LIFO&amp;rdquo; (last in, first out) data structure, that is managed and optimized by the CPU quite closely. Every time a function declares a new variable, it is &amp;ldquo;pushed&amp;rdquo; onto the stack. Then every time a function exits, all of the variables pushed onto the stack by that function, are freed (that is to say, they are deleted).</description>
       </item>
       
       <item>
         <title>Multi Threading</title>
-        <link>https://follang.org/docs/700_processor/</link>
+        <link>https://follang.org/docs/900_processor/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_processor/</guid>
-        <description></description>
+        <guid>https://follang.org/docs/900_processor/</guid>
+        <description>Concurrency is the ability of different tasks of a program to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent tasks, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program into order-independent or partially-ordered tasks.
+There are two distinct categories of concurrent task control.</description>
       </item>
       
     

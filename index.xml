@@ -96,20 +96,11 @@
       </item>
       
       <item>
-        <title>Input</title>
-        <link>https://follang.org/docs/100_lexical/input/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/100_lexical/input/</guid>
-        <description>FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8</description>
-      </item>
-      
-      <item>
         <title>Modules</title>
-        <link>https://follang.org/docs/400_modules/modules/</link>
+        <link>https://follang.org/docs/600_modules/modules/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/400_modules/modules/</guid>
+        <guid>https://follang.org/docs/600_modules/modules/</guid>
         <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
 use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
 use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
@@ -138,10 +129,10 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
       
       <item>
         <title>Scope</title>
-        <link>https://follang.org/docs/400_modules/scopes/</link>
+        <link>https://follang.org/docs/600_modules/scopes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/400_modules/scopes/</guid>
+        <guid>https://follang.org/docs/600_modules/scopes/</guid>
         <description>Every file in a folder is part of one package, thus they share the same scope. Thus two varibles with same name at global scope cant be defined. However, this is kind of special for functions. Functions of the same name and same amount of parameters (so identical functions, not function overloading) can be defined in two different files. When called, the one on the same file is used.
 In case a function exists in two files and is called from thrid one, then this can be resolved in two ways.</description>
       </item>
@@ -186,10 +177,10 @@ int[options], flt[options], chr[options], bol Intiger type An integer is a numbe
       
       <item>
         <title>Blocks</title>
-        <link>https://follang.org/docs/400_modules/blocks/</link>
+        <link>https://follang.org/docs/600_modules/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/400_modules/blocks/</guid>
+        <guid>https://follang.org/docs/600_modules/blocks/</guid>
         <description>Namespaces A namespace can be defined in three ways:
  in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main module
 def shko/other: mod[] = { pro[] main: int = { // implementation } // implementation } or in the same module file:
@@ -214,15 +205,6 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
         <guid>https://follang.org/v0.11-docs/spec/variables/</guid>
         <description>Here are some of the ways that variables can be defined:
 var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;this is a string&amp;quot; var[~] yetanother = 192.56 var[+] shortlet = true var anarray: arr[str,3] = { &amp;quot;one&amp;quot;, &amp;quot;two&amp;quot;, &amp;quot;three&amp;quot; } var asequence : seq[num[i8]] = { 20, 25, 45, 68, 73,98 } var multiholder: set[num, str] = { 12, &amp;quot;word&amp;quot; } var anothermulti: set[str, seq[num[f32]]] = { &amp;quot;string&amp;quot;, {5.5, 4.</description>
-      </item>
-      
-      <item>
-        <title>Ownership</title>
-        <link>https://follang.org/docs/600_memory/pointers/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/600_memory/pointers/</guid>
-        <description>Stack vs Heap The Stack What is the stack? It&amp;rsquo;s a special region of your computer&amp;rsquo;s memory that stores temporary variables created by each function (including the main() function). The stack is a &amp;ldquo;LIFO&amp;rdquo; (last in, first out) data structure, that is managed and optimized by the CPU quite closely. Every time a function declares a new variable, it is &amp;ldquo;pushed&amp;rdquo; onto the stack. Then every time a function exits, all of the variables pushed onto the stack by that function, are freed (that is to say, they are deleted).</description>
       </item>
       
       <item>
@@ -253,13 +235,13 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       </item>
       
       <item>
-        <title>Errors</title>
-        <link>https://follang.org/docs/550_sugar/errors/</link>
+        <title>Tests</title>
+        <link>https://follang.org/docs/600_modules/tests/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/550_sugar/errors/</guid>
-        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
- braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
+        <guid>https://follang.org/docs/600_modules/tests/</guid>
+        <description>Blocks defined with type tst, have access to the module (or namespace) defined in tst[&amp;quot;name&amp;quot;, access].
+def test1: tst[&amp;quot;sometest&amp;quot;, shko] = {} def &amp;quot;some unit testing&amp;quot;: tst[shko] = {} </description>
       </item>
       
       <item>
@@ -274,30 +256,11 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Pipes</title>
-        <link>https://follang.org/docs/550_sugar/pipes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/550_sugar/pipes/</guid>
-        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
-      </item>
-      
-      <item>
-        <title>Pipes</title>
         <link>https://follang.org/v0.11-docs/spec/pipes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/v0.11-docs/spec/pipes/</guid>
         <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
-      </item>
-      
-      <item>
-        <title>Concurrency</title>
-        <link>https://follang.org/docs/700_processor/concurrency/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/700_processor/concurrency/</guid>
-        <description>Concurrency Concurrency is the ability of different tasks of a program to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent tasks, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program into order-independent or partially-ordered tasks.
-There are two distinct categories of concurrent task control.</description>
       </item>
       
       <item>
@@ -353,24 +316,47 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
       </item>
       
       <item>
-        <title>Blocks</title>
-        <link>https://follang.org/docs/200_expressions/blocks/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/200_expressions/blocks/</guid>
-        <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling subprograms, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
-      </item>
-      
-      <item>
         <title>Build-In</title>
         <link>https://follang.org/docs/300_macros/buildin/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/300_macros/buildin/</guid>
-        <description>WITH BUILD-INS, ALTERNATIVES, MACROS, DEFAULTS AND TEMPLATES, YOU CAN COMPLETELY MAKE A NEW TYPESYSTEM, WITH ITS OWN KEYWORDS, IDENTIFIERS, AND BEHAVIOUR.
- IT IS NOT SUGGESTED TO RELAY HEAVILY ON MACROS BECAUSE THE CODE MIGHT LOOSES THE READABILITY WHEN SOMEONE TRIES TO USE YOUR CODE.
- Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
-var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .</description>
+        <description>Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
+var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .print(.pointer_value(contPoint));	// print the dereferenced value of pointer .echo() - print on screen
+.not() - negate
+.cast() - type casting
+.as() - type casting
+.eq() - check for equality
+.nq() - check for inequality</description>
+      </item>
+      
+      <item>
+        <title>Coercion</title>
+        <link>https://follang.org/docs/750_conversion/coercion/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/750_conversion/coercion/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Errors</title>
+        <link>https://follang.org/docs/700_sugar/errors/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/errors/</guid>
+        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
+ braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
+      </item>
+      
+      <item>
+        <title>Eventuals</title>
+        <link>https://follang.org/docs/900_processor/eventuals/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/900_processor/eventuals/</guid>
+        <description>Eventuals describe an object that acts as a proxy for a result that is initially unknown, usually because the computation of its value is not yet complete.
+Async/Await Async methods are intended to be non-blocking operations. An await expression in an async subprogram doesn’t block the current thread while the awaited task is running. Instead, the expression signs up the rest of the subprogram as a continuation and returns control to the caller of the async subprogram and it means “Once this is done, execute this function”.</description>
       </item>
       
       <item>
@@ -411,14 +397,23 @@ BK_FALSE false
       </item>
       
       <item>
-        <title>Simple</title>
-        <link>https://follang.org/docs/450_type/simple/</link>
+        <title>Ordinal</title>
+        <link>https://follang.org/docs/400_type/ordinal/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/450_type/simple/</guid>
-        <description>Simple types are the most primitive type of data:
-int[options], flt[options], chr[options], bol Intiger type An integer is a number without a fractional component. We used one integer of the u32 type, the type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with i, instead of u) that takes up 32 bits of space:
-var aVar: int[u32] = 45; Each variant can be either signed or unsigned and has an explicit size.</description>
+        <guid>https://follang.org/docs/400_type/ordinal/</guid>
+        <description>Ordinal types
+Ordinal types have the following characteristics:
+ Ordinal types are countable and ordered. This property allows the operation of functions as inc, ord, dec on ordinal types to be defined. Ordinal values have a smallest possible value. Trying to count further down than the smallest value gives a checked runtime or static error. Ordinal values have a largest possible value. Trying to count further than the largest value gives a checked runtime or static error.</description>
+      </item>
+      
+      <item>
+        <title>Ownership</title>
+        <link>https://follang.org/docs/800_memory/ownership/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/800_memory/ownership/</guid>
+        <description>Much like C++ and Rust, in Fol every variable declared, by default is created in stack unless explicitly specified othervise. Using option [new] or [@] in a variable, it allocates memory in the heap. The size of the allocation is defined by the type. Internally this creates a pointer to heap address, and dereferences it to the type you are having. Usually those behind the scene pointers here are unique pointers.</description>
       </item>
       
       <item>
@@ -432,14 +427,34 @@ fun adder(a, b: int): int = { retun a + b // this will throw an error } fun adde
       </item>
       
       <item>
-        <title>Container</title>
-        <link>https://follang.org/docs/450_type/container/</link>
+        <title>Casting</title>
+        <link>https://follang.org/docs/750_conversion/casting/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/450_type/container/</guid>
+        <guid>https://follang.org/docs/750_conversion/casting/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Container</title>
+        <link>https://follang.org/docs/400_type/container/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/400_type/container/</guid>
         <description>Containers are of compound types. They contain other primitive or constructed types. To access the types in container those brackets are used: [], so:
 var container: type = { element, element, element } // declaring a container var varable: type = container[2] // accessing the last element Containers are always zero indexed
  Static Arrays Arrays arr[type,size] Arrays are the most simple type of container. They contain homogeneous type, meaning that each element in the array has the same type.</description>
+      </item>
+      
+      <item>
+        <title>Corutines</title>
+        <link>https://follang.org/docs/900_processor/corutines/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/900_processor/corutines/</guid>
+        <description>A coroutine is a task given form the main thread, similar to a subprogram, that can be in concurrent execution with other tasks of the same program though other routines. A worker takes the task and runs it, concurrently. Each task in a program can be assigned to one or multiple workers.
+Three characteristics of coroutine distinguish them from normal subprograms:
+ First, a task may be implicitly started, whereas a subprogram must be explicitly called.</description>
       </item>
       
       <item>
@@ -465,6 +480,25 @@ Either
         <guid>https://follang.org/docs/300_macros/macros/</guid>
         <description>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
 For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
+      </item>
+      
+      <item>
+        <title>Pipes</title>
+        <link>https://follang.org/docs/700_sugar/pipes/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/pipes/</guid>
+        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
+      </item>
+      
+      <item>
+        <title>Pointers</title>
+        <link>https://follang.org/docs/800_memory/pointers/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/800_memory/pointers/</guid>
+        <description>The only way to access the same memory with different variable is by using pointers. In example below, we create a pointer, and when we want to dereference it to modify the content of the address that the pointer is pointing to, we use *ptrname or .pointer_value(ptrname).
+@var aContainer: arr[int, 5]; //allocating memory on the heap var contPoint: ptr[] = aContainer; *contPoint = { zero, one, two, three, four }; //dereferencing and then assigning values Bare in mind, that the pointer (so, the address itself) can&amp;rsquo;t be changes, unless when created is marked as var[mut].</description>
       </item>
       
       <item>
@@ -503,15 +537,13 @@ BLOCK_COMMENT :
       
       <item>
         <title>Complex</title>
-        <link>https://follang.org/docs/450_type/complex/</link>
+        <link>https://follang.org/docs/400_type/complex/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/450_type/complex/</guid>
+        <guid>https://follang.org/docs/400_type/complex/</guid>
         <description>Strings Strings are a complex type that are made of array of chars with null terminator &amp;lsquo;\0&amp;rsquo;, and by default is utf8 encoded:
-str[8,16,32] str is similar to seq[char[]]
-Imaginary Imaginary numbers
-img[] Optional Either are empty or have a value
-opt[] Multiple mul[] Any any[] </description>
+str[] Number Number type is an abstraction of intiger and float type. It can be imaginary too.
+num[] Pointer ptr[] Error err[] </description>
       </item>
       
       <item>
@@ -528,6 +560,15 @@ There are two type of literals:
       </item>
       
       <item>
+        <title>Mixture</title>
+        <link>https://follang.org/docs/700_sugar/mixture/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/mixture/</guid>
+        <description>Optional var someMixtureInt: ?int = 45; Never var someNverType: !int = panic(); </description>
+      </item>
+      
+      <item>
         <title>Templates</title>
         <link>https://follang.org/docs/300_macros/temp/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -536,6 +577,15 @@ There are two type of literals:
         <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
 For example here is how the != is defined:
 fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
+      </item>
+      
+      <item>
+        <title>Limits</title>
+        <link>https://follang.org/docs/700_sugar/limits/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/limits/</guid>
+        <description>var aLimitInt: int[][.range(0..255)]; var aLimitString: str[][.regex(&#39;a-zA-Z_&#39;)] </description>
       </item>
       
       <item>
@@ -551,11 +601,13 @@ fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) 
       
       <item>
         <title>Special</title>
-        <link>https://follang.org/docs/450_type/special/</link>
+        <link>https://follang.org/docs/400_type/special/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/450_type/special/</guid>
-        <description>Pointer ptr[basetype] Error err[basetype] Null / Emoty / Junk non nil jun </description>
+        <guid>https://follang.org/docs/400_type/special/</guid>
+        <description>Optional Either are empty or have a value
+opt[] Never nev[] The never type is a type with no values, representing the result of computations that never complete.
+Any any[] Null nil </description>
       </item>
       
       <item>
@@ -577,6 +629,17 @@ fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) 
         <description>There are four access expresions:
  namespace member access subprogram member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
 &amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
+      </item>
+      
+      <item>
+        <title>Rolling</title>
+        <link>https://follang.org/docs/700_sugar/rolling/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/rolling/</guid>
+        <description>Rolling or list comprehension is a syntactic construct available FOL for creating a list based on existing lists. It follows the form of the mathematical set-builder notation - set comprehension.
+Rolling has the same syntactic components to represent generation of a list in order from an input list or iterator:
+ A variable representing members of an input list. An input list (or iterator). An optional predicate expression. And an output expression producing members of the output list from members of the input iterable that satisfy the predicate.</description>
       </item>
       
       <item>
