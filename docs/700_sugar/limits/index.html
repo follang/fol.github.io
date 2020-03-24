@@ -1006,7 +1006,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/700_sugar/limits/",
-    "description": "var aLimitInt: int[][.range(0..255)]; var aLimitString: str[][.regex('a-zA-Z_')] ",
+    "description": "Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using [] right after the type declaration type[], so: type[options][limits] Initger …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1277,9 +1277,9 @@
   
 
   
-  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/300_macros/">
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/300_meta/">
     <span class="menu__title--text ">
-        Macro system
+        Meta programming
     </span>
     <span class="menu__title--icon right">
       
@@ -1287,13 +1287,13 @@
       
     </span>
   </ul>
-  <ul class="menu__list " data-data=/300_macros/ data-link=https://follang.org/docs/700_sugar/limits/>
+  <ul class="menu__list " data-data=/300_meta/ data-link=https://follang.org/docs/700_sugar/limits/>
     
       
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/buildin/" class="menu__title " data-depth="0">Build-In</a>
+          <a href="https://follang.org/docs/300_meta/buildin/" class="menu__title " data-depth="0">Build-In</a>
         </li>
       
     
@@ -1301,7 +1301,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/macros/" class="menu__title " data-depth="0">Macors</a>
+          <a href="https://follang.org/docs/300_meta/macros/" class="menu__title " data-depth="0">Macors</a>
         </li>
       
     
@@ -1309,7 +1309,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+          <a href="https://follang.org/docs/300_meta/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
         </li>
       
     
@@ -1317,7 +1317,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/defaults/" class="menu__title " data-depth="0">Defaults</a>
+          <a href="https://follang.org/docs/300_meta/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -1325,7 +1325,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/temp/" class="menu__title " data-depth="0">Templates</a>
+          <a href="https://follang.org/docs/300_meta/temp/" class="menu__title " data-depth="0">Templates</a>
         </li>
       
     
@@ -1487,7 +1487,15 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/modules/" class="menu__title " data-depth="0">Modules</a>
+          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
     
@@ -1533,6 +1541,52 @@
   
 
   
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/650_erroe/">
+    <span class="menu__title--text ">
+        Error handling
+    </span>
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/650_erroe/ data-link=https://follang.org/docs/700_sugar/limits/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/650_erroe/braking/" class="menu__title " data-depth="0">Braking</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/650_erroe/recover/" class="menu__title " data-depth="0">Recover</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
   <ul class="menu__title--collapse active" data-depth="0" data-href="https://follang.org/docs/700_sugar/">
     <span class="menu__title--text ">
         Syntactic sugar
@@ -1544,14 +1598,6 @@
     </span>
   </ul>
   <ul class="menu__list active" data-data=/700_sugar/ data-link=https://follang.org/docs/700_sugar/limits/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/700_sugar/errors/" class="menu__title " data-depth="0">Errors</a>
-        </li>
-      
     
       
         
@@ -1780,7 +1826,16 @@
     <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#initger-limiting">Initger limiting</a></li>
+        <li><a href="#character-limiting">Character limiting</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <div class="toc__issue">
       
@@ -2732,9 +2787,9 @@
   
 
   
-  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/300_macros/">
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/300_meta/">
     <span class="menu__title--text ">
-        Macro system
+        Meta programming
     </span>
     <span class="menu__title--icon right">
       
@@ -2742,13 +2797,13 @@
       
     </span>
   </ul>
-  <ul class="menu__list " data-data=/300_macros/ data-link=https://follang.org/docs/700_sugar/limits/>
+  <ul class="menu__list " data-data=/300_meta/ data-link=https://follang.org/docs/700_sugar/limits/>
     
       
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/buildin/" class="menu__title " data-depth="0">Build-In</a>
+          <a href="https://follang.org/docs/300_meta/buildin/" class="menu__title " data-depth="0">Build-In</a>
         </li>
       
     
@@ -2756,7 +2811,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/macros/" class="menu__title " data-depth="0">Macors</a>
+          <a href="https://follang.org/docs/300_meta/macros/" class="menu__title " data-depth="0">Macors</a>
         </li>
       
     
@@ -2764,7 +2819,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
+          <a href="https://follang.org/docs/300_meta/alternatives/" class="menu__title " data-depth="0">Alternatives</a>
         </li>
       
     
@@ -2772,7 +2827,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/defaults/" class="menu__title " data-depth="0">Defaults</a>
+          <a href="https://follang.org/docs/300_meta/defaults/" class="menu__title " data-depth="0">Defaults</a>
         </li>
       
     
@@ -2780,7 +2835,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/300_macros/temp/" class="menu__title " data-depth="0">Templates</a>
+          <a href="https://follang.org/docs/300_meta/temp/" class="menu__title " data-depth="0">Templates</a>
         </li>
       
     
@@ -2942,7 +2997,15 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/modules/" class="menu__title " data-depth="0">Modules</a>
+          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
     
@@ -2988,6 +3051,52 @@
   
 
   
+  <ul class="menu__title--collapse " data-depth="0" data-href="https://follang.org/docs/650_erroe/">
+    <span class="menu__title--text ">
+        Error handling
+    </span>
+    <span class="menu__title--icon right">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+      
+    </span>
+  </ul>
+  <ul class="menu__list " data-data=/650_erroe/ data-link=https://follang.org/docs/700_sugar/limits/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/650_erroe/braking/" class="menu__title " data-depth="0">Braking</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/650_erroe/recover/" class="menu__title " data-depth="0">Recover</a>
+        </li>
+      
+    
+  </ul>
+  
+
+    
+        
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+  
+
+  
   <ul class="menu__title--collapse active" data-depth="0" data-href="https://follang.org/docs/700_sugar/">
     <span class="menu__title--text ">
         Syntactic sugar
@@ -2999,14 +3108,6 @@
     </span>
   </ul>
   <ul class="menu__list active" data-data=/700_sugar/ data-link=https://follang.org/docs/700_sugar/limits/>
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/700_sugar/errors/" class="menu__title " data-depth="0">Errors</a>
-        </li>
-      
     
       
         
@@ -3194,9 +3295,14 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <pre><code>var aLimitInt: int[][.range(0..255)];
+    <p>Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using <code>[]</code> right after the type declaration <code>type[]</code>, so: <code>type[options][limits]</code></p>
+<h2 id="initger-limiting">Initger limiting</h2>
+<p>Example, making a intiger variable have only numbers from 0 to 255 that represents an RGB value for a single color:</p>
+<pre><code>var rgb: int[][.range(0..255)];
 
-var aLimitString: str[][.regex('a-zA-Z_')]
+</code></pre><h2 id="character-limiting">Character limiting</h2>
+<p>It works with strings too, say we want a string that can should be of a particular form, for example an email:</p>
+<pre><code>var email: str[][.regex('[._a-z0-9]+@[a-z.]+')]
 </code></pre>
   </article>
 </div>
@@ -3235,7 +3341,16 @@ var aLimitString: str[][.regex('a-zA-Z_')]
         <div class="toc">
   <h6 class="toc__label">Index</h6>
   <div class="toc__body">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#initger-limiting">Initger limiting</a></li>
+        <li><a href="#character-limiting">Character limiting</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <div class="toc__issue">
       

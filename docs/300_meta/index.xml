@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta programming on FOL</title>
+    <link>https://follang.org/docs/300_meta/</link>
+    <description>Recent content in Meta programming on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/300_meta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Build-In</title>
+        <link>https://follang.org/docs/300_meta/buildin/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/buildin/</guid>
+        <description>Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
+var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .print(.pointer_value(contPoint));	// print the dereferenced value of pointer .echo() - print on screen
+.not() - negate
+.cast() - type casting
+.as() - type casting
+.eq() - check for equality
+.nq() - check for inequality</description>
+      </item>
+      
+      <item>
+        <title>Macors</title>
+        <link>https://follang.org/docs/300_meta/macros/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/macros/</guid>
+        <description>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
+For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
+      </item>
+      
+      <item>
+        <title>Alternatives</title>
+        <link>https://follang.org/docs/300_meta/alternatives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/alternatives/</guid>
+        <description>Alternatives are used when we want to simplify code. For example, define an alternative, so whenever you write +var it is the same as var[+].
+def &#39;+var&#39;: alt = &#39;var[+]&#39; def &#39;~var&#39;: alt = &#39;var[~]&#39; def &#39;.pointer_content&#39;: alt = &#39;.pointer_value&#39; </description>
+      </item>
+      
+      <item>
+        <title>Defaults</title>
+        <link>https://follang.org/docs/300_meta/defaults/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/defaults/</guid>
+        <description>Defaults are a way to change the default behaviour of options. Example the default behaviour of str when called without options. By defalt str is it is saved on stack, it is a constant and not public, thus has str[pil,imu,nor], and we want to make it mutable and saved on heap by default:
+def &#39;str&#39;: def[] = &#39;str[new,mut,nor]&#39; </description>
+      </item>
+      
+      <item>
+        <title>Templates</title>
+        <link>https://follang.org/docs/300_meta/temp/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/temp/</guid>
+        <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
+For example here is how the != is defined:
+fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
+      </item>
+      
+    
+  </channel>
+</rss>

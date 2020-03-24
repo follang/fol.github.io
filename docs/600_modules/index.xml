@@ -14,14 +14,26 @@
     
       
       <item>
-        <title>Modules</title>
-        <link>https://follang.org/docs/600_modules/modules/</link>
+        <title>Define</title>
+        <link>https://follang.org/docs/600_modules/define/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/modules/</guid>
-        <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
-use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
-use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
+        <guid>https://follang.org/docs/600_modules/define/</guid>
+        <description>Every file in a folder is part of a package, which means everything in the folder that uses the same package name, share the same scope. To define a package we use:
+def package_name: mod[] = { // implementation } Main module If a package is an executable, it should have pro[] main: int to tell the compiler where to start.
+def shko: mod[] = { pro[] main: int = { log.</description>
+      </item>
+      
+      <item>
+        <title>Import</title>
+        <link>https://follang.org/docs/600_modules/import/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/600_modules/import/</guid>
+        <description>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.
+Syntax to import a library is:
+use package_name: mod[] = { path } There are two type of import declartions:
+ system libraries local libraries  System libraries This is how including other libraries works, for example include fmt module from standard library:</description>
       </item>
       
       <item>

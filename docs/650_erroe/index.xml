@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Error handling on FOL</title>
+    <link>https://follang.org/docs/650_erroe/</link>
+    <description>Recent content in Error handling on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/650_erroe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Braking</title>
+        <link>https://follang.org/docs/650_erroe/braking/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/650_erroe/braking/</guid>
+        <description>panic keyword allows a program to terminate immediately and provide feedback to the caller of the program. It should be used when a program reaches an unrecoverable state. This most commonly occurs when a bug of some kind has been detected and it’s not clear to the programmer how to handle the error.
+pro main(): int = { panic &amp;quot;Hello&amp;quot;; .echo(&amp;quot;End of main&amp;quot;); //unreachable statement } In the above example, the program will terminate immediately when it encounters the panic keyword.</description>
+      </item>
+      
+      <item>
+        <title>Recover</title>
+        <link>https://follang.org/docs/650_erroe/recover/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/650_erroe/recover/</guid>
+        <description>report can be used to handle recoverable errors. As discussed here, FOL uses two variables result nd error in return of each subprogram. As name implies, result represents the type of the value that will be returned in a success case, and error represents the type of the error err[] that will be returned in a failure case.
+When we use the keyword report, the error is returned to the subprogram&amp;rsquo;s error variable and the subprogram qutis executing (the subprogram, not the program).</description>
+      </item>
+      
+    
+  </channel>
+</rss>

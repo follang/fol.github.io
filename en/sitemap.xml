@@ -78,11 +78,15 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/600_modules/modules/</loc>
+    <loc>https://follang.org/docs/600_modules/define/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/600_modules/import/</loc>
   </url>
   
   <url>
@@ -166,15 +170,15 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/buildin/</loc>
+    <loc>https://follang.org/docs/650_erroe/braking/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/300_meta/buildin/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/docs/750_conversion/coercion/</loc>
-  </url>
-  
-  <url>
-    <loc>https://follang.org/docs/700_sugar/errors/</loc>
   </url>
   
   <url>
@@ -222,7 +226,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/macros/</loc>
+    <loc>https://follang.org/docs/300_meta/macros/</loc>
   </url>
   
   <url>
@@ -234,15 +238,19 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/650_erroe/recover/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/200_expressions/200_sta/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/alternatives/</loc>
+    <loc>https://follang.org/docs/300_meta/alternatives/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/defaults/</loc>
+    <loc>https://follang.org/docs/300_meta/defaults/</loc>
   </url>
   
   <url>
@@ -262,7 +270,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/</loc>
+    <loc>https://follang.org/docs/300_meta/</loc>
   </url>
   
   <url>
@@ -270,7 +278,7 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/300_macros/temp/</loc>
+    <loc>https://follang.org/docs/300_meta/temp/</loc>
   </url>
   
   <url>
@@ -311,6 +319,10 @@
   
   <url>
     <loc>https://follang.org/docs/600_modules/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/650_erroe/</loc>
   </url>
   
   <url>

@@ -20,7 +20,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/</guid>
-        <description>FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8</description>
+        <description>A lexical analyzer is essentially a pattern matcher. A pattern matcher attempts to find a substring of a given string of characters that matches a given character pattern. All FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8. A lexical analyzer serves as the front end of a syntax analyzer. Technically, lexical analysis is a part of syntax analysis. A lexical analyzer performs syntax analysis at the lowest level of program structure.</description>
       </item>
       
       <item>
@@ -33,11 +33,11 @@
       </item>
       
       <item>
-        <title>Macro system</title>
-        <link>https://follang.org/docs/300_macros/</link>
+        <title>Meta programming</title>
+        <link>https://follang.org/docs/300_meta/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/</guid>
+        <guid>https://follang.org/docs/300_meta/</guid>
         <description>Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data. It means that a program can be designed to read, generate, analyze or transform other programs, and even modify itself while running. In some cases, this allows programmers to minimize the number of lines of code to express a solution, in turn reducing development time. It also allows programs greater flexibility to efficiently handle new situations without recompilation.</description>
       </item>
       
@@ -56,7 +56,13 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/500_items/</guid>
-        <description></description>
+        <description>FOL uses different keywords to bind functionality and data to variables.
+modules used for: imports and includes
+use[] definitions used for: preporcesr, macros, blocks, definitions &amp;hellip;
+def[] variables used for all variables: ints, strings, bools, arrays, vecotrs &amp;hellip;
+var[] con[] functions used for subporgrams: procedures and functions
+pro[] fun[] constructs used for: new types, records, objects, interfaces, enums &amp;hellip;
+typ[] </description>
       </item>
       
       <item>
@@ -65,7 +71,18 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/600_modules/</guid>
-        <description></description>
+        <description>FOL programs are constructed by linking together packages. A package in turn is constructed from one or more source files that together declare constants, types, variables and functions belonging to the package and which are accessible in all files of the same package. Those elements may be exported and used in another package.
+Every file with extension .fol in a folder is part of a package. Thus every file in the folder that uses the same package name, share the same scope between each other.</description>
+      </item>
+      
+      <item>
+        <title>Error handling</title>
+        <link>https://follang.org/docs/650_erroe/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/650_erroe/</guid>
+        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
+ braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
       </item>
       
       <item>
@@ -74,7 +91,8 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/</guid>
-        <description></description>
+        <description>Syntactic sugar, is a visually or logically-appealing &amp;ldquo;shortcut&amp;rdquo; provided by the language, which reduces the amount of code that must be written in some common situation. It makes the language &amp;ldquo;sweeter&amp;rdquo; for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
+A construct in a language is called &amp;ldquo;syntactic sugar&amp;rdquo; if it can be removed from the language without any effect on what the language can do: functionality and expressive power will remain the same.</description>
       </item>
       
       <item>

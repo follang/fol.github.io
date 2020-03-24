@@ -96,14 +96,14 @@
       </item>
       
       <item>
-        <title>Modules</title>
-        <link>https://follang.org/docs/600_modules/modules/</link>
+        <title>Define</title>
+        <link>https://follang.org/docs/600_modules/define/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/modules/</guid>
-        <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
-use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
-use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
+        <guid>https://follang.org/docs/600_modules/define/</guid>
+        <description>Every file in a folder is part of a package, which means everything in the folder that uses the same package name, share the same scope. To define a package we use:
+def package_name: mod[] = { // implementation } Main module If a package is an executable, it should have pro[] main: int to tell the compiler where to start.
+def shko: mod[] = { pro[] main: int = { log.</description>
       </item>
       
       <item>
@@ -115,6 +115,18 @@ use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.w
         <description>Imoprting modules System libraries This is how including other libraries works, for example include fmt module from standard library:
 use fmt: mod[std] = {fmt}; def main: mod[init] = { fmt::log.warn(&amp;quot;Last warning!...&amp;quot;) } To use only the log namespace of fmt module:
 use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.warn(&amp;quot;Last warning!...&amp;quot;) } } But let&amp;rsquo;s say you only wanna use ONLY the warn functionality of log namespace from fmt module:</description>
+      </item>
+      
+      <item>
+        <title>Import</title>
+        <link>https://follang.org/docs/600_modules/import/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/600_modules/import/</guid>
+        <description>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.
+Syntax to import a library is:
+use package_name: mod[] = { path } There are two type of import declartions:
+ system libraries local libraries  System libraries This is how including other libraries works, for example include fmt module from standard library:</description>
       </item>
       
       <item>
@@ -316,11 +328,21 @@ pro max(T: gen)(a, b: T): T { result = a | a &amp;lt; b | b; }; fun biggerFloat(
       </item>
       
       <item>
-        <title>Build-In</title>
-        <link>https://follang.org/docs/300_macros/buildin/</link>
+        <title>Braking</title>
+        <link>https://follang.org/docs/650_erroe/braking/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/buildin/</guid>
+        <guid>https://follang.org/docs/650_erroe/braking/</guid>
+        <description>panic keyword allows a program to terminate immediately and provide feedback to the caller of the program. It should be used when a program reaches an unrecoverable state. This most commonly occurs when a bug of some kind has been detected and it’s not clear to the programmer how to handle the error.
+pro main(): int = { panic &amp;quot;Hello&amp;quot;; .echo(&amp;quot;End of main&amp;quot;); //unreachable statement } In the above example, the program will terminate immediately when it encounters the panic keyword.</description>
+      </item>
+      
+      <item>
+        <title>Build-In</title>
+        <link>https://follang.org/docs/300_meta/buildin/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/buildin/</guid>
         <description>Fol has many build-in functions and macros offered by compiler, and you access them by . (with space/newline/bracket before):
 var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .print(.pointer_value(contPoint));	// print the dereferenced value of pointer .echo() - print on screen
 .not() - negate
@@ -337,16 +359,6 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
         
         <guid>https://follang.org/docs/750_conversion/coercion/</guid>
         <description></description>
-      </item>
-      
-      <item>
-        <title>Errors</title>
-        <link>https://follang.org/docs/700_sugar/errors/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/700_sugar/errors/</guid>
-        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
- braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
       </item>
       
       <item>
@@ -474,10 +486,10 @@ Either
       
       <item>
         <title>Macors</title>
-        <link>https://follang.org/docs/300_macros/macros/</link>
+        <link>https://follang.org/docs/300_meta/macros/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/macros/</guid>
+        <guid>https://follang.org/docs/300_meta/macros/</guid>
         <description>Are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type. Below are some system defined macros.
 For example, wherever $ is before any variable name, its replaced with .to_string. Or wherever ! is before bol name, its replaced with .not but when the same ! is placed before ptr it is replaced with .</description>
       </item>
@@ -502,21 +514,31 @@ For example, wherever $ is before any variable name, its replaced with .to_strin
       </item>
       
       <item>
-        <title>Alternatives</title>
-        <link>https://follang.org/docs/300_macros/alternatives/</link>
+        <title>Recover</title>
+        <link>https://follang.org/docs/650_erroe/recover/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/alternatives/</guid>
+        <guid>https://follang.org/docs/650_erroe/recover/</guid>
+        <description>report can be used to handle recoverable errors. As discussed here, FOL uses two variables result nd error in return of each subprogram. As name implies, result represents the type of the value that will be returned in a success case, and error represents the type of the error err[] that will be returned in a failure case.
+When we use the keyword report, the error is returned to the subprogram&amp;rsquo;s error variable and the subprogram qutis executing (the subprogram, not the program).</description>
+      </item>
+      
+      <item>
+        <title>Alternatives</title>
+        <link>https://follang.org/docs/300_meta/alternatives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/300_meta/alternatives/</guid>
         <description>Alternatives are used when we want to simplify code. For example, define an alternative, so whenever you write +var it is the same as var[+].
 def &#39;+var&#39;: alt = &#39;var[+]&#39; def &#39;~var&#39;: alt = &#39;var[~]&#39; def &#39;.pointer_content&#39;: alt = &#39;.pointer_value&#39; </description>
       </item>
       
       <item>
         <title>Defaults</title>
-        <link>https://follang.org/docs/300_macros/defaults/</link>
+        <link>https://follang.org/docs/300_meta/defaults/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/defaults/</guid>
+        <guid>https://follang.org/docs/300_meta/defaults/</guid>
         <description>Defaults are a way to change the default behaviour of options. Example the default behaviour of str when called without options. By defalt str is it is saved on stack, it is a constant and not public, thus has str[pil,imu,nor], and we want to make it mutable and saved on heap by default:
 def &#39;str&#39;: def[] = &#39;str[new,mut,nor]&#39; </description>
       </item>
@@ -570,10 +592,10 @@ There are two type of literals:
       
       <item>
         <title>Templates</title>
-        <link>https://follang.org/docs/300_macros/temp/</link>
+        <link>https://follang.org/docs/300_meta/temp/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_macros/temp/</guid>
+        <guid>https://follang.org/docs/300_meta/temp/</guid>
         <description>Templates are supposed to be mostly used for operator overloading. They are glorified functions, hence used with pro or fun instead of def.
 For example here is how the != is defined:
 fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) or define $ to return the string version of an object (careful, it is object$ and not $object, the latest is a macro, not a template):</description>
@@ -585,7 +607,9 @@ fun &#39;!=&#39;(a, b: int): bol = { return .not(.eq(a, b)) } .assert( 5 != 4 ) 
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/limits/</guid>
-        <description>var aLimitInt: int[][.range(0..255)]; var aLimitString: str[][.regex(&#39;a-zA-Z_&#39;)] </description>
+        <description>Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using [] right after the type declaration type[], so: type[options][limits]
+Initger limiting Example, making a intiger variable have only numbers from 0 to 255 that represents an RGB value for a single color:
+var rgb: int[][.range(0..255)]; Character limiting It works with strings too, say we want a string that can should be of a particular form, for example an email:</description>
       </item>
       
       <item>

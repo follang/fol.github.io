@@ -14,16 +14,6 @@
     
       
       <item>
-        <title>Errors</title>
-        <link>https://follang.org/docs/700_sugar/errors/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/700_sugar/errors/</guid>
-        <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
- braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
-      </item>
-      
-      <item>
         <title>Pipes</title>
         <link>https://follang.org/docs/700_sugar/pipes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -47,7 +37,9 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/limits/</guid>
-        <description>var aLimitInt: int[][.range(0..255)]; var aLimitString: str[][.regex(&#39;a-zA-Z_&#39;)] </description>
+        <description>Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using [] right after the type declaration type[], so: type[options][limits]
+Initger limiting Example, making a intiger variable have only numbers from 0 to 255 that represents an RGB value for a single color:
+var rgb: int[][.range(0..255)]; Character limiting It works with strings too, say we want a string that can should be of a particular form, for example an email:</description>
       </item>
       
       <item>
