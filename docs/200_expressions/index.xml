@@ -19,7 +19,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/200_sta/</guid>
-        <description>The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling subprograms, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
+        <description>The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling routines, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
       </item>
       
       <item>
@@ -28,7 +28,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/300_exp/</guid>
-        <description>An expression is a sequence of operators and their operands, that specifies a computation. It is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, subprogram, or namespace. Expressions can consist of a literal value, a subprogram invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, subprogram parameter, namespace or type.</description>
+        <description>An expression is a sequence of operators and their operands, that specifies a computation. It is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, routine, or namespace. Expressions can consist of a literal value, a routine invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, routine parameter, namespace or type.</description>
       </item>
       
     

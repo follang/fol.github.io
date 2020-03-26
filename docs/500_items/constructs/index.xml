@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Constructs on FOL</title>
+    <link>https://follang.org/docs/500_items/constructs/</link>
+    <description>Recent content in Constructs on FOL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, FOL</copyright>
+    
+        <atom:link href="https://follang.org/docs/500_items/constructs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Aliases</title>
+        <link>https://follang.org/docs/500_items/constructs/aliases/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/constructs/aliases/</guid>
+        <description>An alias declaration binds an identifier to an existing type. All the properties of the existing type are bound to the alias too.
+There are two type of aliasing:
+ aliasing extending  Aliasing ali I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
+~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 } Another example is creating a rgb type that can have numbers only form 0 to 255:</description>
+      </item>
+      
+      <item>
+        <title>Structs</title>
+        <link>https://follang.org/docs/500_items/constructs/structs/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/constructs/structs/</guid>
+        <description>Structs are the way to declare new type of data. A struct binds an identifier, the type name, to a type.
+A struct definition creates a new, distinct type and are few of them in FOL:
+ records tables  Definition Records A record is an aggregate of data elements in which the individual elements are identified by names and types and accessed through offsets from the beginning of the structure.</description>
+      </item>
+      
+    
+  </channel>
+</rss>

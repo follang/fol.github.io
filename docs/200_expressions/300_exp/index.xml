@@ -54,7 +54,7 @@ There are two type of literals:
         
         <guid>https://follang.org/docs/200_expressions/300_exp/access/</guid>
         <description>There are four access expresions:
- namespace member access subprogram member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
+ namespace member access routine member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
 &amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
       </item>
       

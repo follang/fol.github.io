@@ -29,7 +29,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/</guid>
-        <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling subprograms, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
+        <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling routine, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
       </item>
       
       <item>
@@ -51,7 +51,7 @@
       </item>
       
       <item>
-        <title>Item declarations</title>
+        <title>Syntax items</title>
         <link>https://follang.org/docs/500_items/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -60,7 +60,7 @@
 modules used for: imports and includes
 use[] definitions used for: preporcesr, macros, blocks, definitions &amp;hellip;
 def[] variables used for all variables: ints, strings, bools, arrays, vecotrs &amp;hellip;
-var[] con[] functions used for subporgrams: procedures and functions
+var[] mut[] rac[] // reactive functions used for subporgrams: procedures and functions
 pro[] fun[] constructs used for: new types, records, objects, interfaces, enums &amp;hellip;
 typ[] </description>
       </item>
@@ -86,13 +86,13 @@ Every file with extension .fol in a folder is part of a package. Thus every file
       </item>
       
       <item>
-        <title>Syntactic sugar</title>
+        <title>Language sugar</title>
         <link>https://follang.org/docs/700_sugar/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/</guid>
-        <description>Syntactic sugar, is a visually or logically-appealing &amp;ldquo;shortcut&amp;rdquo; provided by the language, which reduces the amount of code that must be written in some common situation. It makes the language &amp;ldquo;sweeter&amp;rdquo; for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
-A construct in a language is called &amp;ldquo;syntactic sugar&amp;rdquo; if it can be removed from the language without any effect on what the language can do: functionality and expressive power will remain the same.</description>
+        <description>Language sugar, is a visually or logically-appealing &amp;ldquo;shortcut&amp;rdquo; provided by the language, which reduces the amount of code that must be written in some common situation. It makes the language &amp;ldquo;sweeter&amp;rdquo; for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
+A construct in a language is called &amp;ldquo;language sugar&amp;rdquo; if it can be removed from the language without any effect on what the language can do: functionality and expressive power will remain the same.</description>
       </item>
       
       <item>

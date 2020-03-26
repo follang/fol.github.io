@@ -54,7 +54,7 @@ num[] Pointer ptr[] Error err[] </description>
         <guid>https://follang.org/docs/400_type/special/</guid>
         <description>Optional Either are empty or have a value
 opt[] Never nev[] The never type is a type with no values, representing the result of computations that never complete.
-Any any[] Null nil </description>
+Union Union is a data type that allows different data types to be stored in the same memory locations. Union provides an efficient way of reusing the memory location, as only one of its members can be accessed at a time. It uses a single memory location to hold more than one variables.</description>
       </item>
       
     

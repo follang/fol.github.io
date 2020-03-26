@@ -118,6 +118,16 @@ use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.w
       </item>
       
       <item>
+        <title>Procedures</title>
+        <link>https://follang.org/docs/500_items/routines/procedures/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/routines/procedures/</guid>
+        <description>Procedures are most common type of routines in Fol. When a procedure is &amp;ldquo;called&amp;rdquo; the program &amp;ldquo;leaves&amp;rdquo; the current section of code and begins to execute the first line inside the procedure. Thus the procedure &amp;ldquo;flow of control&amp;rdquo; is:
+ The program comes to a line of code containing a &amp;ldquo;procedure call&amp;rdquo;. The program enters the procedure (starts at the first line in the procedure code). All instructions inside of the procedure are executed from top to bottom.</description>
+      </item>
+      
+      <item>
         <title>Import</title>
         <link>https://follang.org/docs/600_modules/import/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -137,6 +147,26 @@ use package_name: mod[] = { path } There are two type of import declartions:
         <guid>https://follang.org/v0.11-docs/spec/behaviour/</guid>
         <description>Build-in functions Fol has some build-in functions offered by compiler, and you access them by . (with space/newline/bracket before):
 var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of 10 .print(.pointer_value(contPoint));	// print the dereferenced value of pointer Macro system are a very complicated system, and yet can be used as simply as in-place replacement. A lot of build-in macros exist in the language to make the code more easy to type.</description>
+      </item>
+      
+      <item>
+        <title>Functions</title>
+        <link>https://follang.org/docs/500_items/routines/functions/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/routines/functions/</guid>
+        <description>Functions compared to procedure are pure. A pure function is a function that has the following properties:
+ Its return value is the same for the same arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams from I/O devices). Its evaluation has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or I/O streams).  Thus a pure function is a computational analogue of a mathematical function.</description>
+      </item>
+      
+      <item>
+        <title>Methods</title>
+        <link>https://follang.org/docs/500_items/routines/methods/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/routines/methods/</guid>
+        <description>There is another type of routine, called method, but it can be either a pure function either a procedure. A method is a piece of code that is called by a name that is associated with an object where it is implicitly passed the object on which it was called and is able to operate on data that is contained within the object.
+They either are defined inside the object, or outside the object then the object in which they operate is passed like so (just like in Golang):</description>
       </item>
       
       <item>
@@ -230,15 +260,6 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       
       <item>
         <title>Functions</title>
-        <link>https://follang.org/docs/500_items/functions/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/500_items/functions/</guid>
-        <description>A subprogram definition describes the interface to and the actions of the subprogram abstraction. A subprogram call is the explicit request that a specific subprogram be executed. A subprogram is said to be active if, after having been called, it has begun execution but has not yet completed that execution.A subprogram declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</description>
-      </item>
-      
-      <item>
-        <title>Functions</title>
         <link>https://follang.org/v0.11-docs/spec/functions/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
@@ -267,6 +288,18 @@ def test1: tst[&amp;quot;sometest&amp;quot;, shko] = {} def &amp;quot;some unit 
       </item>
       
       <item>
+        <title>Aliases</title>
+        <link>https://follang.org/docs/500_items/constructs/aliases/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/constructs/aliases/</guid>
+        <description>An alias declaration binds an identifier to an existing type. All the properties of the existing type are bound to the alias too.
+There are two type of aliasing:
+ aliasing extending  Aliasing ali I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
+~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 } Another example is creating a rgb type that can have numbers only form 0 to 255:</description>
+      </item>
+      
+      <item>
         <title>Pipes</title>
         <link>https://follang.org/v0.11-docs/spec/pipes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -286,18 +319,6 @@ There are two distinct categories of concurrent task control.</description>
       </item>
       
       <item>
-        <title>Constructs</title>
-        <link>https://follang.org/docs/500_items/constructs/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/500_items/constructs/</guid>
-        <description>Constructs are the way to declare new type of data. A construct binds an identifier, the type name, to a type.
-There re two ways to declare new constructs:
- alias declarations and type definitions  Alias declaration An alias declaration binds an identifier to the given type. All the properties of the type are bound to the alias too: credit to golang:
-typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:</description>
-      </item>
-      
-      <item>
         <title>Objects</title>
         <link>https://follang.org/v0.11-docs/spec/objects/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -309,12 +330,34 @@ typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5]
       </item>
       
       <item>
+        <title>Structs</title>
+        <link>https://follang.org/docs/500_items/constructs/structs/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/constructs/structs/</guid>
+        <description>Structs are the way to declare new type of data. A struct binds an identifier, the type name, to a type.
+A struct definition creates a new, distinct type and are few of them in FOL:
+ records tables  Definition Records A record is an aggregate of data elements in which the individual elements are identified by names and types and accessed through offsets from the beginning of the structure.</description>
+      </item>
+      
+      <item>
+        <title>Standards</title>
+        <link>https://follang.org/docs/500_items/standards/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/standards/</guid>
+        <description>Satndard A standard is an established norm or requirement for a repeatable technical task. It is usually a formal declaration that establishes uniform technical criteria, methods, processes, and practices.
+S, what is a to be considered a standard:
+ A standard specification is an explicit set of requirements for an item, object or service. It is often used to formalize the technical aspects of a procurement agreement or contract. A standard test method describes a definitive procedure that produces a test result.</description>
+      </item>
+      
+      <item>
         <title>Generics</title>
         <link>https://follang.org/docs/500_items/generics/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/500_items/generics/</guid>
-        <description>Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
+        <description>Types Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
       </item>
       
       <item>
@@ -368,7 +411,7 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
         
         <guid>https://follang.org/docs/900_processor/eventuals/</guid>
         <description>Eventuals describe an object that acts as a proxy for a result that is initially unknown, usually because the computation of its value is not yet complete.
-Async/Await Async methods are intended to be non-blocking operations. An await expression in an async subprogram doesn’t block the current thread while the awaited task is running. Instead, the expression signs up the rest of the subprogram as a continuation and returns control to the caller of the async subprogram and it means “Once this is done, execute this function”.</description>
+Async/Await Async methods are intended to be non-blocking operations. An await expression in an async routine doesn’t block the current thread while the awaited task is running. Instead, the expression signs up the rest of the routine as a continuation and returns control to the caller of the async routine and it means “Once this is done, execute this function”.</description>
       </item>
       
       <item>
@@ -378,21 +421,17 @@ Async/Await Async methods are intended to be non-blocking operations. An await e
         
         <guid>https://follang.org/docs/100_lexical/keywords/</guid>
         <description>Fol has a number of restricted groups of keywords:
-BK (build-in keywords) BK_AS as
-BK_IN in
-BK_IS is
-BK_DO do
-BK_GO go
-BK_OR or
+BK (build-in keywords) BK_OR or
+BK_XOR xor
 BK_AND and
 BK_IF if
 BK_ELSE else
 BK_FOR for
-BK_CASE case
-BK_LIKE like
-BK_TYPE type
+BK_EACH each
 BK_LOOP loop
-BK_NONE none
+BK_IS is
+BK_HAS has
+BK_IN in
 BK_THIS this
 BK_SELF self
 BK_BREAK break
@@ -402,10 +441,14 @@ BK_PANIC panic
 BK_REPORT report
 BK_CHECK check
 BK_ASSERT assert
+BK_WHERE where
 BK_TRUE true
 BK_FALSE false
- BUILD-IN KEYWORDS - BK:
-(BK_AS|BK_IN|...)</description>
+BK_AS as
+BK_CAST cast
+BK_DO do
+BK_GO go
+ BUILD-IN KEYWORDS - BK:</description>
       </item>
       
       <item>
@@ -464,9 +507,9 @@ var container: type = { element, element, element } // declaring a container var
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/900_processor/corutines/</guid>
-        <description>A coroutine is a task given form the main thread, similar to a subprogram, that can be in concurrent execution with other tasks of the same program though other routines. A worker takes the task and runs it, concurrently. Each task in a program can be assigned to one or multiple workers.
-Three characteristics of coroutine distinguish them from normal subprograms:
- First, a task may be implicitly started, whereas a subprogram must be explicitly called.</description>
+        <description>A coroutine is a task given form the main thread, similar to a routine, that can be in concurrent execution with other tasks of the same program though other routines. A worker takes the task and runs it, concurrently. Each task in a program can be assigned to one or multiple workers.
+Three characteristics of coroutine distinguish them from normal routines:
+ First, a task may be implicitly started, whereas a routine must be explicitly called.</description>
       </item>
       
       <item>
@@ -500,7 +543,7 @@ For example, wherever $ is before any variable name, its replaced with .to_strin
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/pipes/</guid>
-        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
+        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an routine output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
       </item>
       
       <item>
@@ -519,8 +562,8 @@ For example, wherever $ is before any variable name, its replaced with .to_strin
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/650_erroe/recover/</guid>
-        <description>report can be used to handle recoverable errors. As discussed here, FOL uses two variables result nd error in return of each subprogram. As name implies, result represents the type of the value that will be returned in a success case, and error represents the type of the error err[] that will be returned in a failure case.
-When we use the keyword report, the error is returned to the subprogram&amp;rsquo;s error variable and the subprogram qutis executing (the subprogram, not the program).</description>
+        <description>report can be used to handle recoverable errors. As discussed here, FOL uses two variables result nd error in return of each routine. As name implies, result represents the type of the value that will be returned in a success case, and error represents the type of the error err[] that will be returned in a failure case.
+When we use the keyword report, the error is returned to the routine&amp;rsquo;s error variable and the routine qutis executing (the routine, not the program).</description>
       </item>
       
       <item>
@@ -631,7 +674,7 @@ var rgb: int[][.range(0..255)]; Character limiting It works with strings too, sa
         <guid>https://follang.org/docs/400_type/special/</guid>
         <description>Optional Either are empty or have a value
 opt[] Never nev[] The never type is a type with no values, representing the result of computations that never complete.
-Any any[] Null nil </description>
+Union Union is a data type that allows different data types to be stored in the same memory locations. Union provides an efficient way of reusing the memory location, as only one of its members can be accessed at a time. It uses a single memory location to hold more than one variables.</description>
       </item>
       
       <item>
@@ -645,13 +688,24 @@ Any any[] Null nil </description>
       </item>
       
       <item>
+        <title>Matching</title>
+        <link>https://follang.org/docs/700_sugar/matching/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/matching/</guid>
+        <description>Variable As variable assignment:
+var checker: str = if(variable) { in .range(1..10) =&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in .range(11..20) =&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * =&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; =&amp;gt; 1; is &amp;quot;two&amp;quot; =&amp;gt; 2; * =&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; =&amp;gt; true; * =&amp;gt; false; } Function As function return:
+fun someValue(variable: int): str = if(variable) { in .</description>
+      </item>
+      
+      <item>
         <title>Access</title>
         <link>https://follang.org/docs/200_expressions/300_exp/access/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/200_expressions/300_exp/access/</guid>
         <description>There are four access expresions:
- namespace member access subprogram member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
+ namespace member access routine member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
 &amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
       </item>
       
@@ -678,6 +732,27 @@ var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of 
       </item>
       
       <item>
+        <title>Unpacking</title>
+        <link>https://follang.org/docs/700_sugar/unpacking/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/unpacking/</guid>
+        <description>Unpacking—also known as iterable destructuring—is another form of pattern matching used to extract data from collections of data. Take a look at the following example:
+var start, *_ = { 1, 4, 3, 8 } .echo(start) // Prints 1 .echo(_) // Prints [4, 3, 8] In this example, we’re able to extract the first element of the list and ignore the rest. Likewise, we can just as easily extract the last element of the list:</description>
+      </item>
+      
+      <item>
+        <title>Inquiry</title>
+        <link>https://follang.org/docs/700_sugar/inquiry/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/inquiry/</guid>
+        <description>Inquiries are inline unit tests and are a part of the basic syntax sugar. In other words, we don’t have to import any libraries or build up any suites to run tests.
+Instead, FOL includes a couple of clauses for testing within the source code:
+fun sum(l: ...?int): int = { when(l.length()) { is 0 =&amp;gt; 0; is 1 =&amp;gt; l[0]; $ =&amp;gt; l[0] + sum(l[1:]); } where(self) { sum() is 0; sum(8) is 8; sum(1, 2, 3) is 6; } } Here, we can see an awesome list sum function.</description>
+      </item>
+      
+      <item>
         <title>Numbers</title>
         <link>https://follang.org/docs/100_lexical/numbers/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -686,6 +761,16 @@ var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of 
         <description>A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed.
 Intigers An integer has one of four forms:
  A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
+      </item>
+      
+      <item>
+        <title>Chaining</title>
+        <link>https://follang.org/docs/700_sugar/chaining/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/chaining/</guid>
+        <description>Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
+Before I can really explain optional chaining, we have to get a grasp of what an optional value is.</description>
       </item>
       
       <item>

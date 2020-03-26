@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Item declarations on FOL</title>
+    <title>Syntax items on FOL</title>
     <link>https://follang.org/docs/500_items/</link>
-    <description>Recent content in Item declarations on FOL</description>
+    <description>Recent content in Syntax items on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
@@ -24,12 +24,12 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
       </item>
       
       <item>
-        <title>Functions</title>
-        <link>https://follang.org/docs/500_items/functions/</link>
+        <title>Routines</title>
+        <link>https://follang.org/docs/500_items/routines/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/functions/</guid>
-        <description>A subprogram definition describes the interface to and the actions of the subprogram abstraction. A subprogram call is the explicit request that a specific subprogram be executed. A subprogram is said to be active if, after having been called, it has begun execution but has not yet completed that execution.A subprogram declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</description>
+        <guid>https://follang.org/docs/500_items/routines/</guid>
+        <description>A rutine definition describes the interface to and the actions of the routine abstraction. A routine call is the explicit request that a specific routine be executed. A routine is said to be active if, after having been called, it has begun execution but has not yet completed that execution. A routine declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</description>
       </item>
       
       <item>
@@ -38,10 +38,20 @@ var[pub,mut] somename: num[i32] = 98; var[pub,exp] snotherone: str = &amp;quot;t
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/500_items/constructs/</guid>
-        <description>Constructs are the way to declare new type of data. A construct binds an identifier, the type name, to a type.
-There re two ways to declare new constructs:
- alias declarations and type definitions  Alias declaration An alias declaration binds an identifier to the given type. All the properties of the type are bound to the alias too: credit to golang:
-typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:</description>
+        <description>A construct is a collection of fields, possibly of different data types, typically in fixed number and sequence. It is a custom data type that lets you name and package together multiple related values that make up a meaningful group. The fields of a construct may also be called members.
+Constructs come in two forms:
+ alias declarations (aliases) and type definitions (structs)  </description>
+      </item>
+      
+      <item>
+        <title>Standards</title>
+        <link>https://follang.org/docs/500_items/standards/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/standards/</guid>
+        <description>Satndard A standard is an established norm or requirement for a repeatable technical task. It is usually a formal declaration that establishes uniform technical criteria, methods, processes, and practices.
+S, what is a to be considered a standard:
+ A standard specification is an explicit set of requirements for an item, object or service. It is often used to formalize the technical aspects of a procurement agreement or contract. A standard test method describes a definitive procedure that produces a test result.</description>
       </item>
       
       <item>
@@ -50,7 +60,7 @@ typ[pub] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5]
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/500_items/generics/</guid>
-        <description>Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
+        <description>Types Generic functions - lifting The generic programming process focuses on finding commonality among similar implementations of the same algorithm, then providing suitable abstractions so that a single, generic algorithm can cover many concrete implementations. This process, called lifting, is repeated until the generic algorithm has reached a suitable level of abstraction, where it provides maximal reusability while still yielding efficient, concrete implementations. The abstractions themselves are expressed as requirements on the parameters to the generic algorithm.</description>
       </item>
       
     

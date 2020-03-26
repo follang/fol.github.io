@@ -20,7 +20,7 @@
         
         <guid>https://follang.org/docs/900_processor/eventuals/</guid>
         <description>Eventuals describe an object that acts as a proxy for a result that is initially unknown, usually because the computation of its value is not yet complete.
-Async/Await Async methods are intended to be non-blocking operations. An await expression in an async subprogram doesn’t block the current thread while the awaited task is running. Instead, the expression signs up the rest of the subprogram as a continuation and returns control to the caller of the async subprogram and it means “Once this is done, execute this function”.</description>
+Async/Await Async methods are intended to be non-blocking operations. An await expression in an async routine doesn’t block the current thread while the awaited task is running. Instead, the expression signs up the rest of the routine as a continuation and returns control to the caller of the async routine and it means “Once this is done, execute this function”.</description>
       </item>
       
       <item>
@@ -29,9 +29,9 @@ Async/Await Async methods are intended to be non-blocking operations. An await e
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/900_processor/corutines/</guid>
-        <description>A coroutine is a task given form the main thread, similar to a subprogram, that can be in concurrent execution with other tasks of the same program though other routines. A worker takes the task and runs it, concurrently. Each task in a program can be assigned to one or multiple workers.
-Three characteristics of coroutine distinguish them from normal subprograms:
- First, a task may be implicitly started, whereas a subprogram must be explicitly called.</description>
+        <description>A coroutine is a task given form the main thread, similar to a routine, that can be in concurrent execution with other tasks of the same program though other routines. A worker takes the task and runs it, concurrently. Each task in a program can be assigned to one or multiple workers.
+Three characteristics of coroutine distinguish them from normal routines:
+ First, a task may be implicitly started, whereas a routine must be explicitly called.</description>
       </item>
       
     

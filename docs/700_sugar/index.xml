@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Syntactic sugar on FOL</title>
+    <title>Language sugar on FOL</title>
     <link>https://follang.org/docs/700_sugar/</link>
-    <description>Recent content in Syntactic sugar on FOL</description>
+    <description>Recent content in Language sugar on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
@@ -19,7 +19,7 @@
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/700_sugar/pipes/</guid>
-        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an subprogram output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
+        <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an routine output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
       </item>
       
       <item>
@@ -43,6 +43,17 @@ var rgb: int[][.range(0..255)]; Character limiting It works with strings too, sa
       </item>
       
       <item>
+        <title>Matching</title>
+        <link>https://follang.org/docs/700_sugar/matching/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/matching/</guid>
+        <description>Variable As variable assignment:
+var checker: str = if(variable) { in .range(1..10) =&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in .range(11..20) =&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * =&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; =&amp;gt; 1; is &amp;quot;two&amp;quot; =&amp;gt; 2; * =&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; =&amp;gt; true; * =&amp;gt; false; } Function As function return:
+fun someValue(variable: int): str = if(variable) { in .</description>
+      </item>
+      
+      <item>
         <title>Rolling</title>
         <link>https://follang.org/docs/700_sugar/rolling/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,6 +62,37 @@ var rgb: int[][.range(0..255)]; Character limiting It works with strings too, sa
         <description>Rolling or list comprehension is a syntactic construct available FOL for creating a list based on existing lists. It follows the form of the mathematical set-builder notation - set comprehension.
 Rolling has the same syntactic components to represent generation of a list in order from an input list or iterator:
  A variable representing members of an input list. An input list (or iterator). An optional predicate expression. And an output expression producing members of the output list from members of the input iterable that satisfy the predicate.</description>
+      </item>
+      
+      <item>
+        <title>Unpacking</title>
+        <link>https://follang.org/docs/700_sugar/unpacking/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/unpacking/</guid>
+        <description>Unpacking—also known as iterable destructuring—is another form of pattern matching used to extract data from collections of data. Take a look at the following example:
+var start, *_ = { 1, 4, 3, 8 } .echo(start) // Prints 1 .echo(_) // Prints [4, 3, 8] In this example, we’re able to extract the first element of the list and ignore the rest. Likewise, we can just as easily extract the last element of the list:</description>
+      </item>
+      
+      <item>
+        <title>Inquiry</title>
+        <link>https://follang.org/docs/700_sugar/inquiry/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/inquiry/</guid>
+        <description>Inquiries are inline unit tests and are a part of the basic syntax sugar. In other words, we don’t have to import any libraries or build up any suites to run tests.
+Instead, FOL includes a couple of clauses for testing within the source code:
+fun sum(l: ...?int): int = { when(l.length()) { is 0 =&amp;gt; 0; is 1 =&amp;gt; l[0]; $ =&amp;gt; l[0] + sum(l[1:]); } where(self) { sum() is 0; sum(8) is 8; sum(1, 2, 3) is 6; } } Here, we can see an awesome list sum function.</description>
+      </item>
+      
+      <item>
+        <title>Chaining</title>
+        <link>https://follang.org/docs/700_sugar/chaining/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/700_sugar/chaining/</guid>
+        <description>Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
+Before I can really explain optional chaining, we have to get a grasp of what an optional value is.</description>
       </item>
       
     

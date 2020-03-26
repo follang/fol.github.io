@@ -86,11 +86,23 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/500_items/routines/procedures/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/600_modules/import/</loc>
   </url>
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/behaviour/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/routines/functions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/routines/methods/</loc>
   </url>
   
   <url>
@@ -130,11 +142,11 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/500_items/functions/</loc>
+    <loc>https://follang.org/v0.11-docs/spec/functions/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/v0.11-docs/spec/functions/</loc>
+    <loc>https://follang.org/docs/500_items/routines/</loc>
   </url>
   
   <url>
@@ -143,6 +155,10 @@
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/errors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/constructs/aliases/</loc>
   </url>
   
   <url>
@@ -159,6 +175,14 @@
   
   <url>
     <loc>https://follang.org/v0.11-docs/spec/objects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/constructs/structs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/standards/</loc>
   </url>
   
   <url>
@@ -302,15 +326,19 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/700_sugar/matching/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/200_expressions/300_exp/access/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/500_items/</loc>
+    <loc>https://follang.org/docs/700_sugar/rolling/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/700_sugar/rolling/</loc>
+    <loc>https://follang.org/docs/500_items/</loc>
   </url>
   
   <url>
@@ -322,11 +350,15 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/700_sugar/unpacking/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/650_erroe/</loc>
   </url>
   
   <url>
-    <loc>https://follang.org/docs/100_lexical/numbers/</loc>
+    <loc>https://follang.org/docs/700_sugar/inquiry/</loc>
   </url>
   
   <url>
@@ -334,7 +366,15 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/100_lexical/numbers/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/docs/750_conversion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/700_sugar/chaining/</loc>
   </url>
   
   <url>
