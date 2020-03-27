@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/200_expressions/200_sta/control/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/200_expressions/200_sta/control/">
@@ -1480,6 +1480,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -1694,6 +1702,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/200_expressions/200_sta/control/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -1961,13 +1977,18 @@
         <li><a href="#choice-type">Choice type</a>
           <ul>
             <li><a href="#condition">Condition</a></li>
-            <li><a href="#selection">Selection</a></li>
+            <li><a href="#valueation">Valueation</a></li>
+            <li><a href="#iteration">Iteration</a></li>
+            <li><a href="#contains">Contains</a></li>
+            <li><a href="#generics">Generics</a></li>
+            <li><a href="#channel">Channel</a></li>
           </ul>
         </li>
         <li><a href="#loop-type">Loop type</a>
           <ul>
-            <li><a href="#iteration">Iteration</a></li>
-            <li><a href="#repetition">Repetition</a></li>
+            <li><a href="#condition-1">Condition</a></li>
+            <li><a href="#enumeration">Enumeration</a></li>
+            <li><a href="#iteration-1">Iteration</a></li>
           </ul>
         </li>
       </ul>
@@ -3137,6 +3158,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3351,6 +3380,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/200_expressions/200_sta/control/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3571,48 +3608,78 @@
 
   <article class="single__contents" data-dir="ltr">
     <p>At least two linguistic mechanisms are necessary to make the computations in programs flexible and powerful: some means of selecting among alternative control flow paths (of statement execution) and some means of causing the repeated execution of statements or sequences of statements. Statements that provide these kinds of capabilities are called control statements. A control structure is a control statement and the collection of statements whose execution it controls. This set of statements is in turn generally structured as a block, which in addition to grouping, also defines a lexical scope.</p>
+<p>There are two types of control flow mechanisms:</p>
+<ul>
+<li>choice - <code>when</code></li>
+<li>loop - <code>loop</code></li>
+</ul>
 <h2 id="choice-type">Choice type</h2>
-<h3 id="condition">Condition</h3>
-<pre><code>if(condition){} else(condition){} else{};
-</code></pre><p>Checking equality</p>
-<pre><code>if(x == 6) {
-    // implementation
-} else(x == 7) {
-    // implementation
-} else {
-    // default implementation
+<pre><code>when(condition){ case(condition){} case(condition){} * {} };
+when(variable){ is (value){}; is (value){}; * {}; };
+when(variable){ in (iterator){}; in (iterator){}; * {}; };
+when(iterable){ has (member){}; has (member){}; * {}; };
+when(generic){ of (type){}; of (type){}; * {}; };
+when(type){ on (channel){}; on (channel){}; };
+</code></pre><h3 id="condition">Condition</h3>
+<pre><code>when(true) {
+    case (x == 6){ // implementation }
+    case (y.set()){ // implementation } 
+    * { // default implementation }
 }
-</code></pre><h3 id="selection">Selection</h3>
-<pre><code>if(variable){ is (value){}; is (value){}; * {}; };
-if(variable){ in (iterator){}; in (iterator){}; * {}; };
-if(iterable){ has (member){}; has (member){}; * {}; };
-if(variable){ of (type){}; of (type){}; * {}; };
-if(type){ on (channel){}; on (channel){}; };
+</code></pre><h3 id="valueation">Valueation</h3>
+<pre><code>when(x) {
+    is (6){ // implementation }
+    is (&gt;7){ // implementation } 
+    * { // default implementation }
+}
+</code></pre><h3 id="iteration">Iteration</h3>
+<pre><code>when(2*x) {
+    in ({0..4}){ // implementation }
+    in ({ 5, 6, 7, 8, }){ // implementation } 
+    * { // default implementation }
+}
+</code></pre><h3 id="contains">Contains</h3>
+<pre><code>when({4,5,6,7,8,9,0,2,3,1}) {
+    has (5){ // implementation }
+    has (10){ // implementation } 
+    * { // default implementation }
+}
+</code></pre><h3 id="generics">Generics</h3>
+<pre><code>when(T) {
+    of (int){ // implementation }
+    of (str){ // implementation } 
+    * { // default implementation }
+}
+</code></pre><h3 id="channel">Channel</h3>
+<pre><code>when(str) {
+    on (channel){ // implementation }
+    on (channel){ // implementation } 
+    * { // default implementation }
+}
 </code></pre><h2 id="loop-type">Loop type</h2>
-<h3 id="iteration">Iteration</h3>
-<pre><code>each(iterable){};
-</code></pre><p>With start- and end-values</p>
-<pre><code>each(x in .range(0..100)){
-    //implementation
-}
-
-each(x in (.range(0..100)) if ( x % 2 = 0 )){
-    //implementation
-}
-</code></pre><p>With enumeration of containers</p>
-<pre><code>each(x in array){
-    // implementation
-}
-</code></pre><h3 id="repetition">Repetition</h3>
 <pre><code>loop(condition){};
-</code></pre><p>Condition befor block</p>
-<pre><code>loop(true){
+loop(iterable){};
+</code></pre><h3 id="condition-1">Condition</h3>
+<pre><code>loop(x == 5){
     // implementation
 };
-</code></pre><p>Block before condition</p>
-<pre><code>loop{
+</code></pre><h3 id="enumeration">Enumeration</h3>
+<pre><code>loop(x in {..100}){
     // implementation
-}(true);
+}
+
+loop(x in {..100}) if ( x % 2 = 0 )){
+    // implementation
+}
+
+loop(x in {..100} if ( x in somearra ) and ( x in anotherarray )){
+    // implementation
+}
+
+</code></pre><h3 id="iteration-1">Iteration</h3>
+<pre><code>loop(x in array){
+    // implementation
+}
 </code></pre>
   </article>
 </div>
@@ -3635,13 +3702,18 @@ each(x in (.range(0..100)) if ( x % 2 = 0 )){
         <li><a href="#choice-type">Choice type</a>
           <ul>
             <li><a href="#condition">Condition</a></li>
-            <li><a href="#selection">Selection</a></li>
+            <li><a href="#valueation">Valueation</a></li>
+            <li><a href="#iteration">Iteration</a></li>
+            <li><a href="#contains">Contains</a></li>
+            <li><a href="#generics">Generics</a></li>
+            <li><a href="#channel">Channel</a></li>
           </ul>
         </li>
         <li><a href="#loop-type">Loop type</a>
           <ul>
-            <li><a href="#iteration">Iteration</a></li>
-            <li><a href="#repetition">Repetition</a></li>
+            <li><a href="#condition-1">Condition</a></li>
+            <li><a href="#enumeration">Enumeration</a></li>
+            <li><a href="#iteration-1">Iteration</a></li>
           </ul>
         </li>
       </ul>

@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/500_items/constructs/aliases/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/500_items/constructs/aliases/">
@@ -1480,6 +1480,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -1694,6 +1702,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/500_items/constructs/aliases/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3127,6 +3143,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3341,6 +3365,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/500_items/constructs/aliases/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3567,19 +3599,19 @@
 <li>extending</li>
 </ul>
 <h2 id="aliasing">Aliasing</h2>
-<pre><code>ali I5: arr[int, 5];
+<pre><code>typ[ali] I5: arr[int, 5];
 </code></pre><p>So now the in the code, instead of writing <code>arr[int, 5]</code> we could use <code>I5</code>:</p>
 <pre><code>~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 }
 </code></pre><p>Another example is creating a <code>rgb</code> type that can have numbers only form 0 to 255:</p>
-<pre><code>ali rgb: int[8][.range(0 ... 255)] ;                  // we create a type that holds only number from 0 to 255
-ali rgbSet: set[rgb, rgb, rgb];                       // then we create a type holding the `rgb` type
+<pre><code>typ[ali] rgb: int[8][.range(0..255)] ;                     // we create a type that holds only number from 0 to 255
+typ[ali] rgbSet: set[rgb, rgb, rgb];                       // then we create a type holding the `rgb` type
 </code></pre><p>Alias declaration are created because they can simplify using them multiple times, their identifier (their name) may be expressive in other contexts, and–most importantly–so that you can define (attach) methods to it (you can&rsquo;t attach methods to built-in types, nor to anonymous types or types defined in other packages).</p>
 <p>Attaching methods is of outmost importance, because even though instead of attaching methods you could just as easily create and use functions that accept the &ldquo;original&rdquo; type as parameter, only types with methods can implement standards <code>std[]</code> that list/enforce those methods, and you can&rsquo;t attach methods to certain types unless you create a new type derived from them.</p>
 <h2 id="extending">Extending</h2>
-<p>Extensions add new functionality to an existing constructs. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling). They are identified with <code>ext</code>:</p>
-<pre><code>ali type: type[];
+<p>Extensions add new functionality to an existing constructs. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling).</p>
+<pre><code>typ[ext] type: type;
 </code></pre><p>For example, adding a <code>print</code> function to the default integer type <code>int</code>:</p>
-<pre><code>ali int: int[];
+<pre><code>typ[ext] int: int;
 
 pro (int)print(): non {
     .echo(self)

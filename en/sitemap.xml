@@ -102,10 +102,6 @@
   </url>
   
   <url>
-    <loc>https://follang.org/docs/500_items/routines/methods/</loc>
-  </url>
-  
-  <url>
     <loc>https://follang.org/docs/600_modules/scopes/</loc>
   </url>
   
@@ -118,6 +114,10 @@
   </url>
   
   <url>
+    <loc>https://follang.org/docs/500_items/routines/methods/</loc>
+  </url>
+  
+  <url>
     <loc>https://follang.org/v0.11-docs/spec/types/</loc>
   </url>
   
@@ -127,6 +127,10 @@
   
   <url>
     <loc>https://follang.org/docs/600_modules/blocks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/500_items/routines/logicals/</loc>
   </url>
   
   <url>
@@ -223,6 +227,10 @@
   
   <url>
     <loc>https://follang.org/docs/800_memory/ownership/</loc>
+  </url>
+  
+  <url>
+    <loc>https://follang.org/docs/700_sugar/silents/</loc>
   </url>
   
   <url>

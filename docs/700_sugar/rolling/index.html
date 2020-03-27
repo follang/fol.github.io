@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/700_sugar/rolling/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/700_sugar/rolling/">
@@ -1480,6 +1480,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -1694,6 +1702,14 @@
     </span>
   </ul>
   <ul class="menu__list active" data-data=/700_sugar/ data-link=https://follang.org/docs/700_sugar/rolling/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3109,6 +3125,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3323,6 +3347,14 @@
     </span>
   </ul>
   <ul class="menu__list active" data-data=/700_sugar/ data-link=https://follang.org/docs/700_sugar/rolling/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3553,7 +3585,7 @@
 <p>The order of generation of members of the output list is based on the order of items in the input. Syntactically, rolling consist of an iterable containing an expression followed by a for statement. In FOL the syntax follows exacly the <strong>Python&rsquo;s list comprehension</strong> syntax:</p>
 <pre><code>var aList: vec[] = { x for x in iterable if condition }
 </code></pre><p>Rolling provides an alternative syntax to creating lists and other sequential data types. While other methods of iteration, such as for loops, can also be used to create lists, rolling may be preferred because they can limit the number of lines used in your program.</p>
-<pre><code>var aList: vec[] = { .range(..12) };
+<pre><code>var aList: vec[] = {..12};
 
 var another: vec[] = { ( x * x ) for ( x in aList ) if ( x % 3 == 0 ) }
 </code></pre>

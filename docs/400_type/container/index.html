@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/400_type/container/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/400_type/container/">
@@ -1480,6 +1480,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -1694,6 +1702,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/400_type/container/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -1978,6 +1994,7 @@
             </li>
             <li><a href="#sets">Sets</a></li>
             <li><a href="#maps">Maps</a></li>
+            <li><a href="#axiom">Axiom</a></li>
           </ul>
         </li>
       </ul>
@@ -3138,6 +3155,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3352,6 +3377,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/400_type/container/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3658,19 +3691,51 @@ mat[sizex,sizey,sizez]
 <pre><code>map[key,value]
 </code></pre><p>A map is an unordered group of elements of one type, called the element type, indexed by a set of unique keys of another type, called the key type.</p>
 <pre><code>pro[] main: int = {
-    var aMap: map[str, int] = { { &quot;US&quot;, 45 }, { &quot;DE&quot;, 82 }, { &quot;AL&quot;, 54 } };
+    var aMap: map[str, int] = { &quot;US&quot;:45, &quot;DE&quot;:82, &quot;AL&quot;:54 };
     var element = aMap[&quot;US&quot;];                                 // accessing the &quot;US&quot; key
     .echo(element)                                            // prints: 45
 }
-</code></pre><p>The number of map elements is called its length. For a map <code>aMap</code>, it can be discovered using the built-in function <code>.len</code> and may change during execution To add a new element, we use <code>add</code> function:</p>
+</code></pre><p>The number of map elements is called its length. For a map <code>aMap</code>, it can be discovered using the built-in function <code>.len</code> and may change during execution To add a new element, we use <code>name+[element]</code> or <code>add</code>function:</p>
 <pre><code>.echo(.len(aMap))           // prints: 3
-aMap.add({ &quot;IT&quot;, 55 })
+aMap.add( &quot;IT&quot;:55 )
+aMap+[&quot;RU&quot;:24]
 .echo(.len(aMap))           // prints: 4
 </code></pre><p>The comparison operators <code>==</code> and <code>!=</code> must be fully defined for operands of the key type; thus the key type must not be a function, map, or sequence.</p>
 <div class="notices tip" >
 <p>Maps are a growable containers too, thus if not allocated in heap but in stack, the size will be defined automatically in compile time and will be changet to static containers</p>
 </div>
+<h3 id="axiom">Axiom</h3>
+<pre><code>axi[typ, typ]
+</code></pre><p>A axiom is a list of facts. A fact is a predicate expression that makes a declarative statement about the problem domain. And whenever a variable occurs in a expression, it is assumed to be universally quantified as <a href="/docs/700_sugar/silents/"><strong>silent</strong></a>.</p>
+<pre><code>var likes: axi[str, str] = { &quot;bob&quot;:&quot;alice&quot;, &quot;alice&quot;:&quot;bob&quot;, &quot;dan&quot;:&quot;sally&quot; };
+</code></pre><div class="notices info" >
+<p>Accesing the axioms always returns <code>true</code> or <code>false</code> instead of the data in it.</p>
+</div>
+<pre><code>likes[&quot;bob&quot;:&quot;alice&quot;]                // will return true
+likes[&quot;sally&quot;:&quot;dan&quot;]                // will return false
+</code></pre><p>If we want to relate tyo elements in bidirectional way we use <code>::</code>, so instead of writing <code>one:two, two:one</code> we can write <code>one::two</code></p>
+<pre><code>var married: axi[str, str] = { &quot;albert&quot;::&quot;alice&quot;, &quot;bob&quot;::&quot;sarah&quot; }
+</code></pre><p>Axioms are a data types that are meant to be used with logic programming. There are containers where facts are stated, and when we want to acces the data, they are always served as containers.</p>
+<p>To acces data we use <code>get()</code> function:</p>
+<pre><code>var parent: axi[str, str] = { &quot;albert&quot;::&quot;bob&quot;, &quot;alice&quot;:&quot;bob&quot;, &quot;bob&quot;:&quot;carl&quot;, &quot;bob&quot;:&quot;tom&quot; }
 
+parent.get(&quot;bob&quot;:)                  // this gets all elements that &quot;bob&quot; relates to
+{ &quot;carl&quot;, &quot;tom&quot; }
+parent.get(:&quot;bob&quot;)                  // this gets all elements that &quot;bob&quot; relates from
+{ &quot;albert&quot;, &quot;alice&quot; }
+</code></pre><p>Adding new element can be done like in other containers:</p>
+<pre><code>var parent: axi[str, str] = { &quot;albert&quot;:&quot;bob&quot;, &quot;alice&quot;:&quot;bob&quot;, &quot;bob&quot;:&quot;carl&quot;, &quot;bob&quot;:&quot;tom&quot; }
+parent+[&quot;albert&quot;:&quot;betty&quot;]
+parent+[&quot;albert&quot;:&quot;bill&quot;]
+parent+[&quot;alice&quot;:&quot;betty&quot;]
+parent+[&quot;alice&quot;:&quot;bill&quot;]
+</code></pre><p>And they can be nesetd too:</p>
+<pre><code>var line: axi[axi[str, str], axi[str, str]] = {{4:5}:{4:8},{8:5}:{4:5}}
+
+</code></pre><p>And we can use the simplified form too, just <code>axi</code> instead of all the type. We let the compiler fill in the for us:</p>
+<pre><code>var line: axi = {{4:5}:{4:8},{8:5}:{4:5}}
+
+</code></pre>
   </article>
 </div>
       
@@ -3732,6 +3797,7 @@ aMap.add({ &quot;IT&quot;, 55 })
             </li>
             <li><a href="#sets">Sets</a></li>
             <li><a href="#maps">Maps</a></li>
+            <li><a href="#axiom">Axiom</a></li>
           </ul>
         </li>
       </ul>

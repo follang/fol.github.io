@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/500_items/constructs/structs/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.67.1" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/500_items/constructs/structs/">
@@ -1480,6 +1480,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -1694,6 +1702,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/500_items/constructs/structs/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -1965,9 +1981,9 @@
                 <li><a href="#records-as-classes">Records as classes</a></li>
               </ul>
             </li>
-            <li><a href="#tables">Tables</a>
+            <li><a href="#entries">Entries</a>
               <ul>
-                <li><a href="#tables-as-enums">Tables as enums</a></li>
+                <li><a href="#entries-as-enums">Entries as enums</a></li>
               </ul>
             </li>
           </ul>
@@ -3151,6 +3167,14 @@
         </li>
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/500_items/routines/logicals/" class="menu__title " data-depth="1">Logicals</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3365,6 +3389,14 @@
     </span>
   </ul>
   <ul class="menu__list " data-data=/700_sugar/ data-link=https://follang.org/docs/500_items/constructs/structs/>
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/700_sugar/silents/" class="menu__title " data-depth="0">Silents</a>
+        </li>
+      
     
       
         
@@ -3588,7 +3620,7 @@
 <p>A struct definition creates a new, distinct type and are few of them in FOL:</p>
 <ul>
 <li>records</li>
-<li>tables</li>
+<li>entries</li>
 </ul>
 <h2 id="definition">Definition</h2>
 <h3 id="records">Records</h3>
@@ -3611,9 +3643,9 @@
 
 var laptop: computer = { member1 = value, member2 = value };
 .echo(laptop.getType());
-</code></pre><h3 id="tables">Tables</h3>
-<p>Is an a group of constants (identified with <code>tab</code>) consisting of a set of named values called elements.</p>
-<pre><code>typ color: tab = {
+</code></pre><h3 id="entries">Entries</h3>
+<p>Is an a group of constants (identified with <code>ent</code>) consisting of a set of named values called elements.</p>
+<pre><code>typ color: ent = {
     var BLUE: str = &quot;#0037cd&quot; 
     var RED str = &quot;#ff0000&quot; 
     var BLACK str = &quot;#000000&quot; 
@@ -3621,10 +3653,10 @@ var laptop: computer = { member1 = value, member2 = value };
 };
 
 if( something == color.BLUE ) { doathing } else { donothing }
-</code></pre><h4 id="tables-as-enums">Tables as enums</h4>
+</code></pre><h4 id="entries-as-enums">Entries as enums</h4>
 <p>Unums represent enumerated data. An enumeration type (or enum type) is a value type defined by a set of named constants of the underlying integral numeric type.</p>
-<pre><code>typ aUnion: tab = {
-    var BLUE, RED, BLACK, WHITE: int[8] = { .range(0..3) }
+<pre><code>typ aUnion: ent = {
+    var BLUE, RED, BLACK, WHITE: int[8] = {..3}
 }
 </code></pre><h2 id="initializaion">Initializaion</h2>
 <p>To use a record after we’ve defined it, we create an instance of that record by specifying concrete values for each of the fields. We create an instance by stating the name of the record and then add curly brackets containing key: value pairs, where the keys are the names of the fields and the values are the data we want to store in those fields. We don’t have to specify the fields in the same order in which we declared them in the record. In other words, the record definition is like a general template for the type, and instances fill in that template with particular data to create values of the type.</p>
@@ -3755,9 +3787,9 @@ fun (user)getName(): str = { result = self.username; };
                 <li><a href="#records-as-classes">Records as classes</a></li>
               </ul>
             </li>
-            <li><a href="#tables">Tables</a>
+            <li><a href="#entries">Entries</a>
               <ul>
-                <li><a href="#tables-as-enums">Tables as enums</a></li>
+                <li><a href="#entries-as-enums">Entries as enums</a></li>
               </ul>
             </li>
           </ul>

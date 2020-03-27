@@ -43,6 +43,15 @@
 They either are defined inside the object, or outside the object then the object in which they operate is passed like so (just like in Golang):</description>
       </item>
       
+      <item>
+        <title>Logicals</title>
+        <link>https://follang.org/docs/500_items/routines/logicals/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/500_items/routines/logicals/</guid>
+        <description>var likes: axi[str, str] = { &amp;quot;bob&amp;quot;:&amp;quot;alice&amp;quot;, &amp;quot;dan&amp;quot;:&amp;quot;sally&amp;quot; } log dating(a, b: str): bol = { likes[a:b] and likes[b:a] } log frends(a, b): bol = { likes[a:b] or likes[b:a] } var parent: axi[str, str] = { &amp;quot;albert&amp;quot;:&amp;quot;bob&amp;quot;, &amp;quot;albert&amp;quot;:&amp;quot;betty&amp;quot;, &amp;quot;albert&amp;quot;:&amp;quot;bill&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;bob&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;betty&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;bill&amp;quot;, &amp;quot;bob&amp;quot;:&amp;quot;carl&amp;quot;, &amp;quot;bob&amp;quot;:&amp;quot;tom&amp;quot; } var dances axi[str] = { &amp;quot;albert&amp;quot;, &amp;quot;betty&amp;quot;, &amp;quot;carl&amp;quot; } log a_parent_that_dances(a: str): bol = { parent[a:_] and dances[a] } log all_parents_that_dance(): vec[str] = { parent[_:X] and dances[X] } log has_grandparents(a: str): vec[str] = { parent[X:a] and parent[Y:X] } log are_syblings(a, b: str): vec[str] = { parent[X:a] and parent[X:b] } var brothers: axi[str] = { &amp;quot;bob&amp;quot;::&amp;quot;bill&amp;quot; }; log has_uncle(a: str): vec[str] = { parent[Y:a] and brothers[Y:Z] } If A is object and objects can be destroyed, then A can be destroyed.</description>
+      </item>
+      
     
   </channel>
 </rss>
