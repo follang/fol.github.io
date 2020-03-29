@@ -61,8 +61,8 @@ modules used for: imports and includes
 use[] definitions used for: preporcesr, macros, blocks, definitions &amp;hellip;
 def[] variables used for all variables: ints, strings, bools, arrays, vecotrs &amp;hellip;
 var[] functions used for subporgrams: procedures and functions
-pro[] fun[] constructs used for: new types, records, objects, interfaces, enums &amp;hellip;
-ali[] typ[] std[] </description>
+pro[] fun[] log[] constructs used for: new types, records, objects, interfaces, enums &amp;hellip;
+typ[] std[] </description>
       </item>
       
       <item>

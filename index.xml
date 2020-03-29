@@ -235,7 +235,8 @@ def shko: mod[] = { pro[] main: int = { // implementation } def shko/other: mod[
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/500_items/routines/logicals/</guid>
-        <description>var likes: axi[str, str] = { &amp;quot;bob&amp;quot;:&amp;quot;alice&amp;quot;, &amp;quot;dan&amp;quot;:&amp;quot;sally&amp;quot; } log dating(a, b: str): bol = { likes[a:b] and likes[b:a] } log frends(a, b): bol = { likes[a:b] or likes[b:a] } var parent: axi[str, str] = { &amp;quot;albert&amp;quot;:&amp;quot;bob&amp;quot;, &amp;quot;albert&amp;quot;:&amp;quot;betty&amp;quot;, &amp;quot;albert&amp;quot;:&amp;quot;bill&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;bob&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;betty&amp;quot;, &amp;quot;alice&amp;quot;:&amp;quot;bill&amp;quot;, &amp;quot;bob&amp;quot;:&amp;quot;carl&amp;quot;, &amp;quot;bob&amp;quot;:&amp;quot;tom&amp;quot; } var dances axi[str] = { &amp;quot;albert&amp;quot;, &amp;quot;betty&amp;quot;, &amp;quot;carl&amp;quot; } log a_parent_that_dances(a: str): bol = { parent[a:_] and dances[a] } log all_parents_that_dance(): vec[str] = { parent[_:X] and dances[X] } log has_grandparents(a: str): vec[str] = { parent[X:a] and parent[Y:X] } log are_syblings(a, b: str): vec[str] = { parent[X:a] and parent[X:b] } var brothers: axi[str] = { &amp;quot;bob&amp;quot;::&amp;quot;bill&amp;quot; }; log has_uncle(a: str): vec[str] = { parent[Y:a] and brothers[Y:Z] } If A is object and objects can be destroyed, then A can be destroyed.</description>
+        <description>Logicals, which are logic routines, and represent logic programming, state the routine as a set of logical relations (e.g., a grandparent is the parent of a parent of someone). Such rutines are similar to the database languages. A program is executed by an “inference engine” that answers a query by searching these relations systematically to make inferences that will answer a query.
+One of the main goals of the development of symbolic logic hasbeen to capture the notion of logical consequence with formal, mechanical, means.</description>
       </item>
       
       <item>
@@ -714,8 +715,8 @@ Union Union is a data type that allows different data types to be stored in the 
         
         <guid>https://follang.org/docs/700_sugar/matching/</guid>
         <description>Variable As variable assignment:
-var checker: str = if(variable) { in .range(1..10) =&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in .range(11..20) =&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * =&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; =&amp;gt; 1; is &amp;quot;two&amp;quot; =&amp;gt; 2; * =&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; =&amp;gt; true; * =&amp;gt; false; } Function As function return:
-fun someValue(variable: int): str = if(variable) { in .</description>
+var checker: str = when(variable) { in .range(1..10) =&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in .range(11..20) =&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * =&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = when(variable) { is &amp;quot;one&amp;quot; =&amp;gt; 1; is &amp;quot;two&amp;quot; =&amp;gt; 2; * =&amp;gt; 0; } var has_it: bol = when(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; =&amp;gt; true; * =&amp;gt; false; } Function As function return:
+fun someValue(variable: int): str = when(variable) { in .</description>
       </item>
       
       <item>

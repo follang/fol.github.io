@@ -3660,24 +3660,24 @@ when(type){ on (channel){}; on (channel){}; };
 <pre><code>loop(condition){};
 loop(iterable){};
 </code></pre><h3 id="condition-1">Condition</h3>
-<pre><code>loop(x == 5){
+<pre><code>loop( x == 5 ){
     // implementation
 };
 </code></pre><h3 id="enumeration">Enumeration</h3>
-<pre><code>loop(x in {..100}){
+<pre><code>loop( x in {..100}){
     // implementation
 }
 
-loop(x in {..100}) if ( x % 2 = 0 )){
+loop( x in {..100}) if ( x % 2 == 0 )){
     // implementation
 }
 
-loop(x in {..100} if ( x in somearra ) and ( x in anotherarray )){
+loop( x in {..100} if ( x in somearra ) and ( x in anotherarray )){
     // implementation
 }
 
 </code></pre><h3 id="iteration-1">Iteration</h3>
-<pre><code>loop(x in array){
+<pre><code>loop( x in array ){
     // implementation
 }
 </code></pre>

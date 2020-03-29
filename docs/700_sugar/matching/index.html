@@ -1006,7 +1006,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/700_sugar/matching/",
-    "description": "Variable As variable assignment: var checker: str = if(variable) { in .range(1..10) =\u0026gt; \u0026quot;in range of 1-10\u0026quot;; in .range(11..20) =\u0026gt; \u0026quot;in range of …",
+    "description": "Variable As variable assignment: var checker: str = when(variable) { in .range(1..10) =\u0026gt; \u0026quot;in range of 1-10\u0026quot;; in .range(11..20) =\u0026gt; \u0026quot;in range of …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -3585,25 +3585,25 @@
   <article class="single__contents" data-dir="ltr">
     <h2 id="variable">Variable</h2>
 <p>As variable assignment:</p>
-<pre><code>var checker: str = if(variable) { 
+<pre><code>var checker: str = when(variable) { 
     in .range(1..10) =&gt; &quot;in range of 1-10&quot;; 
     in .range(11..20) =&gt; &quot;in range of 11-20&quot;;
     * =&gt; &quot;out of range&quot;;
 }
 
-var is_it: int = if(variable) { 
+var is_it: int = when(variable) { 
     is &quot;one&quot; =&gt; 1; 
     is &quot;two&quot; =&gt; 2; 
     * =&gt; 0;
 }
 
-var has_it: bol = if(variable) { 
+var has_it: bol = when(variable) { 
     has &quot;o&quot;, &quot;k&quot; =&gt; true; 
     * =&gt; false;
 }
 </code></pre><h2 id="function">Function</h2>
 <p>As function return:</p>
-<pre><code>fun someValue(variable: int): str = if(variable) { 
+<pre><code>fun someValue(variable: int): str = when(variable) { 
     in .range(1..10) =&gt; &quot;1-10&quot;; 
     in .range(11..20) =&gt; &quot;11-20&quot;; 
     * =&gt; &quot;0&quot;;
