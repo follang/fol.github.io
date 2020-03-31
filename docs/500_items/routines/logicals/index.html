@@ -1978,7 +1978,6 @@
           <ul>
             <li><a href="#facts">Facts</a></li>
             <li><a href="#rules">Rules</a></li>
-            <li><a href="#checks">Checks</a></li>
           </ul>
         </li>
         <li><a href="#return">Return</a>
@@ -3623,23 +3622,19 @@
 </code></pre><h3 id="rules">Rules</h3>
 <p>Declaring a rule that states if A likes B and B likes A, they are dating</p>
 <pre><code>log dating(a, b: str): bol = {
-    likes[a,b]: and
-    likes[b,a]:
+    likes:[a,b] and
+    likes:[b,a]
 }
 </code></pre><p>Declaring a rule that states if A likes B and B likes A, they are just friends</p>
 <pre><code>log frends(a, b): bol = {
-    likes[a,b]: or
-    likes[b,a]:
+    likes:[a,b] or
+    likes:[b,a]
 }
 
 </code></pre><div class="notices warn" >
 <p>Rules can have <strong>only</strong> facts and varibles within</p>
 </div>
-<h3 id="checks">Checks</h3>
-<p>Checking is done with container accessor and <code>:</code> after:</p>
-<pre><code>likes[&quot;bob&quot;,&quot;alice&quot;]:               // will return true
-likes[&quot;sally&quot;,&quot;dan&quot;]:               // will return false
-</code></pre><h2 id="return">Return</h2>
+<h2 id="return">Return</h2>
 <p>A logical <code>log</code> can return different values, but they are either of type <code>bol</code>, or of type container (axioms <code>axi</code> or vectors <code>vec</code>):</p>
 <p>Lets define a axiom of parents and childrens called <code>parents</code> and another one of parents that can dance called <code>dances</code>:</p>
 <pre><code>var parent: axi[str, str] = { {&quot;albert&quot;,&quot;bob&quot;}, 
@@ -3654,59 +3649,59 @@ var dances axi[str] = { &quot;albert&quot;, &quot;alice&quot;, &quot;carl&quot; 
 </code></pre><h3 id="boolean">Boolean</h3>
 <p>Here we return a boolean <code>bol</code>. This rule check if a parent can dance:</p>
 <pre><code>log can_parent_dance(a: str): bol = {
-    parent[a,_]: and dances[a]:
+    parent:[a,_] and dances:[a]
 }
 
 can_parent_dance(&quot;albert&quot;)          // return true, &quot;albert&quot; is both a parent and can dance
 can_parent_dance(&quot;bob&quot;)             // return false, &quot;bob&quot; is a parent but can't dance
 can_parent_dance(&quot;carl&quot;)            // return false, &quot;carl&quot; is not a parent
 </code></pre><p>Lets examine this:<br />
-<code>parent[a,_]: and dances[a]:</code><br />
+<code>parent:[a,_] and dances:[a]</code><br />
 this is a combintion of two facts. Here we say if <code>a</code> is parent of anyone (we dont care whose, that&rsquo;s why we use meh symbol <code>[a,_]</code>) and if true, then we check if parent <code>a</code> (since he is a parent now, we fact-checked) can dance.</p>
 <h3 id="vector">Vector</h3>
 <p>The same, we can create a vector of elements. For example, if we want to get the list of parents that dance:</p>
 <pre><code>log all_parents_that_dance(): vec[str] = {
-    parent[x,_]: and
-    dances[x]:
-    x
+    parent:[*-&gt;X,_] and
+    dances:[X-&gt;Y]
+    Y
 }
 
 all_parents_that_dance()            // this will return a string vector {&quot;albert&quot;, &quot;alice&quot;}
 </code></pre><p>Now lets analyze the body of the rule:</p>
-<pre><code>parent[x,_]: and
-dances[x]:
-x
+<pre><code>parent:[*-&gt;X,_] and
+dances:[X-&gt;Y]
+Y
 </code></pre><p>Here are a combination of facts and variable assignment through <a href="/docs/700_sugar/silents/"><strong>silents</strong></a>. Silents are a single letter identifiers. If a silent constant is not declared, it gets declared and assigned <strong>in-place</strong>.</p>
 <p>Taking a look each line:<br />
-<code>parent[x,_]: and</code><br />
-this gets all parents (and again we dont care for the childrens, we use meh symbol <code>[x,_]</code>), but in this case we assign them to <strong>silent</strong> <code>x</code>. So, <code>x</code> is a list of all parents.<br />
+<code>parent:[X,_] and</code><br />
+this gets all parents (<code>[*-&gt;X,_]</code>),and assign them to <strong>silent</strong> <code>X</code>. So, <code>X</code> is a list of all parents.<br />
 then:<br />
-<code>dances[x]:</code><br />
-this takes the list of parents <code>x</code> and checks each if they can dance, and filters it will only the parents that can dance.<br />
+<code>dances[X-&gt;Y]:</code><br />
+this takes the list of parents <code>X</code> and checks each if they can dance, and filter it by assigning it to <code>Y</code> so <code>[X-&gt;Y]</code> it will have only the parents that can dance.<br />
 then:<br />
-<code>x</code><br />
-this just returns the list <code>x</code> of parents that can dance.</p>
+<code>Y</code><br />
+this just returns the list <code>Y</code> of parents that can dance.</p>
 <h2 id="relationship">Relationship</h2>
 <p>If <code>A</code> is <code>object</code> and <code>objects</code> can be destroyed, then <code>A</code> can be destroyed. As a result axioms can be related or conditioned to other axioms too, much like facts.</p>
 <p>For example: if <code>carl</code> is the son of <code>bob</code> and <code>bob</code> is the son of <code>albert</code> then <code>carl</code> must be the grandson of <code>albert</code>:</p>
 <pre><code>log grandparent(a: str): vec[str] = {
-    parent[x,a]: and 
-    parent[y,X]:
+    parent[*-&gt;X,a]: and 
+    parent[*-&gt;Y,X]:
     Y
 }
 </code></pre><p>Or: if <code>bob</code> is the son of <code>albert</code> and <code>betty</code> is the doughter of <code>albert</code>, then <code>bob</code> and <code>betty</code> must be syblings:</p>
 <pre><code>log are_syblings(a, b: str): vec[str] = {
-    parent[x,a]: and
-    parent[x,b]:
-    x
+    parent[*-&gt;X,a]: and
+    parent[X-&gt;Y,b]:
+    Y
 }
 </code></pre><p>Same with uncle relationship:</p>
 <pre><code>var brothers: axi[str] = { {&quot;bob&quot;:&quot;bill&quot;}, {&quot;bill&quot;,&quot;bob&quot;} };
 
 log has_uncle(a: str): vec[str] = {
-    parent[y,a]: and
-    brothers[y,z]:;
-    z
+    parent[*-&gt;Y,a]: and
+    brothers[Y,*-&gt;Z]:;
+    Z
 }
 </code></pre><h2 id="conditional-facts">Conditional facts</h2>
 <p>Here an example, the axioms <code>hates</code> will add a memeber <code>romeo</code> only if the relation <code>x</code> is satisfied:</p>
@@ -3714,7 +3709,7 @@ log has_uncle(a: str): vec[str] = {
 var hates: axi;
 
 log romeHates(X: str): bol = {
-    stabs[x,&quot;mercutio&quot;,_]:
+    stabs[X,&quot;mercutio&quot;,_]:
 }
 
 hates+[&quot;romeo&quot;,X] if (romeHates(X));
@@ -3731,15 +3726,15 @@ eats+[x:&quot;cheesburger&quot;] if (log (a: str): bol = {
 <pre><code>var line: axi = { {{4,5},{4,8}}, {{8,5},{4,5}} }
 
 log vertical(line: axi): bol = {
-    line[A,B]: and 
-    A[X,Y]: and
-    B[X,Y2]:
+    line[*-&gt;A,*-&gt;B]: and 
+    A[*-&gt;X,Y*-&gt;]: and
+    B[X,*-&gt;Y2]:
 }
 
 log horizontal(line: axi): bol = {
-    line[A,B]: and 
-    A[X,Y]: and
-    B[X2,Y]:
+    line[*-&gt;A,*-&gt;B]: and 
+    A[*-&gt;X,*-&gt;Y]: and
+    B[*-&gt;X2,Y]:
 }
 
 assert(vertical(line.at(0))
@@ -3752,7 +3747,8 @@ class.add({&quot;cs340&quot;,&quot;spring&quot;,{&quot;tue&quot;,&quot;thur&quot
 class.add({&quot;cs340&quot;,winter,{&quot;wed&quot;,&quot;fri&quot;},{15,16},&quot;bruce&quot;,&quot;coor_3&quot;})
 
 log instructor(class: str): vec[str] = {
-    class[class,_,[_,&quot;fri&quot;],_,A,_]
+    class[class,_,[_,&quot;fri&quot;],_,*-&gt;X,_]
+    X
 }
 </code></pre>
   </article>
@@ -3793,7 +3789,6 @@ log instructor(class: str): vec[str] = {
           <ul>
             <li><a href="#facts">Facts</a></li>
             <li><a href="#rules">Rules</a></li>
-            <li><a href="#checks">Checks</a></li>
           </ul>
         </li>
         <li><a href="#return">Return</a>

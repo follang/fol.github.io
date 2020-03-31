@@ -24,8 +24,8 @@ BK (build-in keywords) BK_OR or
 BK_XOR xor
 BK_AND and
 BK_IF if
-BK_ELSE else
 BK_FOR for
+BK_WHEN when
 BK_EACH each
 BK_LOOP loop
 BK_IS is

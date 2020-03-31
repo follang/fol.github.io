@@ -3586,7 +3586,7 @@
     <p>Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using <code>[]</code> right after the type declaration <code>type[]</code>, so: <code>type[options][limits]</code></p>
 <h2 id="initger-limiting">Initger limiting</h2>
 <p>Example, making a intiger variable have only numbers from 0 to 255 that represents an RGB value for a single color:</p>
-<pre><code>var rgb: int[][.range(0..255)];
+<pre><code>var rgb: int[][.range(255)];
 
 </code></pre><h2 id="character-limiting">Character limiting</h2>
 <p>It works with strings too, say we want a string that can should be of a particular form, for example an email:</p>

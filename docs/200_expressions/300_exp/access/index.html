@@ -1976,7 +1976,16 @@
       <ul>
         <li><a href="#subprogram-access">Subprogram access</a></li>
         <li><a href="#namespaces-access">Namespaces access</a></li>
-        <li><a href="#container-access">Container access</a></li>
+        <li><a href="#container-access">Container access</a>
+          <ul>
+            <li><a href="#array-vectors-sequences-sets">Array, Vectors, Sequences, Sets</a></li>
+            <li><a href="#matrixes">Matrixes</a></li>
+            <li><a href="#maps">Maps</a></li>
+            <li><a href="#axioms">Axioms</a></li>
+            <li><a href="#avaliability">Avaliability</a></li>
+            <li><a href="#in-place-assignment">In-Place assignment</a></li>
+          </ul>
+        </li>
         <li><a href="#field-access">Field access</a>
           <ul>
             <li><a href="#methods">Methods</a></li>
@@ -3614,6 +3623,7 @@
 <pre><code>use log mod[std] = { fmt::log };            // using the log namespace of fmt
 io::console::write_out.echo();              // echoing out
 </code></pre><h2 id="container-access">Container access</h2>
+<h3 id="array-vectors-sequences-sets">Array, Vectors, Sequences, Sets</h3>
 <p>Containers can be indexed by writing a square-bracket-enclosed expression of type <code>int[arch]</code> (the index) after them.</p>
 <pre><code>var collection: int = { 5, 4, 8, 3, 9, 0, 1, 2, 7, 6 }
 
@@ -3687,6 +3697,66 @@ collection[-2::]                            // the last two items, reversed
 { 6, 7 }
 collection[::-3]                            // everything except the last three items, reversed
 { 2, 1, 0, 9, 3, 8, 4, 5 }
+</code></pre><h3 id="matrixes">Matrixes</h3>
+<p>Matrixes are 2D+ arrays, thus they have a bit more complex acces way:</p>
+<pre><code>var aMat = mat[int, int] = { {1,2,3}, {4,5,6}, {7,8,9} };
+
+nMat[[1][0]]                                // this will return 4
+                                            // first [] accesses the first dimension, then second [] accesses the second
+</code></pre><p>All other operations are the same like arrays.</p>
+<h3 id="maps">Maps</h3>
+<p>Accesing maps is donw by using the key within square-bracket-enclosed:</p>
+<pre><code>var someMap: map[str, int] = { {&quot;prolog&quot;, 1}, {&quot;lisp&quot;, 2}, {&quot;c&quot;, 3} }
+someMap[&quot;lisp&quot;]                             // will return 2
+</code></pre><h3 id="axioms">Axioms</h3>
+<p>Accesing axioms is more or less like accessing maps, but more verbose and matching through <strong>backtracing</strong>, and the return is always a vector of elements (empty if no elements are found):</p>
+<pre><code>var parent: axi[str, str] = { {&quot;albert&quot;,&quot;bob&quot;}, {&quot;alice&quot;,&quot;bob&quot;}, {&quot;bob&quot;,&quot;carl&quot;}, {&quot;bob&quot;,&quot;tom&quot;} };
+
+parent[&quot;albert&quot;,*]                          // this will return strng vector: {&quot;bob&quot;}
+parent[&quot;bob&quot;,*]                             // this will return strng vector: {&quot;carl&quot;,&quot;tom&quot;}
+
+parent[*,_]                                 // this will match to {&quot;albert&quot;, &quot;alice&quot;, &quot;bob&quot;}
+</code></pre><p>Matching can be with a vector too:</p>
+<pre><code>var parent: axi[str, str] = { {&quot;albert&quot;,&quot;bob&quot;}, {&quot;alice&quot;,&quot;bob&quot;}, {&quot;bob&quot;,&quot;carl&quot;}, {&quot;bob&quot;,&quot;tom&quot;}, {&quot;maggie&quot;,&quot;bill&quot;} };
+var aVec: vec[str] = { &quot;tom&quot;, &quot;bob&quot; };
+
+parent[*,aVec]                              // will match all possible values that have &quot;tom&quot; ot &quot;bob&quot; as second element
+                                            // in this case will be a strng vector: {&quot;albert&quot;, &quot;alice&quot;, &quot;bob&quot;}
+</code></pre><p>a more complex matching:</p>
+<pre><code>var class: axi;
+class.add({&quot;cs340&quot;,&quot;spring&quot;,{&quot;tue&quot;,&quot;thur&quot;},{12,13},&quot;john&quot;,&quot;coor_5&quot;})
+class.add({&quot;cs340&quot;,&quot;winter&quot;,{&quot;tue&quot;,&quot;fri&quot;},{12,13},&quot;mike&quot;,&quot;coor_5&quot;})
+class.add({&quot;cs340&quot;,winter,{&quot;wed&quot;,&quot;fri&quot;},{15,16},&quot;bruce&quot;,&quot;coor_3&quot;})
+class.add({&quot;cs101&quot;,winter,{&quot;mon&quot;,&quot;wed&quot;},{10,12},&quot;james&quot;,&quot;coor_1&quot;})
+class.add({&quot;cs101&quot;,spring,{&quot;tue&quot;,&quot;tue&quot;},{16,18},&quot;tom&quot;,&quot;coor_1&quot;})
+
+var aClass = &quot;cs340&quot;
+class[aClass,_,[_,&quot;fri&quot;],_,*,_]             // this will return string vector: {&quot;mike&quot;, bruce}
+                                            // it matches everything that has aClass ad &quot;fri&quot; within
+                                            // and ignore ones with meh symbol
+</code></pre><h3 id="avaliability">Avaliability</h3>
+<p>To check if an element exists, we add <code>:</code> before accessing with []. Thus this will return <code>true</code> if element exists.</p>
+<pre><code>var val: vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+val:[5]                                     // returns true
+val:[15]                                    // returns false
+
+
+var likes: axi[str, str] = { {&quot;bob&quot;,&quot;alice&quot;} , {&quot;alice&quot;,&quot;bob&quot;}, {&quot;dan&quot;,&quot;sally&quot;} };
+
+likes[&quot;bob&quot;,&quot;alice&quot;]:                       // will return true
+likes[&quot;sally&quot;,&quot;dan&quot;]:                       // will return false
+</code></pre><h3 id="in-place-assignment">In-Place assignment</h3>
+<p>One of the features that is very important in arrays is that they can assign variables immediately:</p>
+<pre><code>var val: vec = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+var even: vec = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+val[even =&gt; Y]                              // this equals to {2, 4, 6, 8, 10} and same time assign to Y
+.echo(Y)                                    // will print {2, 4, 6, 8, 10}
+</code></pre><p>This dows not look very much interesting here, you can just as easy assign the whole filtered array to a variable, but it gets interesting for axioms:</p>
+<pre><code>var parent: axi[str, str] = { {&quot;albert&quot;,&quot;bob&quot;}, {&quot;alice&quot;,&quot;bob&quot;}, {&quot;bob&quot;,&quot;carl&quot;}, {&quot;bob&quot;,&quot;tom&quot;}, {&quot;maggie&quot;,&quot;bill&quot;} };
+
+parent:[* =&gt; Y,&quot;bob&quot;]                       // this one returns true if we find a parent of &quot;bob&quot;
+                                            // same time it assigns parent to a string vector `Y`
 </code></pre><h2 id="field-access">Field access</h2>
 <p>Field access expressoin accesses fields inside constructs. Here is a recorcalled <code>user</code>:</p>
 <pre><code>var user1: user = {
@@ -3750,7 +3820,16 @@ fun (user)getName(): str = { result = self.username; };
       <ul>
         <li><a href="#subprogram-access">Subprogram access</a></li>
         <li><a href="#namespaces-access">Namespaces access</a></li>
-        <li><a href="#container-access">Container access</a></li>
+        <li><a href="#container-access">Container access</a>
+          <ul>
+            <li><a href="#array-vectors-sequences-sets">Array, Vectors, Sequences, Sets</a></li>
+            <li><a href="#matrixes">Matrixes</a></li>
+            <li><a href="#maps">Maps</a></li>
+            <li><a href="#axioms">Axioms</a></li>
+            <li><a href="#avaliability">Avaliability</a></li>
+            <li><a href="#in-place-assignment">In-Place assignment</a></li>
+          </ul>
+        </li>
         <li><a href="#field-access">Field access</a>
           <ul>
             <li><a href="#methods">Methods</a></li>
