@@ -1973,10 +1973,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#__everything__-in-fol-is-declared-like-below"><strong><em>Everything</em></strong> in <strong>FOL</strong> is declared like below:</a></li>
-        <li><a href="#top-most-declarations">top-most declarations</a></li>
+        <li><a href="#declarations">declarations</a></li>
         <li><a href="#control-flow">control flow</a></li>
-        <li><a href="#keywords">keywords</a></li>
+        <li><a href="#example">example</a></li>
       </ul>
     </li>
   </ul>
@@ -3584,10 +3583,10 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 style="color: red !important;">FOL IS STILL IN VERY VERY EARLY DEVELOPMENT</h2>
-<h2 id="__everything__-in-fol-is-declared-like-below"><strong><em>Everything</em></strong> in <strong>FOL</strong> is declared like below:</h2>
+    <p><span style="font-size: 2em !important; color: red !important;">FOL IS STILL IN VERY VERY EARLY DEVELOPMENT</span></p>
+<p><span style="font-size: 1.6em !important;">Everything in FOL follows the same structure:</span></p>
 <pre><code>declaration[options] name: type[options] = { implementation; };
-</code></pre><h2 id="top-most-declarations">top-most declarations</h2>
+</code></pre><h2 id="declarations">declarations</h2>
 <pre><code>use    // imports, includes ...
 def    // preporcesr, macros, bocks, definitions ...
 
@@ -3600,17 +3599,27 @@ log    // subporgrams with logic only - logicals
 typ    // new types: records, entries, classes, aiases, extensions
 std    // standards: protocols, blueprints
 </code></pre><h2 id="control-flow">control flow</h2>
-<pre><code>if(condition){} else(condition){} else{};
-if(variable){ is (){}; is (){}; * {}; };
-each(iterator){};
-loop(condition){};
-</code></pre><h2 id="keywords">keywords</h2>
-<pre><code>continue; break; return; yeild; jump; result; report; panic; error; assert; check; test; or; and; ...
+<pre><code>when(condition){ case (){}; case (){}; * {}; };
+loop(condition){  };
+</code></pre><p> </p>
+<hr>
+<h2 id="example">example</h2>
+<pre><code>use log: mod[std] = {fmt::log};
+
+def argo: mod[init] = {
+    
+    -var const: str = &quot;something here&quot;
+
+    +pro main: int = {
+        log.warn(&quot;Last warning!...&quot;);
+        .echo(add(3, 5));
+    }
+
+    fun add(a, b: int): int = { a + b }
+}
 </code></pre>
   </article>
 </div>
-      
-
       
   
 
@@ -3625,10 +3634,9 @@ loop(condition){};
   <ul>
     <li>
       <ul>
-        <li><a href="#__everything__-in-fol-is-declared-like-below"><strong><em>Everything</em></strong> in <strong>FOL</strong> is declared like below:</a></li>
-        <li><a href="#top-most-declarations">top-most declarations</a></li>
+        <li><a href="#declarations">declarations</a></li>
         <li><a href="#control-flow">control flow</a></li>
-        <li><a href="#keywords">keywords</a></li>
+        <li><a href="#example">example</a></li>
       </ul>
     </li>
   </ul>
@@ -3996,18 +4004,21 @@ loop(condition){};
         
 <div class="bot">
   <footer class="footer">
-    <div class="divider">
-      <div class="lmr">
-        
-          <p class="caption">
-            ©2020, FOL
-          </p>
-          
-        
-      </div>
-    </div>
+        <div class="grow"></div>
+        <nav class="pagination-single">
+            
+            <div class="grow"></div>
+            
+                <p class="caption">
+                    ©2020, FOL
+                </p>
+            
+            <div class="grow"></div>
+            
+        </nav>
   </footer>
 </div>
+
 
     </div>
 
