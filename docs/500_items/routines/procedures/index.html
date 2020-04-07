@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3259,14 +3243,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3275,15 +3251,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3646,8 +3614,8 @@ pro[] main: int =  {
 }
 </code></pre><h3 id="lend-parameters">Lend parameters</h3>
 <p>But now, we were able to change just the variable that is defined in heap (case two), by moving back the ownership. In case one, since the value is copied, the owner of newly copied value is the procedure itself. So the <code>.give_back()</code> is ignored. To fix this, we use <a href="/docs/spec/050_pointers/#borrowing">borrowing</a> to lend a value to the procedure</p>
-<pre><code>pro[] modifyValue((someStr): str) = {                         // we use `(someStr)` to mark it as borrowable
-    someStr = someStr + &quot; world!&quot;
+<pre><code>pro[] modifyValue(SOMESTR: str) = {                         // we use allcaps `SOMESTR` to mark it as borrowable
+    somestr = someStr + &quot; world!&quot;                           // when we refer, we can both refer with ALLCAPS or lowecaps
 }
 
 pro[] main: int =  {
@@ -3661,15 +3629,16 @@ pro[] main: int =  {
     modifyValue(aString);                                   // the value is lended to the procedure
     .echo(aString)                                          // this now prints: &quot;hello world!&quot;, 
 }
-</code></pre><p>So to make a procedure borrow a varibale it uses <code>(varName)</code>.</p>
-<pre><code>pro[] borrowingProcedure(aVar: str; (bVar): bol; cVar, (dVar): int)
+</code></pre><div class="notices warn" >
+<p>So to make a procedure borrow a varibale it uses all caps name <code>A_VAR</code>.<br />
+Remember that two variables are the same if have same characters (does not matter the caps)</p>
+</div>
+<pre><code>pro[] borrowingProcedure(aVar: str; BVAR: bol; cVar, DVAR: int)
 </code></pre><p>To call this procedure, the borrowed parameters always shoud be a variable name and not a direct value:</p>
 <pre><code>var aBool, anInt = true, 5
 borrowingProcedure(&quot;get&quot;, true, 4, 5)                        // this will throw an error, cos it expects borrowable not direct value
 borrowingProcedure(&quot;get&quot;, aBool, 4, anInt)                   // this is the proper way
 
-</code></pre><p>If all parameters are going to be borrowable, then the procedure can encapsulate all the parameters in double brackets <code>(( //parameters ))</code>:</p>
-<pre><code>pro[] borrowingProcedure((aVar: str; bVar: bol; cVar, dVar: int))
 </code></pre><p>When the value is passed as borrowable in procedure, by default it gives premission to change, so the same as <code>var[mut, bor]</code> as <a href="/docs/spec/050_pointers/#borrowing">disscussed here</a>.</p>
 <h3 id="return-ownership">Return ownership</h3>
 <p>Return values can be though as return of ownership too. The ownership of a variable follows the same pattern every time: assigning a value to another variable moves or copies it.</p>
@@ -4855,36 +4824,6 @@ pro transferOwnership((aString: str)): str = {              // $aString comes in
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

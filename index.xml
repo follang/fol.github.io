@@ -96,17 +96,6 @@
       </item>
       
       <item>
-        <title>Define</title>
-        <link>https://follang.org/docs/600_modules/define/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/600_modules/define/</guid>
-        <description>Every file in a folder is part of a package, which means everything in the folder that uses the same package name, share the same scope. To define a package we use:
-def package_name: mod[] = { // implementation } Main module If a package is an executable, it should have pro[] main: int to tell the compiler where to start.
-def shko: mod[] = { pro[] main: int = { log.</description>
-      </item>
-      
-      <item>
         <title>Modules</title>
         <link>https://follang.org/v0.11-docs/spec/modules/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -135,7 +124,7 @@ use log mod[std] = {fmt::log}; def main: mod[init] = { pro[] main: int = { log.w
         <guid>https://follang.org/docs/600_modules/import/</guid>
         <description>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.
 Syntax to import a library is:
-use package_name: mod[] = { path } There are two type of import declartions:
+use package_name: mod = { path } There are two type of import declartions:
  system libraries local libraries  System libraries This is how including other libraries works, for example include fmt module from standard library:</description>
       </item>
       
@@ -157,16 +146,6 @@ var contPoint: ptr[int] = 10;	// make a pointer and asign the memory to value of
         <guid>https://follang.org/docs/500_items/routines/functions/</guid>
         <description>Functions compared to procedure are pure. A pure function is a function that has the following properties:
  Its return value is the same for the same arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams from I/O devices). Its evaluation has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or I/O streams).  Thus a pure function is a computational analogue of a mathematical function.</description>
-      </item>
-      
-      <item>
-        <title>Scope</title>
-        <link>https://follang.org/docs/600_modules/scopes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/600_modules/scopes/</guid>
-        <description>Every file in a folder is part of one package, thus they share the same scope. Thus two varibles with same name at global scope cant be defined. However, this is kind of special for functions. Functions of the same name and same amount of parameters (so identical functions, not function overloading) can be defined in two different files. When called, the one on the same file is used.
-In case a function exists in two files and is called from thrid one, then this can be resolved in two ways.</description>
       </item>
       
       <item>
@@ -218,15 +197,15 @@ int[options], flt[options], chr[options], bol Intiger type An integer is a numbe
       </item>
       
       <item>
-        <title>Blocks</title>
+        <title>Declaration</title>
         <link>https://follang.org/docs/600_modules/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/600_modules/blocks/</guid>
-        <description>Namespaces A namespace can be defined in three ways:
- in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main module
-def shko/other: mod[] = { pro[] main: int = { // implementation } // implementation } or in the same module file:
-def shko: mod[] = { pro[] main: int = { // implementation } def shko/other: mod[] = { // implementation } } Blocks Block statement is used for scopes where members get destroyed when scope is finished.</description>
+        <description>Each file in a folder (with extension .fol) is part of a package. There is no need for imports or other things at the top of the file. They share the same scope, and each declaration is order independent for all files.
+Namespaces A namespace can be defined in a subfolder of the main foler. And they can be nested.
+To acces the namespace there are two ways:
+ direct import with use or code access with ::  Direct import use aNS: loc = { &amp;quot;home/folder/printing/logg&amp;quot; } pro[] main: int = { logg.</description>
       </item>
       
       <item>
@@ -613,12 +592,13 @@ def &#39;str&#39;: def[] = &#39;str[new,mut,nor]&#39; </description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/comments/</guid>
-        <description>Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace.
-LINE_COMMENT :
-// (~[/ !] | //) ~\n* | //
-BLOCK_COMMENT :
-/* (~[* !] ) ( ~*/)* */ | /**/
- Docs comments Doc comments beginning with exactly three slashes (///) are interpreted as a special syntax for doc attributes.</description>
+        <description>Comments in FOL code DON&amp;rsquo;T follow the traditional style of line (//) comment forms.
+ Normal comments They are represented with backtick.
+SINGLE_LINE_COMMENT :
+`this is a single line comment` MULTI_LINE_COMMENT :
+`this is a multi line comment`  Docs comments Doc comments have at the beggining of comment the optinon [doc].
+DOC_COMMENT:
+`[doc] this is a documentation comment`  </description>
       </item>
       
       <item>
@@ -716,7 +696,7 @@ Union Union is a data type that allows different data types to be stored in the 
         
         <guid>https://follang.org/docs/700_sugar/matching/</guid>
         <description>Variable As variable assignment:
-var checker: str = when(variable) { in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = when(variable) { is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = when(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
+var checker: str = if(variable) { in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
 fun someValue(variable: int): str = when(variable) { in {.</description>
       </item>
       

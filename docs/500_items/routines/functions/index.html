@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3261,14 +3245,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3277,15 +3253,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3619,14 +3587,25 @@
 <h3 id="anonymous-functoins">Anonymous functoins</h3>
 <p>Anonymous function is a function definition that is not bound to an identifier. These are a form of nested function, in allowing access to variables in the scope of the containing function (non-local functions).</p>
 <p>Staring by assigning a anonymous function to a vriable:</p>
-<pre><code>var[] f = fun[] (a, b: int): int = {                                    // assigning a variable to function
+<pre><code>var f = fun (a, b: int): int = {                                        // assigning a variable to function
     return a + b
 }
 .echo(f(5,6))                                                           // prints 11
+
+var f: int = (a, b: int){                                               // this is an short alternative of same variable assignmet to function
+    return a + b
+}
 </code></pre><p>It is also possible to call a anonymous function without assigning it to a variable.</p>
-<pre><code>fun[] (a, b: int) = {                                                   //define anonymous function
+<pre><code>`version 1`
+fun[] (a, b: int) = {                                                   `define anonymous function`
     .echo(a + b)
-}(5, 6)                                                                 //calling anonymous function
+}(5, 6)                                                                 `calling anonymous function`
+
+
+`version 2`
+(a, b: int){                                                            `define anonymous function`
+    .echo(a + b)
+}(5, 6)                                                                 `calling anonymous function`
 </code></pre><h3 id="closures">Closures</h3>
 <p>Functions can appear at the top level in a module as well as inside other scopes, in which case they are called nested functions. A nested function can access local variables from its enclosing scope and if it does so it becomes a closure. Any captured variables are stored in a hidden additional argument to the closure (its environment) and they are accessed by reference by both the closure and its enclosing scope (i.e. any modifications made to them are visible in both places). The closure environment may be allocated on the heap or on the stack if the compiler determines that this would be safe.</p>
 <p>There are two types of closures:</p>
@@ -4848,36 +4827,6 @@ fun[] add2(): {fun (x: int): int} = {
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

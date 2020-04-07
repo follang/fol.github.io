@@ -1006,7 +1006,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/100_lexical/comments/",
-    "description": "Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace. …",
+    "description": "Comments in FOL code DON\u0026rsquo;T follow the traditional style of line (//) comment forms.  Normal comments They are represented with backtick. SINGLE_LINE_COMMENT : `this …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3245,14 +3229,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3261,15 +3237,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3583,20 +3551,26 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="normal-comments">Normal comments</h2>
-<p>Comments in FOL code follow the general Rust/C++ style of line (<code>//</code>) and block (<code>/* ... */</code>) comment forms and are interpreted as a form of whitespace.</p>
-<div class="placeholder " >
-<p>LINE_COMMENT :<br />
-<code>// (~[/ !] | //) ~\n*</code> | <code>//</code></p>
-<p>BLOCK_COMMENT :<br />
-<code>/* (~[* !] ) ( ~*/)* */</code> | <code>/**/</code></p>
+    <div class="notices warn" >
+<p>Comments in FOL code <strong>DON&rsquo;T</strong>  follow the traditional style of line (<code>//</code>) comment forms.</p>
 </div>
+<h2 id="normal-comments">Normal comments</h2>
+<p>They are represented with backtick.</p>
+<div class="placeholder " >
+<p>SINGLE_LINE_COMMENT :</p>
+<pre><code>`this is a single line comment`
+</code></pre><p>MULTI_LINE_COMMENT :</p>
+<pre><code>`this is a 
+multi
+line
+comment`
+</code></pre></div>
 <h2 id="docs-comments">Docs comments</h2>
-<p>Doc comments beginning with exactly three slashes (<code>///</code>) are interpreted as a special syntax for doc attributes.</p>
+<p>Doc comments have at the beggining of comment the optinon <code>[doc]</code>.</p>
 <div class="placeholder " >
-<p>DOC_COMMENT:<br />
-<code>/// (~/ ~[\n]*)?</code></p>
-</div>
+<p>DOC_COMMENT:</p>
+<pre><code>`[doc] this is a documentation comment`
+</code></pre></div>
 
   </article>
 </div>
@@ -4728,36 +4702,6 @@
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

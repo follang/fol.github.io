@@ -14,17 +14,6 @@
     
       
       <item>
-        <title>Define</title>
-        <link>https://follang.org/docs/600_modules/define/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/600_modules/define/</guid>
-        <description>Every file in a folder is part of a package, which means everything in the folder that uses the same package name, share the same scope. To define a package we use:
-def package_name: mod[] = { // implementation } Main module If a package is an executable, it should have pro[] main: int to tell the compiler where to start.
-def shko: mod[] = { pro[] main: int = { log.</description>
-      </item>
-      
-      <item>
         <title>Import</title>
         <link>https://follang.org/docs/600_modules/import/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -32,30 +21,20 @@ def shko: mod[] = { pro[] main: int = { log.</description>
         <guid>https://follang.org/docs/600_modules/import/</guid>
         <description>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.
 Syntax to import a library is:
-use package_name: mod[] = { path } There are two type of import declartions:
+use package_name: mod = { path } There are two type of import declartions:
  system libraries local libraries  System libraries This is how including other libraries works, for example include fmt module from standard library:</description>
       </item>
       
       <item>
-        <title>Scope</title>
-        <link>https://follang.org/docs/600_modules/scopes/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://follang.org/docs/600_modules/scopes/</guid>
-        <description>Every file in a folder is part of one package, thus they share the same scope. Thus two varibles with same name at global scope cant be defined. However, this is kind of special for functions. Functions of the same name and same amount of parameters (so identical functions, not function overloading) can be defined in two different files. When called, the one on the same file is used.
-In case a function exists in two files and is called from thrid one, then this can be resolved in two ways.</description>
-      </item>
-      
-      <item>
-        <title>Blocks</title>
+        <title>Declaration</title>
         <link>https://follang.org/docs/600_modules/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/600_modules/blocks/</guid>
-        <description>Namespaces A namespace can be defined in three ways:
- in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main module
-def shko/other: mod[] = { pro[] main: int = { // implementation } // implementation } or in the same module file:
-def shko: mod[] = { pro[] main: int = { // implementation } def shko/other: mod[] = { // implementation } } Blocks Block statement is used for scopes where members get destroyed when scope is finished.</description>
+        <description>Each file in a folder (with extension .fol) is part of a package. There is no need for imports or other things at the top of the file. They share the same scope, and each declaration is order independent for all files.
+Namespaces A namespace can be defined in a subfolder of the main foler. And they can be nested.
+To acces the namespace there are two ways:
+ direct import with use or code access with ::  Direct import use aNS: loc = { &amp;quot;home/folder/printing/logg&amp;quot; } pro[] main: int = { logg.</description>
       </item>
       
       <item>

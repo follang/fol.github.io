@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blocks – FOL</title>
+    <title>Declaration – FOL</title>
     
 
 
@@ -971,7 +971,7 @@
 
 
 <meta property="og:site_name" content="FOL">
-<meta property="og:title" content="Blocks">
+<meta property="og:title" content="Declaration">
 <meta property="og:url" content="https://follang.org/docs/600_modules/blocks/">
 <meta property="og:type" content="article">
 
@@ -1002,11 +1002,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Blocks",
+    "headline": "Declaration",
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/600_modules/blocks/",
-    "description": "Namespaces A namespace can be defined in three ways:  in a subfolder same folder, but in a new file or the same file  and is done by using slash when outside the main …",
+    "description": "Each file in a folder (with extension .fol) is part of a package. There is no need for imports or other things at the top of the file. They share the same scope, and each …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1037,7 +1037,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Blocks
+      Declaration
     
   </h6>
   <ul>
@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title active" data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title active" data-depth="0">Declaration</a>
         </li>
       
     
@@ -1974,7 +1958,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#namespaces">Namespaces</a>
+          <ul>
+            <li><a href="#direct-import">Direct import</a></li>
+            <li><a href="#code-access">Code access</a></li>
+          </ul>
+        </li>
         <li><a href="#blocks">Blocks</a>
           <ul>
             <li><a href="#unnamed-blocks">Unnamed blocks</a></li>
@@ -2056,7 +2045,7 @@
 
     
     <div class="toc__issue-el">
-        <a href="https://github.com/follang/docs/issues/new?title=Blocks%28docs/600_modules/blocks.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://github.com/follang/docs/issues/new?title=Declaration%28docs/600_modules/blocks.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
   <g
      transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
      id="g6">
@@ -2518,7 +2507,7 @@
         </a>
         </div>
         <div class="grow"></div>
-        <h2 class="title">Blocks</h2>
+        <h2 class="title">Declaration</h2>
         <div class="grow"></div>
         <div id="rightBurger" class="hide">
         <a href="#" class="burgermenu">
@@ -2572,7 +2561,7 @@
   
   <li  class="is-active" >
     
-      <span>Blocks</span>
+      <span>Declaration</span>
     
   </li>
   
@@ -3250,14 +3239,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3266,15 +3247,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title active" data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title active" data-depth="0">Declaration</a>
         </li>
       
     
@@ -3588,29 +3561,28 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="namespaces">Namespaces</h2>
-<p>A namespace can be defined in three ways:</p>
+    <p>Each file in a folder (with extension <code>.fol</code>) is part of a package. There is no need for imports or other things at the top of the file. They share the same scope, and each declaration is order independent for all files.</p>
+<h2 id="namespaces">Namespaces</h2>
+<p>A namespace can be defined in a subfolder of the main foler. And they can be nested.</p>
+<p>To acces the namespace there are two ways:</p>
 <ul>
-<li>in a subfolder</li>
-<li>same folder, but in a new file</li>
-<li>or the same file</li>
+<li>direct import with <code>use</code></li>
+<li>or code access with <code>::</code></li>
 </ul>
-<p>and is done by using slash when outside the main module</p>
-<pre><code>def shko/other: mod[] = {
-    pro[] main: int = {
-        // implementation
-    }
-    // implementation
+<h3 id="direct-import">Direct import</h3>
+<pre><code>use aNS: loc = { &quot;home/folder/printing/logg&quot; }
+
+pro[] main: int = {
+    logg.warn(&quot;something&quot;)
 }
-</code></pre><p>or in the same module file:</p>
-<pre><code>def shko: mod[] = {
-    pro[] main: int = {
-        // implementation
-    }
-    def shko/other: mod[] = {
-        // implementation
-    }
+
+</code></pre><h3 id="code-access">Code access</h3>
+<pre><code>use aNS: loc = { &quot;home/folder/printing&quot; }
+
+pro[] main: int = {
+    printing::logg.warn(&quot;something&quot;)
 }
+
 </code></pre><h2 id="blocks">Blocks</h2>
 <p>Block statement is used for scopes where members get destroyed when scope is finished. And there are two ways to define a block:</p>
 <ul>
@@ -3619,23 +3591,19 @@
 </ul>
 <h3 id="unnamed-blocks">Unnamed blocks</h3>
 <p>Are simply scopes, that may or may not return value, and are represented as: <code>{ //block }</code>, with <code>.</code> before the brackets for return types and <code>_</code> for non return types:</p>
-<pre><code>def shko: mod[] = {
-    pro[] main: int = {
-        _{
-            .echo(&quot;simple type block&quot;)
-        }
-        .echo(.{ return &quot;return type block&quot; })
+<pre><code>pro[] main: int = {
+    _{
+        .echo(&quot;simple type block&quot;)
     }
+    .echo(.{ return &quot;return type block&quot; })
 }
 </code></pre><h3 id="named-blocks">Named blocks</h3>
 <p>Blocks can be used as labels too, when we want to unconditionally jump to a specific part of the code.</p>
-<pre><code>def shko/other: mod[] = {
-    pro[] main: int = {
-        def block: blk[] = {            // $block A named block that can be referenced
-            // implementation
-        }
-        def mark: blk[]                 // $mark A named block that can be referenced, usually for &quot;jump&quot; statements
+<pre><code>pro[] main: int = {
+    def block: blk[] = {            // $block A named block that can be referenced
+        // implementation
     }
+    def mark: blk[]                 // $mark A named block that can be referenced, usually for &quot;jump&quot; statements
 }
 </code></pre>
   </article>
@@ -3654,7 +3622,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#namespaces">Namespaces</a>
+          <ul>
+            <li><a href="#direct-import">Direct import</a></li>
+            <li><a href="#code-access">Code access</a></li>
+          </ul>
+        </li>
         <li><a href="#blocks">Blocks</a>
           <ul>
             <li><a href="#unnamed-blocks">Unnamed blocks</a></li>
@@ -3736,7 +3709,7 @@
 
     
     <div class="toc__issue-el">
-        <a href="https://github.com/follang/docs/issues/new?title=Blocks%28docs/600_modules/blocks.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+        <a href="https://github.com/follang/docs/issues/new?title=Declaration%28docs/600_modules/blocks.md%29&amp;labels=kind%25!F%28MISSING%29bug&amp;template=bug-in-existing-docs.md"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
   <g
      transform="matrix(0.04263197,0,0,0.04263197,0.9844802,0.77949016)"
      id="g6">
@@ -4798,36 +4771,6 @@
 
 
   
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
   
     
   
@@ -5610,11 +5553,11 @@
 
         
             
-            <a href="https://follang.org/docs/600_modules/scopes/" title="Scope" class="pagination__left">
+            <a href="https://follang.org/docs/600_modules/import/" title="Import" class="pagination__left">
                 <div class="pagination__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6.411 12.258l10.277 10.744a.468.468 0 00.675-.646l-9.967-10.42 9.967-10.422a.468.468 0 00-.015-.66.466.466 0 00-.323-.13.466.466 0 00-.337.145L6.41 11.612a.468.468 0 000 .646z"/></svg>
                 </div>
-                <div class="pagination__right-title">Scope</div>
+                <div class="pagination__right-title">Import</div>
             </a>
             
         

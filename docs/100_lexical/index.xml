@@ -71,12 +71,13 @@ Either
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/100_lexical/comments/</guid>
-        <description>Normal comments Comments in FOL code follow the general Rust/C++ style of line (//) and block (/* ... */) comment forms and are interpreted as a form of whitespace.
-LINE_COMMENT :
-// (~[/ !] | //) ~\n* | //
-BLOCK_COMMENT :
-/* (~[* !] ) ( ~*/)* */ | /**/
- Docs comments Doc comments beginning with exactly three slashes (///) are interpreted as a special syntax for doc attributes.</description>
+        <description>Comments in FOL code DON&amp;rsquo;T follow the traditional style of line (//) comment forms.
+ Normal comments They are represented with backtick.
+SINGLE_LINE_COMMENT :
+`this is a single line comment` MULTI_LINE_COMMENT :
+`this is a multi line comment`  Docs comments Doc comments have at the beggining of comment the optinon [doc].
+DOC_COMMENT:
+`[doc] this is a documentation comment`  </description>
       </item>
       
       <item>

@@ -1590,14 +1590,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1606,15 +1598,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3262,14 +3246,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3278,15 +3254,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3601,7 +3569,11 @@
 
   <article class="single__contents" data-dir="ltr">
     <p>A rutine definition describes the interface to and the actions of the routine abstraction. A routine call is the explicit request that a specific routine be executed. A routine is said to be active if, after having been called, it has begun execution but has not yet completed that execution. A routine declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</p>
-<pre><code>fun[] add(el1, el2: int[64]): int[64] = { result = el1 + el2 }
+<pre><code>// version 1
+fun[] add(el1, el2: int[64]): int[64] = { result = el1 + el2 }
+
+// version 2
+fun[] add: int[64] = (el1, el2: int[64]){ result = el1 + el2 }
 </code></pre><p>You’ve already seen one of the most important routines in the language: the main routine, which is the entry point of many programs. You’ve also seen the <code>fun</code> or <code>pro</code> keyword, which allows you to declare new routine.</p>
 <h2 id="types">Types</h2>
 <p>There are two main types of routines in fol:</p>
@@ -4895,36 +4867,6 @@ pro main(): int = {
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3264,14 +3248,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3280,15 +3256,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3654,7 +3622,20 @@ true                    // boolean literal
 </code></pre><h2 id="call-literals">Call literals</h2>
 <p>Call literals are function calls that resolve to values:</p>
 <pre><code>var seven: int = add(2, 5);             // assigning variables &quot;seven&quot; to function call &quot;add&quot;
-</code></pre>
+</code></pre><p>`typ Vector: rec = {<br />
+var x: flt<br />
+var y: flt<br />
+}</p>
+<p>typ Rect: rec = {<br />
+var pos: Vector<br />
+var size: Vecotr<br />
+}</p>
+<p>fun make_rect(min, max: Vector): Rect {<br />
+return [Rect]{{min.x, min.y}, {max.x - max.y, max.y - max.y}}<br />
+return [Rect]{pos = {min.x, min.y}, size = {max.x - max.y, max.y - max.y}}<br />
+}</p>
+<p>`</p>
+
   </article>
 </div>
       
@@ -4808,36 +4789,6 @@ true                    // boolean literal
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

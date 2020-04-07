@@ -60,7 +60,7 @@ var rgb: int[][.range(255)]; Character limiting It works with strings too, say w
         
         <guid>https://follang.org/docs/700_sugar/matching/</guid>
         <description>Variable As variable assignment:
-var checker: str = when(variable) { in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = when(variable) { is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = when(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
+var checker: str = if(variable) { in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
 fun someValue(variable: int): str = when(variable) { in {.</description>
       </item>
       

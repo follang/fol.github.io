@@ -1006,7 +1006,7 @@
     "datePublished": "0001-01-01T00:00:00Z",
     "dateModified": "0001-01-01T00:00:00Z",
     "url" : "https://follang.org/docs/700_sugar/matching/",
-    "description": "Variable As variable assignment: var checker: str = when(variable) { in {..10} -\u0026gt; \u0026quot;in range of 1-10\u0026quot;; in {11..20} -\u0026gt; \u0026quot;in range of 11-20\u0026quot;; * …",
+    "description": "Variable As variable assignment: var checker: str = if(variable) { in {..10} -\u0026gt; \u0026quot;in range of 1-10\u0026quot;; in {11..20} -\u0026gt; \u0026quot;in range of 11-20\u0026quot;; * -\u0026gt; …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://follang.org/"
@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3245,14 +3229,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title " data-depth="0">Import</a>
         </li>
       
@@ -3261,15 +3237,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3585,19 +3553,19 @@
   <article class="single__contents" data-dir="ltr">
     <h2 id="variable">Variable</h2>
 <p>As variable assignment:</p>
-<pre><code>var checker: str = when(variable) { 
+<pre><code>var checker: str = if(variable) { 
     in {..10} -&gt; &quot;in range of 1-10&quot;; 
     in {11..20} -&gt; &quot;in range of 11-20&quot;;
     * -&gt; &quot;out of range&quot;;
 }
 
-var is_it: int = when(variable) { 
+var is_it: int = if(variable) { 
     is &quot;one&quot; -&gt; 1; 
     is &quot;two&quot; -&gt; 2; 
     * -&gt; 0;
 }
 
-var has_it: bol = when(variable) { 
+var has_it: bol = if(variable) { 
     has &quot;o&quot;, &quot;k&quot; -&gt; true; 
     * -&gt; false;
 }
@@ -4728,36 +4696,6 @@ var has_it: bol = when(variable) {
 
 
   
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
-
 
 
 

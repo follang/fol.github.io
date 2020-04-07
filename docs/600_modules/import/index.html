@@ -1591,14 +1591,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title active" data-depth="0">Import</a>
         </li>
       
@@ -1607,15 +1599,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -1976,6 +1960,7 @@
       <ul>
         <li><a href="#system-libraries">System libraries</a></li>
         <li><a href="#local-libraries">Local libraries</a></li>
+        <li><a href="#url-libraries">URL libraries</a></li>
       </ul>
     </li>
   </ul>
@@ -3245,14 +3230,6 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/define/" class="menu__title " data-depth="0">Define</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
           <a href="https://follang.org/docs/600_modules/import/" class="menu__title active" data-depth="0">Import</a>
         </li>
       
@@ -3261,15 +3238,7 @@
         
         
         <li>
-          <a href="https://follang.org/docs/600_modules/scopes/" class="menu__title " data-depth="0">Scope</a>
-        </li>
-      
-    
-      
-        
-        
-        <li>
-          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Blocks</a>
+          <a href="https://follang.org/docs/600_modules/blocks/" class="menu__title " data-depth="0">Declaration</a>
         </li>
       
     
@@ -3585,7 +3554,7 @@
   <article class="single__contents" data-dir="ltr">
     <p>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.</p>
 <p>Syntax to import a library is:</p>
-<pre><code>use package_name: mod[] = { path }
+<pre><code>use package_name: mod = { path }
 </code></pre><p>There are two type of import declartions:</p>
 <ul>
 <li>system libraries</li>
@@ -3593,32 +3562,31 @@
 </ul>
 <h2 id="system-libraries">System libraries</h2>
 <p>This is how including other libraries works, for example include <code>fmt</code> module from standard library:</p>
-<pre><code>use fmt: mod[std] = {fmt};
+<pre><code>use fmt: std = {&quot;fmt&quot;};
 
-def main: mod[init] = {
+pro main: ini = {
     fmt::log.warn(&quot;Last warning!...&quot;)
 }
 </code></pre><p>To use only the <code>log</code> namespace of <code>fmt</code> module:</p>
-<pre><code>use log: mod[std] = {fmt::log};
+<pre><code>use log: std = {&quot;fmt/log&quot;};
 
-def main: mod[init] = {
-    pro[] main: int = {
-        log.warn(&quot;Last warning!...&quot;)
-    }
+pro[] main: int = {
+    log.warn(&quot;Last warning!...&quot;)
 }
 </code></pre><p>But let&rsquo;s say you only wanna use ONLY the <code>warn</code> functionality of <code>log</code> namespace from <code>fmt</code> module:</p>
-<pre><code>use warn mod[std] = {fmt::log.warn};
+<pre><code>use warn std = {&quot;fmt/log.warn&quot;};
 
-def main: mod[init] = {
-    pro[] main: int = {
-        warn(&quot;Last warning!...&quot;)
-    }
+pro[] main: int = {
+    warn(&quot;Last warning!...&quot;)
 }
 </code></pre><h2 id="local-libraries">Local libraries</h2>
 <p>To include a local package (example, package name <code>bender</code>), then we include the folder where it is, followed by the package name (folder is where files are located, package is the name defned with mod[])</p>
-<pre><code>use bend: mod[loc] = {../folder/bender};
+<pre><code>use bend: loc = {&quot;../folder/bender&quot;};
 </code></pre><p>Then to acces only a namespace:</p>
-<pre><code>use space: mod[loc] = {../folder/bender::space};
+<pre><code>use space: loc = {&quot;../folder/bender/space&quot;};
+</code></pre><h2 id="url-libraries">URL libraries</h2>
+<p>Libraries can be directly URL imported:</p>
+<pre><code>use space: url = {&quot;https://github.com/follang/std&quot;};
 </code></pre>
   </article>
 </div>
@@ -3638,6 +3606,7 @@ def main: mod[init] = {
       <ul>
         <li><a href="#system-libraries">System libraries</a></li>
         <li><a href="#local-libraries">Local libraries</a></li>
+        <li><a href="#url-libraries">URL libraries</a></li>
       </ul>
     </li>
   </ul>
@@ -4755,26 +4724,6 @@ def main: mod[init] = {
 
 
   
-    
-    
-      
-    
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
   
     
   
@@ -4797,21 +4746,6 @@ def main: mod[init] = {
     
       
     
-  
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
   
 
 
@@ -5587,11 +5521,11 @@ def main: mod[init] = {
 
         
             
-            <a href="https://follang.org/docs/600_modules/define/" title="Define" class="pagination__left">
+            <a href="https://follang.org/docs/600_modules/" title="Modules tree" class="pagination__left">
                 <div class="pagination__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6.411 12.258l10.277 10.744a.468.468 0 00.675-.646l-9.967-10.42 9.967-10.422a.468.468 0 00-.015-.66.466.466 0 00-.323-.13.466.466 0 00-.337.145L6.41 11.612a.468.468 0 000 .646z"/></svg>
                 </div>
-                <div class="pagination__right-title">Define</div>
+                <div class="pagination__right-title">Modules tree</div>
             </a>
             
         
@@ -5600,8 +5534,8 @@ def main: mod[init] = {
         <div class="grow"></div>
         
             
-            <a href="https://follang.org/docs/600_modules/scopes/" title="Scope" class="pagination__left">
-                <div class="pagination__left-title">Scope</div>
+            <a href="https://follang.org/docs/600_modules/blocks/" title="Declaration" class="pagination__left">
+                <div class="pagination__left-title">Declaration</div>
                 <div class="pagination__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.719 11.561L7.442.818a.468.468 0 00-.675.645l9.967 10.421-9.967 10.42a.468.468 0 00.015.661.466.466 0 00.323.13.466.466 0 00.337-.144L17.72 12.207a.468.468 0 000-.646z"/></svg>
                 </div>
