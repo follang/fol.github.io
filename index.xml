@@ -284,7 +284,7 @@ def test1: tst[&amp;quot;sometest&amp;quot;, shko] = {} def &amp;quot;some unit 
         <guid>https://follang.org/docs/500_items/constructs/aliases/</guid>
         <description>An alias declaration binds an identifier to an existing type. All the properties of the existing type are bound to the alias too.
 There are two type of aliasing:
- aliasing extending  Aliasing typ[ali] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
+ aliasing extending  Aliasing ali I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
 ~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 } Another example is creating a rgb type that can have numbers only form 0 to 255:</description>
       </item>
       
@@ -696,8 +696,8 @@ Union Union is a data type that allows different data types to be stored in the 
         
         <guid>https://follang.org/docs/700_sugar/matching/</guid>
         <description>Variable As variable assignment:
-var checker: str = if(variable) { in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if(variable) { is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = if(variable) { has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
-fun someValue(variable: int): str = when(variable) { in {.</description>
+var checker: str = if (variable){ in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if (variable){ is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = if (variable){ has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
+fun someValue(variable: int): str = if (variable){ in {.</description>
       </item>
       
       <item>
@@ -709,6 +709,16 @@ fun someValue(variable: int): str = when(variable) { in {.</description>
         <description>There are four access expresions:
  namespace member access routine member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
 &amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
+      </item>
+      
+      <item>
+        <title>Blocks</title>
+        <link>https://follang.org/docs/200_expressions/blocks/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/blocks/</guid>
+        <description>FOL&amp;rsquo;s all possible code blocks:
+DECLARATION Variable var one = &amp;lt;expression&amp;gt;; ~var one = &amp;lt;expression&amp;gt;; ~var one: int = &amp;lt;expression&amp;gt;; ~var[] one: int[] = &amp;lt;expression&amp;gt;; ~var[opt,opt] one: int[opt,opt] = &amp;lt;expression&amp;gt;; ~var[] ( one: int[] = &amp;lt;expression&amp;gt;; two: int[] = &amp;lt;expression&amp;gt;; ) ~var[] one, two, three: int[] = &amp;lt;expression&amp;gt;; ~var[] one, two, three: int[], flt[], bol[] = &amp;lt;expression&amp;gt;; Functions fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~log[] one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun[] &#39;!</description>
       </item>
       
       <item>
@@ -751,7 +761,7 @@ var start, *_ = { 1, 4, 3, 8 } .echo(start) // Prints 1 .echo(_) // Prints [4, 3
         <guid>https://follang.org/docs/700_sugar/inquiry/</guid>
         <description>Inquiries are inline unit tests and are a part of the basic syntax sugar. In other words, we don’t have to import any libraries or build up any suites to run tests.
 Instead, FOL includes a couple of clauses for testing within the source code:
-fun sum(l: ...?int): int = { when(l.length()) { is 0 =&amp;gt; 0; is 1 =&amp;gt; l[0]; $ =&amp;gt; l[0] + sum(l[1:]); } where(self) { sum() is 0; sum(8) is 8; sum(1, 2, 3) is 6; } } Here, we can see an awesome list sum function.</description>
+fun sum(l: int...): int = { when (l.length()){ is 1 -&amp;gt; l[0]; * -&amp;gt; l[0] + sum(l[1:]); } where (self){ sum(8) is 8; sum(1, 2, 3) is 6; } } Here, we can see an awesome list sum function.</description>
       </item>
       
       <item>

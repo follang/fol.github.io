@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/500_items/constructs/aliases/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.70.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/500_items/constructs/aliases/">
@@ -1257,6 +1257,14 @@
   </ul>
   
 
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
       
     
   </ul>
@@ -2906,6 +2914,14 @@
 
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3567,19 +3583,19 @@
 <li>extending</li>
 </ul>
 <h2 id="aliasing">Aliasing</h2>
-<pre><code>typ[ali] I5: arr[int, 5];
+<pre><code>ali I5: arr[int, 5];
 </code></pre><p>So now the in the code, instead of writing <code>arr[int, 5]</code> we could use <code>I5</code>:</p>
 <pre><code>~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 }
 </code></pre><p>Another example is creating a <code>rgb</code> type that can have numbers only form 0 to 255:</p>
-<pre><code>typ[ali] rgb: int[8][.range(255)] ;                        // we create a type that holds only number from 0 to 255
-typ[ali] rgbSet: set[rgb, rgb, rgb];                       // then we create a type holding the `rgb` type
+<pre><code>ali rgb: int[8][.range(255)] ;                        // we create a type that holds only number from 0 to 255
+ali rgbSet: set[rgb, rgb, rgb];                       // then we create a type holding the `rgb` type
 </code></pre><p>Alias declaration are created because they can simplify using them multiple times, their identifier (their name) may be expressive in other contexts, and–most importantly–so that you can define (attach) methods to it (you can&rsquo;t attach methods to built-in types, nor to anonymous types or types defined in other packages).</p>
-<p>Attaching methods is of outmost importance, because even though instead of attaching methods you could just as easily create and use functions that accept the &ldquo;original&rdquo; type as parameter, only types with methods can implement standards <code>std[]</code> that list/enforce those methods, and you can&rsquo;t attach methods to certain types unless you create a new type derived from them.</p>
+<p>Attaching methods is of outmost importance, because even though instead of attaching methods you could just as easily create and use functions that accept the &ldquo;original&rdquo; type as parameter, only types with methods can implement blueprint standards <code>blu[]</code> that list/enforce those methods, and you can&rsquo;t attach methods to certain types unless you create a new type derived from them.</p>
 <h2 id="extending">Extending</h2>
 <p>Extensions add new functionality to an existing constructs. This includes the ability to extend types for which you do not have access to the original source code (known as retroactive modeling).</p>
-<pre><code>typ[ext] type: type;
+<pre><code>ali[ext] type: type;
 </code></pre><p>For example, adding a <code>print</code> function to the default integer type <code>int</code>:</p>
-<pre><code>typ[ext] int: int;
+<pre><code>ali[ext] int: int;
 
 pro (int)print(): non = {
     .echo(self)
@@ -3589,7 +3605,7 @@ pro main: int = {
     5.print()                   // method print on int
 }
 </code></pre><p>Or turning a string <code>str</code> into a vector of characters:</p>
-<pre><code>typ[ext] str: str;
+<pre><code>ali[ext] str: str;
 
 fun (str)to_array(): vec[chr] = {
     loop(x in self){
@@ -4360,6 +4376,21 @@ pro main(): int = {
   
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 

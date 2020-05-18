@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/500_items/generics/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.70.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/500_items/generics/">
@@ -1257,6 +1257,14 @@
   </ul>
   
 
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
       
     
   </ul>
@@ -2902,6 +2910,14 @@
 
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3570,7 +3586,7 @@ fun biggerInteger(a, b: int[64]): int[64] = { max(a, b) }
 	var anarray: arr[T,N];
 	+fun getsize(): num = { result = N; }
 };
-var aContainer: container[int, 5] = { anarray = {zero, one, two, three, four}; };
+var aContainer: container[int, 5] = { anarray = { 1, 2, 3, 4, 5 }; };
 </code></pre><h2 id="dispach">Dispach</h2>
 <p>Static dispatch (or early binding) happens when compiler knows at compile time which function body will be executed when I call a method. In contrast, dynamic dispatch (or run-time dispatch or virtual method call or late binding) happens when compiler defers that decision to run time. This runtime dispatch requires either an indirect call through a function pointer, or a name-based method lookup.</p>
 <pre><code>std foo: pro = { fun bar(); }
@@ -4351,6 +4367,21 @@ pro main: int = {
   
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 

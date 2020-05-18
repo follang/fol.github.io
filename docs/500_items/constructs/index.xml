@@ -21,7 +21,7 @@
         <guid>https://follang.org/docs/500_items/constructs/aliases/</guid>
         <description>An alias declaration binds an identifier to an existing type. All the properties of the existing type are bound to the alias too.
 There are two type of aliasing:
- aliasing extending  Aliasing typ[ali] I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
+ aliasing extending  Aliasing ali I5: arr[int, 5]; So now the in the code, instead of writing arr[int, 5] we could use I5:
 ~var[pub] fiveIntigers: I5 = { 0, 1, 2, 3, 4, 5 } Another example is creating a rgb type that can have numbers only form 0 to 255:</description>
       </item>
       

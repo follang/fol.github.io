@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/200_expressions/200_sta/control/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.70.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/200_expressions/200_sta/control/">
@@ -1257,6 +1257,14 @@
   </ul>
   
 
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
       
     
   </ul>
@@ -1975,6 +1983,7 @@
             <li><a href="#iteration-1">Iteration</a></li>
           </ul>
         </li>
+        <li><a href="#guard-type">Guard type</a></li>
       </ul>
     </li>
   </ul>
@@ -2921,6 +2930,14 @@
 
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3580,49 +3597,50 @@
 <ul>
 <li>choice - <code>when</code></li>
 <li>loop - <code>loop</code></li>
+<li>guard - <code>if</code></li>
 </ul>
 <h2 id="choice-type">Choice type</h2>
-<pre><code>when(condition){ case(condition){} case(condition){} * {} };
-when(variable){ is (value){}; is (value){}; * {}; };
-when(variable){ in (iterator){}; in (iterator){}; * {}; };
-when(iterable){ has (member){}; has (member){}; * {}; };
-when(generic){ of (type){}; of (type){}; * {}; };
+<pre><code>when(){ case(condition){} case(condition){} _ {} };
+when(variable){ is (value){}; is (value){}; _ {}; };
+when(variable){ in (iterator){}; in (iterator){}; _ {}; };
+when(variable){ has (member){}; has (member){}; _ {}; };
+when(variable){ of (type){}; of (type){}; _ {}; };
 when(type){ on (channel){}; on (channel){}; };
 </code></pre><h3 id="condition">Condition</h3>
-<pre><code>when(true) {
+<pre><code>when() {
     case (x == 6){ // implementation }
     case (y.set()){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h3 id="valueation">Valueation</h3>
 <pre><code>when(x) {
     is (6){ // implementation }
     is (&gt;7){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h3 id="iteration">Iteration</h3>
-<pre><code>when(2*x) {
+<pre><code>when(2 * x) {
     in ({0..4}){ // implementation }
     in ({ 5, 6, 7, 8, }){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h3 id="contains">Contains</h3>
 <pre><code>when({4,5,6,7,8,9,0,2,3,1}) {
     has (5){ // implementation }
     has (10){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h3 id="generics">Generics</h3>
 <pre><code>when(T) {
     of (int){ // implementation }
     of (str){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h3 id="channel">Channel</h3>
 <pre><code>when(str) {
     on (channel){ // implementation }
     on (channel){ // implementation } 
-    * { // default implementation }
+    _ { // default implementation }
 }
 </code></pre><h2 id="loop-type">Loop type</h2>
 <pre><code>loop(condition){};
@@ -3640,13 +3658,25 @@ loop( x in {..100}) if ( x % 2 == 0 )){
     // implementation
 }
 
-loop( x in {..100} if ( x in somearra ) and ( x in anotherarray )){
+loop( x in {..100} if (( x in somearra ) and ( x in anotherarray ))){
     // implementation
 }
 
 </code></pre><h3 id="iteration-1">Iteration</h3>
 <pre><code>loop( x in array ){
     // implementation
+}
+</code></pre><h2 id="guard-type">Guard type</h2>
+<p>The if statement can be used as guard in both <code>when</code> statement and <code>loop</code> statement:</p>
+<pre><code>
+loop( x in {..100} if (( x in somearra ) and ( x in anotherarray ))){
+    // implementation
+}
+
+when(x) {
+    is (6) if (6 of (int)){ // implementation }
+    is (7) if (7 in (somearray)){ // implementation } 
+    * { // default implementation }http://spack.rtfd.io/
 }
 </code></pre>
   </article>
@@ -3682,6 +3712,7 @@ loop( x in {..100} if ( x in somearra ) and ( x in anotherarray )){
             <li><a href="#iteration-1">Iteration</a></li>
           </ul>
         </li>
+        <li><a href="#guard-type">Guard type</a></li>
       </ul>
     </li>
   </ul>
@@ -4433,6 +4464,21 @@ loop( x in {..100} if ( x in somearra ) and ( x in anotherarray )){
   
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 

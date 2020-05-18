@@ -31,6 +31,16 @@
         <description>An expression is a sequence of operators and their operands, that specifies a computation. It is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, routine, or namespace. Expressions can consist of a literal value, a routine invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, routine parameter, namespace or type.</description>
       </item>
       
+      <item>
+        <title>Blocks</title>
+        <link>https://follang.org/docs/200_expressions/blocks/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://follang.org/docs/200_expressions/blocks/</guid>
+        <description>FOL&amp;rsquo;s all possible code blocks:
+DECLARATION Variable var one = &amp;lt;expression&amp;gt;; ~var one = &amp;lt;expression&amp;gt;; ~var one: int = &amp;lt;expression&amp;gt;; ~var[] one: int[] = &amp;lt;expression&amp;gt;; ~var[opt,opt] one: int[opt,opt] = &amp;lt;expression&amp;gt;; ~var[] ( one: int[] = &amp;lt;expression&amp;gt;; two: int[] = &amp;lt;expression&amp;gt;; ) ~var[] one, two, three: int[] = &amp;lt;expression&amp;gt;; ~var[] one, two, three: int[], flt[], bol[] = &amp;lt;expression&amp;gt;; Functions fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~log[] one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun[] &#39;!</description>
+      </item>
+      
     
   </channel>
 </rss>

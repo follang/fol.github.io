@@ -71,8 +71,11 @@ typ[] std[] </description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://follang.org/docs/600_modules/</guid>
-        <description>FOL programs are constructed by linking together packages. A package in turn is constructed from one or more source files that together declare constants, types, variables and functions belonging to the package and which are accessible in all files of the same package. Those elements may be exported and used in another package.
-Every file with extension .fol in a folder is part of a package. Thus every file in the folder that uses the same package name, share the same scope between each other.</description>
+        <description>zsh:1: command not found: :quitall
+Every file with extension .fol in a folder is part of a package. Thus every file in the folder that uses the same package name, share the same scope between each other.
+Two packages can&amp;rsquo;t exist in same folder, so it is suggested using hierarchy folders to separate packages.
+Types Packages can be either:
+ defined imported  </description>
       </item>
       
       <item>

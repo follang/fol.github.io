@@ -975,7 +975,7 @@
 <meta property="og:url" content="https://follang.org/docs/700_sugar/inquiry/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.70.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/700_sugar/inquiry/">
@@ -1257,6 +1257,14 @@
   </ul>
   
 
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
       
     
   </ul>
@@ -2888,6 +2896,14 @@
 
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3544,15 +3560,13 @@
   <article class="single__contents" data-dir="ltr">
     <p>Inquiries are inline unit tests and are a part of the basic syntax sugar. In other words, we don’t have to import any libraries or build up any suites to run tests.</p>
 <p>Instead, FOL includes a couple of clauses for testing within the source code:</p>
-<pre><code>fun sum(l: ...?int): int = {
-    when(l.length()) {
-        is 0 =&gt; 0;
-        is 1 =&gt; l[0];
-        $ =&gt; l[0] + sum(l[1:]);
+<pre><code>fun sum(l: int...): int = {
+    when (l.length()){
+        is 1 -&gt; l[0];
+        * -&gt; l[0] + sum(l[1:]);
     }
 
-    where(self) {
-        sum() is 0;
+    where (self){
         sum(8) is 8;
         sum(1, 2, 3) is 6;
     }
@@ -4307,6 +4321,21 @@
   
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 

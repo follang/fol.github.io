@@ -976,7 +976,7 @@
 <meta property="og:url" content="https://follang.org/docs/500_items/routines/">
 <meta property="og:type" content="website">
 
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.70.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://follang.org/docs/500_items/routines/">
@@ -1256,6 +1256,14 @@
   </ul>
   
 
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
       
     
   </ul>
@@ -2914,6 +2922,14 @@
 
       
     
+      
+        
+        
+        <li>
+          <a href="https://follang.org/docs/200_expressions/blocks/" class="menu__title " data-depth="0">Blocks</a>
+        </li>
+      
+    
   </ul>
   
 
@@ -3569,11 +3585,11 @@
 
   <article class="single__contents" data-dir="ltr">
     <p>A rutine definition describes the interface to and the actions of the routine abstraction. A routine call is the explicit request that a specific routine be executed. A routine is said to be active if, after having been called, it has begun execution but has not yet completed that execution. A routine declaration consists of an identifier, zero or more argument parameters, a return value type and a block of code.</p>
-<pre><code>// version 1
-fun[] add(el1, el2: int[64]): int[64] = { result = el1 + el2 }
+<pre><code>// function definition
+fun[] add(el1, el2: int): int = { result = el1 + el2 }
 
-// version 2
-fun[] add: int[64] = (el1, el2: int[64]){ result = el1 + el2 }
+// function literal
+var[] add = [fun(el1, el2: int): int]{ result = el1 + el2 }
 </code></pre><p>You’ve already seen one of the most important routines in the language: the main routine, which is the entry point of many programs. You’ve also seen the <code>fun</code> or <code>pro</code> keyword, which allows you to declare new routine.</p>
 <h2 id="types">Types</h2>
 <p>There are two main types of routines in fol:</p>
@@ -4487,6 +4503,21 @@ pro main(): int = {
   
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
 
 
 
