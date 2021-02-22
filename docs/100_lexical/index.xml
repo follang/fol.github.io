@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lexical analysis on FOL</title>
-    <link>https://follang.org/docs/100_lexical/</link>
+    <link>https://follang.github.io/docs/100_lexical/</link>
     <description>Recent content in Lexical analysis on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/100_lexical/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/100_lexical/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Keywords</title>
-        <link>https://follang.org/docs/100_lexical/keywords/</link>
+        <link>https://follang.github.io/docs/100_lexical/keywords/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/keywords/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/keywords/</guid>
         <description>Fol has a number of restricted groups of keywords:
 BK (build-in keywords) BK_OR or
 BK_XOR xor
@@ -52,10 +52,10 @@ BK_GO go
       
       <item>
         <title>Identifiers</title>
-        <link>https://follang.org/docs/100_lexical/identify/</link>
+        <link>https://follang.github.io/docs/100_lexical/identify/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/identify/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/identify/</guid>
         <description>Encoding Identifiers in FOL can be any string of letters, digits and underscores, but beginning with a letter. Two immediate following underscores __ are not allowed.
 IDENTIFIER:
 [a-z A-Z] [a-z A-Z 0-9 _]* | _ [a-z A-Z 0-9 _]+
@@ -67,10 +67,10 @@ Either
       
       <item>
         <title>Comments</title>
-        <link>https://follang.org/docs/100_lexical/comments/</link>
+        <link>https://follang.github.io/docs/100_lexical/comments/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/comments/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/comments/</guid>
         <description>Comments in FOL code DON&amp;rsquo;T follow the traditional style of line (//) comment forms.
  Normal comments They are represented with backtick.
 SINGLE_LINE_COMMENT :
@@ -82,10 +82,10 @@ DOC_COMMENT:
       
       <item>
         <title>Whitespaces</title>
-        <link>https://follang.org/docs/100_lexical/whitespaces/</link>
+        <link>https://follang.github.io/docs/100_lexical/whitespaces/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/whitespaces/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/whitespaces/</guid>
         <description>Whitespaces Whitespace is any non-empty string containing only characters that have the below Unicode properties:
  U+0009 (horizontal tab, &amp;lsquo;\t&amp;rsquo;) U+000B (vertical tab) U+000C (form feed) U+0020 (space, &#39; &amp;lsquo;) U+0085 (next line) U+200E (left-to-right mark) U+200F (right-to-left mark) U+2028 (line separator) U+2029 (paragraph separator)  New lines New line are used as end-of-line separators:
  U+000A (line feed, &amp;lsquo;\n&amp;rsquo;) U+000D (carriage return, &amp;lsquo;\r&amp;rsquo;)  </description>
@@ -93,10 +93,10 @@ DOC_COMMENT:
       
       <item>
         <title>Letters</title>
-        <link>https://follang.org/docs/100_lexical/strings/</link>
+        <link>https://follang.github.io/docs/100_lexical/strings/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/strings/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/strings/</guid>
         <description>Characters A character is a single Unicode element enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).
 var aCharacter: chr = &amp;quot;z\n&amp;quot; var anotherOne: str = &amp;quot;語\n&amp;quot; Raw characters Raw character literals do not process any escapes. They are enclosed within single-quotes U+0027 (&#39;) with the exception of U+0027 itself:
 var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of Unicode elements enclosed within quotes U+0022 (&amp;quot;) with the exception of U+0022 itself, which must be escaped by a preceding U+005C character (\).</description>
@@ -104,10 +104,10 @@ var aCharacter: chr = &#39;z&#39; Strings A string is a single or a sequence of 
       
       <item>
         <title>Numbers</title>
-        <link>https://follang.org/docs/100_lexical/numbers/</link>
+        <link>https://follang.github.io/docs/100_lexical/numbers/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/numbers/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/numbers/</guid>
         <description>A number is either an integer, floating-point or imaginary. The grammar for recognizing the kind of number is mixed.
 Intigers An integer has one of four forms:
  A decimal literal starts with a decimal digit and continues with any mixture of decimal digits and underscores. A hex literal starts with the character sequence U+0030 U+0078 (0x) and continues as any mixture (with at least one digit) of hex digits and underscores.</description>
@@ -115,10 +115,10 @@ Intigers An integer has one of four forms:
       
       <item>
         <title>Symbols</title>
-        <link>https://follang.org/docs/100_lexical/symbols/</link>
+        <link>https://follang.github.io/docs/100_lexical/symbols/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/symbols/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/symbols/</guid>
         <description>Operators Fol allows user defined operators. An operator is any combination of the following characters:
 = + - * / &amp;gt; . @ $ ~ &amp;amp; % &amp;lt; : ! ? ^ # ` \ _ The grammar uses the terminal OP to refer to operator symbols as defined here.
 Brackets Bracket punctuation is used in various parts of the grammar. An open bracket must always be paired with a close bracket.</description>

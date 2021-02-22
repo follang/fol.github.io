@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code blocks on FOL</title>
-    <link>https://follang.org/docs/200_expressions/</link>
+    <link>https://follang.github.io/docs/200_expressions/</link>
     <description>Recent content in Code blocks on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/200_expressions/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/200_expressions/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Statements</title>
-        <link>https://follang.org/docs/200_expressions/200_sta/</link>
+        <link>https://follang.github.io/docs/200_expressions/200_sta/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/200_sta/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/200_sta/</guid>
         <description>The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling routines, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
       </item>
       
       <item>
         <title>Expressions</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/</link>
+        <link>https://follang.github.io/docs/200_expressions/300_exp/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/300_exp/</guid>
         <description>An expression is a sequence of operators and their operands, that specifies a computation. It is a sequence of one or more operands and zero or more operators that can be evaluated to a single value, object, routine, or namespace. Expressions can consist of a literal value, a routine invocation, an operator and its operands, or a simple name. Simple names can be the name of a variable, type member, routine parameter, namespace or type.</description>
       </item>
       
       <item>
         <title>Blocks</title>
-        <link>https://follang.org/docs/200_expressions/blocks/</link>
+        <link>https://follang.github.io/docs/200_expressions/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/blocks/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/blocks/</guid>
         <description>FOL&amp;rsquo;s all possible code blocks:
 DECLARATION Variable var one = &amp;lt;expression&amp;gt;; ~var one = &amp;lt;expression&amp;gt;; ~var one: int = &amp;lt;expression&amp;gt;; ~var[] one: int[] = &amp;lt;expression&amp;gt;; ~var[opt,opt] one: int[opt,opt] = &amp;lt;expression&amp;gt;; ~var[] ( one: int[] = &amp;lt;expression&amp;gt;; two: int[] = &amp;lt;expression&amp;gt;; ) ~var[] one, two, three: int[] = &amp;lt;expression&amp;gt;; ~var[] one, two, three: int[], flt[], bol[] = &amp;lt;expression&amp;gt;; Functions fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun one(two: int): int = { &amp;lt;expression&amp;gt; } ~log[] one(two: int): int = { &amp;lt;expression&amp;gt; } ~fun[] &#39;!</description>
       </item>

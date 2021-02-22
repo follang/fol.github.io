@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on FOL</title>
-    <link>https://follang.org/blog/</link>
+    <link>https://follang.github.io/blog/</link>
     <description>Recent content in Blog on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://follang.org/blog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://follang.org/blog/markdown-syntax/</link>
+        <link>https://follang.github.io/blog/markdown-syntax/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/blog/markdown-syntax/</guid>
+        <guid>https://follang.github.io/blog/markdown-syntax/</guid>
         <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de&lt;br /&gt;
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice&lt;br /&gt;
 subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc&lt;br /&gt;

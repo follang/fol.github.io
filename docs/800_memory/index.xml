@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Memory model on FOL</title>
-    <link>https://follang.org/docs/800_memory/</link>
+    <link>https://follang.github.io/docs/800_memory/</link>
     <description>Recent content in Memory model on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/800_memory/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/800_memory/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Ownership</title>
-        <link>https://follang.org/docs/800_memory/ownership/</link>
+        <link>https://follang.github.io/docs/800_memory/ownership/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/800_memory/ownership/</guid>
+        <guid>https://follang.github.io/docs/800_memory/ownership/</guid>
         <description>Much like C++ and Rust, in Fol every variable declared, by default is created in stack unless explicitly specified othervise. Using option [new] or [@] in a variable, it allocates memory in the heap. The size of the allocation is defined by the type. Internally this creates a pointer to heap address, and dereferences it to the type you are having. Usually those behind the scene pointers here are unique pointers.</description>
       </item>
       
       <item>
         <title>Pointers</title>
-        <link>https://follang.org/docs/800_memory/pointers/</link>
+        <link>https://follang.github.io/docs/800_memory/pointers/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/800_memory/pointers/</guid>
+        <guid>https://follang.github.io/docs/800_memory/pointers/</guid>
         <description>The only way to access the same memory with different variable is by using pointers. In example below, we create a pointer, and when we want to dereference it to modify the content of the address that the pointer is pointing to, we use *ptrname or .pointer_value(ptrname).
-@var aContainer: arr[int, 5]; //allocating memory on the heap var contPoint: ptr[] = aContainer; *contPoint = { zero, one, two, three, four }; //dereferencing and then assigning values Bare in mind, that the pointer (so, the address itself) can&amp;rsquo;t be changes, unless when created is marked as var[mut].</description>
+@var aContainer: str[] = &amp;quot;hi there&amp;quot;; //allocating memory on the heap for IMMUTABLE variable var contPoint: ptr[str[]] = aContainer; echo(*contPoint); // here we dereference it and echo &amp;quot;hi there&amp;quot; Bare in mind, that the pointer (so, the address itself) can&amp;rsquo;t be changes, unless the variable itself and pointer created are marked as var[mut].</description>
       </item>
       
     

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FOL</title>
-    <link>https://follang.org/de/</link>
+    <link>https://follang.github.io/de/</link>
     <description>Recent content on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     <lastBuildDate>Sun, 26 Jan 2020 04:15:05 +0900</lastBuildDate>
     
-        <atom:link href="https://follang.org/de/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/de/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>May 2019</title>
-        <link>https://follang.org/de/updates/2019_may/</link>
+        <link>https://follang.github.io/de/updates/2019_may/</link>
         <pubDate>Tue, 28 Jan 2020 00:10:51 +0900</pubDate>
         
-        <guid>https://follang.org/de/updates/2019_may/</guid>
+        <guid>https://follang.github.io/de/updates/2019_may/</guid>
         <description>Markdown here</description>
       </item>
       

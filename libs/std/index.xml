@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>STD on FOL</title>
-    <link>https://follang.org/libs/std/</link>
+    <link>https://follang.github.io/libs/std/</link>
     <description>Recent content in STD on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     <lastBuildDate>Fri, 28 Feb 2020 10:08:56 +0900</lastBuildDate>
     
-        <atom:link href="https://follang.org/libs/std/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/libs/std/index.xml" rel="self" type="application/rss+xml" />
     
     
     

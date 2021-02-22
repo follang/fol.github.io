@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Modules tree on FOL</title>
-    <link>https://follang.org/docs/600_modules/</link>
+    <link>https://follang.github.io/docs/600_modules/</link>
     <description>Recent content in Modules tree on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/600_modules/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/600_modules/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Import</title>
-        <link>https://follang.org/docs/600_modules/import/</link>
+        <link>https://follang.github.io/docs/600_modules/import/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/import/</guid>
+        <guid>https://follang.github.io/docs/600_modules/import/</guid>
         <description>An import declaration states that the source file containing the declaration depends on functionality of the imported package and enables access to exported identifiers of that package.
 Syntax to import a library is:
 use package_name: mod = { path } There are two type of import declartions:
@@ -27,10 +27,10 @@ use package_name: mod = { path } There are two type of import declartions:
       
       <item>
         <title>Declaration</title>
-        <link>https://follang.org/docs/600_modules/blocks/</link>
+        <link>https://follang.github.io/docs/600_modules/blocks/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/blocks/</guid>
+        <guid>https://follang.github.io/docs/600_modules/blocks/</guid>
         <description>Each file in a folder (with extension .fol) is part of a package. There is no need for imports or other things at the top of the file. They share the same scope, and each declaration is order independent for all files.
 Namespaces A namespace can be defined in a subfolder of the main foler. And they can be nested.
 To acces the namespace there are two ways:
@@ -39,10 +39,10 @@ To acces the namespace there are two ways:
       
       <item>
         <title>Tests</title>
-        <link>https://follang.org/docs/600_modules/tests/</link>
+        <link>https://follang.github.io/docs/600_modules/tests/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/tests/</guid>
+        <guid>https://follang.github.io/docs/600_modules/tests/</guid>
         <description>Blocks defined with type tst, have access to the module (or namespace) defined in tst[&amp;quot;name&amp;quot;, access].
 def test1: tst[&amp;quot;sometest&amp;quot;, shko] = {} def &amp;quot;some unit testing&amp;quot;: tst[shko] = {} </description>
       </item>

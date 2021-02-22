@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Language sugar on FOL</title>
-    <link>https://follang.org/docs/700_sugar/</link>
+    <link>https://follang.github.io/docs/700_sugar/</link>
     <description>Recent content in Language sugar on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/700_sugar/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/700_sugar/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Silents</title>
-        <link>https://follang.org/docs/700_sugar/silents/</link>
+        <link>https://follang.github.io/docs/700_sugar/silents/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/silents/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/silents/</guid>
         <description>Single letter identifiers (SILENTs) identifiers are a form of languages sugar assignment.
 Letter Lowercase Many times is needed to use a variable in-place and to decluter the code we use silents:
-each(var x: str; x in {..10}){ // implementation } each(x in {..10}){ // we use the sicale `x` here // implementation } Uppercase If a silent is uppercase, then it is a constant, can&amp;rsquo;t be changed. This is very important when using FOL for logic programming:</description>
+each(var x: int; x in {.. 10}){ // implementation } each(x in {.. 10}){ // we use the sicale `x` here // implementation } Uppercase If a silent is uppercase, then it is a constant, can&amp;rsquo;t be changed. This is very important when using FOL for logic programming:</description>
       </item>
       
       <item>
         <title>Pipes</title>
-        <link>https://follang.org/docs/700_sugar/pipes/</link>
+        <link>https://follang.github.io/docs/700_sugar/pipes/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/pipes/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/pipes/</guid>
         <description>Piping is a process that connects the output of the expression to the left to the input of the expression of the right. You can think of it as a dedicated program that takes care of copying everything that one expressionm prints, and feeding it to the next expression. The idea is the same as bash pipes. For example, an routine output is piped to a conditional through pipe symbol | then the conditional takes the input and returns true or false.</description>
       </item>
       
       <item>
         <title>Mixture</title>
-        <link>https://follang.org/docs/700_sugar/mixture/</link>
+        <link>https://follang.github.io/docs/700_sugar/mixture/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/mixture/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/mixture/</guid>
         <description>Optional var someMixtureInt: ?int = 45; Never var someNverType: !int = panic(); </description>
       </item>
       
       <item>
         <title>Limits</title>
-        <link>https://follang.org/docs/700_sugar/limits/</link>
+        <link>https://follang.github.io/docs/700_sugar/limits/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/limits/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/limits/</guid>
         <description>Limiting is a syntactic way to set boundaries for variables. The way FOL does is by using [] right after the type declaration type[], so: type[options][limits]
 Initger limiting Example, making a intiger variable have only numbers from 0 to 255 that represents an RGB value for a single color:
 var rgb: int[][.range(255)]; Character limiting It works with strings too, say we want a string that can should be of a particular form, for example an email:</description>
@@ -55,10 +55,10 @@ var rgb: int[][.range(255)]; Character limiting It works with strings too, say w
       
       <item>
         <title>Matching</title>
-        <link>https://follang.org/docs/700_sugar/matching/</link>
+        <link>https://follang.github.io/docs/700_sugar/matching/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/matching/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/matching/</guid>
         <description>Variable As variable assignment:
 var checker: str = if (variable){ in {..10} -&amp;gt; &amp;quot;in range of 1-10&amp;quot;; in {11..20} -&amp;gt; &amp;quot;in range of 11-20&amp;quot;; * -&amp;gt; &amp;quot;out of range&amp;quot;; } var is_it: int = if (variable){ is &amp;quot;one&amp;quot; -&amp;gt; 1; is &amp;quot;two&amp;quot; -&amp;gt; 2; * -&amp;gt; 0; } var has_it: bol = if (variable){ has &amp;quot;o&amp;quot;, &amp;quot;k&amp;quot; -&amp;gt; true; * -&amp;gt; false; } Function As function return:
 fun someValue(variable: int): str = if (variable){ in {.</description>
@@ -66,10 +66,10 @@ fun someValue(variable: int): str = if (variable){ in {.</description>
       
       <item>
         <title>Rolling</title>
-        <link>https://follang.org/docs/700_sugar/rolling/</link>
+        <link>https://follang.github.io/docs/700_sugar/rolling/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/rolling/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/rolling/</guid>
         <description>Rolling or list comprehension is a syntactic construct available FOL for creating a list based on existing lists. It follows the form of the mathematical set-builder notation - set comprehension.
 Rolling has the same syntactic components to represent generation of a list in order from an input list or iterator:
  A variable representing members of an input list. An input list (or iterator). An optional predicate expression. And an output expression producing members of the output list from members of the input iterable that satisfy the predicate.</description>
@@ -77,20 +77,20 @@ Rolling has the same syntactic components to represent generation of a list in o
       
       <item>
         <title>Unpacking</title>
-        <link>https://follang.org/docs/700_sugar/unpacking/</link>
+        <link>https://follang.github.io/docs/700_sugar/unpacking/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/unpacking/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/unpacking/</guid>
         <description>Unpacking—also known as iterable destructuring—is another form of pattern matching used to extract data from collections of data. Take a look at the following example:
 var start, *_ = { 1, 4, 3, 8 } .echo(start) // Prints 1 .echo(_) // Prints [4, 3, 8] In this example, we’re able to extract the first element of the list and ignore the rest. Likewise, we can just as easily extract the last element of the list:</description>
       </item>
       
       <item>
         <title>Inquiry</title>
-        <link>https://follang.org/docs/700_sugar/inquiry/</link>
+        <link>https://follang.github.io/docs/700_sugar/inquiry/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/inquiry/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/inquiry/</guid>
         <description>Inquiries are inline unit tests and are a part of the basic syntax sugar. In other words, we don’t have to import any libraries or build up any suites to run tests.
 Instead, FOL includes a couple of clauses for testing within the source code:
 fun sum(l: int...): int = { when (l.length()){ is 1 -&amp;gt; l[0]; * -&amp;gt; l[0] + sum(l[1:]); } where (self){ sum(8) is 8; sum(1, 2, 3) is 6; } } Here, we can see an awesome list sum function.</description>
@@ -98,12 +98,12 @@ fun sum(l: int...): int = { when (l.length()){ is 1 -&amp;gt; l[0]; * -&amp;gt; 
       
       <item>
         <title>Chaining</title>
-        <link>https://follang.org/docs/700_sugar/chaining/</link>
+        <link>https://follang.github.io/docs/700_sugar/chaining/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/chaining/</guid>
-        <description>Optional chaining is a process for querying and calling properties, methods, and subscripts on an optional that might currently be nil. If the optional contains a value, the property, method, or subscript call succeeds; if the optional is nil, the property, method, or subscript call returns nil. Multiple queries can be chained together, and the entire chain fails gracefully if any link in the chain is nil.
-Before I can really explain optional chaining, we have to get a grasp of what an optional value is.</description>
+        <guid>https://follang.github.io/docs/700_sugar/chaining/</guid>
+        <description>Chaining, also known as named parameter idiom, is a common syntax for invoking multiple method calls of a structure. Each method returns a structure, allowing the calls to be chained together in a single statement without requiring variables to store the intermediate results.
+In order for this to work, the structure&amp;rsquo;s method needs to return the structure itself. For example (below), if we call the method add og container does&amp;rsquo;nt return anything, thus we cant chain further more.</description>
       </item>
       
     

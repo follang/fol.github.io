@@ -3,42 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://follang.org/de/updates/2019_may/</loc>
+    <loc>https://follang.github.io/de/updates/2019_may/</loc>
     <lastmod>2020-01-28T00:10:51+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://follang.org/de/updates/</loc>
+    <loc>https://follang.github.io/de/updates/</loc>
     <lastmod>2020-01-28T00:08:29+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://follang.org/de/</loc>
+    <loc>https://follang.github.io/de/</loc>
     <lastmod>2020-01-26T04:15:05+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://follang.org/"
+                href="https://follang.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://follang.org/de/"
+                href="https://follang.github.io/de/"
                 />
   </url>
   
   <url>
-    <loc>https://follang.org/de/docs/</loc>
+    <loc>https://follang.github.io/de/docs/</loc>
     <lastmod>2020-01-11T14:09:21+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://follang.org/docs/"
+                href="https://follang.github.io/docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://follang.org/de/docs/"
+                href="https://follang.github.io/de/docs/"
                 />
   </url>
   

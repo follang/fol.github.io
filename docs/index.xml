@@ -2,60 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on FOL</title>
-    <link>https://follang.org/docs/</link>
+    <link>https://follang.github.io/docs/</link>
     <description>Recent content in Docs on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     <lastBuildDate>Sat, 11 Jan 2020 14:09:21 +0900</lastBuildDate>
     
-        <atom:link href="https://follang.org/docs/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Lexical analysis</title>
-        <link>https://follang.org/docs/100_lexical/</link>
+        <link>https://follang.github.io/docs/100_lexical/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/100_lexical/</guid>
+        <guid>https://follang.github.io/docs/100_lexical/</guid>
         <description>A lexical analyzer is essentially a pattern matcher. A pattern matcher attempts to find a substring of a given string of characters that matches a given character pattern. All FOL&amp;rsquo;s input is interpreted as a sequence of UNICODE code points encoded in UTF-8. A lexical analyzer serves as the front end of a syntax analyzer. Technically, lexical analysis is a part of syntax analysis. A lexical analyzer performs syntax analysis at the lowest level of program structure.</description>
       </item>
       
       <item>
         <title>Code blocks</title>
-        <link>https://follang.org/docs/200_expressions/</link>
+        <link>https://follang.github.io/docs/200_expressions/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/</guid>
         <description>Statements The actions that a program takes are expressed in statements. Common actions include declaring variables, assigning values, calling routine, looping through collections, and branching to one or another block of code, depending on a given condition. The order in which statements are executed in a program is called the flow of control or flow of execution. The flow of control may vary every time that a program is run, depending on how the program reacts to input that it receives at run time.</description>
       </item>
       
       <item>
         <title>Meta programming</title>
-        <link>https://follang.org/docs/300_meta/</link>
+        <link>https://follang.github.io/docs/300_meta/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/300_meta/</guid>
+        <guid>https://follang.github.io/docs/300_meta/</guid>
         <description>Metaprogramming is a programming technique in which computer programs have the ability to treat other programs as their data. It means that a program can be designed to read, generate, analyze or transform other programs, and even modify itself while running. In some cases, this allows programmers to minimize the number of lines of code to express a solution, in turn reducing development time. It also allows programs greater flexibility to efficiently handle new situations without recompilation.</description>
       </item>
       
       <item>
         <title>Type system</title>
-        <link>https://follang.org/docs/400_type/</link>
+        <link>https://follang.github.io/docs/400_type/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/400_type/</guid>
+        <guid>https://follang.github.io/docs/400_type/</guid>
         <description>A data type defines a collection of data values and a set of predefined operations on those values. Computer programs produce results by manipulating data. An important factor in determining the ease with which they can perform this task is how well the data types available in the language being used match the objects in the real world of the problem being addressed. Therefore, it is crucial that a FOL supports an appropriate collection of data types and structures.</description>
       </item>
       
       <item>
         <title>Syntax items</title>
-        <link>https://follang.org/docs/500_items/</link>
+        <link>https://follang.github.io/docs/500_items/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/</guid>
+        <guid>https://follang.github.io/docs/500_items/</guid>
         <description>FOL uses different keywords to bind functionality and data to variables.
 modules used for: imports and includes
 use[] definitions used for: preporcesr, macros, blocks, definitions &amp;hellip;
@@ -67,10 +67,10 @@ typ[] std[] </description>
       
       <item>
         <title>Modules tree</title>
-        <link>https://follang.org/docs/600_modules/</link>
+        <link>https://follang.github.io/docs/600_modules/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/600_modules/</guid>
+        <guid>https://follang.github.io/docs/600_modules/</guid>
         <description>zsh:1: command not found: :quitall
 Every file with extension .fol in a folder is part of a package. Thus every file in the folder that uses the same package name, share the same scope between each other.
 Two packages can&amp;rsquo;t exist in same folder, so it is suggested using hierarchy folders to separate packages.
@@ -80,30 +80,30 @@ Types Packages can be either:
       
       <item>
         <title>Error handling</title>
-        <link>https://follang.org/docs/650_erroe/</link>
+        <link>https://follang.github.io/docs/650_erroe/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/650_erroe/</guid>
+        <guid>https://follang.github.io/docs/650_erroe/</guid>
         <description>Unlike other programming languages, FOL does not have exceptions (Rust neither). It has only two types of errors:
  braking errors recoverable errors  Breaking errors cause a program to fail abruptly. A program cannot revert to its normal state if an unrecoverable error occurs. It cannot retry the failed operation or undo the error. An example of an unrecoverable error is trying to access a location beyond the end of an array.</description>
       </item>
       
       <item>
         <title>Language sugar</title>
-        <link>https://follang.org/docs/700_sugar/</link>
+        <link>https://follang.github.io/docs/700_sugar/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/700_sugar/</guid>
+        <guid>https://follang.github.io/docs/700_sugar/</guid>
         <description>Language sugar, is a visually or logically-appealing &amp;ldquo;shortcut&amp;rdquo; provided by the language, which reduces the amount of code that must be written in some common situation. It makes the language &amp;ldquo;sweeter&amp;rdquo; for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
 A construct in a language is called &amp;ldquo;language sugar&amp;rdquo; if it can be removed from the language without any effect on what the language can do: functionality and expressive power will remain the same.</description>
       </item>
       
       <item>
         <title>Value conversion</title>
-        <link>https://follang.org/docs/750_conversion/</link>
+        <link>https://follang.github.io/docs/750_conversion/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/750_conversion/</guid>
+        <guid>https://follang.github.io/docs/750_conversion/</guid>
         <description>A type cast converts a value of one type to another.
 FOL uses two ways for value conversion:
  coercion for conversions that are known to be completely safe and unambiguous, and casting for conversions that one would not want to happen on accident.  </description>
@@ -111,19 +111,19 @@ FOL uses two ways for value conversion:
       
       <item>
         <title>Memory model</title>
-        <link>https://follang.org/docs/800_memory/</link>
+        <link>https://follang.github.io/docs/800_memory/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/800_memory/</guid>
+        <guid>https://follang.github.io/docs/800_memory/</guid>
         <description>The Stack What is the stack? It&amp;rsquo;s a special region of your computer&amp;rsquo;s memory that stores temporary variables created by each function (including the main() function). The stack is a &amp;ldquo;LIFO&amp;rdquo; (last in, first out) data structure, that is managed and optimized by the CPU quite closely. Every time a function declares a new variable, it is &amp;ldquo;pushed&amp;rdquo; onto the stack. Then every time a function exits, all of the variables pushed onto the stack by that function, are freed (that is to say, they are deleted).</description>
       </item>
       
       <item>
         <title>Multi Threading</title>
-        <link>https://follang.org/docs/900_processor/</link>
+        <link>https://follang.github.io/docs/900_processor/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/900_processor/</guid>
+        <guid>https://follang.github.io/docs/900_processor/</guid>
         <description>Concurrency is the ability of different tasks of a program to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent tasks, which can significantly improve overall speed of the execution in multi-processor and multi-core systems. In more technical terms, concurrency refers to the decomposability property of a program into order-independent or partially-ordered tasks.
 There are two distinct categories of concurrent task control.</description>
       </item>

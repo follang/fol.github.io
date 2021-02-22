@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Value conversion on FOL</title>
-    <link>https://follang.org/docs/750_conversion/</link>
+    <link>https://follang.github.io/docs/750_conversion/</link>
     <description>Recent content in Value conversion on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/750_conversion/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/750_conversion/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Coercion</title>
-        <link>https://follang.org/docs/750_conversion/coercion/</link>
+        <link>https://follang.github.io/docs/750_conversion/coercion/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/750_conversion/coercion/</guid>
+        <guid>https://follang.github.io/docs/750_conversion/coercion/</guid>
         <description></description>
       </item>
       
       <item>
         <title>Casting</title>
-        <link>https://follang.org/docs/750_conversion/casting/</link>
+        <link>https://follang.github.io/docs/750_conversion/casting/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/750_conversion/casting/</guid>
+        <guid>https://follang.github.io/docs/750_conversion/casting/</guid>
         <description></description>
       </item>
       

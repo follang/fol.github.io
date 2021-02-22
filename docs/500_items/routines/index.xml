@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Routines on FOL</title>
-    <link>https://follang.org/docs/500_items/routines/</link>
+    <link>https://follang.github.io/docs/500_items/routines/</link>
     <description>Recent content in Routines on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/500_items/routines/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/500_items/routines/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Procedures</title>
-        <link>https://follang.org/docs/500_items/routines/procedures/</link>
+        <link>https://follang.github.io/docs/500_items/routines/procedures/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/routines/procedures/</guid>
+        <guid>https://follang.github.io/docs/500_items/routines/procedures/</guid>
         <description>Procedures are most common type of routines in Fol. When a procedure is &amp;ldquo;called&amp;rdquo; the program &amp;ldquo;leaves&amp;rdquo; the current section of code and begins to execute the first line inside the procedure. Thus the procedure &amp;ldquo;flow of control&amp;rdquo; is:
  The program comes to a line of code containing a &amp;ldquo;procedure call&amp;rdquo;. The program enters the procedure (starts at the first line in the procedure code). All instructions inside of the procedure are executed from top to bottom.</description>
       </item>
       
       <item>
         <title>Functions</title>
-        <link>https://follang.org/docs/500_items/routines/functions/</link>
+        <link>https://follang.github.io/docs/500_items/routines/functions/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/routines/functions/</guid>
+        <guid>https://follang.github.io/docs/500_items/routines/functions/</guid>
         <description>Functions compared to procedure are pure. A pure function is a function that has the following properties:
  Its return value is the same for the same arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams from I/O devices). Its evaluation has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or I/O streams).  Thus a pure function is a computational analogue of a mathematical function.</description>
       </item>
       
       <item>
         <title>Methods</title>
-        <link>https://follang.org/docs/500_items/routines/methods/</link>
+        <link>https://follang.github.io/docs/500_items/routines/methods/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/routines/methods/</guid>
+        <guid>https://follang.github.io/docs/500_items/routines/methods/</guid>
         <description>There is another type of routine, called method, but it can be either a pure function either a procedure. A method is a piece of code that is called by a name that is associated with an object where it is implicitly passed the object on which it was called and is able to operate on data that is contained within the object.
 They either are defined inside the object, or outside the object then the object in which they operate is passed like so (just like in Golang):</description>
       </item>
       
       <item>
         <title>Logicals</title>
-        <link>https://follang.org/docs/500_items/routines/logicals/</link>
+        <link>https://follang.github.io/docs/500_items/routines/logicals/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/500_items/routines/logicals/</guid>
+        <guid>https://follang.github.io/docs/500_items/routines/logicals/</guid>
         <description>Logicals, which are logic routines, and represent logic programming, state the routine as a set of logical relations (e.g., a grandparent is the parent of a parent of someone). Such rutines are similar to the database languages. A program is executed by an “inference engine” that answers a query by searching these relations systematically to make inferences that will answer a query.
 One of the main goals of the development of symbolic logic hasbeen to capture the notion of logical consequence with formal, mechanical, means.</description>
       </item>

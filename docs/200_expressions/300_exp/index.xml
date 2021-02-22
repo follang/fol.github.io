@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Expressions on FOL</title>
-    <link>https://follang.org/docs/200_expressions/300_exp/</link>
+    <link>https://follang.github.io/docs/200_expressions/300_exp/</link>
     <description>Recent content in Expressions on FOL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, FOL</copyright>
     
-        <atom:link href="https://follang.org/docs/200_expressions/300_exp/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://follang.github.io/docs/200_expressions/300_exp/index.xml" rel="self" type="application/rss+xml" />
     
     
     
       
       <item>
         <title>Calculations</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/arithmetics/</link>
+        <link>https://follang.github.io/docs/200_expressions/300_exp/arithmetics/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/arithmetics/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/300_exp/arithmetics/</guid>
         <description>In fol, every calcultaion, needs to be enclosed in rounded brackets ( //to evaluate ) - except in one line evaluating, the curly brackets are allowed too { // to evaluate }:
 fun adder(a, b: int): int = { retun a + b // this will throw an error } fun adder(a, b: int): int = { retun (a + b) // this is the right way to enclose } Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</description>
       </item>
       
       <item>
         <title>Literals</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/literals/</link>
+        <link>https://follang.github.io/docs/200_expressions/300_exp/literals/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/literals/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/300_exp/literals/</guid>
         <description>A literal expression consists of one or more of the numerical/letter forms described earlier. It directly describes a numbers, characters, booleans, containers and constructs.
 There are two type of literals:
  values calls  Value literals Value literals are the simpliest expressions. They are direct values assigned to variables and are divided into two types:
@@ -38,10 +38,10 @@ There are two type of literals:
       
       <item>
         <title>Ranges</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/ranges/</link>
+        <link>https://follang.github.io/docs/200_expressions/300_exp/ranges/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/ranges/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/300_exp/ranges/</guid>
         <description>There are two range expressions:
  Defined ranges Undefined ranges  Defined ranges Defined ranges represent a group of values that are generated as a sequence based on some predefined rules. Ranges are represented with two dots .. operator.
 { 1..8 } // a range from 1 to 8 { 1,2,3,4,5,6,7,8 } { 8..1 } // a range from 8 to 1 { 8,7,6,5,4,3,2,1 } { 1..8..2 } // a range from 1 to 8 jumping by 2 { 1,3,5,7 } { 3.</description>
@@ -49,10 +49,10 @@ There are two type of literals:
       
       <item>
         <title>Access</title>
-        <link>https://follang.org/docs/200_expressions/300_exp/access/</link>
+        <link>https://follang.github.io/docs/200_expressions/300_exp/access/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://follang.org/docs/200_expressions/300_exp/access/</guid>
+        <guid>https://follang.github.io/docs/200_expressions/300_exp/access/</guid>
         <description>There are four access expresions:
  namespace member access routine member access container memeber access field member access  Subprogram access In most programming languages, it is called &amp;ldquo;method-call expresion&amp;rdquo;. A method call consists of an expression (the receiver) followed by a single dot ., an expression path segment, and a parenthesized expression-list:
 &amp;quot;3.14&amp;quot;.cast(float).pow(2); // casting a numbered string to float, then rising it to power of 2 Namespaces access Accesing namespaces is done through double colon operator :::</description>
